@@ -54,7 +54,9 @@ lazy val LspaceNS = project
   .settings(skip in publish := true)
   .aggregate(ns.jvm, ns.js)
 
-lazy val ns = (crossProject(JSPlatform, JVMPlatform).crossType(CrossType.Full) in file("ns"))
+lazy val ns = (crossProject(JSPlatform, JVMPlatform)
+  .withoutSuffixFor(JVMPlatform)
+  .crossType(CrossType.Full) in file("ns"))
   .settings(settings)
   .settings(
     name := "lspace-ns",
