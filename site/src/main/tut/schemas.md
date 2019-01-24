@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Traversal guide
+title: Schema guide
 position: 2
 ---
 
