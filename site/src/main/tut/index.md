@@ -6,9 +6,8 @@ title: "Home"
 **Welcome to L-space**
 
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/L-space/L-space-NS)
-[![Waffle.io - Columns and their card count](https://badge.waffle.io/L-space/L-space-NS.svg?columns=all)](https://waffle.io/L-space/L-space-NS)
 
-[![Build Status](https://travis-ci.org/L-space/L-space-NS.svg)](https://travis-ci.org/L-space/L-space-NS)
+[![Build Status](https://travis-ci.com/L-space/L-space-NS.svg)](https://travis-ci.com/L-space/L-space-NS)
 [![codecov](https://codecov.io/gh/L-space/L-space-NS/branch/master/graph/badge.svg)](https://codecov.io/gh/L-space/L-space-NS)
 
 Semantic schema repository
@@ -16,8 +15,7 @@ Semantic schema repository
 # Getting started
 
 L-space is available for Scala 2.11.x and 2.12.x. 
-To include `lspace-core` (all core structures and basic implementations (in-memory) of the graph, 
-data-models and traversal-engines) add the following to your `build.sbt`:
+To include `lspace-ns` add the following to your `build.sbt`:
 ```
 libraryDependencies += "eu.l-space" %% "lspace-ns" % "{{ site.data.settings.version }}"
 ```
