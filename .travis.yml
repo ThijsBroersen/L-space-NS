@@ -6,10 +6,10 @@ stages:
   - name: test
   - name: test coverage
     if: (branch = master AND type = push) OR (tag IS present)
-#  - name: publish pages
-#    if: (branch = master AND type = push) OR (tag IS present)
-#  - name: release and deploy
-#    if: (branch = master AND type = push) OR (tag IS present)
+  - name: publish pages
+    if: (branch = master AND type = push) OR (tag IS present)
+  - name: release and deploy
+    if: (branch = master AND type = push) OR (tag IS present)
 jobs:
   include:
     - stage: test
@@ -78,7 +78,7 @@ jobs:
         target-branch: gh-pages
     - stage: release
       name: "Cross-publish to Sonatype and deploy ns.l-space.eu"
-      services: docker
+#      services: docker
       before_install: git fetch --tags
       script:
         - sbt ci-release

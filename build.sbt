@@ -20,6 +20,7 @@ lazy val compilerOptions = Seq(
 
 lazy val projectSettings = Seq(
   organization := "eu.l-space",
+  sonatypeProfileName := "eu.l-space",
   homepage := Some(url("https://github.com/L-space/L-space-NS")),
   licenses := List("MIT" -> url("https://opensource.org/licenses/MIT")),
   developers := List(
