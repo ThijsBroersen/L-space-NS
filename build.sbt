@@ -3,6 +3,9 @@ import com.typesafe.sbt.packager.docker.Cmd
 // shadow sbt-scalajs' crossProject and CrossType until Scala.js 1.0.0 is released
 import sbtcrossproject.CrossPlugin.autoImport.{crossProject, CrossType}
 
+ThisBuild / organization := "eu.l-space"
+ThisBuild / scalaVersion := "2.12.8"
+
 lazy val settings = commonSettings
 
 lazy val compilerOptions = Seq(
@@ -20,7 +23,6 @@ lazy val compilerOptions = Seq(
 
 lazy val projectSettings = Seq(
   organization := "eu.l-space",
-  sonatypeProfileName := "eu.l-space",
   homepage := Some(url("https://github.com/L-space/L-space-NS")),
   licenses := List("MIT" -> url("https://opensource.org/licenses/MIT")),
   developers := List(
@@ -35,7 +37,6 @@ lazy val projectSettings = Seq(
 
 lazy val commonSettings = projectSettings ++ Seq(
   scalacOptions ++= compilerOptions,
-  scalaVersion := "2.12.8",
   crossScalaVersions := Seq("2.11.12", "2.12.8"),
   publishArtifact in (Test, packageBin) := true,
   updateOptions := updateOptions.value.withCachedResolution(true)
