@@ -9,7 +9,7 @@ object Version {
 
 // Libraries
 object Library {
-  val lspaceCore     = Def.setting("eu.l-space" %%% "lspace-core" % Version.lspace)
+  val lspaceCore     = Def.setting("eu.l-space" %%% "lspace-client" % Version.lspace)
   val lspaceServices = "eu.l-space" %% "lspace-services" % Version.lspace
 
   val scalaTest = Def.setting("org.scalatest" %%% "scalatest" % "3.0.5" % "test")
