@@ -18,7 +18,7 @@ import lspace.librarian.structure._
 import lspace.parse.JsonLD
 import lspace.ns._
 import lspace.services.rest.endpoints.JsonLDModule
-import org.slf4j.LoggerFactory
+import scribe._
 import shapeless.{:+:, CNil}
 
 import scala.collection.mutable
@@ -64,7 +64,6 @@ object NSService extends TwitterServer {
   }
 }
 case class NSService(context: String, graph: Graph) extends JsonLDModule {
-  val log    = LoggerFactory.getLogger(getClass)
   val jsonld = JsonLD(graph)
 
   val headersAll = root.map(_.headerMap.toMap)
