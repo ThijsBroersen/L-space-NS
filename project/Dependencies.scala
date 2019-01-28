@@ -4,7 +4,7 @@ import org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 // Versions
 object Version {
   val scala  = "2.12.8"
-  val lspace = "0.3.0.0-M2+2-e5d86e65-SNAPSHOT"
+  val lspace = "0.3.0.0-M2+3-b89e77b6-SNAPSHOT"
 }
 
 // Libraries
