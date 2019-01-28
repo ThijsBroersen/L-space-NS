@@ -36,7 +36,8 @@ object File extends OntologyDef(Lspace + "File", label = "File", comment = "A Fi
                             "The moment at which the file was last accessed.")
   }
   override lazy val properties
-    : List[Property] = keys.`lspace:name`.property :: keys.`lspace:File/ext`.property :: keys.`schema:downloadUrl`.property :: keys.`schema:fileSize`.property :: keys.`schema:author`.property ::
+    : List[Property] = keys.`lspace:name`.property :: keys.`lspace:File/ext`.property :: keys.`schema:downloadUrl`.property ::
+    keys.`schema:fileSize`.property :: keys.`schema:author`.property ::
     keys.`schema:dateModified`.property :: keys.`schema:dateCreated`.property :: keys.`lspace:File/lastAccessedOn`.property :: Nil
 
   trait Properties {
