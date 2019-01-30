@@ -4,12 +4,12 @@ import org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 // Versions
 object Version {
   val scala  = "2.12.8"
-  val lspace = "0.3.0.0-M2+3-b89e77b6-SNAPSHOT"
+  val lspace = "0.3.0.0-M2+6-523959d0-SNAPSHOT"
 }
 
 // Libraries
 object Library {
-  val lspaceCore     = Def.setting("eu.l-space" %%% "lspace-client" % Version.lspace)
+  val lspaceClient   = Def.setting("eu.l-space" %%% "lspace-client" % Version.lspace)
   val lspaceServices = "eu.l-space" %% "lspace-services" % Version.lspace
 
   val scalaTest = Def.setting("org.scalatest" %%% "scalatest" % "3.0.5" % "test")
@@ -18,7 +18,7 @@ object Library {
 object Dependencies {
   import Library._
 
-  val nsDeps = Def.setting(Seq(lspaceCore.value, scalaTest.value))
+  val nsDeps = Def.setting(Seq(lspaceClient.value, scalaTest.value))
 
   val nsJsDeps = Def.setting(Seq())
 
