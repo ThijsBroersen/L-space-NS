@@ -23,14 +23,16 @@ class NSServiceSpec extends AsyncWordSpec with Matchers with BeforeAndAfterAll {
         response.contentType shouldBe Some("application/ld+json")
       }
     }
-    "return UnsupportedMediaType for unsupported Accept-header" ignore {
+    "return 'application/ld+json' for unsupported Accept-header" in {
       val input = Input
         .get("/File/ext")
         .withHeaders("Accept" -> "weird/type")
       val res = NSService.api(input.request)
 
       res.map { response =>
-        response.status shouldBe Status.UnsupportedMediaType
+        scribe.info(response.contentType.toString)
+        response.status shouldBe Status.Ok
+        response.contentType shouldBe Some("application/ld+json")
       }
     }
   }
