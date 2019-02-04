@@ -16,6 +16,7 @@ object Directory extends OntologyDef(Lspace + "Directory", label = "Directory") 
     lazy val `schema:downloadUrl`  = File.keys.`schema:downloadUrl`
     lazy val `schema:fileSize`     = File.keys.`schema:fileSize`
     lazy val `schema:author`       = File.keys.`schema:author`
+    lazy val `lspace:owner`        = File.keys.`lspace:owner`
     lazy val `schema:dateModified` = File.keys.`schema:dateModified`
     object `schema:dateCreated`
         extends PropertyDef(

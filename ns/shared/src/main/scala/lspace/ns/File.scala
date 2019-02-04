@@ -24,6 +24,7 @@ object File extends OntologyDef(Lspace + "File", label = "File", comment = "A Fi
         extends PropertyDef(schema + "downloadUrl", "downloadUrl", "The url at which the file can be retrieved.")
     object `schema:fileSize`     extends PropertyDef(schema + "fileSize", "fileSize")
     object `schema:author`       extends PropertyDef(schema + "author", "author")
+    object `lspace:owner`        extends PropertyDef(schema + "owner", "owner")
     object `schema:dateModified` extends PropertyDef(schema + "dateModified", "dateModified")
     object `schema:dateCreated`
         extends PropertyDef(Lspace + "filesystem/File/dateCreated",
