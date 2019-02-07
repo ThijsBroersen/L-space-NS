@@ -15,9 +15,8 @@ import lspace.librarian.process.traversal.P
 import lspace.librarian.process.traversal.Step
 import lspace.librarian.provider.mem.MemGraph
 import lspace.librarian.structure._
-import lspace.parse.JsonLD
 import lspace.ns._
-import lspace.services.rest.endpoints.JsonLDModule
+import lspace.services.rest.endpoints.Api
 import shapeless.{:+:, CNil}
 
 import scala.collection.mutable
@@ -39,11 +38,13 @@ object NSService extends TwitterServer {
 
   lazy val port: Int = 8080
 
-  import JsonLDModule.Encode._
+  import lspace.services.codecs.Application
+  import lspace.services.codecs.Encode._
+  import lspace.encode.EncodeJsonLD._
 
   lazy val api: Service[Request, Response] = Bootstrap
     .configure(enableMethodNotAllowed = true, enableUnsupportedMediaType = true)
-    .serve[JsonLDModule.JsonLD :+: CNil](nsService.api)
+    .serve[Application.JsonLD :+: CNil](nsService.api)
     .toService
 
   def main(): Unit = {
@@ -62,18 +63,19 @@ object NSService extends TwitterServer {
     Await.ready(adminHttpServer)
   }
 }
-case class NSService(context: String, graph: Graph) extends JsonLDModule {
-  val jsonld = JsonLD(graph)
+case class NSService(context: String, graph: Graph) extends Api {
+  val encoder = lspace.codec.argonaut.Encode
+  val decoder = lspace.codec.argonaut.Decode(graph)
 
   val headersAll = root.map(_.headerMap.toMap)
-  val cache      = mutable.HashMap[String, mutable.HashMap[String, Json]]()
+  val cache      = mutable.HashMap[String, mutable.HashMap[String, String]]()
 
   /**
     * retrieve a single resource
     * @param uri
     * @return
     */
-  val getUri: Endpoint[IO, Json] = get(paths[String]) { (paths: Seq[String]) =>
+  val getUri: Endpoint[IO, String] = get(paths[String]) { (paths: Seq[String]) =>
     val path = paths.mkString("/")
     cache
       .get(context + path)
@@ -82,10 +84,10 @@ case class NSService(context: String, graph: Graph) extends JsonLDModule {
         graph.ns.nodes
           .hasIri(context + path)
           .headOption
-          .map(jsonld.encode(_))
+          .map(encoder(_))
           .map { json =>
-            cache += (context + path)                                                              -> (cache
-              .getOrElse(context + path, mutable.HashMap[String, Json]()) += "application/ld+json" -> json)
+            cache += (context + path)                                                                -> (cache
+              .getOrElse(context + path, mutable.HashMap[String, String]()) += "application/ld+json" -> json)
             json
           })
       .map(Ok(_)) //.withHeader("Content-Type", "application/ld+json"))

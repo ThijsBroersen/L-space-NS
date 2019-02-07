@@ -78,7 +78,7 @@ lazy val nsService = project.in(file("ns-service"))
   .settings(settings)
   .settings(
     name := "lspace-ns-service",
-    libraryDependencies ++= nsServiceDeps,
+    libraryDependencies ++= nsServiceDeps.value,
     topLevelDirectory := None, // Don't add a root folder to the archive
     dockerBaseImage := "openjdk:8-jre-alpine",
     dockerExposedPorts := Seq(8080),

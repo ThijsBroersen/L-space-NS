@@ -1,9 +1,9 @@
 addSbtPlugin("org.portable-scala" % "sbt-scalajs-crossproject" % "0.6.0")
 addSbtPlugin("org.scala-js"       % "sbt-scalajs"              % "0.6.26")
 
-addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.3.16")
+addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.3.17")
 
-addSbtPlugin("com.dwijnand"   % "sbt-dynver"   % "3.0.0")
+addSbtPlugin("com.dwijnand"   % "sbt-dynver"   % "3.1.0")
 addSbtPlugin("org.xerial.sbt" % "sbt-sonatype" % "2.4")
 
 addSbtPlugin("com.jsuereth"     % "sbt-pgp" % "1.1.1")
