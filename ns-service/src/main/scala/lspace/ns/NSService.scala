@@ -64,8 +64,8 @@ object NSService extends TwitterServer {
   }
 }
 case class NSService(context: String, graph: Graph) extends Api {
-  val encoder = lspace.codec.argonaut.Encode
-  val decoder = lspace.codec.argonaut.Decode(graph)
+  val encoder = lspace.codec.argonaut.Encoder
+  val decoder = lspace.codec.argonaut.Decoder(graph)
 
   val headersAll = root.map(_.headerMap.toMap)
   val cache      = mutable.HashMap[String, mutable.HashMap[String, String]]()
