@@ -30,7 +30,6 @@ class NSServiceSpec extends AsyncWordSpec with Matchers with BeforeAndAfterAll {
       val res = NSService.api(input.request)
 
       res.map { response =>
-        scribe.info(response.contentType.toString)
         response.status shouldBe Status.Ok
         response.contentType shouldBe Some("application/ld+json")
       }

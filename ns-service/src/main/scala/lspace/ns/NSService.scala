@@ -1,6 +1,5 @@
 package lspace.ns
 
-import argonaut.{EncodeJson, Json, PrettyParams}
 import cats.effect.IO
 import com.twitter.finagle.{Http, Service}
 import com.twitter.finagle.http.{Request, Response, Status}
@@ -11,15 +10,20 @@ import com.twitter.util.Await
 import io.finch
 import io.finch.{Bootstrap, Endpoint, Ok, Output}
 import lspace.client.User
+import lspace.codec.{ActiveContext, JsonObjectInProgress}
+import lspace.librarian.datatype.DataType
 import lspace.librarian.process.traversal.P
 import lspace.librarian.process.traversal.Step
 import lspace.librarian.provider.mem.MemGraph
 import lspace.librarian.structure._
 import lspace.ns._
 import lspace.services.rest.endpoints.Api
+import monix.eval.Task
 import shapeless.{:+:, CNil}
 
 import scala.collection.mutable
+import scala.concurrent
+import scala.concurrent.duration._
 
 object NSService extends TwitterServer {
 
@@ -27,14 +31,22 @@ object NSService extends TwitterServer {
   val context           = graph.iri
   lazy val nsService    = NSService(context, graph)
 
-  P.predicates.map(_.ontology).foreach(graph.ns.ontologies.store)
-  Step.steps.map(_.ontology).foreach(graph.ns.ontologies.store)
-  graph.ns.ontologies.store(File.ontology)
-  graph.ns.ontologies.store(Directory.ontology)
-  graph.ns.ontologies.store(User.ontology)
-  File.properties.foreach(graph.ns.properties.store)
-  Directory.properties.foreach(graph.ns.properties.store)
-  User.properties.foreach(graph.ns.properties.store)
+  import monix.execution.Scheduler.Implicits.global
+
+  concurrent.Await.ready(
+    Task
+      .gatherUnordered(
+        P.predicates.map(_.ontology).map(graph.ns.ontologies.store) ++
+          Step.steps.map(_.ontology).map(graph.ns.ontologies.store) ++
+          List(graph.ns.ontologies.store(File.ontology),
+               graph.ns.ontologies.store(Directory.ontology),
+               graph.ns.ontologies.store(User.ontology)) ++
+          File.properties.map(graph.ns.properties.store) ++
+          Directory.properties.map(graph.ns.properties.store) ++
+          User.properties.map(graph.ns.properties.store))
+      .runToFuture,
+    5 seconds
+  )
 
   lazy val port: Int = 8080
 
@@ -64,11 +76,15 @@ object NSService extends TwitterServer {
   }
 }
 case class NSService(context: String, graph: Graph) extends Api {
-  val encoder = lspace.codec.argonaut.Encoder
-  val decoder = lspace.codec.argonaut.Decoder(graph)
+  implicit val nencoder: lspace.codec.NativeTypeEncoder.Aux[argonaut.Json] = lspace.codec.argonaut.NativeTypeEncoder
+  implicit val encoder                                                     = lspace.codec.Encoder(nencoder)
+  implicit val ndecoder                                                    = lspace.codec.argonaut.NativeTypeDecoder
+  implicit val decoder                                                     = lspace.codec.Decoder(graph)(ndecoder)
 
   val headersAll = root.map(_.headerMap.toMap)
   val cache      = mutable.HashMap[String, mutable.HashMap[String, String]]()
+
+  import encoder._
 
   /**
     * retrieve a single resource
@@ -81,10 +97,14 @@ case class NSService(context: String, graph: Graph) extends Api {
       .get(context + path)
       .flatMap(_.get("application/ld+json"))
       .orElse(
-        graph.ns.nodes
-          .hasIri(context + path)
-          .headOption
-          .map(encoder(_))
+        graph.ns.classtypes
+          .cached(context + path)
+          .map {
+            case ontology: Ontology    => encoder.fromOntology(ontology)(ActiveContext())
+            case property: Property    => encoder.fromProperty(property)(ActiveContext())
+            case datatype: DataType[_] => encoder.fromDataType(datatype)(ActiveContext())
+          }
+          .map(_.asInstanceOf[JsonObjectInProgress[argonaut.Json]].withContext.asInstanceOf[encoder.Json].noSpaces)
           .map { json =>
             cache += (context + path)                                                                -> (cache
               .getOrElse(context + path, mutable.HashMap[String, String]()) += "application/ld+json" -> json)
