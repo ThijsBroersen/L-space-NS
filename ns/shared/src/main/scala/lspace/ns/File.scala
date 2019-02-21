@@ -2,8 +2,8 @@ package lspace.ns
 
 import lspace.NS
 import lspace.NS.vocab.{schema, Lspace}
-import lspace.librarian.datatype.DataType
-import lspace.librarian.structure._
+import lspace.datatype.DataType
+import lspace.structure._
 
 object File extends OntologyDef(Lspace + "File", label = "File", comment = "A File ..") {
 

@@ -11,11 +11,11 @@ import io.finch
 import io.finch.{Bootstrap, Endpoint, Ok, Output}
 import lspace.client.User
 import lspace.codec.{ActiveContext, JsonObjectInProgress}
-import lspace.librarian.datatype.DataType
-import lspace.librarian.process.traversal.P
-import lspace.librarian.process.traversal.Step
-import lspace.librarian.provider.mem.MemGraph
-import lspace.librarian.structure._
+import lspace.datatype.DataType
+import lspace.P
+import lspace.librarian.traversal.Step
+import lspace.provider.mem.MemGraph
+import lspace.structure._
 import lspace.ns._
 import lspace.services.rest.endpoints.Api
 import monix.eval.Task

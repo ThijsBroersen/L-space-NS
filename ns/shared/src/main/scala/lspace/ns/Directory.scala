@@ -1,6 +1,6 @@
 package lspace.ns
 
-import lspace.librarian.structure.{OntologyDef, Property, PropertyDef}
+import lspace.structure.{OntologyDef, Property, PropertyDef}
 import lspace.NS.vocab._
 
 object Directory extends OntologyDef(Lspace + "Directory", label = "Directory") {
