@@ -9,5 +9,5 @@ object address
       NS.vocab.schema + "address",
       label = "address",
       comment = "Physical address of the item.",
-      `@range` = () => Nil,
+      `@range` = () => Nil
     )
