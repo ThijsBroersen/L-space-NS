@@ -20,6 +20,11 @@ class schemaSpec extends AsyncWordSpec with Matchers {
         .genOntology("ns/shared/src/main/scala/lspace/ns/vocab/schema/", "https://schema.org/Place")
         .map(_ shouldBe true)
     }
+    "get https://schema.org/PostalAddress from schema.org and create *Def-files accordingly" in {
+      schema
+        .genOntology("ns/shared/src/main/scala/lspace/ns/vocab/schema/", "https://schema.org/PostalAddress")
+        .map(_ shouldBe true)
+    }
     "get properties from schema.org and create *Def-files accordingly" in {
       schema
         .genProperty("ns/shared/src/main/scala/lspace/ns/vocab/schema/", "https://schema.org/memberOf")

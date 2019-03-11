@@ -2,11 +2,11 @@ package lspace.ns.vocab.schema
 import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.structure.{Property, PropertyDef}
-object worksFor extends PropertyDef(
-        iri = "https://schema.org/worksFor",
-        iris = Set("https://schema.org/worksFor"),
-        label = "worksFor",
-        comment = """Organizations that the person works for.""",
+object streetAddress extends PropertyDef(
+        iri = "https://schema.org/streetAddress",
+        iris = Set("https://schema.org/streetAddress"),
+        label = "streetAddress",
+        comment = """The street address. For example, 1600 Amphitheatre Pkwy.""",
         `@extends` = () => List(),
         `@range` = () => List()
        ){
