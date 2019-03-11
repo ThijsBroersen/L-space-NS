@@ -10,12 +10,15 @@ import org.scalatest.{AsyncWordSpec, Matchers}
 class schemaSpec extends AsyncWordSpec with Matchers {
 
   "schema" should {
-    "get ontologies from schema.org and create *Def-files accordingly" in {
-//      Person.keys.children
+    "get https://schema.org/Person from schema.org and create *Def-files accordingly" in {
       schema
         .genOntology("ns/shared/src/main/scala/lspace/ns/vocab/schema/", "https://schema.org/Person")
         .map(_ shouldBe true)
-
+    }
+    "get https://schema.org/Place from schema.org and create *Def-files accordingly" in {
+      schema
+        .genOntology("ns/shared/src/main/scala/lspace/ns/vocab/schema/", "https://schema.org/Place")
+        .map(_ shouldBe true)
     }
     "get properties from schema.org and create *Def-files accordingly" in {
       schema

@@ -4,6 +4,7 @@ import lspace._
 import lspace.codec.{ActiveContext, Decoder}
 import lspace.codec.argonaut._
 import lspace.structure.{Graph => _, _}
+import monix.eval.Task
 
 import scala.meta._
 import scala.meta.prettyprinters.Show
@@ -22,6 +23,15 @@ object schema {
   def genOntology(path: String, iri: String) =
     decoder
       .toOntology(iri)(ActiveContext())
+      .map { ontology =>
+        Task.gather(
+          graph
+            .nodes()
+            .filter(node => node.hasLabel(Ontology.ontology).isEmpty && node.hasLabel(Property.ontology).isEmpty)
+            .map { node =>
+              decoder.toClasstype(node.iri)(ActiveContext())
+            })
+      }
       .map { ontology =>
         Ontology.ontologies.all.filter(_.iri.contains("schema.org")).foreach { ontology =>
           val code  = ontologyToOntologyDef(ontology)
@@ -110,7 +120,16 @@ object schema {
                 .takeWhile(c => c != '/' && c != '#')
                 .reverse + ".Properties")
           .mkString(" with ")
-      else ""}""" + "\n" +
+      else ""}""" + "{\n" +
+      ontology
+        .properties()
+        .toList
+        .map(_.iris.find(_.startsWith("@") == false).head.reverse.takeWhile(c => c != '/' && c != '#').reverse)
+        .map { label =>
+          s"lazy val $label = lspace.ns.vocab.schema.${label}"
+        }
+        .mkString("\n") +
+      "}\n" +
       "}"
   }
 
