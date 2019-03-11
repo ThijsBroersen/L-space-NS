@@ -44,7 +44,6 @@ object schema {
           saveToFile(s"$path${label}.scala", code.parse[Source].get)
         }
       }
-      .runToFuture(monix.execution.Scheduler.global)
   def genProperty(path: String, iri: String) =
     decoder
       .toProperty(iri)(ActiveContext())
@@ -60,7 +59,6 @@ object schema {
           saveToFile(s"$path${label}.scala", code.parse[Source].get)
         }
       }
-      .runToFuture(monix.execution.Scheduler.global)
 
   def ontologyToOntologyDef(ontology: Ontology, cname: Option[String] = None): String = {
     val label = cname.getOrElse(ontology.iri.reverse.takeWhile(c => c != '/' && c != '#').reverse)

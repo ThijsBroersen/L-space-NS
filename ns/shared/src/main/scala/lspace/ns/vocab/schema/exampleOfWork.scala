@@ -2,11 +2,11 @@ package lspace.ns.vocab.schema
 import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.structure.{Property, PropertyDef}
-object isPartOf extends PropertyDef(
-        iri = "https://schema.org/isPartOf",
-        iris = Set("https://schema.org/isPartOf"),
-        label = "isPartOf",
-        comment = """Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.""",
+object exampleOfWork extends PropertyDef(
+        iri = "https://schema.org/exampleOfWork",
+        iris = Set("https://schema.org/exampleOfWork"),
+        label = "exampleOfWork",
+        comment = """A creative work that this work is an example/instance/realization/derivation of.""",
         `@extends` = () => List(),
         `@range` = () => List(CreativeWork)
        ){

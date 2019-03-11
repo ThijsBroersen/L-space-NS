@@ -10,7 +10,7 @@ object publishingPrinciples extends PropertyDef(
 
 While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a <a class="localLink" href="http://schema.org/funder">funder</a>) can be expressed using schema.org terminology.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(CreativeWork)
        ){
 
 override lazy val properties: List[Property] = List()
