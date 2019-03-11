@@ -72,6 +72,15 @@ lazy val ns = (crossProject(JSPlatform, JVMPlatform)
     libraryDependencies ++= nsJsDeps.value
   )
 
+lazy val nsGen = (crossProject(JSPlatform, JVMPlatform)
+  .withoutSuffixFor(JVMPlatform)
+  .crossType(CrossType.Pure) in file("nsGen"))
+  .settings(settings)
+  .settings(
+    name := "lspace-ns-gen",
+    libraryDependencies ++= nsGenDeps.value
+  )
+
 lazy val nsService = project.in(file("ns-service"))
   .enablePlugins(DockerPlugin).enablePlugins(JDKPackagerPlugin)
   .dependsOn(ns.jvm)

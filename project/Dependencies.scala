@@ -4,7 +4,7 @@ import org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 // Versions
 object Version {
   val scala  = "2.12.8"
-  val lspace = "0.5.0.3"
+  val lspace = "0.5.1.2"
 }
 
 // Libraries
@@ -31,4 +31,8 @@ object Dependencies {
           lspaceClient.value,
           lspaceParseArgonaut.value,
           "org.scalatest" %% "scalatest" % "3.0.5" % "test"))
+
+  val nsGenDeps =
+    Def.setting(
+      Seq(lspaceParseArgonaut.value, Def.setting("org.scalameta" %%% "scalameta" % "4.1.0").value, scalaTest.value))
 }
