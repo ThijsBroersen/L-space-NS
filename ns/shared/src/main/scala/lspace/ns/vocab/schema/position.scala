@@ -8,7 +8,7 @@ object position extends PropertyDef(
         label = "position",
         comment = """The position of an item in a series or sequence of items.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`, `@int`)
        ){
 
 override lazy val properties: List[Property] = List()

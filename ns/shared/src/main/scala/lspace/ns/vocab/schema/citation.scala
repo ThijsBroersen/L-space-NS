@@ -8,7 +8,7 @@ object citation extends PropertyDef(
         label = "citation",
         comment = """A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.""",
         `@extends` = () => List(),
-        `@range` = () => List(CreativeWork)
+        `@range` = () => List(`@string`, CreativeWork)
        ){
 
 override lazy val properties: List[Property] = List()

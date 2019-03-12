@@ -8,7 +8,7 @@ object genre extends PropertyDef(
         label = "genre",
         comment = """Genre of the creative work, broadcast channel or group.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`, `@url`)
        ){
 
 override lazy val properties: List[Property] = List()

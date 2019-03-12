@@ -8,7 +8,7 @@ object alternativeHeadline extends PropertyDef(
         label = "alternativeHeadline",
         comment = """A secondary title of the CreativeWork.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

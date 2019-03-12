@@ -8,7 +8,7 @@ object correction extends PropertyDef(
         label = "correction",
         comment = """Indicates a correction to a <a class="localLink" href="http://schema.org/CreativeWork">CreativeWork</a>, either via a <a class="localLink" href="http://schema.org/CorrectionComment">CorrectionComment</a>, textually or in another document.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`, `@url`)
        ){
 
 override lazy val properties: List[Property] = List()

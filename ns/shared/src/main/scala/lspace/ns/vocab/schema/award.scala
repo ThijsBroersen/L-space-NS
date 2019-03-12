@@ -8,7 +8,7 @@ object award extends PropertyDef(
         label = "award",
         comment = """An award won by or for this item.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

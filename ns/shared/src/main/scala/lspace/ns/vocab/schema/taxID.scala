@@ -8,7 +8,7 @@ object taxID extends PropertyDef(
         label = "taxID",
         comment = """The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.""",
         `@extends` = () => List(identifier),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

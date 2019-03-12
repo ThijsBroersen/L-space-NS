@@ -8,7 +8,7 @@ object email extends PropertyDef(
         label = "email",
         comment = """Email address.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

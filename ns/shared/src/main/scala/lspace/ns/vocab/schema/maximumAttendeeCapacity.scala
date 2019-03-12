@@ -8,7 +8,7 @@ object maximumAttendeeCapacity extends PropertyDef(
         label = "maximumAttendeeCapacity",
         comment = """The total number of individuals that may attend an event or venue.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@int`)
        ){
 
 override lazy val properties: List[Property] = List()

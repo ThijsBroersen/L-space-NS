@@ -8,7 +8,7 @@ object location extends PropertyDef(
         label = "location",
         comment = """The location of for example where the event is happening, an organization is located, or where an action takes place.""",
         `@extends` = () => List(),
-        `@range` = () => List(Place, PostalAddress)
+        `@range` = () => List(Place, PostalAddress, `@string`)
        ){
 
 override lazy val properties: List[Property] = List()

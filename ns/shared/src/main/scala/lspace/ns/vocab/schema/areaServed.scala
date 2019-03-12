@@ -8,7 +8,7 @@ object areaServed extends PropertyDef(
         label = "areaServed",
         comment = """The geographic area where a service or offered item is provided.""",
         `@extends` = () => List(),
-        `@range` = () => List(Place)
+        `@range` = () => List(Place, `@string`)
        ){
 
 override lazy val properties: List[Property] = List()

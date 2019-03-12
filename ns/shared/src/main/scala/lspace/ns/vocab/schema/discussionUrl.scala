@@ -8,7 +8,7 @@ object discussionUrl extends PropertyDef(
         label = "discussionUrl",
         comment = """A link to the page containing the comments of the CreativeWork.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@url`)
        ){
 
 override lazy val properties: List[Property] = List()

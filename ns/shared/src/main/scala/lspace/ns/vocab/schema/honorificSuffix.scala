@@ -8,7 +8,7 @@ object honorificSuffix extends PropertyDef(
         label = "honorificSuffix",
         comment = """An honorific suffix preceding a Person's name such as M.D. /PhD/MSCSW.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

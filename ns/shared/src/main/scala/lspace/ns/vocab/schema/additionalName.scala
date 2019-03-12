@@ -8,7 +8,7 @@ object additionalName extends PropertyDef(
         label = "additionalName",
         comment = """An additional name for a Person, can be used for a middle name.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

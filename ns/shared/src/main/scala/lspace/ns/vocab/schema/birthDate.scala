@@ -8,7 +8,7 @@ object birthDate extends PropertyDef(
         label = "birthDate",
         comment = """Date of birth.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@date`)
        ){
 
 override lazy val properties: List[Property] = List()

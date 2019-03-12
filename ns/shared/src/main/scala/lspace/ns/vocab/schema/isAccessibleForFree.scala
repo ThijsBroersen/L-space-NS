@@ -8,7 +8,7 @@ object isAccessibleForFree extends PropertyDef(
         label = "isAccessibleForFree",
         comment = """A flag to signal that the item, event, or place is accessible for free.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@boolean`)
        ){
 
 override lazy val properties: List[Property] = List()

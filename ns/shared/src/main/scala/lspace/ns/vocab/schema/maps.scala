@@ -8,7 +8,7 @@ object maps extends PropertyDef(
         label = "maps",
         comment = """A URL to a map of the place.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@url`)
        ){
 
 override lazy val properties: List[Property] = List()

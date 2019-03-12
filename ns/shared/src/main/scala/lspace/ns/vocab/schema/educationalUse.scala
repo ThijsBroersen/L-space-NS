@@ -8,7 +8,7 @@ object educationalUse extends PropertyDef(
         label = "educationalUse",
         comment = """The purpose of a work in the context of education; for example, 'assignment', 'group work'.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

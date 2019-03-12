@@ -12,7 +12,7 @@ In cases where a <a class="localLink" href="http://schema.org/CreativeWork">Crea
 
 Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`, `@url`)
        ){
 
 override lazy val properties: List[Property] = List()

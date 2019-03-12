@@ -8,7 +8,7 @@ object copyrightYear extends PropertyDef(
         label = "copyrightYear",
         comment = """The year during which the claimed copyright for the CreativeWork was first asserted.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@number`)
        ){
 
 override lazy val properties: List[Property] = List()

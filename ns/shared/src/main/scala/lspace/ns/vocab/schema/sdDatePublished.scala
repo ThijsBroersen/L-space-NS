@@ -8,7 +8,7 @@ object sdDatePublished extends PropertyDef(
         label = "sdDatePublished",
         comment = """Indicates the date on which the current structured data was generated / published. Typically used alongside <a class="localLink" href="http://schema.org/sdPublisher">sdPublisher</a>""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@date`)
        ){
 
 override lazy val properties: List[Property] = List()

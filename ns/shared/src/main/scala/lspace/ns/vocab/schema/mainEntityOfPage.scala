@@ -8,7 +8,7 @@ object mainEntityOfPage extends PropertyDef(
         label = "mainEntityOfPage",
         comment = """Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@url`)
        ){
 
 override lazy val properties: List[Property] = List()

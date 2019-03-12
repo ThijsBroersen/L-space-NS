@@ -8,7 +8,7 @@ object address extends PropertyDef(
         label = "address",
         comment = """Physical address of the item.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

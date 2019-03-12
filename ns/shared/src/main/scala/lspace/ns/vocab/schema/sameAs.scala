@@ -8,7 +8,7 @@ object sameAs extends PropertyDef(
         label = "sameAs",
         comment = """URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`)
+        `@range` = () => List(`@string`, `@url`)
        ){
 
 override lazy val properties: List[Property] = List()

@@ -8,7 +8,7 @@ object dateCreated extends PropertyDef(
         label = "dateCreated",
         comment = """The date on which the CreativeWork was created or the item was added to a DataFeed.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@datetime`, `@date`)
        ){
 
 override lazy val properties: List[Property] = List()

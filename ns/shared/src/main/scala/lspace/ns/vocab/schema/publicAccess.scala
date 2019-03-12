@@ -8,7 +8,7 @@ object publicAccess extends PropertyDef(
         label = "publicAccess",
         comment = """A flag to signal that the <a class="localLink" href="http://schema.org/Place">Place</a> is open to public visitors.  If this property is omitted there is no assumed default boolean value""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@boolean`)
        ){
 
 override lazy val properties: List[Property] = List()

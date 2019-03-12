@@ -8,7 +8,7 @@ object datePublished extends PropertyDef(
         label = "datePublished",
         comment = """Date of first broadcast/publication.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@date`)
        ){
 
 override lazy val properties: List[Property] = List()

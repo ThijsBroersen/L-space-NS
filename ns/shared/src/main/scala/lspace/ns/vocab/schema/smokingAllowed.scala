@@ -8,7 +8,7 @@ object smokingAllowed extends PropertyDef(
         label = "smokingAllowed",
         comment = """Indicates whether it is allowed to smoke in the place, e.g. in the restaurant, hotel or hotel room.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@boolean`)
        ){
 
 override lazy val properties: List[Property] = List()

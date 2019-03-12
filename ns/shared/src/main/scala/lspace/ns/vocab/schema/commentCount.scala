@@ -8,7 +8,7 @@ object commentCount extends PropertyDef(
         label = "commentCount",
         comment = """The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@int`)
        ){
 
 override lazy val properties: List[Property] = List()

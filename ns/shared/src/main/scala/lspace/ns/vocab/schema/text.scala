@@ -8,7 +8,7 @@ object text extends PropertyDef(
         label = "text",
         comment = """The textual content of this CreativeWork.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

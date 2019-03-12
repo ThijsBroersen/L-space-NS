@@ -8,7 +8,7 @@ object telephone extends PropertyDef(
         label = "telephone",
         comment = """The telephone number.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

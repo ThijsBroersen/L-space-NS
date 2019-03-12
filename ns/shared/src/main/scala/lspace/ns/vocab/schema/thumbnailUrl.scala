@@ -8,7 +8,7 @@ object thumbnailUrl extends PropertyDef(
         label = "thumbnailUrl",
         comment = """A thumbnail image relevant to the Thing.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@url`)
        ){
 
 override lazy val properties: List[Property] = List()

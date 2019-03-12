@@ -8,7 +8,7 @@ object doorTime extends PropertyDef(
         label = "doorTime",
         comment = """The time admission will commence.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@datetime`)
        ){
 
 override lazy val properties: List[Property] = List()

@@ -8,7 +8,7 @@ object sdLicense extends PropertyDef(
         label = "sdLicense",
         comment = """A license document that applies to this structured data, typically indicated by URL.""",
         `@extends` = () => List(),
-        `@range` = () => List(CreativeWork)
+        `@range` = () => List(CreativeWork, `@url`)
        ){
 
 override lazy val properties: List[Property] = List()

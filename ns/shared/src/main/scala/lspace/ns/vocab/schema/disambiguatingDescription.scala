@@ -8,7 +8,7 @@ object disambiguatingDescription extends PropertyDef(
         label = "disambiguatingDescription",
         comment = """A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.""",
         `@extends` = () => List(description),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

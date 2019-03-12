@@ -8,7 +8,7 @@ object accessModeSufficient extends PropertyDef(
         label = "accessModeSufficient",
         comment = """A list of single or combined accessModes that are sufficient to understand all the intellectual content of a resource. Expected values include:  auditory, tactile, textual, visual.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

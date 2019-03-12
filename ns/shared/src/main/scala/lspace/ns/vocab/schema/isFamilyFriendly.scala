@@ -8,7 +8,7 @@ object isFamilyFriendly extends PropertyDef(
         label = "isFamilyFriendly",
         comment = """Indicates whether this content is family friendly.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@boolean`)
        ){
 
 override lazy val properties: List[Property] = List()

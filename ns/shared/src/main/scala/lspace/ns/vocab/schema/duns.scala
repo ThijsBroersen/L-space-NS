@@ -8,7 +8,7 @@ object duns extends PropertyDef(
         label = "duns",
         comment = """The Dun &amp; Bradstreet DUNS number for identifying an organization or business person.""",
         `@extends` = () => List(identifier),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

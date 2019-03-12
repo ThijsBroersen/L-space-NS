@@ -8,7 +8,7 @@ object license extends PropertyDef(
         label = "license",
         comment = """A license document that applies to this content, typically indicated by URL.""",
         `@extends` = () => List(),
-        `@range` = () => List(CreativeWork)
+        `@range` = () => List(CreativeWork, `@url`)
        ){
 
 override lazy val properties: List[Property] = List()

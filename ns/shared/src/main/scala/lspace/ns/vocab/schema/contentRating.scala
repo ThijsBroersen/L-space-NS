@@ -8,7 +8,7 @@ object contentRating extends PropertyDef(
         label = "contentRating",
         comment = """Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

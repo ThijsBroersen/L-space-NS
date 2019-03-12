@@ -8,7 +8,7 @@ object naics extends PropertyDef(
         label = "naics",
         comment = """The North American Industry Classification System (NAICS) code for a particular organization or business person.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

@@ -8,7 +8,7 @@ object remainingAttendeeCapacity extends PropertyDef(
         label = "remainingAttendeeCapacity",
         comment = """The number of attendee places for an event that remain unallocated.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@int`)
        ){
 
 override lazy val properties: List[Property] = List()

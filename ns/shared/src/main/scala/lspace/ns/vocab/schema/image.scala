@@ -8,7 +8,7 @@ object image extends PropertyDef(
         label = "image",
         comment = """An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a> or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@url`)
        ){
 
 override lazy val properties: List[Property] = List()

@@ -8,7 +8,7 @@ object interactivityType extends PropertyDef(
         label = "interactivityType",
         comment = """The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

@@ -8,7 +8,7 @@ object addressRegion extends PropertyDef(
         label = "addressRegion",
         comment = """The region. For example, CA.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

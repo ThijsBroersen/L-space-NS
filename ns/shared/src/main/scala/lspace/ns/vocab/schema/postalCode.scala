@@ -8,7 +8,7 @@ object postalCode extends PropertyDef(
         label = "postalCode",
         comment = """The postal code. For example, 94043.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

@@ -8,7 +8,7 @@ object logo extends PropertyDef(
         label = "logo",
         comment = """An associated logo.""",
         `@extends` = () => List(image),
-        `@range` = () => List()
+        `@range` = () => List(`@url`)
        ){
 
 override lazy val properties: List[Property] = List()

@@ -8,7 +8,7 @@ object typicalAgeRange extends PropertyDef(
         label = "typicalAgeRange",
         comment = """The typical expected age range, e.g. '7-9', '11-'.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

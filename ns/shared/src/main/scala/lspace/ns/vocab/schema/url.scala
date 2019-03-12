@@ -8,7 +8,7 @@ object url extends PropertyDef(
         label = "url",
         comment = """URL of the item.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@url`)
        ){
 
 override lazy val properties: List[Property] = List()

@@ -8,7 +8,7 @@ object material extends PropertyDef(
         label = "material",
         comment = """A material that something is made from, e.g. leather, wool, cotton, paper.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`, `@url`)
        ){
 
 override lazy val properties: List[Property] = List()

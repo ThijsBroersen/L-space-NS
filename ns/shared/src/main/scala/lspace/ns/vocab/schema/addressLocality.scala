@@ -8,7 +8,7 @@ object addressLocality extends PropertyDef(
         label = "addressLocality",
         comment = """The locality. For example, Mountain View.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()

@@ -12,7 +12,7 @@ object temporalCoverage extends PropertyDef(
 
 Open-ended date ranges can be written with ".." in place of the end date. For example, "2015-11/.." indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@datetime`, `@string`, `@url`)
        ){
 
 override lazy val properties: List[Property] = List()

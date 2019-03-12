@@ -8,7 +8,7 @@ object learningResourceType extends PropertyDef(
         label = "learningResourceType",
         comment = """The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@string`)
        ){
 
 override lazy val properties: List[Property] = List()
