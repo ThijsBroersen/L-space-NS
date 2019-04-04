@@ -88,7 +88,6 @@ case class NSService(context: String, graph: Graph) extends Api {
 
   /**
     * retrieve a single resource
-    * @param uri
     * @return
     */
   val getUri: Endpoint[IO, String] = get(paths[String]) { (paths: Seq[String]) =>
