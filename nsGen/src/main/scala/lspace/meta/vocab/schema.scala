@@ -3,6 +3,7 @@ package lspace.meta.vocab
 import lspace._
 import lspace.codec.{ActiveContext, Decoder}
 import lspace.codec.argonaut._
+import lspace.datatype.DataType
 import lspace.structure.{Graph => _, _}
 import monix.eval.Task
 
@@ -23,14 +24,15 @@ object schema {
   def genOntology(path: String, iri: String) =
     decoder
       .toOntology(iri)(ActiveContext())
-      .map { ontology =>
-        Task.gather(
-          graph
-            .nodes()
-            .filter(node => node.hasLabel(Ontology.ontology).isEmpty && node.hasLabel(Property.ontology).isEmpty)
-            .map { node =>
-              decoder.toClasstype(node.iri)(ActiveContext())
-            })
+      .flatMap { ontology =>
+        graph
+          .nodes()
+          .filter(node => node.hasLabel(Ontology.ontology).isEmpty && node.hasLabel(Property.ontology).isEmpty)
+          .mapEval { node =>
+            println(s"fetch ${node.iri}")
+            decoder.toClasstype(node.iri)(ActiveContext())
+          }
+          .toListL
       }
       .map { ontology =>
         Ontology.ontologies.all.filter(_.iri.contains("schema.org")).foreach { ontology =>
@@ -73,16 +75,22 @@ object schema {
       s"""object $label extends OntologyDef(
         iri = "${ontology.iri}",
         iris = ${ontology.iris.map(v => s""""$v"""")},
-        label = "$label",
+        label = "${ontology.label("en").getOrElse("")}",
         comment = \"\"\"${comment}\"\"\",
-        `@extends` = () => List(${ontology
+        `@extends` = () => ${ontology
         .extendedClasses()
-        .map(o => o.iris.find(_.startsWith("@") == false).head.reverse.takeWhile(c => c != '/' && c != '#').reverse)
-        .mkString(". ")})
+        .map {
+          case c if c.iri.startsWith("@") => s"`${c.iri}`"
+          case classes =>
+            classes.iri.reverse
+              .takeWhile(c => c != '/' && c != '#')
+              .reverse + ".ontology"
+        }}
        ){""" + "\n" +
-      s"""object keys ${if (ontology.extendedClasses().nonEmpty)
+      s"""object keys ${if (ontology.extendedClasses().filter(!_.iri.startsWith("@")).nonEmpty)
         "extends " + ontology
           .extendedClasses()
+          .filter(!_.iri.startsWith("@"))
           .map(
             o =>
               "lspace.ns.vocab.schema." + o.iris
@@ -104,11 +112,13 @@ object schema {
       "}\n" +
       s"""override lazy val properties: List[Property] = ${ontology
         .properties()
+        .filter(!_.iri.startsWith("@"))
         .toList
         .map(_.iris.find(_.startsWith("@") == false).head.reverse.takeWhile(c => c != '/' && c != '#').reverse)}""" + "\n" +
-      s"""trait Properties ${if (ontology.extendedClasses().nonEmpty)
+      s"""trait Properties ${if (ontology.extendedClasses().filter(!_.iri.startsWith("@")).nonEmpty)
         "extends " + ontology
           .extendedClasses()
+          .filter(!_.iri.startsWith("@"))
           .map(
             o =>
               "lspace.ns.vocab.schema." + o.iris
@@ -121,6 +131,7 @@ object schema {
       else ""}""" + "{\n" +
       ontology
         .properties()
+        .filter(!_.iri.startsWith("@"))
         .toList
         .map(_.iris.find(_.startsWith("@") == false).head.reverse.takeWhile(c => c != '/' && c != '#').reverse)
         .map { label =>
@@ -141,24 +152,42 @@ object schema {
     "package lspace.ns.vocab.schema\n" +
       "import lspace.ns.vocab.schema._\n" +
       "import lspace.Label.D._\n" +
+      "import lspace.Label.P._\n" +
       "import lspace.structure.{Property, PropertyDef}\n" +
       s"""object $label extends PropertyDef(
         iri = "${property.iri}",
         iris = ${property.iris.map(v => s""""$v"""")},
-        label = "$label",
+        label = "${property.label("en").getOrElse("")}",
         comment = \"\"\"${comment}\"\"\",
         `@extends` = () => ${property
         .extendedClasses()
-        .map(_.iris.find(_.startsWith("@") == false).head.reverse.takeWhile(c => c != '/' && c != '#').reverse)},
+        .map {
+          case c if c.iri.startsWith("@") => s"`${c.iri}`"
+          case classes =>
+            classes.iri.reverse
+              .takeWhile(c => c != '/' && c != '#')
+              .reverse + ".property"
+        }},
         `@range` = () => ${property
         .range()
-        .toList
-        .map(c =>
-          if (c.iri.startsWith("@")) "`" + c.iri + "`" else c.iri.reverse.takeWhile(c => c != '/' && c != '#').reverse)}
+        .map {
+          case c: Ontology =>
+            if (c.iri.startsWith("@")) "`" + c.iri + "`"
+            else c.iri.reverse.takeWhile(c => c != '/' && c != '#').reverse + ".ontology"
+          case c: Property =>
+            if (c.iri.startsWith("@")) "`" + c.iri + "`"
+            else c.iri.reverse.takeWhile(c => c != '/' && c != '#').reverse + ".property"
+          case c: DataType[_] =>
+            if (c.iri.startsWith("@")) "`" + c.iri + "`" else c.iri.reverse.takeWhile(c => c != '/' && c != '#').reverse
+        }}
        ){""" + "\n" +
-      s"""${if (property.extendedClasses().nonEmpty && property.extendedClasses().flatMap(_.properties()).nonEmpty)
+      s"""${if (property.extendedClasses().filter(!_.iri.startsWith("@")).nonEmpty && property
+                  .extendedClasses()
+                  .flatMap(_.properties().filter(!_.iri.startsWith("@")))
+                  .nonEmpty)
         "object keys extends " + property
           .extendedClasses()
+          .filter(!_.iri.startsWith("@"))
           .map(
             o =>
               "lspace.ns.vocab.schema." + o.iris
@@ -172,11 +201,13 @@ object schema {
       else ""}""" + "\n" +
       s"""override lazy val properties: List[Property] = ${property
         .properties()
+        .filter(!_.iri.startsWith("@"))
         .toList
         .map(_.iris.find(_.startsWith("@") == false).head.reverse.takeWhile(c => c != '/' && c != '#').reverse)}""" + "\n" +
-      s"""trait Properties ${if (property.extendedClasses().nonEmpty)
+      s"""trait Properties ${if (property.extendedClasses().filter(!_.iri.startsWith("@")).nonEmpty)
         "extends " + property
           .extendedClasses()
+          .filter(!_.iri.startsWith("@"))
           .map(
             o =>
               "lspace.ns.vocab.schema." + o.iris

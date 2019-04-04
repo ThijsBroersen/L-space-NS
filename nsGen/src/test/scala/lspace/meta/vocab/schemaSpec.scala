@@ -27,7 +27,7 @@ class schemaSpec extends AsyncWordSpec with Matchers {
           schema
             .genProperty("ns/shared/src/main/scala/lspace/ns/vocab/schema/", "https://schema.org/memberOf")
         ))
-        .map(_ shouldBe true)
+        .map(_.nonEmpty shouldBe true)
         .runToFuture(monix.execution.Scheduler.global)
     }
     "write @ids/sameAs" in {
