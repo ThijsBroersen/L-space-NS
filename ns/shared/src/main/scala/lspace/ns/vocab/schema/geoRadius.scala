@@ -2,18 +2,16 @@ package lspace.ns.vocab.schema
 import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
-import lspace.structure.{Property, PropertyDef}
-object geoRadius
-    extends PropertyDef(
-      iri = "http://schema.org/geoRadius",
-      iris = Set("http://schema.org/geoRadius"),
-      label = "geoRadius",
-      comment =
-        """Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation).""",
-      `@extends` = () => List(),
-      `@range` = () => List(Number.ontology, Distance.ontology, Text.ontology)
-    ) {
+import lspace.structure.{Property => LProperty, PropertyDef}
+object geoRadius extends PropertyDef(
+        iri = "http://schema.org/geoRadius",
+        iris = Set("http://schema.org/geoRadius"),
+        label = "geoRadius",
+        comment = """Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation).""",
+        `@extends` = () => List(),
+        `@range` = () => List(Number.ontology, Distance.ontology, Text.ontology)
+       ){
 
-  override lazy val properties: List[Property] = List()
-  trait Properties
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

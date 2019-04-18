@@ -1,13 +1,11 @@
 package lspace.ns.vocab.schema
 import lspace.ns.vocab.schema._
-import lspace.structure.{OntologyDef, Property}
-object PaymentMethod
-    extends OntologyDef(
-      iri = "http://schema.org/PaymentMethod",
-      iris = Set("http://schema.org/PaymentMethod"),
-      label = "PaymentMethod",
-      comment =
-        """A payment method is a standardized procedure for transferring the monetary amount for a purchase. Payment methods are characterized by the legal and technical structures used, and by the organization or group carrying out the transaction.<br/><br/>
+import lspace.structure.{Property => LProperty, OntologyDef}
+object PaymentMethod extends OntologyDef(
+        iri = "http://schema.org/PaymentMethod",
+        iris = Set("http://schema.org/PaymentMethod"),
+        label = "PaymentMethod",
+        comment = """A payment method is a standardized procedure for transferring the monetary amount for a purchase. Payment methods are characterized by the legal and technical structures used, and by the organization or group carrying out the transaction.<br/><br/>
 
 Commonly used values:<br/><br/>
 
@@ -23,9 +21,13 @@ Commonly used values:<br/><br/>
 <li>http://purl.org/goodrelations/v1#PaySwarm</li>
 </ul>
 """,
-      `@extends` = () => List(Enumeration.ontology)
-    ) {
-  object keys extends lspace.ns.vocab.schema.Enumeration.Properties {}
-  override lazy val properties: List[Property] = List()
-  trait Properties extends lspace.ns.vocab.schema.Enumeration.Properties {}
+        `@extends` = () => List(Enumeration.ontology)
+       ){
+object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Enumeration.Properties{
+
+}
 }

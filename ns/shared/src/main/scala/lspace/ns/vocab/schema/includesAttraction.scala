@@ -2,17 +2,16 @@ package lspace.ns.vocab.schema
 import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
-import lspace.structure.{Property, PropertyDef}
-object includesAttraction
-    extends PropertyDef(
-      iri = "http://schema.org/includesAttraction",
-      iris = Set("http://schema.org/includesAttraction"),
-      label = "includesAttraction",
-      comment = """Attraction located at destination.""",
-      `@extends` = () => List(),
-      `@range` = () => List()
-    ) {
+import lspace.structure.{Property => LProperty, PropertyDef}
+object includesAttraction extends PropertyDef(
+        iri = "http://schema.org/includesAttraction",
+        iris = Set("http://schema.org/includesAttraction"),
+        label = "includesAttraction",
+        comment = """Attraction located at destination.""",
+        `@extends` = () => List(),
+        `@range` = () => List()
+       ){
 
-  override lazy val properties: List[Property] = List()
-  trait Properties
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }
