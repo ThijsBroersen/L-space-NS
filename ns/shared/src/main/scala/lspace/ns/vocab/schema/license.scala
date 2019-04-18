@@ -3,15 +3,16 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property, PropertyDef}
-object license extends PropertyDef(
-        iri = "https://schema.org/license",
-        iris = Set("https://schema.org/license"),
-        label = "license",
-        comment = """A license document that applies to this content, typically indicated by URL.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@url`, CreativeWork.ontology)
-       ){
+object license
+    extends PropertyDef(
+      iri = "http://schema.org/license",
+      iris = Set("http://schema.org/license"),
+      label = "license",
+      comment = """A license document that applies to this content, typically indicated by URL.""",
+      `@extends` = () => List(),
+      `@range` = () => List(CreativeWork.ontology, URL.ontology)
+    ) {
 
-override lazy val properties: List[Property] = List()
-trait Properties 
+  override lazy val properties: List[Property] = List()
+  trait Properties
 }

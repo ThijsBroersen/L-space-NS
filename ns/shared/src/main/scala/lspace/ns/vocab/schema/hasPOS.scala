@@ -3,15 +3,16 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property, PropertyDef}
-object hasPOS extends PropertyDef(
-        iri = "https://schema.org/hasPOS",
-        iris = Set("https://schema.org/hasPOS"),
-        label = "hasPOS",
-        comment = """Points-of-Sales operated by the organization or person.""",
-        `@extends` = () => List(),
-        `@range` = () => List()
-       ){
+object hasPOS
+    extends PropertyDef(
+      iri = "http://schema.org/hasPOS",
+      iris = Set("http://schema.org/hasPOS"),
+      label = "hasPOS",
+      comment = """Points-of-Sales operated by the organization or person.""",
+      `@extends` = () => List(),
+      `@range` = () => List(Place.ontology)
+    ) {
 
-override lazy val properties: List[Property] = List()
-trait Properties 
+  override lazy val properties: List[Property] = List()
+  trait Properties
 }

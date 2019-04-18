@@ -3,15 +3,16 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property, PropertyDef}
-object performerIn extends PropertyDef(
-        iri = "https://schema.org/performerIn",
-        iris = Set("https://schema.org/performerIn"),
-        label = "performerIn",
-        comment = """Event that this person is a performer or participant in.""",
-        `@extends` = () => List(),
-        `@range` = () => List()
-       ){
+object performerIn
+    extends PropertyDef(
+      iri = "http://schema.org/performerIn",
+      iris = Set("http://schema.org/performerIn"),
+      label = "performerIn",
+      comment = """Event that this person is a performer or participant in.""",
+      `@extends` = () => List(),
+      `@range` = () => List(Event.ontology)
+    ) {
 
-override lazy val properties: List[Property] = List()
-trait Properties 
+  override lazy val properties: List[Property] = List()
+  trait Properties
 }

@@ -3,15 +3,16 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property, PropertyDef}
-object publisherImprint extends PropertyDef(
-        iri = "https://schema.org/publisherImprint",
-        iris = Set("https://schema.org/publisherImprint"),
-        label = "publisherImprint",
-        comment = """The publishing division which published the comic.""",
-        `@extends` = () => List(),
-        `@range` = () => List()
-       ){
+object publisherImprint
+    extends PropertyDef(
+      iri = "http://schema.org/publisherImprint",
+      iris = Set("http://schema.org/publisherImprint"),
+      label = "publisherImprint",
+      comment = """The publishing division which published the comic.""",
+      `@extends` = () => List(),
+      `@range` = () => List(Organization.ontology)
+    ) {
 
-override lazy val properties: List[Property] = List()
-trait Properties 
+  override lazy val properties: List[Property] = List()
+  trait Properties
 }

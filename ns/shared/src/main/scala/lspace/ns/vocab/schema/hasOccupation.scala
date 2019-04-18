@@ -3,15 +3,16 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property, PropertyDef}
-object hasOccupation extends PropertyDef(
-        iri = "https://schema.org/hasOccupation",
-        iris = Set("https://schema.org/hasOccupation"),
-        label = "hasOccupation",
-        comment = """The Person's occupation. For past professions, use Role for expressing dates.""",
-        `@extends` = () => List(),
-        `@range` = () => List()
-       ){
+object hasOccupation
+    extends PropertyDef(
+      iri = "http://schema.org/hasOccupation",
+      iris = Set("http://schema.org/hasOccupation"),
+      label = "hasOccupation",
+      comment = """The Person's occupation. For past professions, use Role for expressing dates.""",
+      `@extends` = () => List(),
+      `@range` = () => List(Occupation.ontology)
+    ) {
 
-override lazy val properties: List[Property] = List()
-trait Properties 
+  override lazy val properties: List[Property] = List()
+  trait Properties
 }

@@ -3,15 +3,16 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property, PropertyDef}
-object honorificPrefix extends PropertyDef(
-        iri = "https://schema.org/honorificPrefix",
-        iris = Set("https://schema.org/honorificPrefix"),
-        label = "honorificPrefix",
-        comment = """An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@string`)
-       ){
+object honorificPrefix
+    extends PropertyDef(
+      iri = "http://schema.org/honorificPrefix",
+      iris = Set("http://schema.org/honorificPrefix"),
+      label = "honorificPrefix",
+      comment = """An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.""",
+      `@extends` = () => List(),
+      `@range` = () => List(Text.ontology)
+    ) {
 
-override lazy val properties: List[Property] = List()
-trait Properties 
+  override lazy val properties: List[Property] = List()
+  trait Properties
 }

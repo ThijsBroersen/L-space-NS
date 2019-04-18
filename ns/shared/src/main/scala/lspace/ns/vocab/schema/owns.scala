@@ -3,15 +3,16 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property, PropertyDef}
-object owns extends PropertyDef(
-        iri = "https://schema.org/owns",
-        iris = Set("https://schema.org/owns"),
-        label = "owns",
-        comment = """Products owned by the organization or person.""",
-        `@extends` = () => List(),
-        `@range` = () => List()
-       ){
+object owns
+    extends PropertyDef(
+      iri = "http://schema.org/owns",
+      iris = Set("http://schema.org/owns"),
+      label = "owns",
+      comment = """Products owned by the organization or person.""",
+      `@extends` = () => List(),
+      `@range` = () => List(Product.ontology, OwnershipInfo.ontology)
+    ) {
 
-override lazy val properties: List[Property] = List()
-trait Properties 
+  override lazy val properties: List[Property] = List()
+  trait Properties
 }

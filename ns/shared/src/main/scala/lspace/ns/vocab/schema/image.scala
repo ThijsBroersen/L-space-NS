@@ -3,15 +3,17 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property, PropertyDef}
-object image extends PropertyDef(
-        iri = "https://schema.org/image",
-        iris = Set("https://schema.org/image"),
-        label = "image",
-        comment = """An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a> or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@url`)
-       ){
+object image
+    extends PropertyDef(
+      iri = "http://schema.org/image",
+      iris = Set("http://schema.org/image"),
+      label = "image",
+      comment =
+        """An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a> or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.""",
+      `@extends` = () => List(),
+      `@range` = () => List(ImageObject.ontology, URL.ontology)
+    ) {
 
-override lazy val properties: List[Property] = List()
-trait Properties 
+  override lazy val properties: List[Property] = List()
+  trait Properties
 }
