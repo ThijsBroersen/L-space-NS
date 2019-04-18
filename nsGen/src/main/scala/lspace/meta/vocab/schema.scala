@@ -1,7 +1,7 @@
 package lspace.meta.vocab
 
 import lspace._
-import lspace.codec.{ActiveContext}
+import lspace.codec.ActiveContext
 import lspace.codec.argonaut._
 import lspace.codec.jsonld.Decoder
 import lspace.datatype.DataType
@@ -94,7 +94,7 @@ object schema {
 //      .getOrElse(throw new Exception(s"no 'en' label present for ${ontology.iri} ${ontology.label()}"))
     "package lspace.ns.vocab.schema\n" +
       "import lspace.ns.vocab.schema._\n" +
-      "import lspace.structure.{Property, OntologyDef}\n" +
+      "import lspace.structure.{Property => LProperty, OntologyDef}\n" +
       s"""object $label extends OntologyDef(
         iri = "${ontology.iri}",
         iris = ${ontology.iris.map(v => s""""$v"""")},
@@ -156,7 +156,7 @@ object schema {
         }
         .mkString("\n") +
       "}\n" +
-      s"""override lazy val properties: List[Property] = ${ontology
+      s"""override lazy val properties: List[LProperty] = ${ontology
         .properties()
         .diff(inheritedProperties.toSet)
         .filter(!_.iri.startsWith("@"))
@@ -229,7 +229,7 @@ object schema {
       "import lspace.ns.vocab.schema._\n" +
       "import lspace.Label.D._\n" +
       "import lspace.Label.P._\n" +
-      "import lspace.structure.{Property, PropertyDef}\n" +
+      "import lspace.structure.{Property => LProperty, PropertyDef}\n" +
       s"""object $label extends PropertyDef(
         iri = "${property.iri}",
         iris = ${property.iris.map(v => s""""$v"""")},
@@ -281,7 +281,7 @@ object schema {
           .map(_ + ".Properties")
           .mkString(" with ")
       else ""}""" + "\n" +
-      s"""override lazy val properties: List[Property] = ${property
+      s"""override lazy val properties: List[LProperty] = ${property
         .properties()
         .filter(!_.iri.startsWith("@"))
         .toList
