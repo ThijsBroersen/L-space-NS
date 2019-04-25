@@ -3,15 +3,16 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property => LProperty, PropertyDef}
-object publishedBy extends PropertyDef(
-        iri = "http://schema.org/publishedBy",
-        iris = Set("http://schema.org/publishedBy"),
-        label = "publishedBy",
-        comment = """An agent associated with the publication event.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology, Person.ontology)
-       ){
+object publishedBy
+    extends PropertyDef(
+      iri = "http://schema.org/publishedBy",
+      iris = Set("http://schema.org/publishedBy"),
+      label = "publishedBy",
+      comment = """An agent associated with the publication event.""",
+      `@extends` = () => List(),
+      `@range` = () => List(Organization.ontology, Person.ontology)
+    ) {
 
-override lazy val properties: List[LProperty] = List()
-trait Properties 
+  override lazy val properties: List[LProperty] = List()
+  trait Properties
 }

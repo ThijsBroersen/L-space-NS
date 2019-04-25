@@ -3,15 +3,17 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property => LProperty, PropertyDef}
-object signOrSymptom extends PropertyDef(
-        iri = "http://schema.org/signOrSymptom",
-        iris = Set("http://schema.org/signOrSymptom"),
-        label = "signOrSymptom",
-        comment = """A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MedicalSignOrSymptom.ontology)
-       ){
+object signOrSymptom
+    extends PropertyDef(
+      iri = "http://schema.org/signOrSymptom",
+      iris = Set("http://schema.org/signOrSymptom"),
+      label = "signOrSymptom",
+      comment =
+        """A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition.""",
+      `@extends` = () => List(),
+      `@range` = () => List(MedicalSignOrSymptom.ontology)
+    ) {
 
-override lazy val properties: List[LProperty] = List()
-trait Properties 
+  override lazy val properties: List[LProperty] = List()
+  trait Properties
 }

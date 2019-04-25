@@ -3,15 +3,16 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property => LProperty, PropertyDef}
-object merchant extends PropertyDef(
-        iri = "http://schema.org/merchant",
-        iris = Set("http://schema.org/merchant"),
-        label = "merchant",
-        comment = """'merchant' is an out-dated term for 'seller'.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology, Organization.ontology)
-       ){
+object merchant
+    extends PropertyDef(
+      iri = "http://schema.org/merchant",
+      iris = Set("http://schema.org/merchant"),
+      label = "merchant",
+      comment = """'merchant' is an out-dated term for 'seller'.""",
+      `@extends` = () => List(),
+      `@range` = () => List(Person.ontology, Organization.ontology)
+    ) {
 
-override lazy val properties: List[LProperty] = List()
-trait Properties 
+  override lazy val properties: List[LProperty] = List()
+  trait Properties
 }

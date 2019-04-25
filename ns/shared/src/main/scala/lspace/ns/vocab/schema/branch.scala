@@ -3,15 +3,17 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property => LProperty, PropertyDef}
-object branch extends PropertyDef(
-        iri = "http://schema.org/branch",
-        iris = Set("http://schema.org/branch"),
-        label = "branch",
-        comment = """The branches that delineate from the nerve bundle. Not to be confused with <a class="localLink" href="http://schema.org/branchOf">branchOf</a>.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AnatomicalStructure.ontology)
-       ){
+object branch
+    extends PropertyDef(
+      iri = "http://schema.org/branch",
+      iris = Set("http://schema.org/branch"),
+      label = "branch",
+      comment =
+        """The branches that delineate from the nerve bundle. Not to be confused with <a class="localLink" href="http://schema.org/branchOf">branchOf</a>.""",
+      `@extends` = () => List(),
+      `@range` = () => List(AnatomicalStructure.ontology)
+    ) {
 
-override lazy val properties: List[LProperty] = List()
-trait Properties 
+  override lazy val properties: List[LProperty] = List()
+  trait Properties
 }

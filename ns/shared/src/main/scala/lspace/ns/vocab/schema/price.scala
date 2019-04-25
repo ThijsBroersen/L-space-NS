@@ -3,11 +3,13 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property => LProperty, PropertyDef}
-object price extends PropertyDef(
-        iri = "http://schema.org/price",
-        iris = Set("http://schema.org/price"),
-        label = "price",
-        comment = """The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.<br/><br/>
+object price
+    extends PropertyDef(
+      iri = "http://schema.org/price",
+      iris = Set("http://schema.org/price"),
+      label = "price",
+      comment =
+        """The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.<br/><br/>
 
 Usage guidelines:<br/><br/>
 
@@ -18,10 +20,10 @@ Usage guidelines:<br/><br/>
 <li>Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.</li>
 </ul>
 """,
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, Number.ontology)
-       ){
+      `@extends` = () => List(),
+      `@range` = () => List(Text.ontology, Number.ontology)
+    ) {
 
-override lazy val properties: List[LProperty] = List()
-trait Properties 
+  override lazy val properties: List[LProperty] = List()
+  trait Properties
 }

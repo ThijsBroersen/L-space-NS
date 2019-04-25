@@ -3,15 +3,16 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property => LProperty, PropertyDef}
-object dissolutionDate extends PropertyDef(
-        iri = "http://schema.org/dissolutionDate",
-        iris = Set("http://schema.org/dissolutionDate"),
-        label = "dissolutionDate",
-        comment = """The date that this organization was dissolved.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@date`)
-       ){
+object dissolutionDate
+    extends PropertyDef(
+      iri = "http://schema.org/dissolutionDate",
+      iris = Set("http://schema.org/dissolutionDate"),
+      label = "dissolutionDate",
+      comment = """The date that this organization was dissolved.""",
+      `@extends` = () => List(),
+      `@range` = () => List(`@date`)
+    ) {
 
-override lazy val properties: List[LProperty] = List()
-trait Properties 
+  override lazy val properties: List[LProperty] = List()
+  trait Properties
 }

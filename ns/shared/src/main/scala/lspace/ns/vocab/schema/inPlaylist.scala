@@ -3,15 +3,16 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property => LProperty, PropertyDef}
-object inPlaylist extends PropertyDef(
-        iri = "http://schema.org/inPlaylist",
-        iris = Set("http://schema.org/inPlaylist"),
-        label = "inPlaylist",
-        comment = """The playlist to which this recording belongs.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MusicPlaylist.ontology)
-       ){
+object inPlaylist
+    extends PropertyDef(
+      iri = "http://schema.org/inPlaylist",
+      iris = Set("http://schema.org/inPlaylist"),
+      label = "inPlaylist",
+      comment = """The playlist to which this recording belongs.""",
+      `@extends` = () => List(),
+      `@range` = () => List(MusicPlaylist.ontology)
+    ) {
 
-override lazy val properties: List[LProperty] = List()
-trait Properties 
+  override lazy val properties: List[LProperty] = List()
+  trait Properties
 }

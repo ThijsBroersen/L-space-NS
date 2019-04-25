@@ -53,6 +53,7 @@ object NSService extends TwitterServer {
   import lspace.services.codecs.Application
   import lspace.services.codecs.Encode._
   import lspace.encode.EncodeJsonLD._
+  implicit val activeContext: ActiveContext = ActiveContext()
 
   lazy val api: Service[Request, Response] = Bootstrap
     .configure(enableMethodNotAllowed = true, enableUnsupportedMediaType = true)
@@ -77,9 +78,9 @@ object NSService extends TwitterServer {
 }
 case class NSService(context: String, graph: Graph) extends Api {
   implicit val nencoder: lspace.codec.NativeTypeEncoder.Aux[argonaut.Json] = lspace.codec.argonaut.NativeTypeEncoder
-  implicit val encoder                                                     = lspace.codec.Encoder(nencoder)
+  implicit val encoder                                                     = lspace.codec.jsonld.Encoder(nencoder)
   implicit val ndecoder                                                    = lspace.codec.argonaut.NativeTypeDecoder
-  implicit val decoder                                                     = lspace.codec.Decoder(graph)(ndecoder)
+  implicit val decoder                                                     = lspace.codec.jsonld.Decoder(graph)(ndecoder)
 
   val headersAll = root.map(_.headerMap.toMap)
   val cache      = mutable.HashMap[String, mutable.HashMap[String, String]]()
@@ -103,7 +104,7 @@ case class NSService(context: String, graph: Graph) extends Api {
             case property: Property    => encoder.fromProperty(property)(ActiveContext())
             case datatype: DataType[_] => encoder.fromDataType(datatype)(ActiveContext())
           }
-          .map(_.asInstanceOf[JsonObjectInProgress[argonaut.Json]].withContext.asInstanceOf[encoder.Json].noSpaces)
+          .map(_.withContext.asInstanceOf[encoder.Json].noSpaces)
           .map { json =>
             cache += (context + path)                                                                -> (cache
               .getOrElse(context + path, mutable.HashMap[String, String]()) += "application/ld+json" -> json)
