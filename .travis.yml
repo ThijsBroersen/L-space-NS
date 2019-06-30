@@ -13,41 +13,41 @@ stages:
 jobs:
   include:
     - stage: test
-      scala: 2.11.12
-      install:
-        - npm install jsdom
-      script: sbt ++$TRAVIS_SCALA_VERSION test
-      cache:
-        directories:
-          - $HOME/.ivy2/cache
-          - $HOME/.sbt
-          - $HOME/.coursier
-          - node_modules
-    - scala: 2.12.8
-      install:
-        - npm install jsdom
-      script: sbt ++$TRAVIS_SCALA_VERSION test
-      cache:
-        directories:
-          - $HOME/.ivy2/cache
-          - $HOME/.sbt
-          - $HOME/.coursier
-          - node_modules
-    - stage: test coverage
-      name: "Publish to Codecov"
+#      scala: 2.11.12
+#      install:
+#        - npm install jsdom
+#      script: sbt ++$TRAVIS_SCALA_VERSION test
+#      cache:
+#        directories:
+#          - $HOME/.ivy2/cache
+#          - $HOME/.sbt
+#          - $HOME/.coursier
+#          - node_modules
       scala: 2.12.8
       install:
         - npm install jsdom
-      script:
-        - sbt ++$TRAVIS_SCALA_VERSION clean coverage test
-        - sbt ++$TRAVIS_SCALA_VERSION coverageReport coverageAggregate
-      after_success:
-        - bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN
+      script: sbt ++$TRAVIS_SCALA_VERSION test
       cache:
         directories:
           - $HOME/.ivy2/cache
           - $HOME/.sbt
           - $HOME/.coursier
+          - node_modules
+#    - stage: test coverage
+#      name: "Publish to Codecov"
+#      scala: 2.12.8
+#      install:
+#        - npm install jsdom
+#      script:
+#        - sbt ++$TRAVIS_SCALA_VERSION clean coverage test
+#        - sbt ++$TRAVIS_SCALA_VERSION coverageReport coverageAggregate
+#      after_success:
+#        - bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN
+#      cache:
+#        directories:
+#          - $HOME/.ivy2/cache
+#          - $HOME/.sbt
+#          - $HOME/.coursier
     - stage: publish pages
       name: "Publish to GitHub"
       scala: 2.12.8
