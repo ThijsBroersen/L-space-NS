@@ -3,16 +3,12 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property => LProperty, PropertyDef}
-object originatesFrom
-    extends PropertyDef(
-      iri = "http://schema.org/originatesFrom",
-      iris = Set("http://schema.org/originatesFrom"),
-      label = "originatesFrom",
-      comment = """The vasculature the lymphatic structure originates, or afferents, from.""",
-      `@extends` = () => List(),
-      `@range` = () => List(Vessel.ontology)
-    ) {
-
-  override lazy val properties: List[LProperty] = List()
-  trait Properties
+object originatesFrom extends PropertyDef(
+        iri = "http://schema.org/originatesFrom",
+        iris = Set("http://schema.org/originatesFrom"),
+        label = "originatesFrom",
+        comment = """The vasculature the lymphatic structure originates, or afferents, from.""",
+        `@extends` = () => List(),
+        `@range` = () => List(Vessel.ontology)
+       ){
 }

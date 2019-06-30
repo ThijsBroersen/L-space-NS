@@ -1,13 +1,11 @@
 package lspace.ns.vocab.schema
 import lspace.ns.vocab.schema._
 import lspace.structure.{Property => LProperty, OntologyDef}
-object RegisterAction
-    extends OntologyDef(
-      iri = "http://schema.org/RegisterAction",
-      iris = Set("http://schema.org/RegisterAction"),
-      label = "RegisterAction",
-      comment =
-        """The act of registering to be a user of a service, product or web page.<br/><br/>
+object RegisterAction extends OntologyDef(
+        iri = "http://schema.org/RegisterAction",
+        iris = Set("http://schema.org/RegisterAction"),
+        label = "RegisterAction",
+        comment = """The act of registering to be a user of a service, product or web page.<br/><br/>
 
 Related actions:<br/><br/>
 
@@ -17,9 +15,6 @@ Related actions:<br/><br/>
 <li><a class="localLink" href="http://schema.org/SubscribeAction">SubscribeAction</a>: Unlike SubscribeAction, RegisterAction doesn't imply that the agent is expecting updates from the object.</li>
 </ul>
 """,
-      `@extends` = () => List(InteractAction.ontology)
-    ) {
-  object keys extends lspace.ns.vocab.schema.InteractAction.Properties {}
-  override lazy val properties: List[LProperty] = List()
-  trait Properties extends lspace.ns.vocab.schema.InteractAction.Properties {}
+        `@extends` = () => List(InteractAction.ontology)
+       ){
 }

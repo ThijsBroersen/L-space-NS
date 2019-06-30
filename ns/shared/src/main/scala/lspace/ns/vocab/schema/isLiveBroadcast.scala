@@ -3,16 +3,12 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property => LProperty, PropertyDef}
-object isLiveBroadcast
-    extends PropertyDef(
-      iri = "http://schema.org/isLiveBroadcast",
-      iris = Set("http://schema.org/isLiveBroadcast"),
-      label = "isLiveBroadcast",
-      comment = """True is the broadcast is of a live event.""",
-      `@extends` = () => List(),
-      `@range` = () => List(`@boolean`)
-    ) {
-
-  override lazy val properties: List[LProperty] = List()
-  trait Properties
+object isLiveBroadcast extends PropertyDef(
+        iri = "http://schema.org/isLiveBroadcast",
+        iris = Set("http://schema.org/isLiveBroadcast"),
+        label = "isLiveBroadcast",
+        comment = """True is the broadcast is of a live event.""",
+        `@extends` = () => List(),
+        `@range` = () => List(`@boolean`)
+       ){
 }

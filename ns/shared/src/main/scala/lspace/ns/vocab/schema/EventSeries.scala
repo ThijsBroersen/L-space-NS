@@ -1,13 +1,11 @@
 package lspace.ns.vocab.schema
 import lspace.ns.vocab.schema._
 import lspace.structure.{Property => LProperty, OntologyDef}
-object EventSeries
-    extends OntologyDef(
-      iri = "http://schema.org/EventSeries",
-      iris = Set("http://schema.org/EventSeries"),
-      label = "EventSeries",
-      comment =
-        """A series of <a class="localLink" href="http://schema.org/Event">Event</a>s. Included events can relate with the series using the <a class="localLink" href="http://schema.org/superEvent">superEvent</a> property.<br/><br/>
+object EventSeries extends OntologyDef(
+        iri = "http://schema.org/EventSeries",
+        iris = Set("http://schema.org/EventSeries"),
+        label = "EventSeries",
+        comment = """A series of <a class="localLink" href="http://schema.org/Event">Event</a>s. Included events can relate with the series using the <a class="localLink" href="http://schema.org/superEvent">superEvent</a> property.<br/><br/>
 
 An EventSeries is a collection of events that share some unifying characteristic. For example, "The Olympic Games" is a series, which
 is repeated regularly. The "2012 London Olympics" can be presented both as an <a class="localLink" href="http://schema.org/Event">Event</a> in the series "Olympic Games", and as an
@@ -20,9 +18,6 @@ EventSeries has been defined as a kind of Event to make it easy for publishers t
 worrying about which kinds of series are really event-like enough to call an Event. In general an EventSeries
 may seem more Event-like when the period of time is compact and when aspects such as location are fixed, but
 it may also sometimes prove useful to describe a longer-term series as an Event.""",
-      `@extends` = () => List(Event.ontology, Series.ontology)
-    ) {
-  object keys extends lspace.ns.vocab.schema.Event.Properties with lspace.ns.vocab.schema.Series.Properties {}
-  override lazy val properties: List[LProperty] = List()
-  trait Properties extends lspace.ns.vocab.schema.Event.Properties with lspace.ns.vocab.schema.Series.Properties {}
+        `@extends` = () => List(Event.ontology, Series.ontology)
+       ){
 }

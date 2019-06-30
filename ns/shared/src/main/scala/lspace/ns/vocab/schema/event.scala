@@ -3,16 +3,12 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property => LProperty, PropertyDef}
-object event
-    extends PropertyDef(
-      iri = "http://schema.org/event",
-      iris = Set("http://schema.org/event"),
-      label = "event",
-      comment = """Upcoming or past event associated with this place, organization, or action.""",
-      `@extends` = () => List(),
-      `@range` = () => List(Event.ontology)
-    ) {
-
-  override lazy val properties: List[LProperty] = List()
-  trait Properties
+object event extends PropertyDef(
+        iri = "http://schema.org/event",
+        iris = Set("http://schema.org/event"),
+        label = "event",
+        comment = """Upcoming or past event associated with this place, organization, or action.""",
+        `@extends` = () => List(),
+        `@range` = () => List(Event.ontology)
+       ){
 }

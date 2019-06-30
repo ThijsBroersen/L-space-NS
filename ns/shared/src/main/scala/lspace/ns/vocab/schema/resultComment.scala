@@ -3,16 +3,12 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property => LProperty, PropertyDef}
-object resultComment
-    extends PropertyDef(
-      iri = "http://schema.org/resultComment",
-      iris = Set("http://schema.org/resultComment"),
-      label = "resultComment",
-      comment = """A sub property of result. The Comment created or sent as a result of this action.""",
-      `@extends` = () => List(result.property),
-      `@range` = () => List(Comment.ontology)
-    ) {
-
-  override lazy val properties: List[LProperty] = List()
-  trait Properties extends lspace.ns.vocab.schema.result.Properties
+object resultComment extends PropertyDef(
+        iri = "http://schema.org/resultComment",
+        iris = Set("http://schema.org/resultComment"),
+        label = "resultComment",
+        comment = """A sub property of result. The Comment created or sent as a result of this action.""",
+        `@extends` = () => List(result.property),
+        `@range` = () => List(Comment.ontology)
+       ){
 }

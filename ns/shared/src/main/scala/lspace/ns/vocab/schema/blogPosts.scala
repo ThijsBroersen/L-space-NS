@@ -3,16 +3,12 @@ import lspace.ns.vocab.schema._
 import lspace.Label.D._
 import lspace.Label.P._
 import lspace.structure.{Property => LProperty, PropertyDef}
-object blogPosts
-    extends PropertyDef(
-      iri = "http://schema.org/blogPosts",
-      iris = Set("http://schema.org/blogPosts"),
-      label = "blogPosts",
-      comment = """The postings that are part of this blog.""",
-      `@extends` = () => List(),
-      `@range` = () => List(BlogPosting.ontology)
-    ) {
-
-  override lazy val properties: List[LProperty] = List()
-  trait Properties
+object blogPosts extends PropertyDef(
+        iri = "http://schema.org/blogPosts",
+        iris = Set("http://schema.org/blogPosts"),
+        label = "blogPosts",
+        comment = """The postings that are part of this blog.""",
+        `@extends` = () => List(),
+        `@range` = () => List(BlogPosting.ontology)
+       ){
 }
