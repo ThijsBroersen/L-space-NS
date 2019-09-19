@@ -3,8 +3,8 @@ import org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 
 // Versions
 object Version {
-  val scala  = "2.12.8"
-  val lspace = "0.6.0.12"
+  val scala  = "2.12.10"
+  val lspace = "0.6.1"
 }
 
 // Libraries
@@ -12,8 +12,9 @@ object Library {
   val lspaceClient        = Def.setting("eu.l-space" %%% "lspace-client" % Version.lspace)
   val lspaceParseArgonaut = Def.setting("eu.l-space" %%% "lspace-parse-argonaut" % Version.lspace)
   val lspaceServices      = "eu.l-space" %% "lspace-services" % Version.lspace
+  val twitterServer       = "com.twitter" %% "twitter-server" % "19.8.0"
 
-  val scalaTest = Def.setting("org.scalatest" %%% "scalatest" % "3.0.8" % "test")
+  val scalaTest = Def.setting("org.scalatest" %%% "scalatest" % "3.1.0-RC2" % "test")
 }
 
 object Dependencies {
@@ -30,9 +31,10 @@ object Dependencies {
       Seq(lspaceServices,
           lspaceClient.value,
           lspaceParseArgonaut.value,
-          "org.scalatest" %% "scalatest" % "3.0.8" % "test"))
+          twitterServer,
+          "org.scalatest" %% "scalatest" % "3.1.0-RC2" % "test"))
 
   val nsGenDeps =
     Def.setting(
-      Seq(lspaceParseArgonaut.value, Def.setting("org.scalameta" %%% "scalameta" % "4.2.0").value, scalaTest.value))
+      Seq(lspaceParseArgonaut.value, Def.setting("org.scalameta" %%% "scalameta" % "4.2.3").value, scalaTest.value))
 }
