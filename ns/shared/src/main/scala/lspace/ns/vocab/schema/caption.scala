@@ -11,4 +11,7 @@ object caption extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Text.ontology, MediaObject.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

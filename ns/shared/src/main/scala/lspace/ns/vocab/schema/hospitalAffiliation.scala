@@ -11,4 +11,7 @@ object hospitalAffiliation extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Hospital.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

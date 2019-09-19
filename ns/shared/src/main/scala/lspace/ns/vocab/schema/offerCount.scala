@@ -9,6 +9,9 @@ object offerCount extends PropertyDef(
         label = "offerCount",
         comment = """The number of offers for the product.""",
         `@extends` = () => List(),
-        `@range` = () => List(Integer.ontology)
+        `@range` = () => List(`@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

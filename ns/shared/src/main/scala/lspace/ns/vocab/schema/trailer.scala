@@ -11,4 +11,7 @@ object trailer extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(VideoObject.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

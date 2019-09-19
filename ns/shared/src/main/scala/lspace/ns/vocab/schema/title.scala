@@ -9,6 +9,9 @@ object title extends PropertyDef(
         label = "title",
         comment = """The title of the job.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -8,4 +8,11 @@ object MedicalTestPanel extends OntologyDef(
         comment = """Any collection of tests commonly ordered together.""",
         `@extends` = () => List(MedicalTest.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalTest.Properties{
+lazy val subTest = lspace.ns.vocab.schema.subTest.property
+}
+override lazy val properties: List[LProperty] = List(subTest)
+trait Properties extends lspace.ns.vocab.schema.MedicalTest.Properties{
+lazy val subTest = lspace.ns.vocab.schema.subTest.property
+}
 }

@@ -8,4 +8,13 @@ object MoneyTransfer extends OntologyDef(
         comment = """The act of transferring money from one place to another place. This may occur electronically or physically.""",
         `@extends` = () => List(TransferAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.TransferAction.Properties{
+lazy val amount = lspace.ns.vocab.schema.amount.property
+lazy val beneficiaryBank = lspace.ns.vocab.schema.beneficiaryBank.property
+}
+override lazy val properties: List[LProperty] = List(amount, beneficiaryBank)
+trait Properties extends lspace.ns.vocab.schema.TransferAction.Properties{
+lazy val amount = lspace.ns.vocab.schema.amount.property
+lazy val beneficiaryBank = lspace.ns.vocab.schema.beneficiaryBank.property
+}
 }

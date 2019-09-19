@@ -11,4 +11,7 @@ object legislationConsolidates extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Legislation.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

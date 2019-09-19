@@ -11,4 +11,7 @@ object itemCondition extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(OfferItemCondition.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

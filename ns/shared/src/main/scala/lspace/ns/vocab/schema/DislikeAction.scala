@@ -8,4 +8,11 @@ object DislikeAction extends OntologyDef(
         comment = """The act of expressing a negative sentiment about the object. An agent dislikes an object (a proposition, topic or theme) with participants.""",
         `@extends` = () => List(ReactAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.ReactAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.ReactAction.Properties{
+
+}
 }

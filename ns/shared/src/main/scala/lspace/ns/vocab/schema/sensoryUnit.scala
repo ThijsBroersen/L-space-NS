@@ -11,4 +11,7 @@ object sensoryUnit extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(SuperficialAnatomy.ontology, AnatomicalStructure.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

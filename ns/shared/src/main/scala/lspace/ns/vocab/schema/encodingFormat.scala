@@ -15,4 +15,7 @@ Unregistered or niche encoding and file formats can be indicated instead via the
         `@extends` = () => List(),
         `@range` = () => List(Text.ontology, URL.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

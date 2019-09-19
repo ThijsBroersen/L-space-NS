@@ -8,4 +8,11 @@ object DanceEvent extends OntologyDef(
         comment = """Event type: A social dance.""",
         `@extends` = () => List(Event.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Event.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Event.Properties{
+
+}
 }

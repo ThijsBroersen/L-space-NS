@@ -9,6 +9,9 @@ object procedureType extends PropertyDef(
         label = "procedureType",
         comment = """The type of procedure, for example Surgical, Noninvasive, or Percutaneous.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(MedicalProcedureType.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

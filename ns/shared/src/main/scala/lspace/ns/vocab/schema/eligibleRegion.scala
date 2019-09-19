@@ -11,6 +11,9 @@ object eligibleRegion extends PropertyDef(
 
 See also <a class="localLink" href="http://schema.org/ineligibleRegion">ineligibleRegion</a>.""",
         `@extends` = () => List(areaServed.property),
-        `@range` = () => List(Text.ontology, Place.ontology)
+        `@range` = () => List(Text.ontology, Place.ontology, GeoShape.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.areaServed.Properties
 }

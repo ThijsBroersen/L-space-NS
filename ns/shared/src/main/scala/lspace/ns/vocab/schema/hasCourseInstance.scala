@@ -11,4 +11,7 @@ object hasCourseInstance extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(CourseInstance.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

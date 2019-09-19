@@ -10,4 +10,15 @@ object Role extends OntologyDef(
 See also <a href="http://blog.schema.org/2014/06/introducing-role.html">blog post</a>.""",
         `@extends` = () => List(Intangible.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val endDate = lspace.ns.vocab.schema.endDate.property
+lazy val roleName = lspace.ns.vocab.schema.roleName.property
+lazy val startDate = lspace.ns.vocab.schema.startDate.property
+}
+override lazy val properties: List[LProperty] = List(endDate, roleName, startDate)
+trait Properties extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val endDate = lspace.ns.vocab.schema.endDate.property
+lazy val roleName = lspace.ns.vocab.schema.roleName.property
+lazy val startDate = lspace.ns.vocab.schema.startDate.property
+}
 }

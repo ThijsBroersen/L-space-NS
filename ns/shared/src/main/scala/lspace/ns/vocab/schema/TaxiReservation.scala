@@ -10,4 +10,15 @@ object TaxiReservation extends OntologyDef(
 Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use <a class="localLink" href="http://schema.org/Offer">Offer</a>.""",
         `@extends` = () => List(Reservation.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Reservation.Properties{
+lazy val partySize = lspace.ns.vocab.schema.partySize.property
+lazy val pickupLocation = lspace.ns.vocab.schema.pickupLocation.property
+lazy val pickupTime = lspace.ns.vocab.schema.pickupTime.property
+}
+override lazy val properties: List[LProperty] = List(partySize, pickupLocation, pickupTime)
+trait Properties extends lspace.ns.vocab.schema.Reservation.Properties{
+lazy val partySize = lspace.ns.vocab.schema.partySize.property
+lazy val pickupLocation = lspace.ns.vocab.schema.pickupLocation.property
+lazy val pickupTime = lspace.ns.vocab.schema.pickupTime.property
+}
 }

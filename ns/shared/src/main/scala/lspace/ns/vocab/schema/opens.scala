@@ -11,4 +11,7 @@ object opens extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(`@time`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

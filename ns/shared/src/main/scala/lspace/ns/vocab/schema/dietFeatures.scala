@@ -9,6 +9,9 @@ object dietFeatures extends PropertyDef(
         label = "dietFeatures",
         comment = """Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

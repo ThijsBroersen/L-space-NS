@@ -11,4 +11,7 @@ object interactionService extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(WebSite.ontology, SoftwareApplication.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

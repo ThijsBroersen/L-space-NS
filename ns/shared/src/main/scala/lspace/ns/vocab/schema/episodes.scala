@@ -11,4 +11,7 @@ object episodes extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Episode.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

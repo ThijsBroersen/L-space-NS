@@ -11,4 +11,7 @@ object arrivalAirport extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Airport.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -11,4 +11,7 @@ object diagnosis extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(MedicalCondition.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

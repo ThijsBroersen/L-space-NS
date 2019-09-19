@@ -8,4 +8,11 @@ object HowToStep extends OntologyDef(
         comment = """A step in the instructions for how to achieve a result. It is an ordered list with HowToDirection and/or HowToTip items.""",
         `@extends` = () => List(ListItem.ontology, CreativeWork.ontology, ItemList.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.ListItem.Properties with lspace.ns.vocab.schema.CreativeWork.Properties with lspace.ns.vocab.schema.ItemList.Properties{
+
+override lazy val position = lspace.ns.vocab.schema.position.property}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.ListItem.Properties with lspace.ns.vocab.schema.CreativeWork.Properties with lspace.ns.vocab.schema.ItemList.Properties{
+
+override lazy val position = lspace.ns.vocab.schema.position.property}
 }

@@ -13,4 +13,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         `@extends` = () => List(),
         `@range` = () => List(QuantitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -8,4 +8,15 @@ object LymphaticVessel extends OntologyDef(
         comment = """A type of blood vessel that specifically carries lymph fluid unidirectionally toward the heart.""",
         `@extends` = () => List(Vessel.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Vessel.Properties{
+lazy val originatesFrom = lspace.ns.vocab.schema.originatesFrom.property
+lazy val regionDrained = lspace.ns.vocab.schema.regionDrained.property
+lazy val runsTo = lspace.ns.vocab.schema.runsTo.property
+}
+override lazy val properties: List[LProperty] = List(originatesFrom, regionDrained, runsTo)
+trait Properties extends lspace.ns.vocab.schema.Vessel.Properties{
+lazy val originatesFrom = lspace.ns.vocab.schema.originatesFrom.property
+lazy val regionDrained = lspace.ns.vocab.schema.regionDrained.property
+lazy val runsTo = lspace.ns.vocab.schema.runsTo.property
+}
 }

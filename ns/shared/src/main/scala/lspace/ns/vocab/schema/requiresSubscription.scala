@@ -11,4 +11,7 @@ object requiresSubscription extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(MediaSubscription.ontology, `@boolean`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

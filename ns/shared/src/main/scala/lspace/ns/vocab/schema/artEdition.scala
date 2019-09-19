@@ -9,6 +9,9 @@ object artEdition extends PropertyDef(
         label = "artEdition",
         comment = """The number of copies when multiple copies of a piece of artwork are produced - e.g. for a limited edition of 20 prints, 'artEdition' refers to the total number of copies (in this example "20").""",
         `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, Integer.ontology)
+        `@range` = () => List(Text.ontology, `@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

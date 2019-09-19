@@ -11,4 +11,7 @@ object hasDeliveryMethod extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(DeliveryMethod.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

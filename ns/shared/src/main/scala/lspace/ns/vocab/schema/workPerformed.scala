@@ -11,4 +11,7 @@ object workPerformed extends PropertyDef(
         `@extends` = () => List(workFeatured.property),
         `@range` = () => List(CreativeWork.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.workFeatured.Properties
 }

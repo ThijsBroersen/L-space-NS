@@ -11,4 +11,7 @@ object riskFactor extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(MedicalRiskFactor.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

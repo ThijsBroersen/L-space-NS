@@ -11,4 +11,7 @@ object acceptedAnswer extends PropertyDef(
         `@extends` = () => List(suggestedAnswer.property),
         `@range` = () => List(ItemList.ontology, Answer.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.suggestedAnswer.Properties
 }

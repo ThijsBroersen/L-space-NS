@@ -8,4 +8,11 @@ object DonateAction extends OntologyDef(
         comment = """The act of providing goods, services, or money without compensation, often for philanthropic reasons.""",
         `@extends` = () => List(TradeAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.TradeAction.Properties{
+lazy val recipient = lspace.ns.vocab.schema.recipient.property
+}
+override lazy val properties: List[LProperty] = List(recipient)
+trait Properties extends lspace.ns.vocab.schema.TradeAction.Properties{
+lazy val recipient = lspace.ns.vocab.schema.recipient.property
+}
 }

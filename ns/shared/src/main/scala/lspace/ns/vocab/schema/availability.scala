@@ -11,4 +11,7 @@ object availability extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(ItemAvailability.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

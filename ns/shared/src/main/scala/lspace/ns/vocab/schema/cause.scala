@@ -11,4 +11,7 @@ object cause extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(MedicalCause.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

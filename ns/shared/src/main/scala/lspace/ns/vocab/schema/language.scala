@@ -11,4 +11,7 @@ object language extends PropertyDef(
         `@extends` = () => List(instrument.property),
         `@range` = () => List(Language.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.instrument.Properties
 }

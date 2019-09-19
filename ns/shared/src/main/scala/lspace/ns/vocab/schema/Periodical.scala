@@ -10,4 +10,11 @@ object Periodical extends OntologyDef(
 See also <a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog post</a>.""",
         `@extends` = () => List(CreativeWorkSeries.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CreativeWorkSeries.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.CreativeWorkSeries.Properties{
+
+}
 }

@@ -9,6 +9,9 @@ object ratingCount extends PropertyDef(
         label = "ratingCount",
         comment = """The count of total number of ratings.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -9,6 +9,9 @@ object cashBack extends PropertyDef(
         label = "cashBack",
         comment = """A cardholder benefit that pays the cardholder a small percentage of their net expenditures.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology, `@boolean`)
+        `@range` = () => List(`@number`, `@boolean`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

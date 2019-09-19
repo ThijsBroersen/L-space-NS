@@ -8,4 +8,11 @@ object FilmAction extends OntologyDef(
         comment = """The act of capturing sound and moving images on film, video, or digitally.""",
         `@extends` = () => List(CreateAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CreateAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.CreateAction.Properties{
+
+}
 }

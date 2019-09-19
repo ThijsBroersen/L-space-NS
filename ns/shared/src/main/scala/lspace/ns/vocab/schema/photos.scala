@@ -11,4 +11,7 @@ object photos extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(ImageObject.ontology, Photograph.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

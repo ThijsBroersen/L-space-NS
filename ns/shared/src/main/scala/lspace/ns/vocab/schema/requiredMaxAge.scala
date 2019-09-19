@@ -9,6 +9,9 @@ object requiredMaxAge extends PropertyDef(
         label = "requiredMaxAge",
         comment = """Audiences defined by a person's maximum age.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

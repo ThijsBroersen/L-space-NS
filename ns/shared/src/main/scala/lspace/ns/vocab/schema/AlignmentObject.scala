@@ -8,4 +8,19 @@ object AlignmentObject extends OntologyDef(
         comment = """An intangible item that describes an alignment between a learning resource and a node in an educational framework.""",
         `@extends` = () => List(Intangible.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val alignmentType = lspace.ns.vocab.schema.alignmentType.property
+lazy val educationalFramework = lspace.ns.vocab.schema.educationalFramework.property
+lazy val targetDescription = lspace.ns.vocab.schema.targetDescription.property
+lazy val targetName = lspace.ns.vocab.schema.targetName.property
+lazy val targetUrl = lspace.ns.vocab.schema.targetUrl.property
+}
+override lazy val properties: List[LProperty] = List(alignmentType, educationalFramework, targetDescription, targetName, targetUrl)
+trait Properties extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val alignmentType = lspace.ns.vocab.schema.alignmentType.property
+lazy val educationalFramework = lspace.ns.vocab.schema.educationalFramework.property
+lazy val targetDescription = lspace.ns.vocab.schema.targetDescription.property
+lazy val targetName = lspace.ns.vocab.schema.targetName.property
+lazy val targetUrl = lspace.ns.vocab.schema.targetUrl.property
+}
 }

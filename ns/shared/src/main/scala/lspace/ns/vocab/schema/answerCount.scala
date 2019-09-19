@@ -9,6 +9,9 @@ object answerCount extends PropertyDef(
         label = "answerCount",
         comment = """The number of answers this question has received.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

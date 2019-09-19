@@ -9,6 +9,9 @@ object fileSize extends PropertyDef(
         label = "fileSize",
         comment = """Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -9,6 +9,9 @@ object loser extends PropertyDef(
         label = "loser",
         comment = """A sub property of participant. The loser of the action.""",
         `@extends` = () => List(participant.property),
-        `@range` = () => List()
+        `@range` = () => List(Person.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.participant.Properties
 }

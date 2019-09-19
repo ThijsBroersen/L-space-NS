@@ -11,4 +11,7 @@ object nerve extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Nerve.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

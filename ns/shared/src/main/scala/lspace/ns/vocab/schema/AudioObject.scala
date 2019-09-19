@@ -8,4 +8,13 @@ object AudioObject extends OntologyDef(
         comment = """An audio file.""",
         `@extends` = () => List(MediaObject.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MediaObject.Properties{
+lazy val caption = lspace.ns.vocab.schema.caption.property
+lazy val transcript = lspace.ns.vocab.schema.transcript.property
+override lazy val encodingFormat = lspace.ns.vocab.schema.encodingFormat.property}
+override lazy val properties: List[LProperty] = List(caption, transcript)
+trait Properties extends lspace.ns.vocab.schema.MediaObject.Properties{
+lazy val caption = lspace.ns.vocab.schema.caption.property
+lazy val transcript = lspace.ns.vocab.schema.transcript.property
+override lazy val encodingFormat = lspace.ns.vocab.schema.encodingFormat.property}
 }

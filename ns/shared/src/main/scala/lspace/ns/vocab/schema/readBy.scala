@@ -9,6 +9,9 @@ object readBy extends PropertyDef(
         label = "readBy",
         comment = """A person who reads (performs) the audiobook.""",
         `@extends` = () => List(actor.property),
-        `@range` = () => List()
+        `@range` = () => List(Person.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.actor.Properties
 }

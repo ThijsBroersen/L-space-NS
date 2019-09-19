@@ -8,4 +8,11 @@ object GovernmentPermit extends OntologyDef(
         comment = """A permit issued by a government agency.""",
         `@extends` = () => List(Permit.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Permit.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Permit.Properties{
+
+}
 }

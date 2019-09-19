@@ -8,4 +8,11 @@ object AddAction extends OntologyDef(
         comment = """The act of editing by adding an object to a collection.""",
         `@extends` = () => List(UpdateAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.UpdateAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.UpdateAction.Properties{
+
+}
 }

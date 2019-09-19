@@ -11,6 +11,9 @@ object additionalProperty extends PropertyDef(
 
 Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(PropertyValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

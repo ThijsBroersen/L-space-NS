@@ -11,4 +11,7 @@ object restPeriods extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Text.ontology, QualitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -8,4 +8,11 @@ object Synagogue extends OntologyDef(
         comment = """A synagogue.""",
         `@extends` = () => List(PlaceOfWorship.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.PlaceOfWorship.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.PlaceOfWorship.Properties{
+
+}
 }

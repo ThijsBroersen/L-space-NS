@@ -9,6 +9,9 @@ object strengthValue extends PropertyDef(
         label = "strengthValue",
         comment = """The value of an active ingredient's strength, e.g. 325.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@number`, Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

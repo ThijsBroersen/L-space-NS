@@ -9,6 +9,9 @@ object seeks extends PropertyDef(
         label = "seeks",
         comment = """A pointer to products or services sought by the organization or person (demand).""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(Demand.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

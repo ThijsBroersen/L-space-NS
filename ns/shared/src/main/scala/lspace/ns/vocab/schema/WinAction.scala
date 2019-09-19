@@ -8,4 +8,11 @@ object WinAction extends OntologyDef(
         comment = """The act of achieving victory in a competitive activity.""",
         `@extends` = () => List(AchieveAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.AchieveAction.Properties{
+lazy val loser = lspace.ns.vocab.schema.loser.property
+}
+override lazy val properties: List[LProperty] = List(loser)
+trait Properties extends lspace.ns.vocab.schema.AchieveAction.Properties{
+lazy val loser = lspace.ns.vocab.schema.loser.property
+}
 }

@@ -11,4 +11,7 @@ object areaServed extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(GeoShape.ontology, Place.ontology, AdministrativeArea.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

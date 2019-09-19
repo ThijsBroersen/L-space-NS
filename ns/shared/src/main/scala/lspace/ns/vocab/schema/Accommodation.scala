@@ -11,4 +11,17 @@ For more specific types of accommodations not defined in schema.org, one can use
 See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.""",
         `@extends` = () => List(Place.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Place.Properties{
+lazy val floorSize = lspace.ns.vocab.schema.floorSize.property
+lazy val numberOfRooms = lspace.ns.vocab.schema.numberOfRooms.property
+lazy val permittedUsage = lspace.ns.vocab.schema.permittedUsage.property
+lazy val petsAllowed = lspace.ns.vocab.schema.petsAllowed.property
+}
+override lazy val properties: List[LProperty] = List(floorSize, numberOfRooms, permittedUsage, petsAllowed)
+trait Properties extends lspace.ns.vocab.schema.Place.Properties{
+lazy val floorSize = lspace.ns.vocab.schema.floorSize.property
+lazy val numberOfRooms = lspace.ns.vocab.schema.numberOfRooms.property
+lazy val permittedUsage = lspace.ns.vocab.schema.permittedUsage.property
+lazy val petsAllowed = lspace.ns.vocab.schema.petsAllowed.property
+}
 }

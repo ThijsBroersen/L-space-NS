@@ -12,4 +12,7 @@ object temporal extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(`@datetime`, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -9,6 +9,9 @@ object countriesNotSupported extends PropertyDef(
         label = "countriesNotSupported",
         comment = """Countries for which the application is not supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

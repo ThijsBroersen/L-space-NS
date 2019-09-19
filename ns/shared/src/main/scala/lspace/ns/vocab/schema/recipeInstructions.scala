@@ -11,4 +11,7 @@ object recipeInstructions extends PropertyDef(
         `@extends` = () => List(step.property),
         `@range` = () => List(CreativeWork.ontology, Text.ontology, ItemList.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.step.Properties
 }

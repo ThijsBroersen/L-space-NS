@@ -9,6 +9,9 @@ object billingPeriod extends PropertyDef(
         label = "billingPeriod",
         comment = """The time interval used to compute the invoice.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(Duration.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

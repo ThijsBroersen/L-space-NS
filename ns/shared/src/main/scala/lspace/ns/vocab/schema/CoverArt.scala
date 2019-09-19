@@ -8,4 +8,11 @@ object CoverArt extends OntologyDef(
         comment = """The artwork on the outer surface of a CreativeWork.""",
         `@extends` = () => List(VisualArtwork.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.VisualArtwork.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.VisualArtwork.Properties{
+
+}
 }

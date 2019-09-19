@@ -11,4 +11,7 @@ object interactionStatistic extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(InteractionCounter.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

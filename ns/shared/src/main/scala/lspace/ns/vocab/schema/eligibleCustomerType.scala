@@ -11,4 +11,7 @@ object eligibleCustomerType extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(BusinessEntityType.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

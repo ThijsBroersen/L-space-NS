@@ -11,4 +11,7 @@ object bodyType extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Text.ontology, QualitativeValue.ontology, URL.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

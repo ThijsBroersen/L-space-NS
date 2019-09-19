@@ -9,6 +9,9 @@ object recordedAs extends PropertyDef(
         label = "recordedAs",
         comment = """An audio recording of the work.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(MusicRecording.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

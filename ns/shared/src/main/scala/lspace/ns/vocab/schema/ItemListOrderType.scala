@@ -8,4 +8,11 @@ object ItemListOrderType extends OntologyDef(
         comment = """Enumerated for values for itemListOrder for indicating how an ordered ItemList is organized.""",
         `@extends` = () => List(Enumeration.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Enumeration.Properties{
+
+}
 }

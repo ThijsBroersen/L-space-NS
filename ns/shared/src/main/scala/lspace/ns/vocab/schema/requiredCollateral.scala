@@ -11,4 +11,7 @@ object requiredCollateral extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Thing.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

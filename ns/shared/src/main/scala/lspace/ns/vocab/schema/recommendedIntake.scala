@@ -11,4 +11,7 @@ object recommendedIntake extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(RecommendedDoseSchedule.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

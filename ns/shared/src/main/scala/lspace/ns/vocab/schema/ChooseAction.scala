@@ -8,4 +8,11 @@ object ChooseAction extends OntologyDef(
         comment = """The act of expressing a preference from a set of options or a large or unbounded set of choices/options.""",
         `@extends` = () => List(AssessAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.AssessAction.Properties{
+lazy val actionOption = lspace.ns.vocab.schema.actionOption.property
+}
+override lazy val properties: List[LProperty] = List(actionOption)
+trait Properties extends lspace.ns.vocab.schema.AssessAction.Properties{
+lazy val actionOption = lspace.ns.vocab.schema.actionOption.property
+}
 }

@@ -11,4 +11,7 @@ object greaterOrEqual extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(QualitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

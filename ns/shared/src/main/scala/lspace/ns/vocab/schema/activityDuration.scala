@@ -9,6 +9,9 @@ object activityDuration extends PropertyDef(
         label = "activityDuration",
         comment = """Length of time to engage in the activity.""",
         `@extends` = () => List(),
-        `@range` = () => List(QualitativeValue.ontology)
+        `@range` = () => List(Duration.ontology, QualitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

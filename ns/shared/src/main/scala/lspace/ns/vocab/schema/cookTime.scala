@@ -11,4 +11,7 @@ object cookTime extends PropertyDef(
         `@extends` = () => List(performTime.property),
         `@range` = () => List(Duration.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.performTime.Properties
 }

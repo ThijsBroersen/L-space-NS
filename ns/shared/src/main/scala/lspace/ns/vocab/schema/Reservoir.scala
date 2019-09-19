@@ -8,4 +8,11 @@ object Reservoir extends OntologyDef(
         comment = """A reservoir of water, typically an artificially created lake, like the Lake Kariba reservoir.""",
         `@extends` = () => List(BodyOfWater.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.BodyOfWater.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.BodyOfWater.Properties{
+
+}
 }

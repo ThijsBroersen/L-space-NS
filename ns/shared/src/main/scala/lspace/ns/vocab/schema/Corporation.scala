@@ -8,4 +8,11 @@ object Corporation extends OntologyDef(
         comment = """Organization: A business corporation.""",
         `@extends` = () => List(Organization.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Organization.Properties{
+lazy val tickerSymbol = lspace.ns.vocab.schema.tickerSymbol.property
+}
+override lazy val properties: List[LProperty] = List(tickerSymbol)
+trait Properties extends lspace.ns.vocab.schema.Organization.Properties{
+lazy val tickerSymbol = lspace.ns.vocab.schema.tickerSymbol.property
+}
 }

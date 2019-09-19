@@ -8,4 +8,11 @@ object UserReview extends OntologyDef(
         comment = """A review created by an end-user (e.g. consumer, purchaser, attendee etc.), in contrast with <a class="localLink" href="http://schema.org/CriticReview">CriticReview</a>.""",
         `@extends` = () => List(Review.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Review.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Review.Properties{
+
+}
 }

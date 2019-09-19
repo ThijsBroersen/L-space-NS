@@ -11,4 +11,7 @@ object sodiumContent extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Mass.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

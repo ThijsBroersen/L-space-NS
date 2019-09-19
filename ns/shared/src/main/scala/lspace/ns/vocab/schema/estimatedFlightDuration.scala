@@ -9,6 +9,9 @@ object estimatedFlightDuration extends PropertyDef(
         label = "estimatedFlightDuration",
         comment = """The estimated time the flight will take.""",
         `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@range` = () => List(Text.ontology, Duration.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

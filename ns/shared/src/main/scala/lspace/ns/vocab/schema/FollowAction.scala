@@ -19,4 +19,11 @@ Related actions:<br/><br/>
 """,
         `@extends` = () => List(InteractAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.InteractAction.Properties{
+lazy val followee = lspace.ns.vocab.schema.followee.property
+}
+override lazy val properties: List[LProperty] = List(followee)
+trait Properties extends lspace.ns.vocab.schema.InteractAction.Properties{
+lazy val followee = lspace.ns.vocab.schema.followee.property
+}
 }

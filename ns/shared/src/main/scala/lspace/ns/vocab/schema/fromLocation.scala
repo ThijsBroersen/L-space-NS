@@ -11,4 +11,7 @@ object fromLocation extends PropertyDef(
         `@extends` = () => List(location.property),
         `@range` = () => List(Place.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.location.Properties
 }

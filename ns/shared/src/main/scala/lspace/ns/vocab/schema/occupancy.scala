@@ -12,4 +12,7 @@ Typical unit code(s): C62 for person""",
         `@extends` = () => List(),
         `@range` = () => List(QuantitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

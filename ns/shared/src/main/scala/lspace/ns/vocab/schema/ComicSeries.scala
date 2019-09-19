@@ -10,4 +10,11 @@ object ComicSeries extends OntologyDef(
     Wanderer".""",
         `@extends` = () => List(Periodical.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Periodical.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Periodical.Properties{
+
+}
 }

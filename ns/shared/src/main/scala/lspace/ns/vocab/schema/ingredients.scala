@@ -9,6 +9,9 @@ object ingredients extends PropertyDef(
         label = "ingredients",
         comment = """A single ingredient used in the recipe, e.g. sugar, flour or garlic.""",
         `@extends` = () => List(supply.property),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.supply.Properties
 }

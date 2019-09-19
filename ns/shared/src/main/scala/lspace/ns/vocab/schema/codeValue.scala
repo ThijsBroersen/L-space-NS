@@ -11,4 +11,7 @@ object codeValue extends PropertyDef(
         `@extends` = () => List(termCode.property),
         `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.termCode.Properties
 }

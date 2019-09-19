@@ -11,4 +11,7 @@ object vehicleEngine extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(EngineSpecification.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

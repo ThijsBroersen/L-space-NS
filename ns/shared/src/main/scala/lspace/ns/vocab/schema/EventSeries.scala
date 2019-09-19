@@ -20,4 +20,11 @@ may seem more Event-like when the period of time is compact and when aspects suc
 it may also sometimes prove useful to describe a longer-term series as an Event.""",
         `@extends` = () => List(Event.ontology, Series.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Event.Properties with lspace.ns.vocab.schema.Series.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Event.Properties with lspace.ns.vocab.schema.Series.Properties{
+
+}
 }

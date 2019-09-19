@@ -8,4 +8,11 @@ object WearAction extends OntologyDef(
         comment = """The act of dressing oneself in clothing.""",
         `@extends` = () => List(UseAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.UseAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.UseAction.Properties{
+
+}
 }

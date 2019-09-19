@@ -8,4 +8,11 @@ object BlogPosting extends OntologyDef(
         comment = """A blog post.""",
         `@extends` = () => List(SocialMediaPosting.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.SocialMediaPosting.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.SocialMediaPosting.Properties{
+
+}
 }

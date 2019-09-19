@@ -15,4 +15,11 @@ The <a class="localLink" href="http://schema.org/ReportageNewsArticle">Reportage
 A <a class="localLink" href="http://schema.org/ReportageNewsArticle">ReportageNewsArticle</a> which goes deeper into analysis can also be marked with an additional type of <a class="localLink" href="http://schema.org/AnalysisNewsArticle">AnalysisNewsArticle</a>.""",
         `@extends` = () => List(NewsArticle.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.NewsArticle.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.NewsArticle.Properties{
+
+}
 }

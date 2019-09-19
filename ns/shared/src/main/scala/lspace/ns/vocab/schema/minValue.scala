@@ -9,6 +9,9 @@ object minValue extends PropertyDef(
         label = "minValue",
         comment = """The lower value of some characteristic or property.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@number`, Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

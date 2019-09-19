@@ -11,4 +11,7 @@ object resultReview extends PropertyDef(
         `@extends` = () => List(result.property),
         `@range` = () => List(Review.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.result.Properties
 }

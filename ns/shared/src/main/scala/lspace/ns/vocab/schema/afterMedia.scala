@@ -9,6 +9,9 @@ object afterMedia extends PropertyDef(
         label = "afterMedia",
         comment = """A media object representing the circumstances after performing this direction.""",
         `@extends` = () => List(),
-        `@range` = () => List(MediaObject.ontology)
+        `@range` = () => List(MediaObject.ontology, URL.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -11,4 +11,7 @@ object normalRange extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Text.ontology, MedicalEnumeration.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

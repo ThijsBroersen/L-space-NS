@@ -8,4 +8,11 @@ object PathologyTest extends OntologyDef(
         comment = """A medical test performed by a laboratory that typically involves examination of a tissue sample by a pathologist.""",
         `@extends` = () => List(MedicalTest.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalTest.Properties{
+lazy val tissueSample = lspace.ns.vocab.schema.tissueSample.property
+}
+override lazy val properties: List[LProperty] = List(tissueSample)
+trait Properties extends lspace.ns.vocab.schema.MedicalTest.Properties{
+lazy val tissueSample = lspace.ns.vocab.schema.tissueSample.property
+}
 }

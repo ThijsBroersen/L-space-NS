@@ -8,4 +8,15 @@ object ScreeningEvent extends OntologyDef(
         comment = """A screening of a movie or other video.""",
         `@extends` = () => List(Event.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Event.Properties{
+lazy val subtitleLanguage = lspace.ns.vocab.schema.subtitleLanguage.property
+lazy val videoFormat = lspace.ns.vocab.schema.videoFormat.property
+lazy val workPresented = lspace.ns.vocab.schema.workPresented.property
+}
+override lazy val properties: List[LProperty] = List(subtitleLanguage, videoFormat, workPresented)
+trait Properties extends lspace.ns.vocab.schema.Event.Properties{
+lazy val subtitleLanguage = lspace.ns.vocab.schema.subtitleLanguage.property
+lazy val videoFormat = lspace.ns.vocab.schema.videoFormat.property
+lazy val workPresented = lspace.ns.vocab.schema.workPresented.property
+}
 }

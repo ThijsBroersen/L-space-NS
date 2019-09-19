@@ -8,4 +8,11 @@ object InstallAction extends OntologyDef(
         comment = """The act of installing an application.""",
         `@extends` = () => List(ConsumeAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.ConsumeAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.ConsumeAction.Properties{
+
+}
 }

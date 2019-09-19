@@ -13,4 +13,7 @@ Use standard formats: <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217 c
         `@extends` = () => List(),
         `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

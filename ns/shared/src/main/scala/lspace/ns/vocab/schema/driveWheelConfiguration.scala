@@ -9,6 +9,9 @@ object driveWheelConfiguration extends PropertyDef(
         label = "driveWheelConfiguration",
         comment = """The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle's engine via the drivetrain.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology, DriveWheelConfigurationValue.ontology)
+        `@range` = () => List(DriveWheelConfigurationValue.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -9,6 +9,9 @@ object partOfSystem extends PropertyDef(
         label = "partOfSystem",
         comment = """The anatomical or organ system that this structure is part of.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(AnatomicalSystem.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

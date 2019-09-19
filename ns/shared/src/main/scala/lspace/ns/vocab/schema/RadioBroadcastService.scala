@@ -8,4 +8,11 @@ object RadioBroadcastService extends OntologyDef(
         comment = """A delivery service through which radio content is provided via broadcast over the air or online.""",
         `@extends` = () => List(BroadcastService.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.BroadcastService.Properties{
+lazy val callSign = lspace.ns.vocab.schema.callSign.property
+}
+override lazy val properties: List[LProperty] = List(callSign)
+trait Properties extends lspace.ns.vocab.schema.BroadcastService.Properties{
+lazy val callSign = lspace.ns.vocab.schema.callSign.property
+}
 }

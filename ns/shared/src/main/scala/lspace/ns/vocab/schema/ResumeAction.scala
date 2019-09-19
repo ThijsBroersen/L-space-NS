@@ -8,4 +8,11 @@ object ResumeAction extends OntologyDef(
         comment = """The act of resuming a device or application which was formerly paused (e.g. resume music playback or resume a timer).""",
         `@extends` = () => List(ControlAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.ControlAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.ControlAction.Properties{
+
+}
 }

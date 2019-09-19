@@ -11,4 +11,7 @@ object countryOfOrigin extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Country.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -8,4 +8,11 @@ object EducationalAudience extends OntologyDef(
         comment = """An EducationalAudience.""",
         `@extends` = () => List(Audience.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Audience.Properties{
+lazy val educationalRole = lspace.ns.vocab.schema.educationalRole.property
+}
+override lazy val properties: List[LProperty] = List(educationalRole)
+trait Properties extends lspace.ns.vocab.schema.Audience.Properties{
+lazy val educationalRole = lspace.ns.vocab.schema.educationalRole.property
+}
 }

@@ -8,4 +8,11 @@ object ResearchProject extends OntologyDef(
         comment = """A Research project.""",
         `@extends` = () => List(Project.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Project.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Project.Properties{
+
+}
 }

@@ -11,4 +11,7 @@ object audio extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Clip.ontology, AudioObject.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

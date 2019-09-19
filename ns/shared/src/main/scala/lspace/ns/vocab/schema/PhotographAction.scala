@@ -8,4 +8,11 @@ object PhotographAction extends OntologyDef(
         comment = """The act of capturing still images of objects using a camera.""",
         `@extends` = () => List(CreateAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CreateAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.CreateAction.Properties{
+
+}
 }

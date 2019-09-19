@@ -11,4 +11,7 @@ object authenticator extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Organization.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -11,4 +11,7 @@ object includesHealthPlanNetwork extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(HealthPlanNetwork.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

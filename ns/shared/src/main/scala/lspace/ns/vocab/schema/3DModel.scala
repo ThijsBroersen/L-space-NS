@@ -9,4 +9,11 @@ object `3DModel` extends OntologyDef(
 case of a single file published after Zip compression, the convention of appending '+zip' to the <a class="localLink" href="http://schema.org/encodingFormat">encodingFormat</a> can be used. Geospatial, AR/VR, artistic/animation, gaming, engineering and scientific content can all be represented using <a class="localLink" href="http://schema.org/3DModel">3DModel</a>.""",
         `@extends` = () => List(CreativeWork.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.CreativeWork.Properties{
+
+}
 }

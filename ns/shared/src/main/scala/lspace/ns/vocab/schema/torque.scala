@@ -19,4 +19,7 @@ Typical unit code(s): NU for newton metre (N m), F17 for pound-force per foot, o
         `@extends` = () => List(),
         `@range` = () => List(QuantitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

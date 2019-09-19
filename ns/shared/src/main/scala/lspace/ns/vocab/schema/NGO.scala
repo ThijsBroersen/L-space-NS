@@ -8,4 +8,11 @@ object NGO extends OntologyDef(
         comment = """Organization: Non-governmental Organization.""",
         `@extends` = () => List(Organization.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Organization.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Organization.Properties{
+
+}
 }

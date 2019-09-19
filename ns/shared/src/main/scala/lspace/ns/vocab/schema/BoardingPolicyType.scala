@@ -8,4 +8,11 @@ object BoardingPolicyType extends OntologyDef(
         comment = """A type of boarding policy used by an airline.""",
         `@extends` = () => List(Enumeration.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Enumeration.Properties{
+
+}
 }

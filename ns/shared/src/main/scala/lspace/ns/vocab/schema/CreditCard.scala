@@ -20,4 +20,11 @@ Commonly used values:<br/><br/>
 """,
         `@extends` = () => List(LoanOrCredit.ontology, PaymentCard.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.LoanOrCredit.Properties with lspace.ns.vocab.schema.PaymentCard.Properties{
+lazy val monthlyMinimumRepaymentAmount = lspace.ns.vocab.schema.monthlyMinimumRepaymentAmount.property
+}
+override lazy val properties: List[LProperty] = List(monthlyMinimumRepaymentAmount)
+trait Properties extends lspace.ns.vocab.schema.LoanOrCredit.Properties with lspace.ns.vocab.schema.PaymentCard.Properties{
+lazy val monthlyMinimumRepaymentAmount = lspace.ns.vocab.schema.monthlyMinimumRepaymentAmount.property
+}
 }

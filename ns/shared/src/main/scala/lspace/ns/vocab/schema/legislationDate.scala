@@ -11,4 +11,7 @@ object legislationDate extends PropertyDef(
         `@extends` = () => List(dateCreated.property),
         `@range` = () => List(`@date`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.dateCreated.Properties
 }

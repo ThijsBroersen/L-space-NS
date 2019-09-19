@@ -8,4 +8,11 @@ object RVPark extends OntologyDef(
         comment = """A place offering space for "Recreational Vehicles", Caravans, mobile homes and the like.""",
         `@extends` = () => List(CivicStructure.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CivicStructure.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.CivicStructure.Properties{
+
+}
 }

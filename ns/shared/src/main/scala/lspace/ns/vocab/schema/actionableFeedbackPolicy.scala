@@ -11,4 +11,7 @@ object actionableFeedbackPolicy extends PropertyDef(
         `@extends` = () => List(publishingPrinciples.property),
         `@range` = () => List(CreativeWork.ontology, URL.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.publishingPrinciples.Properties
 }

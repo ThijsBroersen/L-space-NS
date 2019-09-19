@@ -11,4 +11,7 @@ object applicableLocation extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(AdministrativeArea.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

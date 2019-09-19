@@ -9,6 +9,9 @@ object breadcrumb extends PropertyDef(
         label = "breadcrumb",
         comment = """A set of links that can help a user understand and navigate a website hierarchy.""",
         `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@range` = () => List(Text.ontology, BreadcrumbList.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

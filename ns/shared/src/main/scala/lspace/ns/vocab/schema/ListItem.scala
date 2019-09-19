@@ -8,4 +8,17 @@ object ListItem extends OntologyDef(
         comment = """An list item, e.g. a step in a checklist or how-to description.""",
         `@extends` = () => List(Intangible.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val item = lspace.ns.vocab.schema.item.property
+lazy val nextItem = lspace.ns.vocab.schema.nextItem.property
+lazy val position = lspace.ns.vocab.schema.position.property
+lazy val previousItem = lspace.ns.vocab.schema.previousItem.property
+}
+override lazy val properties: List[LProperty] = List(item, nextItem, position, previousItem)
+trait Properties extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val item = lspace.ns.vocab.schema.item.property
+lazy val nextItem = lspace.ns.vocab.schema.nextItem.property
+lazy val position = lspace.ns.vocab.schema.position.property
+lazy val previousItem = lspace.ns.vocab.schema.previousItem.property
+}
 }

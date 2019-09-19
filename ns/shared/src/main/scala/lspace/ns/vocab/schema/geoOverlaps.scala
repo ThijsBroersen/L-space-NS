@@ -11,4 +11,7 @@ object geoOverlaps extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Place.ontology, GeospatialGeometry.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

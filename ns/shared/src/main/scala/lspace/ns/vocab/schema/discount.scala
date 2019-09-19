@@ -9,6 +9,9 @@ object discount extends PropertyDef(
         label = "discount",
         comment = """Any discount applied (to an Order).""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology, Text.ontology)
+        `@range` = () => List(`@number`, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

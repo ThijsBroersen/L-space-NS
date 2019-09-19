@@ -9,6 +9,9 @@ object numTracks extends PropertyDef(
         label = "numTracks",
         comment = """The number of tracks in this album or playlist.""",
         `@extends` = () => List(),
-        `@range` = () => List(Integer.ontology)
+        `@range` = () => List(`@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

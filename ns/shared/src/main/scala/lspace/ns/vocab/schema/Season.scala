@@ -8,4 +8,11 @@ object Season extends OntologyDef(
         comment = """A media season e.g. tv, radio, video game etc.""",
         `@extends` = () => List(CreativeWork.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.CreativeWork.Properties{
+
+}
 }

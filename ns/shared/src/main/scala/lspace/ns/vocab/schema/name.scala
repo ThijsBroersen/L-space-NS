@@ -11,4 +11,7 @@ object name extends PropertyDef(
         `@extends` = () => List(`@label`),
         `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

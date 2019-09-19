@@ -8,4 +8,13 @@ object MedicalConditionStage extends OntologyDef(
         comment = """A stage of a medical condition, such as 'Stage IIIa'.""",
         `@extends` = () => List(MedicalIntangible.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalIntangible.Properties{
+lazy val stageAsNumber = lspace.ns.vocab.schema.stageAsNumber.property
+lazy val subStageSuffix = lspace.ns.vocab.schema.subStageSuffix.property
+}
+override lazy val properties: List[LProperty] = List(stageAsNumber, subStageSuffix)
+trait Properties extends lspace.ns.vocab.schema.MedicalIntangible.Properties{
+lazy val stageAsNumber = lspace.ns.vocab.schema.stageAsNumber.property
+lazy val subStageSuffix = lspace.ns.vocab.schema.subStageSuffix.property
+}
 }

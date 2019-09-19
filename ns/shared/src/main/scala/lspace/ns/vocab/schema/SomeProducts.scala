@@ -8,4 +8,11 @@ object SomeProducts extends OntologyDef(
         comment = """A placeholder for multiple similar products of the same kind.""",
         `@extends` = () => List(Product.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Product.Properties{
+lazy val inventoryLevel = lspace.ns.vocab.schema.inventoryLevel.property
+}
+override lazy val properties: List[LProperty] = List(inventoryLevel)
+trait Properties extends lspace.ns.vocab.schema.Product.Properties{
+lazy val inventoryLevel = lspace.ns.vocab.schema.inventoryLevel.property
+}
 }

@@ -8,4 +8,11 @@ object LockerDelivery extends OntologyDef(
         comment = """A DeliveryMethod in which an item is made available via locker.""",
         `@extends` = () => List(DeliveryMethod.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.DeliveryMethod.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.DeliveryMethod.Properties{
+
+}
 }

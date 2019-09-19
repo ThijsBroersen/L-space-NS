@@ -8,4 +8,13 @@ object CategoryCode extends OntologyDef(
         comment = """A Category Code.""",
         `@extends` = () => List(DefinedTerm.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.DefinedTerm.Properties{
+lazy val codeValue = lspace.ns.vocab.schema.codeValue.property
+lazy val inCodeSet = lspace.ns.vocab.schema.inCodeSet.property
+}
+override lazy val properties: List[LProperty] = List(codeValue, inCodeSet)
+trait Properties extends lspace.ns.vocab.schema.DefinedTerm.Properties{
+lazy val codeValue = lspace.ns.vocab.schema.codeValue.property
+lazy val inCodeSet = lspace.ns.vocab.schema.inCodeSet.property
+}
 }

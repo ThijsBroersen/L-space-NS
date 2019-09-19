@@ -9,6 +9,9 @@ object blogPost extends PropertyDef(
         label = "blogPost",
         comment = """A posting that is part of this blog.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(BlogPosting.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

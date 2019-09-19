@@ -8,4 +8,11 @@ object CreateAction extends OntologyDef(
         comment = """The act of deliberately creating/producing/generating/building a result out of the agent.""",
         `@extends` = () => List(Action.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Action.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Action.Properties{
+
+}
 }

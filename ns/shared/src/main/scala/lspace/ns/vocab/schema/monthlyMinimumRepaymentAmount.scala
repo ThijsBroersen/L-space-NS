@@ -9,6 +9,9 @@ object monthlyMinimumRepaymentAmount extends PropertyDef(
         label = "monthlyMinimumRepaymentAmount",
         comment = """The minimum payment is the lowest amount of money that one is required to pay on a credit card statement each month.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology, MonetaryAmount.ontology)
+        `@range` = () => List(`@number`, MonetaryAmount.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

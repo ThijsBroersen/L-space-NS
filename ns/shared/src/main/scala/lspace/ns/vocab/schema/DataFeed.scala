@@ -8,4 +8,11 @@ object DataFeed extends OntologyDef(
         comment = """A single feed providing structured information about one or more entities or topics.""",
         `@extends` = () => List(Dataset.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Dataset.Properties{
+lazy val dataFeedElement = lspace.ns.vocab.schema.dataFeedElement.property
+}
+override lazy val properties: List[LProperty] = List(dataFeedElement)
+trait Properties extends lspace.ns.vocab.schema.Dataset.Properties{
+lazy val dataFeedElement = lspace.ns.vocab.schema.dataFeedElement.property
+}
 }

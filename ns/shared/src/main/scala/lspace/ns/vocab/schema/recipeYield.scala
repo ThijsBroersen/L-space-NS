@@ -11,4 +11,7 @@ object recipeYield extends PropertyDef(
         `@extends` = () => List(`yield`.property),
         `@range` = () => List(QuantitativeValue.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.`yield`.Properties
 }

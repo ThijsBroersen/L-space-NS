@@ -8,4 +8,11 @@ object WebApplication extends OntologyDef(
         comment = """Web applications.""",
         `@extends` = () => List(SoftwareApplication.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.SoftwareApplication.Properties{
+lazy val browserRequirements = lspace.ns.vocab.schema.browserRequirements.property
+}
+override lazy val properties: List[LProperty] = List(browserRequirements)
+trait Properties extends lspace.ns.vocab.schema.SoftwareApplication.Properties{
+lazy val browserRequirements = lspace.ns.vocab.schema.browserRequirements.property
+}
 }

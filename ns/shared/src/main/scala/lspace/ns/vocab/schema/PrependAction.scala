@@ -8,4 +8,11 @@ object PrependAction extends OntologyDef(
         comment = """The act of inserting at the beginning if an ordered collection.""",
         `@extends` = () => List(InsertAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.InsertAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.InsertAction.Properties{
+
+}
 }

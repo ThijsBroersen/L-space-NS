@@ -9,6 +9,9 @@ object exchangeRateSpread extends PropertyDef(
         label = "exchangeRateSpread",
         comment = """The difference between the price at which a broker or other intermediary buys and sells foreign currency.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology, MonetaryAmount.ontology)
+        `@range` = () => List(`@number`, MonetaryAmount.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

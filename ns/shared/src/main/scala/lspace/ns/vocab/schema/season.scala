@@ -11,4 +11,7 @@ object season extends PropertyDef(
         `@extends` = () => List(hasPart.property),
         `@range` = () => List(CreativeWorkSeason.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.hasPart.Properties
 }

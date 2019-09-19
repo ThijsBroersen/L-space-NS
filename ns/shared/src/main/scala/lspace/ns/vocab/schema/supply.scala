@@ -9,6 +9,9 @@ object supply extends PropertyDef(
         label = "supply",
         comment = """A sub-property of instrument. A supply consumed when performing instructions or a direction.""",
         `@extends` = () => List(instrument.property),
-        `@range` = () => List(Text.ontology, HowToSupply.ontology)
+        `@range` = () => List(HowToSupply.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.instrument.Properties
 }

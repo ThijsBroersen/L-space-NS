@@ -9,6 +9,9 @@ object pageEnd extends PropertyDef(
         label = "pageEnd",
         comment = """The page on which the work ends; for example "138" or "xvi".""",
         `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, Integer.ontology)
+        `@range` = () => List(Text.ontology, `@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -8,4 +8,11 @@ object OnDemandEvent extends OntologyDef(
         comment = """A publication event e.g. catch-up TV or radio podcast, during which a program is available on-demand.""",
         `@extends` = () => List(PublicationEvent.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.PublicationEvent.Properties{
+
+override lazy val isAccessibleForFree = lspace.ns.vocab.schema.isAccessibleForFree.property}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.PublicationEvent.Properties{
+
+override lazy val isAccessibleForFree = lspace.ns.vocab.schema.isAccessibleForFree.property}
 }

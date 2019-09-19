@@ -8,4 +8,13 @@ object DigitalDocumentPermission extends OntologyDef(
         comment = """A permission for a particular person or group to access a particular file.""",
         `@extends` = () => List(Intangible.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val grantee = lspace.ns.vocab.schema.grantee.property
+lazy val permissionType = lspace.ns.vocab.schema.permissionType.property
+}
+override lazy val properties: List[LProperty] = List(grantee, permissionType)
+trait Properties extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val grantee = lspace.ns.vocab.schema.grantee.property
+lazy val permissionType = lspace.ns.vocab.schema.permissionType.property
+}
 }

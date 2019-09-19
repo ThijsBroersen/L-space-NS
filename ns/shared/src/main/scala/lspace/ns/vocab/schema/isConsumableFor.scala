@@ -11,4 +11,7 @@ object isConsumableFor extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Product.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

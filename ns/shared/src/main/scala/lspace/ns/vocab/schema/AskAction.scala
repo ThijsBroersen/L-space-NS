@@ -15,4 +15,11 @@ Related actions:<br/><br/>
 """,
         `@extends` = () => List(CommunicateAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CommunicateAction.Properties{
+lazy val question = lspace.ns.vocab.schema.question.property
+}
+override lazy val properties: List[LProperty] = List(question)
+trait Properties extends lspace.ns.vocab.schema.CommunicateAction.Properties{
+lazy val question = lspace.ns.vocab.schema.question.property
+}
 }

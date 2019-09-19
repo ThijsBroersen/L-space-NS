@@ -16,4 +16,13 @@ Related actions:<br/><br/>
 """,
         `@extends` = () => List(Action.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Action.Properties{
+lazy val audience = lspace.ns.vocab.schema.audience.property
+lazy val event = lspace.ns.vocab.schema.event.property
+}
+override lazy val properties: List[LProperty] = List(audience, event)
+trait Properties extends lspace.ns.vocab.schema.Action.Properties{
+lazy val audience = lspace.ns.vocab.schema.audience.property
+lazy val event = lspace.ns.vocab.schema.event.property
+}
 }

@@ -8,4 +8,11 @@ object MedicalCode extends OntologyDef(
         comment = """A code for a medical entity.""",
         `@extends` = () => List(MedicalIntangible.ontology, CategoryCode.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalIntangible.Properties with lspace.ns.vocab.schema.CategoryCode.Properties{
+lazy val codingSystem = lspace.ns.vocab.schema.codingSystem.property
+}
+override lazy val properties: List[LProperty] = List(codingSystem)
+trait Properties extends lspace.ns.vocab.schema.MedicalIntangible.Properties with lspace.ns.vocab.schema.CategoryCode.Properties{
+lazy val codingSystem = lspace.ns.vocab.schema.codingSystem.property
+}
 }

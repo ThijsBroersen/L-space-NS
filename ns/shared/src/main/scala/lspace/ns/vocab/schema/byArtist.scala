@@ -9,6 +9,9 @@ object byArtist extends PropertyDef(
         label = "byArtist",
         comment = """The artist that performed this album or recording.""",
         `@extends` = () => List(),
-        `@range` = () => List(Person.ontology)
+        `@range` = () => List(Person.ontology, MusicGroup.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -9,6 +9,9 @@ object hasMap extends PropertyDef(
         label = "hasMap",
         comment = """A URL to a map of the place.""",
         `@extends` = () => List(),
-        `@range` = () => List(URL.ontology)
+        `@range` = () => List(Map.ontology, URL.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

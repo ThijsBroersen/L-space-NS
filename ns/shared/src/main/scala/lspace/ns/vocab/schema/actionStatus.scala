@@ -11,4 +11,7 @@ object actionStatus extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(ActionStatusType.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

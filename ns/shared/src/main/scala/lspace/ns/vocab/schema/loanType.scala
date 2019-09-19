@@ -9,6 +9,9 @@ object loanType extends PropertyDef(
         label = "loanType",
         comment = """The type of a loan or credit.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology, URL.ontology)
+        `@range` = () => List(Text.ontology, URL.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

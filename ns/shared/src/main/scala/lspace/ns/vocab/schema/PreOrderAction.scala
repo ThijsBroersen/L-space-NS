@@ -8,4 +8,11 @@ object PreOrderAction extends OntologyDef(
         comment = """An agent orders a (not yet released) object/product/service to be delivered/sent.""",
         `@extends` = () => List(TradeAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.TradeAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.TradeAction.Properties{
+
+}
 }

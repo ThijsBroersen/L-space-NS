@@ -8,4 +8,11 @@ object Distance extends OntologyDef(
         comment = """Properties that take Distances as values are of the form '&lt;Number&gt; &lt;Length unit of measure&gt;'. E.g., '7 ft'.""",
         `@extends` = () => List(Quantity.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Quantity.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Quantity.Properties{
+
+}
 }

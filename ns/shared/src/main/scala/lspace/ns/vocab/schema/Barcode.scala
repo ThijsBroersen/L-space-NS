@@ -8,4 +8,11 @@ object Barcode extends OntologyDef(
         comment = """An image of a visual machine-readable code such as a barcode or QR code.""",
         `@extends` = () => List(ImageObject.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.ImageObject.Properties{
+
+override lazy val encodingFormat = lspace.ns.vocab.schema.encodingFormat.property}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.ImageObject.Properties{
+
+override lazy val encodingFormat = lspace.ns.vocab.schema.encodingFormat.property}
 }

@@ -8,4 +8,11 @@ object MedicalEvidenceLevel extends OntologyDef(
         comment = """Level of evidence for a medical guideline. Enumerated type.""",
         `@extends` = () => List(MedicalEnumeration.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
+
+}
 }

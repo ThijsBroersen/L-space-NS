@@ -9,6 +9,9 @@ object requiredQuantity extends PropertyDef(
         label = "requiredQuantity",
         comment = """The required quantity of the item(s).""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology, Text.ontology, QuantitativeValue.ontology)
+        `@range` = () => List(`@number`, Text.ontology, QuantitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

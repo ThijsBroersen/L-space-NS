@@ -9,6 +9,9 @@ object recipe extends PropertyDef(
         label = "recipe",
         comment = """A sub property of instrument. The recipe/instructions used to perform the action.""",
         `@extends` = () => List(instrument.property),
-        `@range` = () => List()
+        `@range` = () => List(Recipe.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.instrument.Properties
 }

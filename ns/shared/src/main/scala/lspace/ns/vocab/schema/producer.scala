@@ -11,4 +11,7 @@ object producer extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Organization.ontology, Person.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

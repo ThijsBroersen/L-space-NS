@@ -8,4 +8,13 @@ object Airport extends OntologyDef(
         comment = """An airport.""",
         `@extends` = () => List(CivicStructure.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CivicStructure.Properties{
+lazy val iataCode = lspace.ns.vocab.schema.iataCode.property
+lazy val icaoCode = lspace.ns.vocab.schema.icaoCode.property
+}
+override lazy val properties: List[LProperty] = List(iataCode, icaoCode)
+trait Properties extends lspace.ns.vocab.schema.CivicStructure.Properties{
+lazy val iataCode = lspace.ns.vocab.schema.iataCode.property
+lazy val icaoCode = lspace.ns.vocab.schema.icaoCode.property
+}
 }

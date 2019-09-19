@@ -8,4 +8,11 @@ object LandmarksOrHistoricalBuildings extends OntologyDef(
         comment = """An historical landmark or building.""",
         `@extends` = () => List(Place.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Place.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Place.Properties{
+
+}
 }

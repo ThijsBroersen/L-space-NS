@@ -9,6 +9,9 @@ object paymentStatus extends PropertyDef(
         label = "paymentStatus",
         comment = """The status of payment; whether the invoice has been paid or not.""",
         `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@range` = () => List(Text.ontology, PaymentStatusType.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

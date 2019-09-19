@@ -9,6 +9,9 @@ object numberOfBeds extends PropertyDef(
         label = "numberOfBeds",
         comment = """The quantity of the given bed type available in the HotelRoom, Suite, House, or Apartment.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

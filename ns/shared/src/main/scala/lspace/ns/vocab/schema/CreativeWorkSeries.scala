@@ -12,4 +12,15 @@ Specific subtypes are available for describing <a class="localLink" href="http:/
 It is common for properties applicable to an item from the series to be usefully applied to the containing group. Schema.org attempts to anticipate some of these cases, but publishers should be free to apply properties of the series parts to the series as a whole wherever they seem appropriate.""",
         `@extends` = () => List(CreativeWork.ontology, Series.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CreativeWork.Properties with lspace.ns.vocab.schema.Series.Properties{
+lazy val endDate = lspace.ns.vocab.schema.endDate.property
+lazy val issn = lspace.ns.vocab.schema.issn.property
+lazy val startDate = lspace.ns.vocab.schema.startDate.property
+}
+override lazy val properties: List[LProperty] = List(endDate, issn, startDate)
+trait Properties extends lspace.ns.vocab.schema.CreativeWork.Properties with lspace.ns.vocab.schema.Series.Properties{
+lazy val endDate = lspace.ns.vocab.schema.endDate.property
+lazy val issn = lspace.ns.vocab.schema.issn.property
+lazy val startDate = lspace.ns.vocab.schema.startDate.property
+}
 }

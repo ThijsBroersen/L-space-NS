@@ -12,4 +12,13 @@ Beyond <a class="localLink" href="http://schema.org/ClaimReview">ClaimReview</a>
 At this time, Schema.org does not define any types of relationship between claims. This is a natural area for future exploration.""",
         `@extends` = () => List(CreativeWork.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
+lazy val appearance = lspace.ns.vocab.schema.appearance.property
+lazy val firstAppearance = lspace.ns.vocab.schema.firstAppearance.property
+}
+override lazy val properties: List[LProperty] = List(appearance, firstAppearance)
+trait Properties extends lspace.ns.vocab.schema.CreativeWork.Properties{
+lazy val appearance = lspace.ns.vocab.schema.appearance.property
+lazy val firstAppearance = lspace.ns.vocab.schema.firstAppearance.property
+}
 }

@@ -8,4 +8,11 @@ object GovernmentService extends OntologyDef(
         comment = """A service provided by a government organization, e.g. food stamps, veterans benefits, etc.""",
         `@extends` = () => List(Service.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Service.Properties{
+lazy val serviceOperator = lspace.ns.vocab.schema.serviceOperator.property
+}
+override lazy val properties: List[LProperty] = List(serviceOperator)
+trait Properties extends lspace.ns.vocab.schema.Service.Properties{
+lazy val serviceOperator = lspace.ns.vocab.schema.serviceOperator.property
+}
 }

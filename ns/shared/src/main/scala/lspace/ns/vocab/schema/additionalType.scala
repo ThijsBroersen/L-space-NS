@@ -11,4 +11,7 @@ object additionalType extends PropertyDef(
         `@extends` = () => List(`@type`),
         `@range` = () => List(URL.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

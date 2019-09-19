@@ -9,6 +9,9 @@ object reservedTicket extends PropertyDef(
         label = "reservedTicket",
         comment = """A ticket associated with the reservation.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(Ticket.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

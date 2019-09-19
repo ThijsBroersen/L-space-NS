@@ -11,4 +11,7 @@ object geo extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(GeoCoordinates.ontology, GeoShape.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

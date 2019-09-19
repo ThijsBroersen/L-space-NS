@@ -9,6 +9,9 @@ object stageAsNumber extends PropertyDef(
         label = "stageAsNumber",
         comment = """The stage represented as a number, e.g. 3.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

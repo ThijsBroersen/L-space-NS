@@ -8,4 +8,11 @@ object Specialty extends OntologyDef(
         comment = """Any branch of a field in which people typically develop specific expertise, usually after significant study, time, and effort.""",
         `@extends` = () => List(Enumeration.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Enumeration.Properties{
+
+}
 }

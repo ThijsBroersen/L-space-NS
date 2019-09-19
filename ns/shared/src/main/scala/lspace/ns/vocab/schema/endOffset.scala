@@ -9,6 +9,9 @@ object endOffset extends PropertyDef(
         label = "endOffset",
         comment = """The end time of the clip expressed as the number of seconds from the beginning of the work.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

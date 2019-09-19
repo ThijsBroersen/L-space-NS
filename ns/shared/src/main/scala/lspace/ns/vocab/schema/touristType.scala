@@ -11,4 +11,7 @@ object touristType extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Text.ontology, Audience.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

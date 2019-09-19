@@ -8,4 +8,11 @@ object MedicalSignOrSymptom extends OntologyDef(
         comment = """Any feature associated or not with a medical condition. In medicine a symptom is generally subjective while a sign is objective.""",
         `@extends` = () => List(MedicalCondition.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalCondition.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.MedicalCondition.Properties{
+
+}
 }

@@ -9,6 +9,9 @@ object clinicalPharmacology extends PropertyDef(
         label = "clinicalPharmacology",
         comment = """Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

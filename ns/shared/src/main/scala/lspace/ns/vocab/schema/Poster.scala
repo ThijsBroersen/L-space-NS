@@ -8,4 +8,11 @@ object Poster extends OntologyDef(
         comment = """A large, usually printed placard, bill, or announcement, often illustrated, that is posted to advertise or publicize something.""",
         `@extends` = () => List(CreativeWork.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.CreativeWork.Properties{
+
+}
 }

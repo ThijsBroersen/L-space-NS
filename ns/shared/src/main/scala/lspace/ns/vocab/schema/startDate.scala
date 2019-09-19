@@ -11,4 +11,7 @@ object startDate extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(`@datetime`, `@date`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

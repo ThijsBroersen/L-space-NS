@@ -11,4 +11,7 @@ object video extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(VideoObject.ontology, Clip.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

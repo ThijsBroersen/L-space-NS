@@ -15,4 +15,7 @@ Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic in
         `@extends` = () => List(),
         `@range` = () => List(QuantitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

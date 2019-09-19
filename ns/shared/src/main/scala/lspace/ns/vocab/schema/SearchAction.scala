@@ -15,4 +15,11 @@ Related actions:<br/><br/>
 """,
         `@extends` = () => List(Action.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Action.Properties{
+lazy val query = lspace.ns.vocab.schema.query.property
+}
+override lazy val properties: List[LProperty] = List(query)
+trait Properties extends lspace.ns.vocab.schema.Action.Properties{
+lazy val query = lspace.ns.vocab.schema.query.property
+}
 }

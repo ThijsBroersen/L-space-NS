@@ -8,4 +8,11 @@ object Table extends OntologyDef(
         comment = """A table on a Web page.""",
         `@extends` = () => List(WebPageElement.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.WebPageElement.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.WebPageElement.Properties{
+
+}
 }

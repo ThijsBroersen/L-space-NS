@@ -9,6 +9,9 @@ object dataset extends PropertyDef(
         label = "dataset",
         comment = """A dataset contained in this catalog.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(Dataset.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

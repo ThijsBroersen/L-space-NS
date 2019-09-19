@@ -9,6 +9,9 @@ object loanPaymentFrequency extends PropertyDef(
         label = "loanPaymentFrequency",
         comment = """Frequency of payments due, i.e. number of months between payments. This is defined as a frequency, i.e. the reciprocal of a period of time.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -8,4 +8,11 @@ object Residence extends OntologyDef(
         comment = """The place where a person lives.""",
         `@extends` = () => List(Place.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Place.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Place.Properties{
+
+}
 }

@@ -11,4 +11,7 @@ object availableFrom extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(`@datetime`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

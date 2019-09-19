@@ -8,4 +8,11 @@ object TVClip extends OntologyDef(
         comment = """A short TV program or a segment/part of a TV program.""",
         `@extends` = () => List(Clip.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Clip.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Clip.Properties{
+
+}
 }

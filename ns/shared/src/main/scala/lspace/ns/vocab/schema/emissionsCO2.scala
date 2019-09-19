@@ -9,6 +9,9 @@ object emissionsCO2 extends PropertyDef(
         label = "emissionsCO2",
         comment = """The CO2 emissions in g/km. When used in combination with a QuantitativeValue, put "g/km" into the unitText property of that value, since there is no UN/CEFACT Common Code for "g/km".""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

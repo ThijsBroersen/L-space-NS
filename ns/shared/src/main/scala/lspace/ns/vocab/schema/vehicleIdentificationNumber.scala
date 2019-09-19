@@ -11,4 +11,7 @@ object vehicleIdentificationNumber extends PropertyDef(
         `@extends` = () => List(serialNumber.property),
         `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.serialNumber.Properties
 }

@@ -8,4 +8,11 @@ object AdministrativeArea extends OntologyDef(
         comment = """A geographical region, typically under the jurisdiction of a particular government.""",
         `@extends` = () => List(Place.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Place.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Place.Properties{
+
+}
 }

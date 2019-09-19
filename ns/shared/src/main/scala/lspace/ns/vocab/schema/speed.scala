@@ -16,4 +16,7 @@ Typical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s), KNT for
         `@extends` = () => List(),
         `@range` = () => List(QuantitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

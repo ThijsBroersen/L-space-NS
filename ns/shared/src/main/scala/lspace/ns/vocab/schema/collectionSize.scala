@@ -9,6 +9,9 @@ object collectionSize extends PropertyDef(
         label = "collectionSize",
         comment = """The number of items in the <a class="localLink" href="http://schema.org/Collection">Collection</a>.""",
         `@extends` = () => List(),
-        `@range` = () => List(Integer.ontology)
+        `@range` = () => List(`@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

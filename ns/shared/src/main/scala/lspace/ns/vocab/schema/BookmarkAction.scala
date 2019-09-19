@@ -8,4 +8,11 @@ object BookmarkAction extends OntologyDef(
         comment = """An agent bookmarks/flags/labels/tags/marks an object.""",
         `@extends` = () => List(OrganizeAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.OrganizeAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.OrganizeAction.Properties{
+
+}
 }

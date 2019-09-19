@@ -11,4 +11,7 @@ object exerciseRelatedDiet extends PropertyDef(
         `@extends` = () => List(instrument.property),
         `@range` = () => List(Diet.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.instrument.Properties
 }

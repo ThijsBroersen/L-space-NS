@@ -9,4 +9,11 @@ object TouristTrip extends OntologyDef(
   (See examples below).""",
         `@extends` = () => List(Trip.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Trip.Properties{
+lazy val touristType = lspace.ns.vocab.schema.touristType.property
+}
+override lazy val properties: List[LProperty] = List(touristType)
+trait Properties extends lspace.ns.vocab.schema.Trip.Properties{
+lazy val touristType = lspace.ns.vocab.schema.touristType.property
+}
 }

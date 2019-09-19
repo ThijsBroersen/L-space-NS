@@ -11,4 +11,7 @@ object includesObject extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(TypeAndQuantityNode.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

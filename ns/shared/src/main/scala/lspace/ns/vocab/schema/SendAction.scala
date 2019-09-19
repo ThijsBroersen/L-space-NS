@@ -14,4 +14,13 @@ object SendAction extends OntologyDef(
 """,
         `@extends` = () => List(TransferAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.TransferAction.Properties{
+lazy val deliveryMethod = lspace.ns.vocab.schema.deliveryMethod.property
+lazy val recipient = lspace.ns.vocab.schema.recipient.property
+}
+override lazy val properties: List[LProperty] = List(deliveryMethod, recipient)
+trait Properties extends lspace.ns.vocab.schema.TransferAction.Properties{
+lazy val deliveryMethod = lspace.ns.vocab.schema.deliveryMethod.property
+lazy val recipient = lspace.ns.vocab.schema.recipient.property
+}
 }

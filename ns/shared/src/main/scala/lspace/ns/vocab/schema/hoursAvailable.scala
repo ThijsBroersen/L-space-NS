@@ -9,6 +9,9 @@ object hoursAvailable extends PropertyDef(
         label = "hoursAvailable",
         comment = """The hours during which this service or contact is available.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(OpeningHoursSpecification.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

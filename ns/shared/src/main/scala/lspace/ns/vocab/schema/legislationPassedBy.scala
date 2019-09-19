@@ -11,4 +11,7 @@ object legislationPassedBy extends PropertyDef(
         `@extends` = () => List(creator.property),
         `@range` = () => List(Organization.ontology, Person.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.creator.Properties
 }

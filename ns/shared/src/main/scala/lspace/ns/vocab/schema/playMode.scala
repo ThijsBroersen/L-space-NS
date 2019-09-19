@@ -11,4 +11,7 @@ object playMode extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(GamePlayMode.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

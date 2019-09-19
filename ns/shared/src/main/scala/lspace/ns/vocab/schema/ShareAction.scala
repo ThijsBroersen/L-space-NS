@@ -8,4 +8,11 @@ object ShareAction extends OntologyDef(
         comment = """The act of distributing content to people for their amusement or edification.""",
         `@extends` = () => List(CommunicateAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CommunicateAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.CommunicateAction.Properties{
+
+}
 }

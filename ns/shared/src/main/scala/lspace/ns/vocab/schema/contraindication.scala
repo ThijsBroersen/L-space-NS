@@ -9,6 +9,9 @@ object contraindication extends PropertyDef(
         label = "contraindication",
         comment = """A contraindication for this therapy.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology, MedicalContraindication.ontology)
+        `@range` = () => List(Text.ontology, MedicalContraindication.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

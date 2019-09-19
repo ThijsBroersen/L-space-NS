@@ -8,4 +8,11 @@ object AssignAction extends OntologyDef(
         comment = """The act of allocating an action/event/task to some destination (someone or something).""",
         `@extends` = () => List(AllocateAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.AllocateAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.AllocateAction.Properties{
+
+}
 }

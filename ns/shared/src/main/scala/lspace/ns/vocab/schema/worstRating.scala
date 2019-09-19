@@ -9,6 +9,9 @@ object worstRating extends PropertyDef(
         label = "worstRating",
         comment = """The lowest value allowed in this rating system. If worstRating is omitted, 1 is assumed.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology, Text.ontology)
+        `@range` = () => List(`@number`, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

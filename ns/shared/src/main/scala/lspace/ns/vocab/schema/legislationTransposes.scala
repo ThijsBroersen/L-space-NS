@@ -11,4 +11,7 @@ object legislationTransposes extends PropertyDef(
         `@extends` = () => List(legislationApplies.property),
         `@range` = () => List(Legislation.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.legislationApplies.Properties
 }

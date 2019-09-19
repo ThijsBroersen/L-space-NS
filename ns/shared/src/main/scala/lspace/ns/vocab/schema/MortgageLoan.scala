@@ -8,4 +8,13 @@ object MortgageLoan extends OntologyDef(
         comment = """A loan in which property or real estate is used as collateral. (A loan securitized against some real estate.)""",
         `@extends` = () => List(LoanOrCredit.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.LoanOrCredit.Properties{
+lazy val domiciledMortgage = lspace.ns.vocab.schema.domiciledMortgage.property
+lazy val loanMortgageMandateAmount = lspace.ns.vocab.schema.loanMortgageMandateAmount.property
+}
+override lazy val properties: List[LProperty] = List(domiciledMortgage, loanMortgageMandateAmount)
+trait Properties extends lspace.ns.vocab.schema.LoanOrCredit.Properties{
+lazy val domiciledMortgage = lspace.ns.vocab.schema.domiciledMortgage.property
+lazy val loanMortgageMandateAmount = lspace.ns.vocab.schema.loanMortgageMandateAmount.property
+}
 }

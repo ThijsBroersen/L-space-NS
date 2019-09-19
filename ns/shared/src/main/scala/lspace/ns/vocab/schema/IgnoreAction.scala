@@ -8,4 +8,11 @@ object IgnoreAction extends OntologyDef(
         comment = """The act of intentionally disregarding the object. An agent ignores an object.""",
         `@extends` = () => List(AssessAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.AssessAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.AssessAction.Properties{
+
+}
 }

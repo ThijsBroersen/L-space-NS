@@ -9,6 +9,9 @@ object verificationFactCheckingPolicy extends PropertyDef(
         label = "verificationFactCheckingPolicy",
         comment = """Disclosure about verification and fact-checking processes for a <a class="localLink" href="http://schema.org/NewsMediaOrganization">NewsMediaOrganization</a> or other fact-checking <a class="localLink" href="http://schema.org/Organization">Organization</a>.""",
         `@extends` = () => List(publishingPrinciples.property),
-        `@range` = () => List(CreativeWork.ontology)
+        `@range` = () => List(URL.ontology, CreativeWork.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.publishingPrinciples.Properties
 }

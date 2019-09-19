@@ -11,4 +11,7 @@ object servicePhone extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(ContactPoint.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

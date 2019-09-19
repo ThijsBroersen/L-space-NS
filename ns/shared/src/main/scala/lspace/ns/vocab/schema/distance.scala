@@ -11,4 +11,7 @@ object distance extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Distance.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

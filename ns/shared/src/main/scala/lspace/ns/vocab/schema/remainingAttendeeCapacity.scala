@@ -9,6 +9,9 @@ object remainingAttendeeCapacity extends PropertyDef(
         label = "remainingAttendeeCapacity",
         comment = """The number of attendee places for an event that remain unallocated.""",
         `@extends` = () => List(),
-        `@range` = () => List(Integer.ontology)
+        `@range` = () => List(`@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

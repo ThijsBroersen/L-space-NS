@@ -8,4 +8,11 @@ object DrugCostCategory extends OntologyDef(
         comment = """Enumerated categories of medical drug costs.""",
         `@extends` = () => List(MedicalEnumeration.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
+
+}
 }

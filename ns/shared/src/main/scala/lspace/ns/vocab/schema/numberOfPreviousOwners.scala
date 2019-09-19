@@ -11,6 +11,9 @@ object numberOfPreviousOwners extends PropertyDef(
 
 Typical unit code(s): C62""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology, QuantitativeValue.ontology)
+        `@range` = () => List(`@number`, QuantitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

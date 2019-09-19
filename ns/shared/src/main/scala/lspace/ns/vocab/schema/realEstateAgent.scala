@@ -9,6 +9,9 @@ object realEstateAgent extends PropertyDef(
         label = "realEstateAgent",
         comment = """A sub property of participant. The real estate agent involved in the action.""",
         `@extends` = () => List(participant.property),
-        `@range` = () => List()
+        `@range` = () => List(RealEstateAgent.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.participant.Properties
 }

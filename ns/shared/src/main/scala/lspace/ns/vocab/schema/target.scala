@@ -11,4 +11,7 @@ object target extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(EntryPoint.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

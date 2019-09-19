@@ -9,6 +9,9 @@ object owns extends PropertyDef(
         label = "owns",
         comment = """Products owned by the organization or person.""",
         `@extends` = () => List(),
-        `@range` = () => List(Product.ontology, OwnershipInfo.ontology)
+        `@range` = () => List(OwnershipInfo.ontology, Product.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

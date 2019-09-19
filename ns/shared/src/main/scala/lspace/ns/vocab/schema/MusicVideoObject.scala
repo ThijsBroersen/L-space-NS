@@ -8,4 +8,11 @@ object MusicVideoObject extends OntologyDef(
         comment = """A music video file.""",
         `@extends` = () => List(MediaObject.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MediaObject.Properties{
+
+override lazy val encodingFormat = lspace.ns.vocab.schema.encodingFormat.property}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.MediaObject.Properties{
+
+override lazy val encodingFormat = lspace.ns.vocab.schema.encodingFormat.property}
 }

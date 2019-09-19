@@ -9,6 +9,9 @@ object endorsee extends PropertyDef(
         label = "endorsee",
         comment = """A sub property of participant. The person/organization being supported.""",
         `@extends` = () => List(participant.property),
-        `@range` = () => List(Organization.ontology, Person.ontology)
+        `@range` = () => List(Person.ontology, Organization.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.participant.Properties
 }

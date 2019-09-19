@@ -11,4 +11,7 @@ object contentRating extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Rating.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

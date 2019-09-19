@@ -11,4 +11,7 @@ object availableAtOrFrom extends PropertyDef(
         `@extends` = () => List(areaServed.property),
         `@range` = () => List(Place.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.areaServed.Properties
 }

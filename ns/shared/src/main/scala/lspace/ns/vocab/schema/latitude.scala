@@ -9,6 +9,9 @@ object latitude extends PropertyDef(
         label = "latitude",
         comment = """The latitude of a location. For example <code>37.42242</code> (<a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a>).""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology, Text.ontology)
+        `@range` = () => List(`@number`, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

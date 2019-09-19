@@ -8,4 +8,11 @@ object SteeringPositionValue extends OntologyDef(
         comment = """A value indicating a steering position.""",
         `@extends` = () => List(QualitativeValue.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.QualitativeValue.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.QualitativeValue.Properties{
+
+}
 }

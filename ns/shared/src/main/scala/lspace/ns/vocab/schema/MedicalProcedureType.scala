@@ -8,4 +8,11 @@ object MedicalProcedureType extends OntologyDef(
         comment = """An enumeration that describes different types of medical procedures.""",
         `@extends` = () => List(MedicalEnumeration.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
+
+}
 }

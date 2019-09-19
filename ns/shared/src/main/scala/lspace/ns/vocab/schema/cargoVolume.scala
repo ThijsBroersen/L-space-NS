@@ -15,4 +15,7 @@ Note: You can use <a class="localLink" href="http://schema.org/minValue">minValu
         `@extends` = () => List(),
         `@range` = () => List(QuantitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

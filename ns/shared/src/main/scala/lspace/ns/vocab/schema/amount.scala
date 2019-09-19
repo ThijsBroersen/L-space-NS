@@ -9,6 +9,9 @@ object amount extends PropertyDef(
         label = "amount",
         comment = """The amount of money.""",
         `@extends` = () => List(),
-        `@range` = () => List(MonetaryAmount.ontology, Number.ontology)
+        `@range` = () => List(MonetaryAmount.ontology, `@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -9,6 +9,9 @@ object colleague extends PropertyDef(
         label = "colleague",
         comment = """A colleague of the person.""",
         `@extends` = () => List(),
-        `@range` = () => List(URL.ontology)
+        `@range` = () => List(Person.ontology, URL.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

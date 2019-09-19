@@ -8,4 +8,11 @@ object MedicalIntangible extends OntologyDef(
         comment = """A utility class that serves as the umbrella for a number of 'intangible' things in the medical space.""",
         `@extends` = () => List(MedicalEntity.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalEntity.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.MedicalEntity.Properties{
+
+}
 }

@@ -9,6 +9,9 @@ object downPayment extends PropertyDef(
         label = "downPayment",
         comment = """a type of payment made in cash during the onset of the purchase of an expensive good/service. The payment typically represents only a percentage of the full purchase price.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@number`, Number.ontology, MonetaryAmount.ontology)
+        `@range` = () => List(`@number`, MonetaryAmount.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

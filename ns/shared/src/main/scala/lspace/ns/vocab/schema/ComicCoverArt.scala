@@ -8,4 +8,19 @@ object ComicCoverArt extends OntologyDef(
         comment = """The artwork on the cover of a comic.""",
         `@extends` = () => List(ComicStory.ontology, CoverArt.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.ComicStory.Properties with lspace.ns.vocab.schema.CoverArt.Properties{
+
+override lazy val colorist = lspace.ns.vocab.schema.colorist.property
+override lazy val penciler = lspace.ns.vocab.schema.penciler.property
+override lazy val inker = lspace.ns.vocab.schema.inker.property
+override lazy val artist = lspace.ns.vocab.schema.artist.property
+override lazy val letterer = lspace.ns.vocab.schema.letterer.property}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.ComicStory.Properties with lspace.ns.vocab.schema.CoverArt.Properties{
+
+override lazy val colorist = lspace.ns.vocab.schema.colorist.property
+override lazy val penciler = lspace.ns.vocab.schema.penciler.property
+override lazy val inker = lspace.ns.vocab.schema.inker.property
+override lazy val artist = lspace.ns.vocab.schema.artist.property
+override lazy val letterer = lspace.ns.vocab.schema.letterer.property}
 }

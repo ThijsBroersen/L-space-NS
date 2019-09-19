@@ -11,4 +11,7 @@ object logo extends PropertyDef(
         `@extends` = () => List(image.property),
         `@range` = () => List(URL.ontology, ImageObject.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.image.Properties
 }

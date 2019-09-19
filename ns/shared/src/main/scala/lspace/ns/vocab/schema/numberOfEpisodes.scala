@@ -9,6 +9,9 @@ object numberOfEpisodes extends PropertyDef(
         label = "numberOfEpisodes",
         comment = """The number of episodes in this season or series.""",
         `@extends` = () => List(),
-        `@range` = () => List(Integer.ontology)
+        `@range` = () => List(`@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

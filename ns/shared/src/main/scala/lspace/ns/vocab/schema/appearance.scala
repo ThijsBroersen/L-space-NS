@@ -11,4 +11,7 @@ object appearance extends PropertyDef(
         `@extends` = () => List(workExample.property),
         `@range` = () => List(CreativeWork.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.workExample.Properties
 }

@@ -11,6 +11,9 @@ object specialOpeningHoursSpecification extends PropertyDef(
 
 Use this to explicitly override general opening hours brought in scope by <a class="localLink" href="http://schema.org/openingHoursSpecification">openingHoursSpecification</a> or <a class="localLink" href="http://schema.org/openingHours">openingHours</a>.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(OpeningHoursSpecification.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

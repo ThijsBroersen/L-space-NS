@@ -8,4 +8,11 @@ object BrokerageAccount extends OntologyDef(
         comment = """An account that allows an investor to deposit funds and place investment orders with a licensed broker or brokerage firm.""",
         `@extends` = () => List(InvestmentOrDeposit.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.InvestmentOrDeposit.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.InvestmentOrDeposit.Properties{
+
+}
 }

@@ -11,4 +11,7 @@ object boardingPolicy extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(BoardingPolicyType.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

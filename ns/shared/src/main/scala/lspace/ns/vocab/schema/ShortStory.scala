@@ -8,4 +8,11 @@ object ShortStory extends OntologyDef(
         comment = """Short story or tale. A brief work of literature, usually written in narrative prose.""",
         `@extends` = () => List(CreativeWork.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.CreativeWork.Properties{
+
+}
 }

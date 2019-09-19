@@ -8,4 +8,11 @@ object ArriveAction extends OntologyDef(
         comment = """The act of arriving at a place. An agent arrives at a destination from a fromLocation, optionally with participants.""",
         `@extends` = () => List(MoveAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MoveAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.MoveAction.Properties{
+
+}
 }

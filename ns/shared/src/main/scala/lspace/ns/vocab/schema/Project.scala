@@ -9,4 +9,11 @@ object Project extends OntologyDef(
 Use properties from <a class="localLink" href="http://schema.org/Organization">Organization</a>, <a class="localLink" href="http://schema.org/subOrganization">subOrganization</a>/<a class="localLink" href="http://schema.org/parentOrganization">parentOrganization</a> to indicate project sub-structures.""",
         `@extends` = () => List(Organization.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Organization.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Organization.Properties{
+
+}
 }

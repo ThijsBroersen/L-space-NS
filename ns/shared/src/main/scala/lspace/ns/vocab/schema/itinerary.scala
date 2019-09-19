@@ -9,6 +9,9 @@ object itinerary extends PropertyDef(
         label = "itinerary",
         comment = """Destination(s) ( <a class="localLink" href="http://schema.org/Place">Place</a> ) that make up a trip. For a trip where destination order is important use <a class="localLink" href="http://schema.org/ItemList">ItemList</a> to specify that order (see examples).""",
         `@extends` = () => List(),
-        `@range` = () => List(ItemList.ontology)
+        `@range` = () => List(ItemList.ontology, Place.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -8,4 +8,17 @@ object MenuItem extends OntologyDef(
         comment = """A food or drink item listed in a menu or menu section.""",
         `@extends` = () => List(Intangible.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val menuAddOn = lspace.ns.vocab.schema.menuAddOn.property
+lazy val nutrition = lspace.ns.vocab.schema.nutrition.property
+lazy val offers = lspace.ns.vocab.schema.offers.property
+lazy val suitableForDiet = lspace.ns.vocab.schema.suitableForDiet.property
+}
+override lazy val properties: List[LProperty] = List(menuAddOn, nutrition, offers, suitableForDiet)
+trait Properties extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val menuAddOn = lspace.ns.vocab.schema.menuAddOn.property
+lazy val nutrition = lspace.ns.vocab.schema.nutrition.property
+lazy val offers = lspace.ns.vocab.schema.offers.property
+lazy val suitableForDiet = lspace.ns.vocab.schema.suitableForDiet.property
+}
 }

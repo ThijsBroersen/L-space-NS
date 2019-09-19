@@ -11,4 +11,7 @@ object category extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(PhysicalActivityCategory.ontology, Text.ontology, Thing.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

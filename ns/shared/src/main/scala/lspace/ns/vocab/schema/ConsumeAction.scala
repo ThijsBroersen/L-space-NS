@@ -8,4 +8,13 @@ object ConsumeAction extends OntologyDef(
         comment = """The act of ingesting information/resources/food.""",
         `@extends` = () => List(Action.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Action.Properties{
+lazy val actionAccessibilityRequirement = lspace.ns.vocab.schema.actionAccessibilityRequirement.property
+lazy val expectsAcceptanceOf = lspace.ns.vocab.schema.expectsAcceptanceOf.property
+}
+override lazy val properties: List[LProperty] = List(actionAccessibilityRequirement, expectsAcceptanceOf)
+trait Properties extends lspace.ns.vocab.schema.Action.Properties{
+lazy val actionAccessibilityRequirement = lspace.ns.vocab.schema.actionAccessibilityRequirement.property
+lazy val expectsAcceptanceOf = lspace.ns.vocab.schema.expectsAcceptanceOf.property
+}
 }

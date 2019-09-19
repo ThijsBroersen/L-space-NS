@@ -8,4 +8,13 @@ object Menu extends OntologyDef(
         comment = """A structured representation of food or drink items available from a FoodEstablishment.""",
         `@extends` = () => List(CreativeWork.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
+lazy val hasMenuItem = lspace.ns.vocab.schema.hasMenuItem.property
+lazy val hasMenuSection = lspace.ns.vocab.schema.hasMenuSection.property
+}
+override lazy val properties: List[LProperty] = List(hasMenuItem, hasMenuSection)
+trait Properties extends lspace.ns.vocab.schema.CreativeWork.Properties{
+lazy val hasMenuItem = lspace.ns.vocab.schema.hasMenuItem.property
+lazy val hasMenuSection = lspace.ns.vocab.schema.hasMenuSection.property
+}
 }

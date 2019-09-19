@@ -8,4 +8,17 @@ object DataFeedItem extends OntologyDef(
         comment = """A single item within a larger data feed.""",
         `@extends` = () => List(Intangible.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val dateCreated = lspace.ns.vocab.schema.dateCreated.property
+lazy val dateDeleted = lspace.ns.vocab.schema.dateDeleted.property
+lazy val dateModified = lspace.ns.vocab.schema.dateModified.property
+lazy val item = lspace.ns.vocab.schema.item.property
+}
+override lazy val properties: List[LProperty] = List(dateCreated, dateDeleted, dateModified, item)
+trait Properties extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val dateCreated = lspace.ns.vocab.schema.dateCreated.property
+lazy val dateDeleted = lspace.ns.vocab.schema.dateDeleted.property
+lazy val dateModified = lspace.ns.vocab.schema.dateModified.property
+lazy val item = lspace.ns.vocab.schema.item.property
+}
 }

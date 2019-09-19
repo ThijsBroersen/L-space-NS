@@ -8,4 +8,13 @@ object TransferAction extends OntologyDef(
         comment = """The act of transferring/moving (abstract or concrete) animate or inanimate objects from one place to another.""",
         `@extends` = () => List(Action.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Action.Properties{
+lazy val fromLocation = lspace.ns.vocab.schema.fromLocation.property
+lazy val toLocation = lspace.ns.vocab.schema.toLocation.property
+}
+override lazy val properties: List[LProperty] = List(fromLocation, toLocation)
+trait Properties extends lspace.ns.vocab.schema.Action.Properties{
+lazy val fromLocation = lspace.ns.vocab.schema.fromLocation.property
+lazy val toLocation = lspace.ns.vocab.schema.toLocation.property
+}
 }

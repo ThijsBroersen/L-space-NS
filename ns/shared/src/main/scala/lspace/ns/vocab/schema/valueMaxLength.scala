@@ -9,6 +9,9 @@ object valueMaxLength extends PropertyDef(
         label = "valueMaxLength",
         comment = """Specifies the allowed range for number of characters in a literal value.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

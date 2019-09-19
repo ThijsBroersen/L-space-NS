@@ -8,4 +8,11 @@ object SellAction extends OntologyDef(
         comment = """The act of taking money from a buyer in exchange for goods or services rendered. An agent sells an object, product, or service to a buyer for a price. Reciprocal of BuyAction.""",
         `@extends` = () => List(TradeAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.TradeAction.Properties{
+lazy val buyer = lspace.ns.vocab.schema.buyer.property
+}
+override lazy val properties: List[LProperty] = List(buyer)
+trait Properties extends lspace.ns.vocab.schema.TradeAction.Properties{
+lazy val buyer = lspace.ns.vocab.schema.buyer.property
+}
 }

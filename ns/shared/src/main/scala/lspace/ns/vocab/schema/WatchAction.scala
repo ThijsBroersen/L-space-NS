@@ -8,4 +8,11 @@ object WatchAction extends OntologyDef(
         comment = """The act of consuming dynamic/moving visual content.""",
         `@extends` = () => List(ConsumeAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.ConsumeAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.ConsumeAction.Properties{
+
+}
 }

@@ -11,4 +11,7 @@ object calories extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Energy.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

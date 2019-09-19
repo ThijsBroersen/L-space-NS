@@ -11,4 +11,7 @@ object artMedium extends PropertyDef(
         `@extends` = () => List(material.property),
         `@range` = () => List(URL.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.material.Properties
 }

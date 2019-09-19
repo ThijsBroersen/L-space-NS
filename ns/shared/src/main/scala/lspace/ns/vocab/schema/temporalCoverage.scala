@@ -15,4 +15,7 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
         `@extends` = () => List(),
         `@range` = () => List(Text.ontology, URL.ontology, `@datetime`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

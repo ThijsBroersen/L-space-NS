@@ -11,4 +11,7 @@ object parentItem extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Question.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -8,4 +8,11 @@ object Integer extends OntologyDef(
         comment = """Data type: Integer.""",
         `@extends` = () => List(Number.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Number.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Number.Properties{
+
+}
 }

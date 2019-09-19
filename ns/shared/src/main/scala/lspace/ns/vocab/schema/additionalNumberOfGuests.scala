@@ -9,6 +9,9 @@ object additionalNumberOfGuests extends PropertyDef(
         label = "additionalNumberOfGuests",
         comment = """If responding yes, the number of guests who will attend in addition to the invitee.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -11,4 +11,7 @@ object material extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Product.ontology, Text.ontology, URL.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

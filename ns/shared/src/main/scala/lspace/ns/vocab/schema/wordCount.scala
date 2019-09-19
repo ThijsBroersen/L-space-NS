@@ -9,6 +9,9 @@ object wordCount extends PropertyDef(
         label = "wordCount",
         comment = """The number of words in the text of the Article.""",
         `@extends` = () => List(),
-        `@range` = () => List(Integer.ontology)
+        `@range` = () => List(`@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

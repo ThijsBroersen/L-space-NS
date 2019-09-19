@@ -11,4 +11,7 @@ object lodgingUnitType extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(QualitativeValue.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

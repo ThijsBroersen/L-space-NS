@@ -8,4 +8,11 @@ object DrugPrescriptionStatus extends OntologyDef(
         comment = """Indicates whether this drug is available by prescription or over-the-counter.""",
         `@extends` = () => List(MedicalEnumeration.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
+
+}
 }

@@ -9,6 +9,9 @@ object accessCode extends PropertyDef(
         label = "accessCode",
         comment = """Password, PIN, or access code needed for delivery (e.g. from a locker).""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

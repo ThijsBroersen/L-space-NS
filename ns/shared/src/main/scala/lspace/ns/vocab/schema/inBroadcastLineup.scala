@@ -9,6 +9,9 @@ object inBroadcastLineup extends PropertyDef(
         label = "inBroadcastLineup",
         comment = """The CableOrSatelliteService offering the channel.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(CableOrSatelliteService.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

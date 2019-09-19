@@ -11,4 +11,7 @@ object depth extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(QuantitativeValue.ontology, Distance.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -8,4 +8,11 @@ object ContactPage extends OntologyDef(
         comment = """Web page type: Contact page.""",
         `@extends` = () => List(WebPage.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.WebPage.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.WebPage.Properties{
+
+}
 }

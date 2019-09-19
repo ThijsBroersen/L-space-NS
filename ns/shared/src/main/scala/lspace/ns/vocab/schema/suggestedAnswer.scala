@@ -9,6 +9,9 @@ object suggestedAnswer extends PropertyDef(
         label = "suggestedAnswer",
         comment = """An answer (possibly one of several, possibly incorrect) to a Question, e.g. on a Question/Answer site.""",
         `@extends` = () => List(),
-        `@range` = () => List(ItemList.ontology)
+        `@range` = () => List(ItemList.ontology, Answer.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

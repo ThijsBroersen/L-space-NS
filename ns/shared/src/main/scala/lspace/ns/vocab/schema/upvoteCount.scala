@@ -9,6 +9,9 @@ object upvoteCount extends PropertyDef(
         label = "upvoteCount",
         comment = """The number of upvotes this question, answer or comment has received from the community.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

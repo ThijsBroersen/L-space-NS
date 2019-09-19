@@ -10,4 +10,19 @@ object NewsArticle extends OntologyDef(
 A more detailed overview of <a href="/docs/news.html">schema.org News markup</a> is also available.""",
         `@extends` = () => List(Article.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Article.Properties{
+lazy val dateline = lspace.ns.vocab.schema.dateline.property
+lazy val printColumn = lspace.ns.vocab.schema.printColumn.property
+lazy val printEdition = lspace.ns.vocab.schema.printEdition.property
+lazy val printPage = lspace.ns.vocab.schema.printPage.property
+lazy val printSection = lspace.ns.vocab.schema.printSection.property
+}
+override lazy val properties: List[LProperty] = List(dateline, printColumn, printEdition, printPage, printSection)
+trait Properties extends lspace.ns.vocab.schema.Article.Properties{
+lazy val dateline = lspace.ns.vocab.schema.dateline.property
+lazy val printColumn = lspace.ns.vocab.schema.printColumn.property
+lazy val printEdition = lspace.ns.vocab.schema.printEdition.property
+lazy val printPage = lspace.ns.vocab.schema.printPage.property
+lazy val printSection = lspace.ns.vocab.schema.printSection.property
+}
 }

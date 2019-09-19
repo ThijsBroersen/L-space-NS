@@ -16,4 +16,13 @@ Related actions:<br/><br/>
 """,
         `@extends` = () => List(TransferAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.TransferAction.Properties{
+lazy val deliveryMethod = lspace.ns.vocab.schema.deliveryMethod.property
+lazy val sender = lspace.ns.vocab.schema.sender.property
+}
+override lazy val properties: List[LProperty] = List(deliveryMethod, sender)
+trait Properties extends lspace.ns.vocab.schema.TransferAction.Properties{
+lazy val deliveryMethod = lspace.ns.vocab.schema.deliveryMethod.property
+lazy val sender = lspace.ns.vocab.schema.sender.property
+}
 }

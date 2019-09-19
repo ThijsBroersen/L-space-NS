@@ -11,4 +11,7 @@ object releaseNotes extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Text.ontology, URL.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

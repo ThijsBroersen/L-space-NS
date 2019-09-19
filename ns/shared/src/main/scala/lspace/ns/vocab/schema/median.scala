@@ -9,6 +9,9 @@ object median extends PropertyDef(
         label = "median",
         comment = """The median value.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

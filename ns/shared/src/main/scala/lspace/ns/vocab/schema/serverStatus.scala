@@ -11,4 +11,7 @@ object serverStatus extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(GameServerStatus.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

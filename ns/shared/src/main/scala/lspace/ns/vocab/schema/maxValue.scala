@@ -9,6 +9,9 @@ object maxValue extends PropertyDef(
         label = "maxValue",
         comment = """The upper value of some characteristic or property.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

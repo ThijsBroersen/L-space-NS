@@ -8,4 +8,11 @@ object URL extends OntologyDef(
         comment = """Data type: URL.""",
         `@extends` = () => List(Text.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Text.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Text.Properties{
+
+}
 }

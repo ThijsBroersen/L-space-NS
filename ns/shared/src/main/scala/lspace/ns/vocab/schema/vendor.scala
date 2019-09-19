@@ -9,6 +9,9 @@ object vendor extends PropertyDef(
         label = "vendor",
         comment = """'vendor' is an earlier term for 'seller'.""",
         `@extends` = () => List(participant.property),
-        `@range` = () => List(Organization.ontology)
+        `@range` = () => List(Organization.ontology, Person.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.participant.Properties
 }

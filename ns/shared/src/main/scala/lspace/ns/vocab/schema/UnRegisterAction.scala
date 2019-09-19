@@ -16,4 +16,11 @@ Related actions:<br/><br/>
 """,
         `@extends` = () => List(InteractAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.InteractAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.InteractAction.Properties{
+
+}
 }

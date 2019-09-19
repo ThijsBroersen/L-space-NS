@@ -8,4 +8,11 @@ object EventStatusType extends OntologyDef(
         comment = """EventStatusType is an enumeration type whose instances represent several states that an Event may be in.""",
         `@extends` = () => List(Enumeration.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Enumeration.Properties{
+
+}
 }

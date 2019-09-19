@@ -11,4 +11,7 @@ object warrantyPromise extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(WarrantyPromise.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

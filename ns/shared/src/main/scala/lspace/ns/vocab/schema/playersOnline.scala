@@ -9,6 +9,9 @@ object playersOnline extends PropertyDef(
         label = "playersOnline",
         comment = """Number of players on the server.""",
         `@extends` = () => List(),
-        `@range` = () => List(Integer.ontology)
+        `@range` = () => List(`@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

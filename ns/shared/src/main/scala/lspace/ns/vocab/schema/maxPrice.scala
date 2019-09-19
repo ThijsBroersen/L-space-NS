@@ -9,6 +9,9 @@ object maxPrice extends PropertyDef(
         label = "maxPrice",
         comment = """The highest price if the price is a range.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

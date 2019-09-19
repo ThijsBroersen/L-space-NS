@@ -9,6 +9,9 @@ object repetitions extends PropertyDef(
         label = "repetitions",
         comment = """Number of times one should repeat the activity.""",
         `@extends` = () => List(),
-        `@range` = () => List(QualitativeValue.ontology, Number.ontology)
+        `@range` = () => List(QualitativeValue.ontology, `@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

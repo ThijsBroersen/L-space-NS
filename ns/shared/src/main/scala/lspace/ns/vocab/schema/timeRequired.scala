@@ -11,4 +11,7 @@ object timeRequired extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Duration.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

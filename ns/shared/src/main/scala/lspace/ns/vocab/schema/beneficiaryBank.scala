@@ -9,6 +9,9 @@ object beneficiaryBank extends PropertyDef(
         label = "beneficiaryBank",
         comment = """A bank or bank’s branch, financial institution or international financial institution operating the beneficiary’s bank account or releasing funds for the beneficiary""",
         `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@range` = () => List(BankOrCreditUnion.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

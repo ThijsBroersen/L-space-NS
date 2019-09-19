@@ -11,4 +11,7 @@ object permissionType extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(DigitalDocumentPermissionType.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

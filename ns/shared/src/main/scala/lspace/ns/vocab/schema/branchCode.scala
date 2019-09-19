@@ -13,4 +13,7 @@ For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
         `@extends` = () => List(),
         `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

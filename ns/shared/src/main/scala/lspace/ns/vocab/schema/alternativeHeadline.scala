@@ -9,6 +9,9 @@ object alternativeHeadline extends PropertyDef(
         label = "alternativeHeadline",
         comment = """A secondary title of the CreativeWork.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

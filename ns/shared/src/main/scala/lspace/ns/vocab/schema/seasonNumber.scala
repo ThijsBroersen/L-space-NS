@@ -9,6 +9,9 @@ object seasonNumber extends PropertyDef(
         label = "seasonNumber",
         comment = """Position of the season within an ordered group of seasons.""",
         `@extends` = () => List(position.property),
-        `@range` = () => List(`@string`)
+        `@range` = () => List(`@int`, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.position.Properties
 }

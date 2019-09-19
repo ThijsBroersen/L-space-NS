@@ -8,4 +8,11 @@ object GamePlayMode extends OntologyDef(
         comment = """Indicates whether this game is multi-player, co-op or single-player.""",
         `@extends` = () => List(Enumeration.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Enumeration.Properties{
+
+}
 }

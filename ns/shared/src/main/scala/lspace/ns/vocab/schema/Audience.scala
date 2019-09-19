@@ -8,4 +8,13 @@ object Audience extends OntologyDef(
         comment = """Intended audience for an item, i.e. the group for whom the item was created.""",
         `@extends` = () => List(Intangible.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val audienceType = lspace.ns.vocab.schema.audienceType.property
+lazy val geographicArea = lspace.ns.vocab.schema.geographicArea.property
+}
+override lazy val properties: List[LProperty] = List(audienceType, geographicArea)
+trait Properties extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val audienceType = lspace.ns.vocab.schema.audienceType.property
+lazy val geographicArea = lspace.ns.vocab.schema.geographicArea.property
+}
 }

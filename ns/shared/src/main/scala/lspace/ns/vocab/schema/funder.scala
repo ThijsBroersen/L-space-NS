@@ -11,4 +11,7 @@ object funder extends PropertyDef(
         `@extends` = () => List(sponsor.property),
         `@range` = () => List(Organization.ontology, Person.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.sponsor.Properties
 }

@@ -11,4 +11,7 @@ object pregnancyCategory extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(DrugPregnancyCategory.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

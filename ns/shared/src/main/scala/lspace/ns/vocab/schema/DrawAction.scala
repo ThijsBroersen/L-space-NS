@@ -8,4 +8,11 @@ object DrawAction extends OntologyDef(
         comment = """The act of producing a visual/graphical representation of an object, typically with a pen/pencil and paper as instruments.""",
         `@extends` = () => List(CreateAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CreateAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.CreateAction.Properties{
+
+}
 }

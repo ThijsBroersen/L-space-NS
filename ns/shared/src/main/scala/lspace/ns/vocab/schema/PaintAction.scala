@@ -8,4 +8,11 @@ object PaintAction extends OntologyDef(
         comment = """The act of producing a painting, typically with paint and canvas as instruments.""",
         `@extends` = () => List(CreateAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CreateAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.CreateAction.Properties{
+
+}
 }

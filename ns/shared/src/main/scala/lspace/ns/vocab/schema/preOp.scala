@@ -9,6 +9,9 @@ object preOp extends PropertyDef(
         label = "preOp",
         comment = """A description of the workup, testing, and other preparations required before implanting this device.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

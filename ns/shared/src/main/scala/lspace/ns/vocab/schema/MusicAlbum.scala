@@ -8,4 +8,17 @@ object MusicAlbum extends OntologyDef(
         comment = """A collection of music tracks.""",
         `@extends` = () => List(MusicPlaylist.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MusicPlaylist.Properties{
+lazy val albumProductionType = lspace.ns.vocab.schema.albumProductionType.property
+lazy val albumRelease = lspace.ns.vocab.schema.albumRelease.property
+lazy val albumReleaseType = lspace.ns.vocab.schema.albumReleaseType.property
+lazy val byArtist = lspace.ns.vocab.schema.byArtist.property
+}
+override lazy val properties: List[LProperty] = List(albumProductionType, albumRelease, albumReleaseType, byArtist)
+trait Properties extends lspace.ns.vocab.schema.MusicPlaylist.Properties{
+lazy val albumProductionType = lspace.ns.vocab.schema.albumProductionType.property
+lazy val albumRelease = lspace.ns.vocab.schema.albumRelease.property
+lazy val albumReleaseType = lspace.ns.vocab.schema.albumReleaseType.property
+lazy val byArtist = lspace.ns.vocab.schema.byArtist.property
+}
 }

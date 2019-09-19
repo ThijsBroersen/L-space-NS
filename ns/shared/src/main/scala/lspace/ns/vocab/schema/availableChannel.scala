@@ -9,6 +9,9 @@ object availableChannel extends PropertyDef(
         label = "availableChannel",
         comment = """A means of accessing the service (e.g. a phone bank, a web site, a location, etc.).""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(ServiceChannel.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

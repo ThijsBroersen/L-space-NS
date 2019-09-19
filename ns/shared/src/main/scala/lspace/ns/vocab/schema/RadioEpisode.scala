@@ -8,4 +8,11 @@ object RadioEpisode extends OntologyDef(
         comment = """A radio episode which can be part of a series or season.""",
         `@extends` = () => List(Episode.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Episode.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Episode.Properties{
+
+}
 }

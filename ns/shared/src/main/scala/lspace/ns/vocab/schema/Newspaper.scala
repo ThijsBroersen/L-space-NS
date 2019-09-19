@@ -8,4 +8,11 @@ object Newspaper extends OntologyDef(
         comment = """A publication containing information about varied topics that are pertinent to general information, a geographic area, or a specific subject matter (i.e. business, culture, education). Often published daily.""",
         `@extends` = () => List(Periodical.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Periodical.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Periodical.Properties{
+
+}
 }

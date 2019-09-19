@@ -8,4 +8,11 @@ object Float extends OntologyDef(
         comment = """Data type: Floating number.""",
         `@extends` = () => List(Number.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Number.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Number.Properties{
+
+}
 }

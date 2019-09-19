@@ -9,6 +9,9 @@ object homeTeam extends PropertyDef(
         label = "homeTeam",
         comment = """The home team in a sports event.""",
         `@extends` = () => List(competitor.property),
-        `@range` = () => List()
+        `@range` = () => List(Person.ontology, SportsTeam.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.competitor.Properties
 }

@@ -18,4 +18,7 @@ Typical unit code(s): SEC for seconds<br/><br/>
         `@extends` = () => List(),
         `@range` = () => List(QuantitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

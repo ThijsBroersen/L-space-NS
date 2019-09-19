@@ -9,6 +9,9 @@ object percentile25 extends PropertyDef(
         label = "percentile25",
         comment = """The 25th percentile value.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

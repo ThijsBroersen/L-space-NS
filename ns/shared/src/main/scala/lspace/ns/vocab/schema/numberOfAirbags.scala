@@ -9,6 +9,9 @@ object numberOfAirbags extends PropertyDef(
         label = "numberOfAirbags",
         comment = """The number or type of airbags in the vehicle.""",
         `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, Number.ontology)
+        `@range` = () => List(Text.ontology, `@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

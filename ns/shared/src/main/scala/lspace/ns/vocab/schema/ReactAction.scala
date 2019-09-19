@@ -8,4 +8,11 @@ object ReactAction extends OntologyDef(
         comment = """The act of responding instinctively and emotionally to an object, expressing a sentiment.""",
         `@extends` = () => List(AssessAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.AssessAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.AssessAction.Properties{
+
+}
 }

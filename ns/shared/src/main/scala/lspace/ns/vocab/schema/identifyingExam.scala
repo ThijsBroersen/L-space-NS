@@ -9,6 +9,9 @@ object identifyingExam extends PropertyDef(
         label = "identifyingExam",
         comment = """A physical examination that can identify this sign.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(PhysicalExam.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -9,6 +9,9 @@ object code extends PropertyDef(
         label = "code",
         comment = """A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(MedicalCode.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

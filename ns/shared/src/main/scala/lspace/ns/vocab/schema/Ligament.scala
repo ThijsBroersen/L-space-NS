@@ -8,4 +8,11 @@ object Ligament extends OntologyDef(
         comment = """A short band of tough, flexible, fibrous connective tissue that functions to connect multiple bones, cartilages, and structurally support joints.""",
         `@extends` = () => List(AnatomicalStructure.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.AnatomicalStructure.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.AnatomicalStructure.Properties{
+
+}
 }

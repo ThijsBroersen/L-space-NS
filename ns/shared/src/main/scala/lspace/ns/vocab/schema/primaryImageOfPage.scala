@@ -9,6 +9,9 @@ object primaryImageOfPage extends PropertyDef(
         label = "primaryImageOfPage",
         comment = """Indicates the main image on the page.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(ImageObject.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -11,4 +11,7 @@ object suitableForDiet extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(RestrictedDiet.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

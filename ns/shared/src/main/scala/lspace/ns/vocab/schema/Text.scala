@@ -8,4 +8,11 @@ object Text extends OntologyDef(
         comment = """""",
         `@extends` = () => List()
        ){
+object keys {
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties {
+
+}
 }

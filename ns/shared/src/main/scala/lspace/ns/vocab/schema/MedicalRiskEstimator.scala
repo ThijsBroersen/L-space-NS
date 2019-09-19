@@ -8,4 +8,13 @@ object MedicalRiskEstimator extends OntologyDef(
         comment = """Any rule set or interactive tool for estimating the risk of developing a complication or condition.""",
         `@extends` = () => List(MedicalEntity.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalEntity.Properties{
+lazy val estimatesRiskOf = lspace.ns.vocab.schema.estimatesRiskOf.property
+lazy val includedRiskFactor = lspace.ns.vocab.schema.includedRiskFactor.property
+}
+override lazy val properties: List[LProperty] = List(estimatesRiskOf, includedRiskFactor)
+trait Properties extends lspace.ns.vocab.schema.MedicalEntity.Properties{
+lazy val estimatesRiskOf = lspace.ns.vocab.schema.estimatesRiskOf.property
+lazy val includedRiskFactor = lspace.ns.vocab.schema.includedRiskFactor.property
+}
 }

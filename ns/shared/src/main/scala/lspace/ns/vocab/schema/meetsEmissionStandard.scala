@@ -11,4 +11,7 @@ object meetsEmissionStandard extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(QualitativeValue.ontology, URL.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

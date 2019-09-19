@@ -11,4 +11,7 @@ object potentialAction extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Action.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

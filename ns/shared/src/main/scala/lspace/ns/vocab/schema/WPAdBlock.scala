@@ -8,4 +8,11 @@ object WPAdBlock extends OntologyDef(
         comment = """An advertising section of the page.""",
         `@extends` = () => List(WebPageElement.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.WebPageElement.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.WebPageElement.Properties{
+
+}
 }

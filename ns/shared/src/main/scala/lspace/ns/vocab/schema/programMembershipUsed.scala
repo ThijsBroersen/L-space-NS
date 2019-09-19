@@ -11,4 +11,7 @@ object programMembershipUsed extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(ProgramMembership.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

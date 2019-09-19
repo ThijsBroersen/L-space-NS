@@ -11,4 +11,7 @@ object xpath extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(XPathType.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

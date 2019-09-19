@@ -9,6 +9,9 @@ object broadcastFrequencyValue extends PropertyDef(
         label = "broadcastFrequencyValue",
         comment = """The frequency in MHz for a particular broadcast.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology, QuantitativeValue.ontology)
+        `@range` = () => List(`@number`, QuantitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

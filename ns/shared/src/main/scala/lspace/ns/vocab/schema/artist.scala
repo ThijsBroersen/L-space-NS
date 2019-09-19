@@ -13,4 +13,7 @@ object artist extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Person.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

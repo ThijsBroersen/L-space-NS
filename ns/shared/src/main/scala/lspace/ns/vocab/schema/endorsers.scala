@@ -9,6 +9,9 @@ object endorsers extends PropertyDef(
         label = "endorsers",
         comment = """People or organizations that endorse the plan.""",
         `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology)
+        `@range` = () => List(Organization.ontology, Person.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

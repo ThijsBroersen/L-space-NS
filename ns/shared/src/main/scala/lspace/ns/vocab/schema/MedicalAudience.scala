@@ -8,4 +8,11 @@ object MedicalAudience extends OntologyDef(
         comment = """Target audiences for medical web pages. Enumerated type.""",
         `@extends` = () => List(MedicalEnumeration.ontology, Audience.ontology, PeopleAudience.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalEnumeration.Properties with lspace.ns.vocab.schema.Audience.Properties with lspace.ns.vocab.schema.PeopleAudience.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.MedicalEnumeration.Properties with lspace.ns.vocab.schema.Audience.Properties with lspace.ns.vocab.schema.PeopleAudience.Properties{
+
+}
 }

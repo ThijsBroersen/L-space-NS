@@ -11,4 +11,7 @@ object accountOverdraftLimit extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(MonetaryAmount.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

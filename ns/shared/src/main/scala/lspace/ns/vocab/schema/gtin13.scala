@@ -11,4 +11,7 @@ object gtin13 extends PropertyDef(
         `@extends` = () => List(identifier.property),
         `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.identifier.Properties
 }

@@ -11,4 +11,7 @@ object albumProductionType extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(MusicAlbumProductionType.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

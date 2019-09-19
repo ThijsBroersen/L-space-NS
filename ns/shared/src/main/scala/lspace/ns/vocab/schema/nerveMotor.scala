@@ -9,6 +9,9 @@ object nerveMotor extends PropertyDef(
         label = "nerveMotor",
         comment = """The neurological pathway extension that involves muscle control.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(Muscle.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

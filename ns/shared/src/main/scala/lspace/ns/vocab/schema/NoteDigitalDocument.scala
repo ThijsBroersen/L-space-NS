@@ -8,4 +8,11 @@ object NoteDigitalDocument extends OntologyDef(
         comment = """A file containing a note, primarily for the author.""",
         `@extends` = () => List(DigitalDocument.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.DigitalDocument.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.DigitalDocument.Properties{
+
+}
 }

@@ -11,4 +11,7 @@ object steps extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(CreativeWork.ontology, Text.ontology, ItemList.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

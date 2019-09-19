@@ -8,4 +8,11 @@ object DepositAccount extends OntologyDef(
         comment = """A type of Bank Account with a main purpose of depositing funds to gain interest or other benefits.""",
         `@extends` = () => List(InvestmentOrDeposit.ontology, BankAccount.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.InvestmentOrDeposit.Properties with lspace.ns.vocab.schema.BankAccount.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.InvestmentOrDeposit.Properties with lspace.ns.vocab.schema.BankAccount.Properties{
+
+}
 }

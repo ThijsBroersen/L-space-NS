@@ -15,4 +15,7 @@ Dateline summaries are oriented more towards human readers than towards automate
         `@extends` = () => List(),
         `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

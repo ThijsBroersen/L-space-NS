@@ -11,4 +11,7 @@ object ccRecipient extends PropertyDef(
         `@extends` = () => List(recipient.property),
         `@range` = () => List(ContactPoint.ontology, Person.ontology, Organization.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.recipient.Properties
 }

@@ -11,4 +11,7 @@ object maximumIntake extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(MaximumDoseSchedule.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

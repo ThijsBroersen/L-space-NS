@@ -8,4 +8,11 @@ object CssSelectorType extends OntologyDef(
         comment = """Text representing a CSS selector.""",
         `@extends` = () => List(Text.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Text.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Text.Properties{
+
+}
 }

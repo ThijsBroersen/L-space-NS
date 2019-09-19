@@ -9,6 +9,9 @@ object orderItemNumber extends PropertyDef(
         label = "orderItemNumber",
         comment = """The identifier of the order item.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

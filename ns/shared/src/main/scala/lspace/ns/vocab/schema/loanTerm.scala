@@ -11,4 +11,7 @@ object loanTerm extends PropertyDef(
         `@extends` = () => List(duration.property),
         `@range` = () => List(QuantitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.duration.Properties
 }

@@ -9,6 +9,9 @@ object pageStart extends PropertyDef(
         label = "pageStart",
         comment = """The page on which the work starts; for example "135" or "xiii".""",
         `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, Integer.ontology)
+        `@range` = () => List(Text.ontology, `@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

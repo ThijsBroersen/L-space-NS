@@ -9,6 +9,9 @@ object legislationJurisdiction extends PropertyDef(
         label = "legislationJurisdiction",
         comment = """The jurisdiction from which the legislation originates.""",
         `@extends` = () => List(spatialCoverage.property),
-        `@range` = () => List(Text.ontology, AdministrativeArea.ontology)
+        `@range` = () => List(AdministrativeArea.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.spatialCoverage.Properties
 }

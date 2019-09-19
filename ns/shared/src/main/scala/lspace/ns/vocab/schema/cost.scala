@@ -11,4 +11,7 @@ object cost extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(DrugCost.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

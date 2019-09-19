@@ -8,4 +8,11 @@ object QuoteAction extends OntologyDef(
         comment = """An agent quotes/estimates/appraises an object/product/service with a price at a location/store.""",
         `@extends` = () => List(TradeAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.TradeAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.TradeAction.Properties{
+
+}
 }

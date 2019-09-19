@@ -11,4 +11,7 @@ object dayOfWeek extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(DayOfWeek.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

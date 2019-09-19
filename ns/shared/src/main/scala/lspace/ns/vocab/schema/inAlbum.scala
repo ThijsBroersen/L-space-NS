@@ -9,6 +9,9 @@ object inAlbum extends PropertyDef(
         label = "inAlbum",
         comment = """The album to which this recording belongs.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(MusicAlbum.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

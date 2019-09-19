@@ -9,6 +9,9 @@ object childMaxAge extends PropertyDef(
         label = "childMaxAge",
         comment = """Maximal age of the child.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

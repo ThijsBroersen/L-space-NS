@@ -11,4 +11,7 @@ object educationalLevel extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(DefinedTerm.ontology, Text.ontology, URL.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

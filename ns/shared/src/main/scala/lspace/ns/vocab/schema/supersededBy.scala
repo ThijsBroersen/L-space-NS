@@ -11,4 +11,7 @@ object supersededBy extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(`@class`, `@property`, Enumeration.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

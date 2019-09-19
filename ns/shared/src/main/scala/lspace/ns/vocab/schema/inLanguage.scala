@@ -11,4 +11,7 @@ object inLanguage extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Language.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

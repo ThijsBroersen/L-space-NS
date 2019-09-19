@@ -9,6 +9,9 @@ object contactOption extends PropertyDef(
         label = "contactOption",
         comment = """An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(ContactPointOption.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -9,6 +9,9 @@ object totalPaymentDue extends PropertyDef(
         label = "totalPaymentDue",
         comment = """The total amount due.""",
         `@extends` = () => List(),
-        `@range` = () => List(PriceSpecification.ontology)
+        `@range` = () => List(PriceSpecification.ontology, MonetaryAmount.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

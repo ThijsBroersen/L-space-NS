@@ -9,6 +9,9 @@ object membershipPointsEarned extends PropertyDef(
         label = "membershipPointsEarned",
         comment = """The number of membership points earned by the member. If necessary, the unitText can be used to express the units the points are issued in. (e.g. stars, miles, etc.)""",
         `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology, Number.ontology)
+        `@range` = () => List(QuantitativeValue.ontology, `@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

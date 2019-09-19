@@ -11,4 +11,7 @@ object primaryPrevention extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(MedicalTherapy.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

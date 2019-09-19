@@ -11,4 +11,7 @@ object geospatiallyTouches extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List()
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

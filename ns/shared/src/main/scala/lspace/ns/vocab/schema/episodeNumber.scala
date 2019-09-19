@@ -9,6 +9,9 @@ object episodeNumber extends PropertyDef(
         label = "episodeNumber",
         comment = """Position of the episode within an ordered group of episodes.""",
         `@extends` = () => List(position.property),
-        `@range` = () => List(Text.ontology)
+        `@range` = () => List(Text.ontology, `@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.position.Properties
 }

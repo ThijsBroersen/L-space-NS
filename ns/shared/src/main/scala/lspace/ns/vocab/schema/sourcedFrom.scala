@@ -11,4 +11,7 @@ object sourcedFrom extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(BrainStructure.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -11,4 +11,7 @@ object includedDataCatalog extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(DataCatalog.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

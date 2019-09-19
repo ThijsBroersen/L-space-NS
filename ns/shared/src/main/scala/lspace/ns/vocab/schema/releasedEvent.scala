@@ -11,4 +11,7 @@ object releasedEvent extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(PublicationEvent.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

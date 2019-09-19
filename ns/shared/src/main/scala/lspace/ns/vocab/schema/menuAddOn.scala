@@ -11,4 +11,7 @@ object menuAddOn extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(MenuItem.ontology, MenuSection.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

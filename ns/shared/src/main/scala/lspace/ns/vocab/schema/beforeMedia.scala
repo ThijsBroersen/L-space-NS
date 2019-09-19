@@ -11,4 +11,7 @@ object beforeMedia extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(MediaObject.ontology, URL.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

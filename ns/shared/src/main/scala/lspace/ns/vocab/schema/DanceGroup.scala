@@ -8,4 +8,11 @@ object DanceGroup extends OntologyDef(
         comment = """A dance group&#x2014;for example, the Alvin Ailey Dance Theater or Riverdance.""",
         `@extends` = () => List(PerformingGroup.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.PerformingGroup.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.PerformingGroup.Properties{
+
+}
 }

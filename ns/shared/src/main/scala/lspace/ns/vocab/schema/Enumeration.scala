@@ -8,4 +8,11 @@ object Enumeration extends OntologyDef(
         comment = """Lists or enumerations—for example, a list of cuisines or music genres, etc.""",
         `@extends` = () => List(Intangible.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val supersededBy = lspace.ns.vocab.schema.supersededBy.property
+}
+override lazy val properties: List[LProperty] = List(supersededBy)
+trait Properties extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val supersededBy = lspace.ns.vocab.schema.supersededBy.property
+}
 }

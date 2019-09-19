@@ -11,4 +11,7 @@ object hasMenuItem extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(MenuItem.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

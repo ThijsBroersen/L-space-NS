@@ -8,4 +8,15 @@ object ProductModel extends OntologyDef(
         comment = """A datasheet or vendor specification of a product (in the sense of a prototypical description).""",
         `@extends` = () => List(Product.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Product.Properties{
+lazy val isVariantOf = lspace.ns.vocab.schema.isVariantOf.property
+lazy val predecessorOf = lspace.ns.vocab.schema.predecessorOf.property
+lazy val successorOf = lspace.ns.vocab.schema.successorOf.property
+}
+override lazy val properties: List[LProperty] = List(isVariantOf, predecessorOf, successorOf)
+trait Properties extends lspace.ns.vocab.schema.Product.Properties{
+lazy val isVariantOf = lspace.ns.vocab.schema.isVariantOf.property
+lazy val predecessorOf = lspace.ns.vocab.schema.predecessorOf.property
+lazy val successorOf = lspace.ns.vocab.schema.successorOf.property
+}
 }

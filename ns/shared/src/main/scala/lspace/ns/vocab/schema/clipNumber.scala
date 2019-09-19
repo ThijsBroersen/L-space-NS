@@ -9,6 +9,9 @@ object clipNumber extends PropertyDef(
         label = "clipNumber",
         comment = """Position of the clip within an ordered group of clips.""",
         `@extends` = () => List(position.property),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(`@int`, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.position.Properties
 }

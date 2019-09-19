@@ -8,4 +8,11 @@ object BodyOfWater extends OntologyDef(
         comment = """A body of water, such as a sea, ocean, or lake.""",
         `@extends` = () => List(Landform.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Landform.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Landform.Properties{
+
+}
 }

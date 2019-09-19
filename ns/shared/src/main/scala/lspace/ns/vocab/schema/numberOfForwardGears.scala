@@ -11,6 +11,9 @@ object numberOfForwardGears extends PropertyDef(
 
 Typical unit code(s): C62""",
         `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology, Number.ontology)
+        `@range` = () => List(QuantitativeValue.ontology, `@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

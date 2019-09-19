@@ -9,6 +9,9 @@ object gracePeriod extends PropertyDef(
         label = "gracePeriod",
         comment = """The period of time after any due date that the borrower has to fulfil its obligations before a default (failure to pay) is deemed to have occurred.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(Duration.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -8,4 +8,11 @@ object SiteNavigationElement extends OntologyDef(
         comment = """A navigation element of the page.""",
         `@extends` = () => List(WebPageElement.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.WebPageElement.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.WebPageElement.Properties{
+
+}
 }

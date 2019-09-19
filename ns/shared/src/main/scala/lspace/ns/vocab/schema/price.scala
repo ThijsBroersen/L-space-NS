@@ -19,6 +19,9 @@ Usage guidelines:<br/><br/>
 </ul>
 """,
         `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, Number.ontology)
+        `@range` = () => List(Text.ontology, `@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

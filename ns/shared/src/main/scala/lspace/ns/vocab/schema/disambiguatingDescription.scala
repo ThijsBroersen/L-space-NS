@@ -11,4 +11,7 @@ object disambiguatingDescription extends PropertyDef(
         `@extends` = () => List(description.property),
         `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.description.Properties
 }

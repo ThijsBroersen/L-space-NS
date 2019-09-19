@@ -3,17 +3,18 @@ package lspace.meta.vocab
 import lspace._
 import lspace.codec.ActiveContext
 import lspace.codec.argonaut._
-import lspace.codec.jsonld.Decoder
+import lspace.codec.json.jsonld.JsonLDDecoder
 import lspace.datatype.DataType
 import monix.eval.Task
 
 import scala.meta._
 import scala.meta.prettyprinters.Show
+import scala.concurrent.duration._
 
 object schema {
 
-  val graph: Graph     = Graph("https://schema.org/version/3.5/all-layers")
-  val decoder: Decoder = Decoder(graph.ns)
+  val graph: Graph = Graph("https://schema.org/version/3.5/all-layers")
+  val decoder      = JsonLDDecoder(graph.ns)
 
   def saveToFile(path: String, code: Tree) = {
     val writer = new java.io.PrintWriter(path)
@@ -23,17 +24,19 @@ object schema {
 
   val reservedWords = Set("yield", "if", "else", "for", "object")
 
-  def genSchema(path: String): Task[Unit] = decoder.fetchVocabularyGraph(graph.iri)(ActiveContext()).map { f =>
-    Ontology.ontologies.all.filter(_.iri.contains("schema.org")).foreach { ontology =>
-      val code  = ontologyToOntologyDef(ontology)
-      val label = ontology.iri.reverse.takeWhile(c => c != '/' && c != '#').reverse
-      saveToFile(s"$path${label}.scala", code.parse[Source].get)
-    }
-    Property.properties.all.filter(_.iri.contains("schema.org")).foreach { property =>
-      val code  = propertyToPropertyDef(property)
-      val label = property.iri.reverse.takeWhile(c => c != '/' && c != '#').reverse
-      saveToFile(s"$path${label}.scala", code.parse[Source].get)
-    }
+  def genSchema(path: String): Task[Unit] = decoder.fetchVocabularyGraph(graph.iri)(ActiveContext()).flatMap { f =>
+    Task {
+      Ontology.ontologies.all.filter(_.iri.contains("schema.org")).foreach { ontology =>
+        val code  = ontologyToOntologyDef(ontology)
+        val label = ontology.iri.reverse.takeWhile(c => c != '/' && c != '#').reverse
+        saveToFile(s"$path${label}.scala", code.parse[Source].get)
+      }
+      Property.properties.all.filter(_.iri.contains("schema.org")).foreach { property =>
+        val code  = propertyToPropertyDef(property)
+        val label = property.iri.reverse.takeWhile(c => c != '/' && c != '#').reverse
+        saveToFile(s"$path${label}.scala", code.parse[Source].get)
+      }
+    }.delayExecution(5.seconds)
   }
   def genOntology(path: String, iri: String) =
     decoder
@@ -43,7 +46,6 @@ object schema {
           .nodes()
           .filter(node => node.hasLabel(Ontology.ontology).isEmpty && node.hasLabel(Property.ontology).isEmpty)
           .mapEval { node =>
-            println(s"fetch ${node.iri}")
             decoder.toClasstype(node.iri)(ActiveContext())
           }
           .toListL
@@ -105,116 +107,141 @@ object schema {
         .map {
           case c if c.iri.startsWith("@") => s"`${c.iri}`"
           case classes =>
-            classes.iri.reverse
-              .takeWhile(c => c != '/' && c != '#')
-              .reverse
-              .validObjectName + ".ontology"
+            try {
+              classes.iri.reverse
+                .takeWhile(c => c != '/' && c != '#')
+                .reverse
+                .validObjectName + ".ontology"
+            } catch {
+              case e =>
+                println(ontology.iri)
+                println(classes.iri)
+                println(classes.iris)
+                throw e
+            }
         }}
        ){""" + "\n" +
-//      s"""object keys ${if (ontology.extendedClasses().filter(!_.iri.startsWith("@")).nonEmpty)
-//        "extends " + ontology
-//          .extendedClasses()
-//          .filter(!_.iri.startsWith("@"))
-//          .map(
-//            o =>
-//              "lspace.ns.vocab.schema." + (o.iris
-//                .find(_.startsWith("@") == false)
-//                .head
-//                .reverse
-//                .takeWhile(c => c != '/' && c != '#')
-//                .reverse
-//                .validObjectName) + ".Properties")
-//          .mkString(" with ")
-//      else ""}""" + "{\n" +
-//      ontology
-//        .properties()
-//        .diff(inheritedProperties.toSet)
-//        .toList
-//        .map(
-//          _.iris
-//            .find(_.startsWith("@") == false)
-//            .head
-//            .reverse
-//            .takeWhile(c => c != '/' && c != '#')
-//            .reverse
-//            .validObjectName)
-//        .map { label =>
-//          s"lazy val $label = lspace.ns.vocab.schema.${label}.property"
-//        }
-//        .mkString("\n") + "\n" +
-//      toOverride.toList
-//        .map(
-//          _.iris
-//            .find(_.startsWith("@") == false)
-//            .head
-//            .reverse
-//            .takeWhile(c => c != '/' && c != '#')
-//            .reverse
-//            .validObjectName)
-//        .map { label =>
-//          s"override lazy val $label = lspace.ns.vocab.schema.${label}.property"
-//        }
-//        .mkString("\n") +
-//      "}\n" +
-//      s"""override lazy val properties: List[LProperty] = ${ontology
-//        .properties()
-//        .diff(inheritedProperties.toSet)
-//        .filter(!_.iri.startsWith("@"))
-//        .toList
-//        .map(
-//          _.iris
-//            .find(_.startsWith("@") == false)
-//            .head
-//            .reverse
-//            .takeWhile(c => c != '/' && c != '#')
-//            .reverse
-//            .validObjectName)}""" + "\n" +
-//      s"""trait Properties ${if (ontology.extendedClasses().filter(!_.iri.startsWith("@")).nonEmpty)
-//        "extends " + ontology
-//          .extendedClasses()
-//          .filter(!_.iri.startsWith("@"))
-//          .map(
-//            o =>
-//              "lspace.ns.vocab.schema." + o.iris
-//                .find(_.startsWith("@") == false)
-//                .head
-//                .reverse
-//                .takeWhile(c => c != '/' && c != '#')
-//                .reverse
-//                .validObjectName + ".Properties")
-//          .mkString(" with ")
-//      else ""}""" + "{\n" +
-//      ontology
-//        .properties()
-//        .diff(inheritedProperties.toSet)
-//        .filter(!_.iri.startsWith("@"))
-//        .toList
-//        .map(
-//          _.iris
-//            .find(_.startsWith("@") == false)
-//            .head
-//            .reverse
-//            .takeWhile(c => c != '/' && c != '#')
-//            .reverse
-//            .validObjectName)
-//        .map { label =>
-//          s"lazy val $label = lspace.ns.vocab.schema.${label}.property"
-//        }
-//        .mkString("\n") + "\n" +
-//      toOverride.toList
-//        .map(
-//          _.iris
-//            .find(_.startsWith("@") == false)
-//            .head
-//            .reverse
-//            .takeWhile(c => c != '/' && c != '#')
-//            .reverse
-//            .validObjectName)
-//        .map { label =>
-//          s"override lazy val $label = lspace.ns.vocab.schema.${label}.property"
-//        }
-//        .mkString("\n") +
-//      "}\n" +
+      s"""object keys ${if (ontology.extendedClasses().filter(!_.iri.startsWith("@")).nonEmpty)
+        "extends " + ontology
+          .extendedClasses()
+          .filter(!_.iri.startsWith("@"))
+          .map(
+            o =>
+              "lspace.ns.vocab.schema." + (o.iris
+                .find(_.startsWith("@") == false)
+                .head
+                .reverse
+                .takeWhile(c => c != '/' && c != '#')
+                .reverse
+                .validObjectName) + ".Properties")
+          .mkString(" with ")
+      else ""}""" + "{\n" +
+      (try {
+        ontology
+          .properties()
+          .diff(inheritedProperties.toSet)
+          .toList
+          .sortBy(_.label("en").getOrElse(""))
+          .map(
+            _.iris
+              .find(_.startsWith("@") == false)
+              .head
+              .reverse
+              .takeWhile(c => c != '/' && c != '#')
+              .reverse
+              .validObjectName)
+      } catch {
+        case e =>
+          println(ontology.iri)
+          println(toOverride.map(_.iri))
+          println(toOverride.map(_.iris))
+          throw e
+      }).map { label =>
+          s"lazy val $label = lspace.ns.vocab.schema.${label}.property"
+        }
+        .mkString("\n") + "\n" +
+      (try {
+        toOverride.toList
+          .map(
+            _.iris
+              .find(_.startsWith("@") == false)
+              .head
+              .reverse
+              .takeWhile(c => c != '/' && c != '#')
+              .reverse
+              .validObjectName)
+      } catch {
+        case e =>
+          println(ontology.iri)
+          println(toOverride.map(_.iri))
+          println(toOverride.map(_.iris))
+          throw e
+      }).map { label =>
+          s"override lazy val $label = lspace.ns.vocab.schema.${label}.property"
+        }
+        .mkString("\n") +
+      "}\n" +
+      s"""override lazy val properties: List[LProperty] = ${ontology
+        .properties()
+        .diff(inheritedProperties.toSet)
+        .filter(!_.iri.startsWith("@"))
+        .toList
+        .sortBy(_.label("en").getOrElse(""))
+        .map(
+          _.iris
+            .find(_.startsWith("@") == false)
+            .head
+            .reverse
+            .takeWhile(c => c != '/' && c != '#')
+            .reverse
+            .validObjectName)}""" + "\n" +
+      s"""trait Properties ${if (ontology.extendedClasses().filter(!_.iri.startsWith("@")).nonEmpty)
+        "extends " + ontology
+          .extendedClasses()
+          .filter(!_.iri.startsWith("@"))
+          .map(
+            o =>
+              "lspace.ns.vocab.schema." + o.iris
+                .find(_.startsWith("@") == false)
+                .head
+                .reverse
+                .takeWhile(c => c != '/' && c != '#')
+                .reverse
+                .validObjectName + ".Properties")
+          .mkString(" with ")
+      else ""}""" + "{\n" +
+      ontology
+        .properties()
+        .diff(inheritedProperties.toSet)
+        .filter(!_.iri.startsWith("@"))
+        .toList
+        .sortBy(_.label("en").getOrElse(""))
+        .map(
+          _.iris
+            .find(_.startsWith("@") == false)
+            .head
+            .reverse
+            .takeWhile(c => c != '/' && c != '#')
+            .reverse
+            .validObjectName)
+        .map { label =>
+          s"lazy val $label = lspace.ns.vocab.schema.${label}.property"
+        }
+        .mkString("\n") + "\n" +
+      toOverride.toList
+        .map(
+          _.iris
+            .find(_.startsWith("@") == false)
+            .head
+            .reverse
+            .takeWhile(c => c != '/' && c != '#')
+            .reverse
+            .validObjectName)
+        .map { label =>
+          s"override lazy val $label = lspace.ns.vocab.schema.${label}.property"
+        }
+        .mkString("\n") +
+      "}\n" +
       "}"
   }
 
@@ -262,53 +289,54 @@ object schema {
               c.iri.reverse.takeWhile(c => c != '/' && c != '#').reverse.validObjectName
         }}
        ){""" + "\n" +
-//      s"""${if (property.extendedClasses().filter(!_.iri.startsWith("@")).nonEmpty && property
-//                  .extendedClasses()
-//                  .flatMap(_.properties().filter(!_.iri.startsWith("@")))
-//                  .nonEmpty)
-//        "object keys extends " + property
-//          .extendedClasses()
-//          .filter(!_.iri.startsWith("@"))
-//          .map(
-//            o =>
-//              "lspace.ns.vocab.schema." + o.iris
-//                .find(_.startsWith("@") == false)
-//                .head
-//                .reverse
-//                .takeWhile(c => c != '/' && c != '#')
-//                .reverse
-//                .validObjectName)
-//          .map(_ + ".Properties")
-//          .mkString(" with ")
-//      else ""}""" + "\n" +
-//      s"""override lazy val properties: List[LProperty] = ${property
-//        .properties()
-//        .filter(!_.iri.startsWith("@"))
-//        .toList
-//        .map(
-//          _.iris
-//            .find(_.startsWith("@") == false)
-//            .head
-//            .reverse
-//            .takeWhile(c => c != '/' && c != '#')
-//            .reverse
-//            .validObjectName)}""" + "\n" +
-//      s"""trait Properties ${if (property.extendedClasses().filter(!_.iri.startsWith("@")).nonEmpty)
-//        "extends " + property
-//          .extendedClasses()
-//          .filter(!_.iri.startsWith("@"))
-//          .map(
-//            o =>
-//              "lspace.ns.vocab.schema." + o.iris
-//                .find(_.startsWith("@") == false)
-//                .head
-//                .reverse
-//                .takeWhile(c => c != '/' && c != '#')
-//                .reverse
-//                .validObjectName)
-//          .map(_ + ".Properties")
-//          .mkString(" with ")
-//      else ""}""" + "\n" +
+      s"""${if (property.extendedClasses().filter(!_.iri.startsWith("@")).nonEmpty && property
+                  .extendedClasses()
+                  .flatMap(_.properties().filter(!_.iri.startsWith("@")))
+                  .nonEmpty)
+        "object keys extends " + property
+          .extendedClasses()
+          .filter(!_.iri.startsWith("@"))
+          .map(
+            o =>
+              "lspace.ns.vocab.schema." + o.iris
+                .find(_.startsWith("@") == false)
+                .head
+                .reverse
+                .takeWhile(c => c != '/' && c != '#')
+                .reverse
+                .validObjectName)
+          .map(_ + ".Properties")
+          .mkString(" with ")
+      else ""}""" + "\n" +
+      s"""override lazy val properties: List[LProperty] = ${property
+        .properties()
+        .filter(!_.iri.startsWith("@"))
+        .toList
+        .sortBy(_.label("en").getOrElse(""))
+        .map(
+          _.iris
+            .find(_.startsWith("@") == false)
+            .head
+            .reverse
+            .takeWhile(c => c != '/' && c != '#')
+            .reverse
+            .validObjectName)}""" + "\n" +
+      s"""trait Properties ${if (property.extendedClasses().filter(!_.iri.startsWith("@")).nonEmpty)
+        "extends " + property
+          .extendedClasses()
+          .filter(!_.iri.startsWith("@"))
+          .map(
+            o =>
+              "lspace.ns.vocab.schema." + o.iris
+                .find(_.startsWith("@") == false)
+                .head
+                .reverse
+                .takeWhile(c => c != '/' && c != '#')
+                .reverse
+                .validObjectName)
+          .map(_ + ".Properties")
+          .mkString(" with ")
+      else ""}""" + "\n" +
       "}"
   }
 }

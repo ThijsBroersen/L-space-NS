@@ -11,4 +11,7 @@ object subEvent extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Event.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

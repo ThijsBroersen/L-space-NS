@@ -11,4 +11,7 @@ object differentialDiagnosis extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(DDxElement.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -11,4 +11,7 @@ object bookFormat extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(BookFormatType.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

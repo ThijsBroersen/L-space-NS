@@ -8,4 +8,11 @@ object AskPublicNewsArticle extends OntologyDef(
         comment = """A <a class="localLink" href="http://schema.org/NewsArticle">NewsArticle</a> expressing an open call by a <a class="localLink" href="http://schema.org/NewsMediaOrganization">NewsMediaOrganization</a> asking the public for input, insights, clarifications, anecdotes, documentation, etc., on an issue, for reporting purposes.""",
         `@extends` = () => List(NewsArticle.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.NewsArticle.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.NewsArticle.Properties{
+
+}
 }

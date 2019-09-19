@@ -8,4 +8,11 @@ object InfectiousAgentClass extends OntologyDef(
         comment = """Classes of agents or pathogens that transmit infectious diseases. Enumerated type.""",
         `@extends` = () => List(MedicalEnumeration.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
+
+}
 }

@@ -12,4 +12,7 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
         `@extends` = () => List(),
         `@range` = () => List(QuantitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

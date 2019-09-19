@@ -11,4 +11,7 @@ object actionAccessibilityRequirement extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(ActionAccessSpecification.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

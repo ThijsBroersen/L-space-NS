@@ -9,6 +9,9 @@ object healthPlanCoinsuranceRate extends PropertyDef(
         label = "healthPlanCoinsuranceRate",
         comment = """Whether The rate of coinsurance expressed as a number between 0.0 and 1.0.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

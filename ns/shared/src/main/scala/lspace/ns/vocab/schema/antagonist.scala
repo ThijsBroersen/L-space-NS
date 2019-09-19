@@ -11,4 +11,7 @@ object antagonist extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Muscle.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

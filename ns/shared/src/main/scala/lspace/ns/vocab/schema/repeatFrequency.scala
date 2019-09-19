@@ -10,6 +10,9 @@ object repeatFrequency extends PropertyDef(
         comment = """Defines the frequency at which <a class="localLink" href="http://schema.org/Events">Events</a> will occur according to a schedule <a class="localLink" href="http://schema.org/Schedule">Schedule</a>. The intervals between
       events should be defined as a <a class="localLink" href="http://schema.org/Duration">Duration</a> of time.""",
         `@extends` = () => List(frequency.property),
-        `@range` = () => List(Text.ontology)
+        `@range` = () => List(Text.ontology, Duration.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.frequency.Properties
 }

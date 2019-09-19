@@ -11,4 +11,7 @@ object distinguishingSign extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(MedicalSignOrSymptom.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

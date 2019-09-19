@@ -11,4 +11,7 @@ object encoding extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(MediaObject.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

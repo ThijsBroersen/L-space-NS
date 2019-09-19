@@ -11,4 +11,7 @@ object subjectOf extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Event.ontology, CreativeWork.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -8,4 +8,11 @@ object AllocateAction extends OntologyDef(
         comment = """The act of organizing tasks/objects/events by associating resources to it.""",
         `@extends` = () => List(OrganizeAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.OrganizeAction.Properties{
+lazy val purpose = lspace.ns.vocab.schema.purpose.property
+}
+override lazy val properties: List[LProperty] = List(purpose)
+trait Properties extends lspace.ns.vocab.schema.OrganizeAction.Properties{
+lazy val purpose = lspace.ns.vocab.schema.purpose.property
+}
 }

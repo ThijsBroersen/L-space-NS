@@ -11,4 +11,7 @@ object partOfEpisode extends PropertyDef(
         `@extends` = () => List(isPartOf.property),
         `@range` = () => List(Episode.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.isPartOf.Properties
 }

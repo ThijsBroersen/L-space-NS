@@ -11,4 +11,7 @@ object review extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Review.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

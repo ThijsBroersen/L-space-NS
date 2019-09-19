@@ -11,4 +11,7 @@ object result extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Thing.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

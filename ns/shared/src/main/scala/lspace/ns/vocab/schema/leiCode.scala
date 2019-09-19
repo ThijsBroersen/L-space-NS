@@ -9,6 +9,9 @@ object leiCode extends PropertyDef(
         label = "leiCode",
         comment = """An organization identifier that uniquely identifies a legal entity as defined in ISO 17442.""",
         `@extends` = () => List(identifier.property),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.identifier.Properties
 }

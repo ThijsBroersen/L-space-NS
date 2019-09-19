@@ -12,4 +12,7 @@ object bed extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Text.ontology, BedDetails.ontology, BedType.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

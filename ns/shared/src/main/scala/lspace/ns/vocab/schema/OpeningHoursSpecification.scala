@@ -12,4 +12,19 @@ The place is <strong>open</strong> if the <a class="localLink" href="http://sche
 If the value for the <a class="localLink" href="http://schema.org/closes">closes</a> property is less than the value for the <a class="localLink" href="http://schema.org/opens">opens</a> property then the hour range is assumed to span over the next day.""",
         `@extends` = () => List(StructuredValue.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.StructuredValue.Properties{
+lazy val closes = lspace.ns.vocab.schema.closes.property
+lazy val dayOfWeek = lspace.ns.vocab.schema.dayOfWeek.property
+lazy val opens = lspace.ns.vocab.schema.opens.property
+lazy val validFrom = lspace.ns.vocab.schema.validFrom.property
+lazy val validThrough = lspace.ns.vocab.schema.validThrough.property
+}
+override lazy val properties: List[LProperty] = List(closes, dayOfWeek, opens, validFrom, validThrough)
+trait Properties extends lspace.ns.vocab.schema.StructuredValue.Properties{
+lazy val closes = lspace.ns.vocab.schema.closes.property
+lazy val dayOfWeek = lspace.ns.vocab.schema.dayOfWeek.property
+lazy val opens = lspace.ns.vocab.schema.opens.property
+lazy val validFrom = lspace.ns.vocab.schema.validFrom.property
+lazy val validThrough = lspace.ns.vocab.schema.validThrough.property
+}
 }

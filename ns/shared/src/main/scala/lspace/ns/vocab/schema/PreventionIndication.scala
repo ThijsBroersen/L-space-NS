@@ -8,4 +8,11 @@ object PreventionIndication extends OntologyDef(
         comment = """An indication for preventing an underlying condition, symptom, etc.""",
         `@extends` = () => List(MedicalIndication.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalIndication.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.MedicalIndication.Properties{
+
+}
 }

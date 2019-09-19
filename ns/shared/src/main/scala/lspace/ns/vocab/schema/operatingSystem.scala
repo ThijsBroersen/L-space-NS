@@ -9,6 +9,9 @@ object operatingSystem extends PropertyDef(
         label = "operatingSystem",
         comment = """Operating systems supported (Windows 7, OSX 10.6, Android 1.6).""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

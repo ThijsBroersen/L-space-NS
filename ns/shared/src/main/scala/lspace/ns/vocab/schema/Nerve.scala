@@ -8,4 +8,15 @@ object Nerve extends OntologyDef(
         comment = """A common pathway for the electrochemical nerve impulses that are transmitted along each of the axons.""",
         `@extends` = () => List(AnatomicalStructure.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.AnatomicalStructure.Properties{
+lazy val nerveMotor = lspace.ns.vocab.schema.nerveMotor.property
+lazy val sensoryUnit = lspace.ns.vocab.schema.sensoryUnit.property
+lazy val sourcedFrom = lspace.ns.vocab.schema.sourcedFrom.property
+}
+override lazy val properties: List[LProperty] = List(nerveMotor, sensoryUnit, sourcedFrom)
+trait Properties extends lspace.ns.vocab.schema.AnatomicalStructure.Properties{
+lazy val nerveMotor = lspace.ns.vocab.schema.nerveMotor.property
+lazy val sensoryUnit = lspace.ns.vocab.schema.sensoryUnit.property
+lazy val sourcedFrom = lspace.ns.vocab.schema.sourcedFrom.property
+}
 }

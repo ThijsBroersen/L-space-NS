@@ -9,6 +9,9 @@ object ratingValue extends PropertyDef(
         label = "ratingValue",
         comment = """The rating for the content.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology, Text.ontology)
+        `@range` = () => List(`@number`, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -9,6 +9,9 @@ object screenCount extends PropertyDef(
         label = "screenCount",
         comment = """The number of screens in the movie theater.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

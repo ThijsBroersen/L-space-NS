@@ -8,4 +8,11 @@ object Manuscript extends OntologyDef(
         comment = """A book, document, or piece of music written by hand rather than typed or printed.""",
         `@extends` = () => List(CreativeWork.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.CreativeWork.Properties{
+
+}
 }

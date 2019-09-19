@@ -11,4 +11,7 @@ object screenshot extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(URL.ontology, ImageObject.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -9,6 +9,9 @@ object includesAttraction extends PropertyDef(
         label = "includesAttraction",
         comment = """Attraction located at destination.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(TouristAttraction.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -11,4 +11,7 @@ object amenityFeature extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(LocationFeatureSpecification.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

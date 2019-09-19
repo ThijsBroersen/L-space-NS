@@ -11,4 +11,7 @@ object providesBroadcastService extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(BroadcastService.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

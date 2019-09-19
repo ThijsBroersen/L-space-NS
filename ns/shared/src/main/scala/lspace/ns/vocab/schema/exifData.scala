@@ -11,4 +11,7 @@ object exifData extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(PropertyValue.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

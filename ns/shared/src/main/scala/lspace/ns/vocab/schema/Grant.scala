@@ -13,4 +13,13 @@ Grants support  activities directed towards some agreed collective goals, often 
 The amount of a <a class="localLink" href="http://schema.org/Grant">Grant</a> is represented using <a class="localLink" href="http://schema.org/amount">amount</a> as a <a class="localLink" href="http://schema.org/MonetaryAmount">MonetaryAmount</a>.""",
         `@extends` = () => List(Intangible.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val fundedItem = lspace.ns.vocab.schema.fundedItem.property
+lazy val sponsor = lspace.ns.vocab.schema.sponsor.property
+}
+override lazy val properties: List[LProperty] = List(fundedItem, sponsor)
+trait Properties extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val fundedItem = lspace.ns.vocab.schema.fundedItem.property
+lazy val sponsor = lspace.ns.vocab.schema.sponsor.property
+}
 }

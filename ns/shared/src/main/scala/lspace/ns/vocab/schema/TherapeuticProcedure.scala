@@ -8,4 +8,15 @@ object TherapeuticProcedure extends OntologyDef(
         comment = """A medical procedure intended primarily for therapeutic purposes, aimed at improving a health condition.""",
         `@extends` = () => List(MedicalProcedure.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalProcedure.Properties{
+lazy val adverseOutcome = lspace.ns.vocab.schema.adverseOutcome.property
+lazy val doseSchedule = lspace.ns.vocab.schema.doseSchedule.property
+lazy val drug = lspace.ns.vocab.schema.drug.property
+}
+override lazy val properties: List[LProperty] = List(adverseOutcome, doseSchedule, drug)
+trait Properties extends lspace.ns.vocab.schema.MedicalProcedure.Properties{
+lazy val adverseOutcome = lspace.ns.vocab.schema.adverseOutcome.property
+lazy val doseSchedule = lspace.ns.vocab.schema.doseSchedule.property
+lazy val drug = lspace.ns.vocab.schema.drug.property
+}
 }

@@ -8,4 +8,11 @@ object InsertAction extends OntologyDef(
         comment = """The act of adding at a specific location in an ordered collection.""",
         `@extends` = () => List(AddAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.AddAction.Properties{
+lazy val toLocation = lspace.ns.vocab.schema.toLocation.property
+}
+override lazy val properties: List[LProperty] = List(toLocation)
+trait Properties extends lspace.ns.vocab.schema.AddAction.Properties{
+lazy val toLocation = lspace.ns.vocab.schema.toLocation.property
+}
 }

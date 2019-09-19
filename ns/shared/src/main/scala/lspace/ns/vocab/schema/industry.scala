@@ -9,6 +9,9 @@ object industry extends PropertyDef(
         label = "industry",
         comment = """The industry associated with the job position.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

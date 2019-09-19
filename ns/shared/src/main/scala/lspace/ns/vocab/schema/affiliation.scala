@@ -11,4 +11,7 @@ object affiliation extends PropertyDef(
         `@extends` = () => List(memberOf.property),
         `@range` = () => List(Organization.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.memberOf.Properties
 }

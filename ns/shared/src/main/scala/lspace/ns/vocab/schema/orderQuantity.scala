@@ -9,6 +9,9 @@ object orderQuantity extends PropertyDef(
         label = "orderQuantity",
         comment = """The number of the item ordered. If the property is not set, assume the quantity is one.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

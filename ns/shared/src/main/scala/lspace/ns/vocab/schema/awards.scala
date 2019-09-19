@@ -9,6 +9,9 @@ object awards extends PropertyDef(
         label = "awards",
         comment = """Awards won by or for this item.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

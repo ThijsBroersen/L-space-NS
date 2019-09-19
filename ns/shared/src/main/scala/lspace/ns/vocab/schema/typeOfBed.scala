@@ -9,6 +9,9 @@ object typeOfBed extends PropertyDef(
         label = "typeOfBed",
         comment = """The type of bed to which the BedDetail refers, i.e. the type of bed available in the quantity indicated by quantity.""",
         `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@range` = () => List(Text.ontology, BedType.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

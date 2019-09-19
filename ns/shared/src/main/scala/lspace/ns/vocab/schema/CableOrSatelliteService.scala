@@ -8,4 +8,11 @@ object CableOrSatelliteService extends OntologyDef(
         comment = """A service which provides access to media programming like TV or radio. Access may be via cable or satellite.""",
         `@extends` = () => List(Service.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Service.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Service.Properties{
+
+}
 }

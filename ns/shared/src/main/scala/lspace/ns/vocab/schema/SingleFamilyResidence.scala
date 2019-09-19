@@ -8,4 +8,11 @@ object SingleFamilyResidence extends OntologyDef(
         comment = """Residence type: Single-family home.""",
         `@extends` = () => List(House.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.House.Properties{
+lazy val occupancy = lspace.ns.vocab.schema.occupancy.property
+override lazy val amenityFeature = lspace.ns.vocab.schema.amenityFeature.property}
+override lazy val properties: List[LProperty] = List(occupancy)
+trait Properties extends lspace.ns.vocab.schema.House.Properties{
+lazy val occupancy = lspace.ns.vocab.schema.occupancy.property
+override lazy val amenityFeature = lspace.ns.vocab.schema.amenityFeature.property}
 }

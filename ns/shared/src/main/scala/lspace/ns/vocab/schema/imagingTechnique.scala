@@ -11,4 +11,7 @@ object imagingTechnique extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(MedicalImagingTechnique.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

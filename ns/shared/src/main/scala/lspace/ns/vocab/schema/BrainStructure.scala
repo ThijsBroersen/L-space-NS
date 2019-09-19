@@ -8,4 +8,11 @@ object BrainStructure extends OntologyDef(
         comment = """Any anatomical structure which pertains to the soft nervous tissue functioning as the coordinating center of sensation and intellectual and nervous activity.""",
         `@extends` = () => List(AnatomicalStructure.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.AnatomicalStructure.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.AnatomicalStructure.Properties{
+
+}
 }

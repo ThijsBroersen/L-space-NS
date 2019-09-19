@@ -13,4 +13,7 @@ See also <a class="localLink" href="http://schema.org/eligibleRegion">eligibleRe
         `@extends` = () => List(),
         `@range` = () => List(Text.ontology, GeoShape.ontology, Place.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

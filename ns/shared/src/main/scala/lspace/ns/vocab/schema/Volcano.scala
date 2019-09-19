@@ -8,4 +8,11 @@ object Volcano extends OntologyDef(
         comment = """A volcano, like Fuji san.""",
         `@extends` = () => List(Landform.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Landform.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Landform.Properties{
+
+}
 }

@@ -8,4 +8,11 @@ object City extends OntologyDef(
         comment = """A city or town.""",
         `@extends` = () => List(AdministrativeArea.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.AdministrativeArea.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.AdministrativeArea.Properties{
+
+}
 }

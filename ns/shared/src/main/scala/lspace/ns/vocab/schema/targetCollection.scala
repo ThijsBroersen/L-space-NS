@@ -11,4 +11,7 @@ object targetCollection extends PropertyDef(
         `@extends` = () => List(`object`.property),
         `@range` = () => List(Thing.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.`object`.Properties
 }

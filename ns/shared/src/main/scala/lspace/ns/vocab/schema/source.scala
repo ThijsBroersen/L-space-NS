@@ -11,4 +11,7 @@ object source extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(AnatomicalStructure.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

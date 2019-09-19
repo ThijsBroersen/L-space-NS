@@ -9,6 +9,9 @@ object healthPlanCopayOption extends PropertyDef(
         label = "healthPlanCopayOption",
         comment = """Whether the copay is before or after deductible, etc. TODO: Is this a closed set?""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

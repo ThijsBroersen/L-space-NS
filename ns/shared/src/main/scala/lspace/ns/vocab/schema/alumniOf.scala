@@ -11,4 +11,7 @@ object alumniOf extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(EducationalOrganization.ontology, Organization.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

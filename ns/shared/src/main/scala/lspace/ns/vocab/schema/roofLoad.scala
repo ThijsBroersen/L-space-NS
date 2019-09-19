@@ -20,4 +20,7 @@ Typical unit code(s): KGM for kilogram, LBR for pound<br/><br/>
         `@extends` = () => List(),
         `@range` = () => List(QuantitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

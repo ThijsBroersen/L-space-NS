@@ -8,4 +8,11 @@ object State extends OntologyDef(
         comment = """A state or province of a country.""",
         `@extends` = () => List(AdministrativeArea.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.AdministrativeArea.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.AdministrativeArea.Properties{
+
+}
 }

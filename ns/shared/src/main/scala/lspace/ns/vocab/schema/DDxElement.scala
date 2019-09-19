@@ -8,4 +8,13 @@ object DDxElement extends OntologyDef(
         comment = """An alternative, closely-related condition typically considered later in the differential diagnosis process along with the signs that are used to distinguish it.""",
         `@extends` = () => List(MedicalIntangible.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalIntangible.Properties{
+lazy val diagnosis = lspace.ns.vocab.schema.diagnosis.property
+lazy val distinguishingSign = lspace.ns.vocab.schema.distinguishingSign.property
+}
+override lazy val properties: List[LProperty] = List(diagnosis, distinguishingSign)
+trait Properties extends lspace.ns.vocab.schema.MedicalIntangible.Properties{
+lazy val diagnosis = lspace.ns.vocab.schema.diagnosis.property
+lazy val distinguishingSign = lspace.ns.vocab.schema.distinguishingSign.property
+}
 }

@@ -8,4 +8,11 @@ object PlanAction extends OntologyDef(
         comment = """The act of planning the execution of an event/task/action/reservation/plan to a future date.""",
         `@extends` = () => List(OrganizeAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.OrganizeAction.Properties{
+lazy val scheduledTime = lspace.ns.vocab.schema.scheduledTime.property
+}
+override lazy val properties: List[LProperty] = List(scheduledTime)
+trait Properties extends lspace.ns.vocab.schema.OrganizeAction.Properties{
+lazy val scheduledTime = lspace.ns.vocab.schema.scheduledTime.property
+}
 }

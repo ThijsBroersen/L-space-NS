@@ -9,6 +9,9 @@ object permittedUsage extends PropertyDef(
         label = "permittedUsage",
         comment = """Indications regarding the permitted usage of the accommodation.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

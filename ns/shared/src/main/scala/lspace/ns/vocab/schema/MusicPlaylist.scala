@@ -8,4 +8,13 @@ object MusicPlaylist extends OntologyDef(
         comment = """A collection of music tracks in playlist form.""",
         `@extends` = () => List(CreativeWork.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
+lazy val numTracks = lspace.ns.vocab.schema.numTracks.property
+lazy val track = lspace.ns.vocab.schema.track.property
+}
+override lazy val properties: List[LProperty] = List(numTracks, track)
+trait Properties extends lspace.ns.vocab.schema.CreativeWork.Properties{
+lazy val numTracks = lspace.ns.vocab.schema.numTracks.property
+lazy val track = lspace.ns.vocab.schema.track.property
+}
 }

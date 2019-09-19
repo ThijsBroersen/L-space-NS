@@ -9,6 +9,9 @@ object musicalKey extends PropertyDef(
         label = "musicalKey",
         comment = """The key, mode, or scale this composition uses.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

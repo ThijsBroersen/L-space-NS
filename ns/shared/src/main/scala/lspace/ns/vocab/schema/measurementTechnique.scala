@@ -18,4 +18,7 @@ If there are several <a class="localLink" href="http://schema.org/variableMeasur
         `@extends` = () => List(),
         `@range` = () => List(Text.ontology, URL.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

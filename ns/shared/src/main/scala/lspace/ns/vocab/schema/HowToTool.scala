@@ -8,4 +8,11 @@ object HowToTool extends OntologyDef(
         comment = """A tool used (but not consumed) when performing instructions for how to achieve a result.""",
         `@extends` = () => List(HowToItem.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.HowToItem.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.HowToItem.Properties{
+
+}
 }

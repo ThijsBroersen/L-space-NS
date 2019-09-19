@@ -11,4 +11,7 @@ object mainEntity extends PropertyDef(
         `@extends` = () => List(about.property),
         `@range` = () => List(Thing.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.about.Properties
 }

@@ -9,6 +9,9 @@ object numAdults extends PropertyDef(
         label = "numAdults",
         comment = """The number of adults staying in the unit.""",
         `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology)
+        `@range` = () => List(`@int`, QuantitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

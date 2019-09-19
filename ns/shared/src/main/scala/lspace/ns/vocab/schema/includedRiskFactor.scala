@@ -9,6 +9,9 @@ object includedRiskFactor extends PropertyDef(
         label = "includedRiskFactor",
         comment = """A modifiable or non-modifiable risk factor included in the calculation, e.g. age, coexisting condition.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(MedicalRiskFactor.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

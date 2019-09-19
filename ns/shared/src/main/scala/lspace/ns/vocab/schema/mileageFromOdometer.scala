@@ -13,4 +13,7 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles""",
         `@extends` = () => List(),
         `@range` = () => List(QuantitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

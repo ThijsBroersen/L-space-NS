@@ -11,6 +11,9 @@ object seatingCapacity extends PropertyDef(
 
 Typical unit code(s): C62 for persons""",
         `@extends` = () => List(),
-        `@range` = () => List(`@number`, QuantitativeValue.ontology, Number.ontology)
+        `@range` = () => List(`@number`, QuantitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

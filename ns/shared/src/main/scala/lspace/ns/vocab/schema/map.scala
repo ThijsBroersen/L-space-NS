@@ -11,4 +11,7 @@ object map extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(URL.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -9,6 +9,9 @@ object processingTime extends PropertyDef(
         label = "processingTime",
         comment = """Estimated processing time for the service using this channel.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(Duration.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

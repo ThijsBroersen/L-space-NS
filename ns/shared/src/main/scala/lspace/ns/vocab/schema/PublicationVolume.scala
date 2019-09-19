@@ -12,4 +12,17 @@ object PublicationVolume extends OntologyDef(
 """,
         `@extends` = () => List(CreativeWork.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
+lazy val pageEnd = lspace.ns.vocab.schema.pageEnd.property
+lazy val pageStart = lspace.ns.vocab.schema.pageStart.property
+lazy val pagination = lspace.ns.vocab.schema.pagination.property
+lazy val volumeNumber = lspace.ns.vocab.schema.volumeNumber.property
+}
+override lazy val properties: List[LProperty] = List(pageEnd, pageStart, pagination, volumeNumber)
+trait Properties extends lspace.ns.vocab.schema.CreativeWork.Properties{
+lazy val pageEnd = lspace.ns.vocab.schema.pageEnd.property
+lazy val pageStart = lspace.ns.vocab.schema.pageStart.property
+lazy val pagination = lspace.ns.vocab.schema.pagination.property
+lazy val volumeNumber = lspace.ns.vocab.schema.volumeNumber.property
+}
 }

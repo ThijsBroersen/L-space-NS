@@ -9,6 +9,9 @@ object costPerUnit extends PropertyDef(
         label = "costPerUnit",
         comment = """The cost per unit of the drug.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology, QualitativeValue.ontology, Text.ontology)
+        `@range` = () => List(`@number`, QualitativeValue.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

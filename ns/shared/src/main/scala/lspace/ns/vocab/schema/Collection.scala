@@ -8,4 +8,11 @@ object Collection extends OntologyDef(
         comment = """A created collection of Creative Works or other artefacts.""",
         `@extends` = () => List(CreativeWork.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
+lazy val collectionSize = lspace.ns.vocab.schema.collectionSize.property
+}
+override lazy val properties: List[LProperty] = List(collectionSize)
+trait Properties extends lspace.ns.vocab.schema.CreativeWork.Properties{
+lazy val collectionSize = lspace.ns.vocab.schema.collectionSize.property
+}
 }

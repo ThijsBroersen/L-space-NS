@@ -9,6 +9,9 @@ object amountOfThisGood extends PropertyDef(
         label = "amountOfThisGood",
         comment = """The quantity of the goods included in the offer.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

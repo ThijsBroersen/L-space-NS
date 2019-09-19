@@ -15,4 +15,11 @@ Related actions:<br/><br/>
 """,
         `@extends` = () => List(TransferAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.TransferAction.Properties{
+lazy val borrower = lspace.ns.vocab.schema.borrower.property
+}
+override lazy val properties: List[LProperty] = List(borrower)
+trait Properties extends lspace.ns.vocab.schema.TransferAction.Properties{
+lazy val borrower = lspace.ns.vocab.schema.borrower.property
+}
 }

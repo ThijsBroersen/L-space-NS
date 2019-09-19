@@ -11,4 +11,7 @@ object dataFeedElement extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(DataFeedItem.ontology, Thing.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

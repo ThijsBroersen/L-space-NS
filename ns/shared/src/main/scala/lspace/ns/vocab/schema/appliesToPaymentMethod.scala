@@ -11,4 +11,7 @@ object appliesToPaymentMethod extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(PaymentMethod.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

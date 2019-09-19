@@ -11,4 +11,7 @@ object thumbnail extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(ImageObject.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

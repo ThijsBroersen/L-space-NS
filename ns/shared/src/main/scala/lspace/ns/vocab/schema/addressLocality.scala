@@ -9,6 +9,9 @@ object addressLocality extends PropertyDef(
         label = "addressLocality",
         comment = """The locality. For example, Mountain View.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

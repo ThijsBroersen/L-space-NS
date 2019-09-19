@@ -8,4 +8,11 @@ object MedicalIndication extends OntologyDef(
         comment = """A condition or factor that indicates use of a medical therapy, including signs, symptoms, risk factors, anatomical states, etc.""",
         `@extends` = () => List(MedicalEntity.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalEntity.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.MedicalEntity.Properties{
+
+}
 }

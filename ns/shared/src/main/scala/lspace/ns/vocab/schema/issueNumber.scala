@@ -9,6 +9,9 @@ object issueNumber extends PropertyDef(
         label = "issueNumber",
         comment = """Identifies the issue of publication; for example, "iii" or "2".""",
         `@extends` = () => List(position.property),
-        `@range` = () => List(Text.ontology, Integer.ontology)
+        `@range` = () => List(Text.ontology, `@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.position.Properties
 }

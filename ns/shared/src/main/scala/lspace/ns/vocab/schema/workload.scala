@@ -9,6 +9,9 @@ object workload extends PropertyDef(
         label = "workload",
         comment = """Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.""",
         `@extends` = () => List(),
-        `@range` = () => List(QualitativeValue.ontology, Energy.ontology)
+        `@range` = () => List(Energy.ontology, QualitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

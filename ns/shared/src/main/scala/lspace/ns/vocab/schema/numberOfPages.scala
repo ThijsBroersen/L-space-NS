@@ -9,6 +9,9 @@ object numberOfPages extends PropertyDef(
         label = "numberOfPages",
         comment = """The number of pages in the book.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

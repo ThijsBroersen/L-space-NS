@@ -11,4 +11,7 @@ object gameServer extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(GameServer.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

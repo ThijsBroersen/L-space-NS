@@ -8,4 +8,11 @@ object ReportedDoseSchedule extends OntologyDef(
         comment = """A patient-reported or observed dosing schedule for a drug or supplement.""",
         `@extends` = () => List(DoseSchedule.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.DoseSchedule.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.DoseSchedule.Properties{
+
+}
 }

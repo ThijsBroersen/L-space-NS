@@ -11,4 +11,7 @@ object landlord extends PropertyDef(
         `@extends` = () => List(participant.property),
         `@range` = () => List(Person.ontology, Organization.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.participant.Properties
 }

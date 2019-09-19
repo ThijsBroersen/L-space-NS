@@ -9,6 +9,9 @@ object numberedPosition extends PropertyDef(
         label = "numberedPosition",
         comment = """A number associated with a role in an organization, for example, the number on an athlete's jersey.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

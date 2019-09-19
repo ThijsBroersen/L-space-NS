@@ -9,6 +9,9 @@ object trialDesign extends PropertyDef(
         label = "trialDesign",
         comment = """Specifics about the trial design (enumerated).""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(MedicalTrialDesign.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -11,4 +11,7 @@ object contactlessPayment extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(`@boolean`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -9,6 +9,9 @@ object partySize extends PropertyDef(
         label = "partySize",
         comment = """Number of people the reservation should accommodate.""",
         `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology)
+        `@range` = () => List(QuantitativeValue.ontology, `@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

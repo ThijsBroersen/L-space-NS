@@ -9,6 +9,9 @@ object referencesOrder extends PropertyDef(
         label = "referencesOrder",
         comment = """The Order(s) related to this Invoice. One or more Orders may be combined into a single Invoice.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(Order.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

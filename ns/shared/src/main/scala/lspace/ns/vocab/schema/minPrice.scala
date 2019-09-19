@@ -9,6 +9,9 @@ object minPrice extends PropertyDef(
         label = "minPrice",
         comment = """The lowest price if the price is a range.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -8,4 +8,11 @@ object BookSeries extends OntologyDef(
         comment = """A series of books. Included books can be indicated with the hasPart property.""",
         `@extends` = () => List(CreativeWorkSeries.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.CreativeWorkSeries.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.CreativeWorkSeries.Properties{
+
+}
 }

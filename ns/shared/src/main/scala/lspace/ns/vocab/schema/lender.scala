@@ -9,6 +9,9 @@ object lender extends PropertyDef(
         label = "lender",
         comment = """A sub property of participant. The person that lends the object being borrowed.""",
         `@extends` = () => List(participant.property),
-        `@range` = () => List()
+        `@range` = () => List(Organization.ontology, Person.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.participant.Properties
 }

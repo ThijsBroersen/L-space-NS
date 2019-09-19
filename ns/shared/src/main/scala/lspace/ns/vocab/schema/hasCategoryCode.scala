@@ -11,4 +11,7 @@ object hasCategoryCode extends PropertyDef(
         `@extends` = () => List(hasDefinedTerm.property),
         `@range` = () => List(CategoryCode.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.hasDefinedTerm.Properties
 }

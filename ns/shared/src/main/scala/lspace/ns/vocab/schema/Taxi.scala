@@ -8,4 +8,11 @@ object Taxi extends OntologyDef(
         comment = """A taxi.""",
         `@extends` = () => List(Service.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Service.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Service.Properties{
+
+}
 }

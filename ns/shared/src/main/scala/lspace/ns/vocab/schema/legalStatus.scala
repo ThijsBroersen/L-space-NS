@@ -11,4 +11,7 @@ object legalStatus extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(DrugLegalStatus.ontology, MedicalEnumeration.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -14,4 +14,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
         `@extends` = () => List(),
         `@range` = () => List(URL.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

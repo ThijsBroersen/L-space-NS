@@ -8,4 +8,11 @@ object DownloadAction extends OntologyDef(
         comment = """The act of downloading an object.""",
         `@extends` = () => List(TransferAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.TransferAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.TransferAction.Properties{
+
+}
 }

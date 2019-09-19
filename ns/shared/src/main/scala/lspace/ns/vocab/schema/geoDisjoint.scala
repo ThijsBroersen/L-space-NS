@@ -11,4 +11,7 @@ object geoDisjoint extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(GeospatialGeometry.ontology, Place.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

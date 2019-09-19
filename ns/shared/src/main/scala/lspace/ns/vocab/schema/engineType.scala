@@ -11,4 +11,7 @@ object engineType extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(URL.ontology, Text.ontology, QualitativeValue.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

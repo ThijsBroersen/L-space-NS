@@ -9,6 +9,9 @@ object termsOfService extends PropertyDef(
         label = "termsOfService",
         comment = """Human-readable terms of service documentation.""",
         `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@range` = () => List(Text.ontology, URL.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

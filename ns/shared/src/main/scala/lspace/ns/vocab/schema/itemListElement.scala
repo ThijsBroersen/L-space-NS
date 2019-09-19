@@ -15,4 +15,7 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
         `@extends` = () => List(),
         `@range` = () => List(Text.ontology, Thing.ontology, ListItem.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

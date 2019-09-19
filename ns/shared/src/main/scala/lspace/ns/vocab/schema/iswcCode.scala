@@ -9,6 +9,9 @@ object iswcCode extends PropertyDef(
         label = "iswcCode",
         comment = """The International Standard Musical Work Code for the composition.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

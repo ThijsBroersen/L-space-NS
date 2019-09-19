@@ -9,6 +9,9 @@ object inDefinedTermSet extends PropertyDef(
         label = "inDefinedTermSet",
         comment = """A <a class="localLink" href="http://schema.org/DefinedTermSet">DefinedTermSet</a> that contains this term.""",
         `@extends` = () => List(isPartOf.property),
-        `@range` = () => List(URL.ontology)
+        `@range` = () => List(DefinedTermSet.ontology, URL.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.isPartOf.Properties
 }

@@ -9,6 +9,9 @@ object foodEvent extends PropertyDef(
         label = "foodEvent",
         comment = """A sub property of location. The specific food event where the action occurred.""",
         `@extends` = () => List(location.property),
-        `@range` = () => List()
+        `@range` = () => List(FoodEvent.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.location.Properties
 }

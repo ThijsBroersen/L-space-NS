@@ -8,4 +8,11 @@ object Mass extends OntologyDef(
         comment = """Properties that take Mass as values are of the form '&lt;Number&gt; &lt;Mass unit of measure&gt;'. E.g., '7 kg'.""",
         `@extends` = () => List(Quantity.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Quantity.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Quantity.Properties{
+
+}
 }

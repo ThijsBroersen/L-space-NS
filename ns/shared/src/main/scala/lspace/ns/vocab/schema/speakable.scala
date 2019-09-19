@@ -22,4 +22,7 @@ we define a supporting type, <a class="localLink" href="http://schema.org/Speaka
         `@extends` = () => List(),
         `@range` = () => List(SpeakableSpecification.ontology, URL.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -8,4 +8,11 @@ object MedicalGuidelineContraindication extends OntologyDef(
         comment = """A guideline contraindication that designates a process as harmful and where quality of the data supporting the contraindication is sound.""",
         `@extends` = () => List(MedicalGuideline.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalGuideline.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.MedicalGuideline.Properties{
+
+}
 }

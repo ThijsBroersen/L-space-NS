@@ -8,4 +8,11 @@ object PhysicalTherapy extends OntologyDef(
         comment = """A process of progressive physical care and rehabilitation aimed at improving a health condition.""",
         `@extends` = () => List(MedicalTherapy.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalTherapy.Properties{
+
+override lazy val indication = lspace.ns.vocab.schema.indication.property}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.MedicalTherapy.Properties{
+
+override lazy val indication = lspace.ns.vocab.schema.indication.property}
 }

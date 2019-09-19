@@ -9,6 +9,9 @@ object recommendationStrength extends PropertyDef(
         label = "recommendationStrength",
         comment = """Strength of the guideline's recommendation (e.g. 'class I').""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

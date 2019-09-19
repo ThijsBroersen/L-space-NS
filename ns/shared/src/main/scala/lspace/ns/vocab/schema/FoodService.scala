@@ -8,4 +8,11 @@ object FoodService extends OntologyDef(
         comment = """A food service, like breakfast, lunch, or dinner.""",
         `@extends` = () => List(Service.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Service.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Service.Properties{
+
+}
 }

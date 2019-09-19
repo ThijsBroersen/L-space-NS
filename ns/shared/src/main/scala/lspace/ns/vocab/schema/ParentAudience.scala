@@ -8,4 +8,13 @@ object ParentAudience extends OntologyDef(
         comment = """A set of characteristics describing parents, who can be interested in viewing some content.""",
         `@extends` = () => List(PeopleAudience.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.PeopleAudience.Properties{
+lazy val childMaxAge = lspace.ns.vocab.schema.childMaxAge.property
+lazy val childMinAge = lspace.ns.vocab.schema.childMinAge.property
+}
+override lazy val properties: List[LProperty] = List(childMaxAge, childMinAge)
+trait Properties extends lspace.ns.vocab.schema.PeopleAudience.Properties{
+lazy val childMaxAge = lspace.ns.vocab.schema.childMaxAge.property
+lazy val childMinAge = lspace.ns.vocab.schema.childMinAge.property
+}
 }

@@ -9,6 +9,9 @@ object highPrice extends PropertyDef(
         label = "highPrice",
         comment = """The highest price of all offers available.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology, Text.ontology)
+        `@range` = () => List(`@number`, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

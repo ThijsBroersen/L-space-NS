@@ -8,4 +8,11 @@ object ListenAction extends OntologyDef(
         comment = """The act of consuming audio content.""",
         `@extends` = () => List(ConsumeAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.ConsumeAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.ConsumeAction.Properties{
+
+}
 }

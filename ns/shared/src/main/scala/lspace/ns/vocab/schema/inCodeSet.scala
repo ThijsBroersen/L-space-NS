@@ -11,4 +11,7 @@ object inCodeSet extends PropertyDef(
         `@extends` = () => List(inDefinedTermSet.property),
         `@range` = () => List(URL.ontology, CategoryCodeSet.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.inDefinedTermSet.Properties
 }

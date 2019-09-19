@@ -11,4 +11,7 @@ object copyrightHolder extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Person.ontology, Organization.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

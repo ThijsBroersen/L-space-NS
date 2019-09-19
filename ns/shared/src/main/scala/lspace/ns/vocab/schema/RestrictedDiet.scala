@@ -8,4 +8,11 @@ object RestrictedDiet extends OntologyDef(
         comment = """A diet restricted to certain foods or preparations for cultural, religious, health or lifestyle reasons.""",
         `@extends` = () => List(Enumeration.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Enumeration.Properties{
+
+}
 }

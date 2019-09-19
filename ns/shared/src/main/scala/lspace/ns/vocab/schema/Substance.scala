@@ -8,4 +8,13 @@ object Substance extends OntologyDef(
         comment = """Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.""",
         `@extends` = () => List(MedicalEntity.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.MedicalEntity.Properties{
+lazy val activeIngredient = lspace.ns.vocab.schema.activeIngredient.property
+lazy val maximumIntake = lspace.ns.vocab.schema.maximumIntake.property
+}
+override lazy val properties: List[LProperty] = List(activeIngredient, maximumIntake)
+trait Properties extends lspace.ns.vocab.schema.MedicalEntity.Properties{
+lazy val activeIngredient = lspace.ns.vocab.schema.activeIngredient.property
+lazy val maximumIntake = lspace.ns.vocab.schema.maximumIntake.property
+}
 }

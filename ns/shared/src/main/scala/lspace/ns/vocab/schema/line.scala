@@ -9,6 +9,9 @@ object line extends PropertyDef(
         label = "line",
         comment = """A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space.""",
         `@extends` = () => List(),
-        `@range` = () => List(`@string`, Text.ontology)
+        `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -11,4 +11,7 @@ object aggregateRating extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(AggregateRating.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

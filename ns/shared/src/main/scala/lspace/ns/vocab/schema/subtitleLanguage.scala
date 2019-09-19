@@ -11,4 +11,7 @@ object subtitleLanguage extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Text.ontology, Language.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

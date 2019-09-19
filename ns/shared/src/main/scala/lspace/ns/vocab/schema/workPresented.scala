@@ -9,6 +9,9 @@ object workPresented extends PropertyDef(
         label = "workPresented",
         comment = """The movie presented during this event.""",
         `@extends` = () => List(workFeatured.property),
-        `@range` = () => List()
+        `@range` = () => List(Movie.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.workFeatured.Properties
 }

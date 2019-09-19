@@ -9,6 +9,9 @@ object educationRequirements extends PropertyDef(
         label = "educationRequirements",
         comment = """Educational background needed for the position or Occupation.""",
         `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@range` = () => List(Text.ontology, EducationalOccupationalCredential.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -13,4 +13,7 @@ object spatialCoverage extends PropertyDef(
         `@extends` = () => List(contentLocation.property),
         `@range` = () => List(Place.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.contentLocation.Properties
 }

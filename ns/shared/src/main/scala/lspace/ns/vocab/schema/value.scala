@@ -15,6 +15,9 @@ object value extends PropertyDef(
 </ul>
 """,
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology, `@boolean`, StructuredValue.ontology, Text.ontology)
+        `@range` = () => List(`@number`, `@boolean`, StructuredValue.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

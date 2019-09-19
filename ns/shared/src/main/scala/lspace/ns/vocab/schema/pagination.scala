@@ -11,4 +11,7 @@ object pagination extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

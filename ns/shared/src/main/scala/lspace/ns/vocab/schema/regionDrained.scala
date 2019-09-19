@@ -11,4 +11,7 @@ object regionDrained extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(AnatomicalStructure.ontology, AnatomicalSystem.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

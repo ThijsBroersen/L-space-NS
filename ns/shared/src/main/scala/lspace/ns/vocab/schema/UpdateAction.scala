@@ -8,4 +8,11 @@ object UpdateAction extends OntologyDef(
         comment = """The act of managing by changing/editing the state of the object.""",
         `@extends` = () => List(Action.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Action.Properties{
+lazy val targetCollection = lspace.ns.vocab.schema.targetCollection.property
+}
+override lazy val properties: List[LProperty] = List(targetCollection)
+trait Properties extends lspace.ns.vocab.schema.Action.Properties{
+lazy val targetCollection = lspace.ns.vocab.schema.targetCollection.property
+}
 }

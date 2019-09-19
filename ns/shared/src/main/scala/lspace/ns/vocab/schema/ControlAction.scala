@@ -8,4 +8,11 @@ object ControlAction extends OntologyDef(
         comment = """An agent controls a device or application.""",
         `@extends` = () => List(Action.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Action.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Action.Properties{
+
+}
 }

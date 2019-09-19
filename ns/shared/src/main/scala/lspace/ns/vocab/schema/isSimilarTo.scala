@@ -11,4 +11,7 @@ object isSimilarTo extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(Service.ontology, Product.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

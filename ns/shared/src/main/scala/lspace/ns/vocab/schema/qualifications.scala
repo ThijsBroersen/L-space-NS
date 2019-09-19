@@ -9,6 +9,9 @@ object qualifications extends PropertyDef(
         label = "qualifications",
         comment = """Specific qualifications required for this role or Occupation.""",
         `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@range` = () => List(EducationalOccupationalCredential.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

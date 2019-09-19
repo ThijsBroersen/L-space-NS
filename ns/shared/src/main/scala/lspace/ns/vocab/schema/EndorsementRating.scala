@@ -13,4 +13,11 @@ An <a class="localLink" href="http://schema.org/EndorsementRating">EndorsementRa
 endorsement rating is particularly useful in the absence of numeric scales as it helps consumers understand that the rating is broadly positive.""",
         `@extends` = () => List(Rating.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Rating.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.Rating.Properties{
+
+}
 }

@@ -8,4 +8,11 @@ object MedicalScholarlyArticle extends OntologyDef(
         comment = """A scholarly article in the medical domain.""",
         `@extends` = () => List(ScholarlyArticle.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.ScholarlyArticle.Properties{
+lazy val publicationType = lspace.ns.vocab.schema.publicationType.property
+}
+override lazy val properties: List[LProperty] = List(publicationType)
+trait Properties extends lspace.ns.vocab.schema.ScholarlyArticle.Properties{
+lazy val publicationType = lspace.ns.vocab.schema.publicationType.property
+}
 }

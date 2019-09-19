@@ -9,6 +9,9 @@ object position extends PropertyDef(
         label = "position",
         comment = """The position of an item in a series or sequence of items.""",
         `@extends` = () => List(),
-        `@range` = () => List(Integer.ontology, Text.ontology)
+        `@range` = () => List(`@int`, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -10,4 +10,13 @@ object GeoCircle extends OntologyDef(
           The center of the circle can be indicated via the 'geoMidpoint' property, or more approximately using 'address', 'postalCode'.""",
         `@extends` = () => List(GeoShape.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.GeoShape.Properties{
+lazy val geoMidpoint = lspace.ns.vocab.schema.geoMidpoint.property
+lazy val geoRadius = lspace.ns.vocab.schema.geoRadius.property
+}
+override lazy val properties: List[LProperty] = List(geoMidpoint, geoRadius)
+trait Properties extends lspace.ns.vocab.schema.GeoShape.Properties{
+lazy val geoMidpoint = lspace.ns.vocab.schema.geoMidpoint.property
+lazy val geoRadius = lspace.ns.vocab.schema.geoRadius.property
+}
 }

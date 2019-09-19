@@ -9,6 +9,9 @@ object isPartOf extends PropertyDef(
         label = "isPartOf",
         comment = """Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(CreativeWork.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

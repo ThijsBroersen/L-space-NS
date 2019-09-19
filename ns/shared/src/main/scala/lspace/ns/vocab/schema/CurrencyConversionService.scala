@@ -8,4 +8,11 @@ object CurrencyConversionService extends OntologyDef(
         comment = """A service to convert funds from one currency to another currency.""",
         `@extends` = () => List(FinancialProduct.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.FinancialProduct.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.FinancialProduct.Properties{
+
+}
 }

@@ -11,4 +11,7 @@ object orderDelivery extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(ParcelDelivery.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

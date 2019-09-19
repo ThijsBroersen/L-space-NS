@@ -11,4 +11,7 @@ object isBasedOnUrl extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(URL.ontology, Product.ontology, CreativeWork.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

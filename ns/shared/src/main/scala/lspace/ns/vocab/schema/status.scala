@@ -11,4 +11,7 @@ object status extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(EventStatusType.ontology, MedicalStudyStatus.ontology, Text.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -9,6 +9,9 @@ object recognizingAuthority extends PropertyDef(
         label = "recognizingAuthority",
         comment = """If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(Organization.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

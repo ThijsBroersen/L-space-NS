@@ -11,4 +11,7 @@ object holdingArchive extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(ArchiveOrganization.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

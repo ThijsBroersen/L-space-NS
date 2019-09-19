@@ -13,4 +13,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
         `@extends` = () => List(),
         `@range` = () => List(`@datetime`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

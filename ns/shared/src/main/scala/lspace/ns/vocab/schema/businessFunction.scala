@@ -11,4 +11,7 @@ object businessFunction extends PropertyDef(
         `@extends` = () => List(),
         `@range` = () => List(BusinessFunction.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

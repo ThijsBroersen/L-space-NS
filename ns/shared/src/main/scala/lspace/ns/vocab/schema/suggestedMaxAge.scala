@@ -9,6 +9,9 @@ object suggestedMaxAge extends PropertyDef(
         label = "suggestedMaxAge",
         comment = """Maximal age recommended for viewing content.""",
         `@extends` = () => List(),
-        `@range` = () => List(Number.ontology)
+        `@range` = () => List(`@number`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -8,4 +8,11 @@ object CheckAction extends OntologyDef(
         comment = """An agent inspects, determines, investigates, inquires, or examines an object's accuracy, quality, condition, or state.""",
         `@extends` = () => List(FindAction.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.FindAction.Properties{
+
+}
+override lazy val properties: List[LProperty] = List()
+trait Properties extends lspace.ns.vocab.schema.FindAction.Properties{
+
+}
 }

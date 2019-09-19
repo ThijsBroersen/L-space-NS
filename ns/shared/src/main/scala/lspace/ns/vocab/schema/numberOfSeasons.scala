@@ -9,6 +9,9 @@ object numberOfSeasons extends PropertyDef(
         label = "numberOfSeasons",
         comment = """The number of seasons in this series.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(`@int`)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }

@@ -8,4 +8,15 @@ object HealthPlanNetwork extends OntologyDef(
         comment = """A US-style health insurance plan network.""",
         `@extends` = () => List(Intangible.ontology)
        ){
+object keys extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val healthPlanCostSharing = lspace.ns.vocab.schema.healthPlanCostSharing.property
+lazy val healthPlanNetworkId = lspace.ns.vocab.schema.healthPlanNetworkId.property
+lazy val healthPlanNetworkTier = lspace.ns.vocab.schema.healthPlanNetworkTier.property
+}
+override lazy val properties: List[LProperty] = List(healthPlanCostSharing, healthPlanNetworkId, healthPlanNetworkTier)
+trait Properties extends lspace.ns.vocab.schema.Intangible.Properties{
+lazy val healthPlanCostSharing = lspace.ns.vocab.schema.healthPlanCostSharing.property
+lazy val healthPlanNetworkId = lspace.ns.vocab.schema.healthPlanNetworkId.property
+lazy val healthPlanNetworkTier = lspace.ns.vocab.schema.healthPlanNetworkTier.property
+}
 }

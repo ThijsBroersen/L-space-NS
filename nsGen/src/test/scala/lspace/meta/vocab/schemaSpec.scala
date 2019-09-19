@@ -18,6 +18,10 @@ class schemaSpec extends AsyncWordSpec with Matchers {
             schema
               .genSchema("ns/shared/src/main/scala/lspace/ns/vocab/schema/")
           ))
+        .onErrorHandle { f =>
+          f.printStackTrace()
+          throw f
+        }
         .map(_.nonEmpty shouldBe true)
         .runToFuture(monix.execution.Scheduler.global)
     }

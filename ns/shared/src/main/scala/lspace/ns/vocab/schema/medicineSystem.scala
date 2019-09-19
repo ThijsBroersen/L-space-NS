@@ -9,6 +9,9 @@ object medicineSystem extends PropertyDef(
         label = "medicineSystem",
         comment = """The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.""",
         `@extends` = () => List(),
-        `@range` = () => List()
+        `@range` = () => List(MedicineSystem.ontology)
        ){
+
+override lazy val properties: List[LProperty] = List()
+trait Properties 
 }
