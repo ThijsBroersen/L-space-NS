@@ -4,7 +4,7 @@ import com.typesafe.sbt.packager.docker.Cmd
 import sbtcrossproject.CrossPlugin.autoImport.{crossProject, CrossType}
 
 ThisBuild / organization := "eu.l-space"
-ThisBuild / scalaVersion := "2.12.8"
+ThisBuild / scalaVersion := "2.12.10"
 
 lazy val settings = commonSettings
 
@@ -37,7 +37,7 @@ lazy val projectSettings = Seq(
 
 lazy val commonSettings = projectSettings ++ Seq(
   scalacOptions ++= compilerOptions,
-  crossScalaVersions := Seq("2.11.12", "2.12.8"),
+  crossScalaVersions := Seq("2.12.10"),
   publishArtifact in (Test, packageBin) := true,
   updateOptions := updateOptions.value.withCachedResolution(true)
 )
