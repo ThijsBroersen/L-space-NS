@@ -1,11 +1,30 @@
 dist: xenial
 language: scala
-jdk:
-  - openjdk8
+scala_211: &scala_211 2.11.12
+scala_212: &scala_212 2.12.10
+scala_213: &scala_213 2.13.1
+java_8: &java_8 openjdk8
+java_11: &java_11 openjdk11
+tests: &tests
+  env: TEST="test"
+  node_js: 11
+  install:
+    - . $HOME/.nvm/nvm.sh
+    - nvm install stable
+    - nvm use stable
+    - node -v
+    - npm install jsdom
+  script: sbt -J-Xmx4096m ++$TRAVIS_SCALA_VERSION test
+  cache:
+    directories:
+      - $HOME/.cache/coursier
+      - $HOME/.ivy2/cache
+      - $HOME/.sbt
+      - node_modules
 stages:
   - name: test
-  - name: test coverage
-    if: (branch = master AND type = push) OR (tag IS present)
+#  - name: test coverage
+#    if: (branch = master AND type = push) OR (tag IS present)
   - name: publish pages
     if: (branch = master AND type = push) OR (tag IS present)
   - name: release and deploy
@@ -13,26 +32,24 @@ stages:
 jobs:
   include:
     - stage: test
-#      scala: 2.11.12
-#      install:
-#        - npm install jsdom
-#      script: sbt ++$TRAVIS_SCALA_VERSION test
-#      cache:
-#        directories:
-#          - $HOME/.ivy2/cache
-#          - $HOME/.sbt
-#          - $HOME/.coursier
-#          - node_modules
-      scala: 2.12.8
-      install:
-        - npm install jsdom
-      script: sbt ++$TRAVIS_SCALA_VERSION test
-      cache:
-        directories:
-          - $HOME/.ivy2/cache
-          - $HOME/.sbt
-          - $HOME/.coursier
-          - node_modules
+    #    - <<: *tests
+    #      scala: *scala_211
+    #      jdk: *java_8
+    - <<: *tests
+      scala: *scala_212
+      jdk: *java_8
+    #    - <<: *tests
+    #      scala: *scala_213
+    #      jdk: *java_8
+    #    - <<: *tests
+    #      scala: *scala_211
+    #      jdk: *java_11
+    - <<: *tests
+      scala: *scala_212
+      jdk: *java_11
+    #    - <<: *tests
+    #      scala: *scala_213
+    #      jdk: *java_11
 #    - stage: test coverage
 #      name: "Publish to Codecov"
 #      scala: 2.12.8
@@ -50,20 +67,21 @@ jobs:
 #          - $HOME/.coursier
     - stage: publish pages
       name: "Publish to GitHub"
-      scala: 2.12.8
+      scala: *scala_212
+      jdk: *java_11
       before_install:
         - export PATH=${PATH}:./vendor/bundle
       install:
         - gem update --system
         - gem install sass
         - gem install jekyll -v 3.8.5
-      script: sbt ++$TRAVIS_SCALA_VERSION site/makeMicrosite
+      script: sbt -J-Xmx4096m ++$TRAVIS_SCALA_VERSION site/makeMicrosite
       cache:
         - bundler
         - directories:
+          - $HOME/.cache/coursier
           - $HOME/.ivy2/cache
           - $HOME/.sbt
-          - $HOME/.coursier
           - node_modules
           - /home/travis/.rvm/
       deploy:
@@ -78,6 +96,7 @@ jobs:
         target-branch: gh-pages
     - stage: release
       name: "Cross-publish to Sonatype and deploy ns.l-space.eu"
+      jdk: *java_11
 #      services: docker
       before_install: git fetch --tags
       script:
@@ -85,9 +104,9 @@ jobs:
 #        - sbt nsService/docker:publishLocal
       cache:
         directories:
+          - $HOME/.cache/coursier
           - $HOME/.ivy2/cache
           - $HOME/.sbt
-          - $HOME/.coursier
 before_cache:
   - find $HOME/.sbt -name "*.lock" -type f -delete
   - find $HOME/.ivy2/cache -name "ivydata-*.properties" -type f -delete
