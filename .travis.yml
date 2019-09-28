@@ -31,7 +31,7 @@ stages:
     if: (branch = master AND type = push) OR (tag IS present)
 jobs:
   include:
-    - stage: test
+#    - stage: test
     #    - <<: *tests
     #      scala: *scala_211
     #      jdk: *java_8
