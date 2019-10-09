@@ -6,7 +6,7 @@ object Locksmith extends OntologyDef(
         iris = Set("http://schema.org/Locksmith"),
         label = "Locksmith",
         comment = """A locksmith.""",
-        `@extends` = () => List(HomeAndConstructionBusiness.ontology)
+        `@extends` = List(HomeAndConstructionBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.HomeAndConstructionBusiness.Properties{
 

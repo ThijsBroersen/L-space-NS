@@ -8,8 +8,8 @@ object breastfeedingWarning extends PropertyDef(
         iris = Set("http://schema.org/breastfeedingWarning"),
         label = "breastfeedingWarning",
         comment = """Any precaution, guidance, contraindication, etc. related to this drug's use by breastfeeding mothers.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

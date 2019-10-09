@@ -8,8 +8,8 @@ object beneficiaryBank extends PropertyDef(
         iris = Set("http://schema.org/beneficiaryBank"),
         label = "beneficiaryBank",
         comment = """A bank or bank’s branch, financial institution or international financial institution operating the beneficiary’s bank account or releasing funds for the beneficiary""",
-        `@extends` = () => List(),
-        `@range` = () => List(BankOrCreditUnion.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, BankOrCreditUnion.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

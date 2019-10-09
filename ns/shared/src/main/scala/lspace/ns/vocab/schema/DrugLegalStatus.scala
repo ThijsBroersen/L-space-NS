@@ -6,7 +6,7 @@ object DrugLegalStatus extends OntologyDef(
         iris = Set("http://schema.org/DrugLegalStatus"),
         label = "DrugLegalStatus",
         comment = """The legal availability status of a medical drug.""",
-        `@extends` = () => List(MedicalIntangible.ontology)
+        `@extends` = List(MedicalIntangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalIntangible.Properties{
 lazy val applicableLocation = lspace.ns.vocab.schema.applicableLocation.property

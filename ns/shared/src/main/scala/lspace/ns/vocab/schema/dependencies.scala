@@ -8,8 +8,8 @@ object dependencies extends PropertyDef(
         iris = Set("http://schema.org/dependencies"),
         label = "dependencies",
         comment = """Prerequisites needed to fulfill steps in article.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

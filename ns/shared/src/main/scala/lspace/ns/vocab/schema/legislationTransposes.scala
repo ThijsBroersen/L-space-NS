@@ -8,8 +8,8 @@ object legislationTransposes extends PropertyDef(
         iris = Set("http://schema.org/legislationTransposes"),
         label = "legislationTransposes",
         comment = """Indicates that this legislation (or part of legislation) fulfills the objectives set by another legislation, by passing appropriate implementation measures. Typically, some legislations of European Union's member states or regions transpose European Directives. This indicates a legally binding link between the 2 legislations.""",
-        `@extends` = () => List(legislationApplies.property),
-        `@range` = () => List(Legislation.ontology)
+        `@extends` = List(legislationApplies.property),
+        `@range` = List(Legislation.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

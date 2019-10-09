@@ -6,7 +6,7 @@ object PropertyValueSpecification extends OntologyDef(
         iris = Set("http://schema.org/PropertyValueSpecification"),
         label = "PropertyValueSpecification",
         comment = """A Property value specification.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val defaultValue = lspace.ns.vocab.schema.defaultValue.property

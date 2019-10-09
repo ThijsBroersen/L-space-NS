@@ -6,7 +6,7 @@ object Country extends OntologyDef(
         iris = Set("http://schema.org/Country"),
         label = "Country",
         comment = """A country.""",
-        `@extends` = () => List(AdministrativeArea.ontology)
+        `@extends` = List(AdministrativeArea.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.AdministrativeArea.Properties{
 

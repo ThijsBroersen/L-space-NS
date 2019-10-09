@@ -6,7 +6,7 @@ object ContactPage extends OntologyDef(
         iris = Set("http://schema.org/ContactPage"),
         label = "ContactPage",
         comment = """Web page type: Contact page.""",
-        `@extends` = () => List(WebPage.ontology)
+        `@extends` = List(WebPage.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.WebPage.Properties{
 

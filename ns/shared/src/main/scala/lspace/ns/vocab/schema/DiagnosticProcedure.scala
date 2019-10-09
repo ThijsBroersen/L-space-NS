@@ -6,7 +6,7 @@ object DiagnosticProcedure extends OntologyDef(
         iris = Set("http://schema.org/DiagnosticProcedure"),
         label = "DiagnosticProcedure",
         comment = """A medical procedure intended primarily for diagnostic, as opposed to therapeutic, purposes.""",
-        `@extends` = () => List(MedicalProcedure.ontology)
+        `@extends` = List(MedicalProcedure.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalProcedure.Properties{
 

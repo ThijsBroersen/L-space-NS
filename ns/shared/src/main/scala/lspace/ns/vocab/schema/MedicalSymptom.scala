@@ -6,7 +6,7 @@ object MedicalSymptom extends OntologyDef(
         iris = Set("http://schema.org/MedicalSymptom"),
         label = "MedicalSymptom",
         comment = """Any complaint sensed and expressed by the patient (therefore defined as subjective)  like stomachache, lower-back pain, or fatigue.""",
-        `@extends` = () => List(MedicalSignOrSymptom.ontology)
+        `@extends` = List(MedicalSignOrSymptom.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalSignOrSymptom.Properties{
 

@@ -6,13 +6,13 @@ object URL extends OntologyDef(
         iris = Set("http://schema.org/URL"),
         label = "URL",
         comment = """Data type: URL.""",
-        `@extends` = () => List(Text.ontology)
+        `@extends` = List()
        ){
-object keys extends lspace.ns.vocab.schema.Text.Properties{
+object keys {
 
 }
 override lazy val properties: List[LProperty] = List()
-trait Properties extends lspace.ns.vocab.schema.Text.Properties{
+trait Properties {
 
 }
 }

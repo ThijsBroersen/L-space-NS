@@ -8,8 +8,8 @@ object mainContentOfPage extends PropertyDef(
         iris = Set("http://schema.org/mainContentOfPage"),
         label = "mainContentOfPage",
         comment = """Indicates if this web page element is the main subject of the page.""",
-        `@extends` = () => List(),
-        `@range` = () => List(WebPageElement.ontology)
+        `@extends` = List(),
+        `@range` = List(WebPageElement.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

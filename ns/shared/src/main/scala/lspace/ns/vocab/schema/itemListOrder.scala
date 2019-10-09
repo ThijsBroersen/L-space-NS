@@ -8,8 +8,8 @@ object itemListOrder extends PropertyDef(
         iris = Set("http://schema.org/itemListOrder"),
         label = "itemListOrder",
         comment = """Type of ordering (e.g. Ascending, Descending, Unordered).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, ItemListOrderType.ontology)
+        `@extends` = List(),
+        `@range` = List(ItemListOrderType.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object regionDrained extends PropertyDef(
         iris = Set("http://schema.org/regionDrained"),
         label = "regionDrained",
         comment = """The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AnatomicalStructure.ontology, AnatomicalSystem.ontology)
+        `@extends` = List(),
+        `@range` = List(AnatomicalSystem.ontology, AnatomicalStructure.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

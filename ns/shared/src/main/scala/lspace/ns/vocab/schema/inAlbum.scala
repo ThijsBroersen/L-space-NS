@@ -8,8 +8,8 @@ object inAlbum extends PropertyDef(
         iris = Set("http://schema.org/inAlbum"),
         label = "inAlbum",
         comment = """The album to which this recording belongs.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MusicAlbum.ontology)
+        `@extends` = List(),
+        `@range` = List(MusicAlbum.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

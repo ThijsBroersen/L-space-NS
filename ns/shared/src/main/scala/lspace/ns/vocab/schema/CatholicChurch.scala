@@ -6,7 +6,7 @@ object CatholicChurch extends OntologyDef(
         iris = Set("http://schema.org/CatholicChurch"),
         label = "CatholicChurch",
         comment = """A Catholic church.""",
-        `@extends` = () => List(PlaceOfWorship.ontology)
+        `@extends` = List(PlaceOfWorship.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.PlaceOfWorship.Properties{
 

@@ -8,8 +8,8 @@ object phase extends PropertyDef(
         iris = Set("http://schema.org/phase"),
         label = "phase",
         comment = """The phase of the clinical trial.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

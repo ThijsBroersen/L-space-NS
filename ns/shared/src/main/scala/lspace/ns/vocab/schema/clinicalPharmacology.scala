@@ -8,8 +8,8 @@ object clinicalPharmacology extends PropertyDef(
         iris = Set("http://schema.org/clinicalPharmacology"),
         label = "clinicalPharmacology",
         comment = """Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

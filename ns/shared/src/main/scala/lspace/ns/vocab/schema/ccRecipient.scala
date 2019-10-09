@@ -8,8 +8,8 @@ object ccRecipient extends PropertyDef(
         iris = Set("http://schema.org/ccRecipient"),
         label = "ccRecipient",
         comment = """A sub property of recipient. The recipient copied on a message.""",
-        `@extends` = () => List(recipient.property),
-        `@range` = () => List(ContactPoint.ontology, Person.ontology, Organization.ontology)
+        `@extends` = List(recipient.property),
+        `@range` = List(Organization.ontology, Person.ontology, ContactPoint.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

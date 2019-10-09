@@ -6,7 +6,7 @@ object PsychologicalTreatment extends OntologyDef(
         iris = Set("http://schema.org/PsychologicalTreatment"),
         label = "PsychologicalTreatment",
         comment = """A process of care relying upon counseling, dialogue and communication  aimed at improving a mental health condition without use of drugs.""",
-        `@extends` = () => List(TherapeuticProcedure.ontology)
+        `@extends` = List(TherapeuticProcedure.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.TherapeuticProcedure.Properties{
 

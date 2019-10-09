@@ -6,7 +6,7 @@ object RsvpAction extends OntologyDef(
         iris = Set("http://schema.org/RsvpAction"),
         label = "RsvpAction",
         comment = """The act of notifying an event organizer as to whether you expect to attend the event.""",
-        `@extends` = () => List(InformAction.ontology)
+        `@extends` = List(InformAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.InformAction.Properties{
 lazy val additionalNumberOfGuests = lspace.ns.vocab.schema.additionalNumberOfGuests.property

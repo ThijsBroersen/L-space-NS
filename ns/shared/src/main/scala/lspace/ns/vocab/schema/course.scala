@@ -8,8 +8,8 @@ object course extends PropertyDef(
         iris = Set("http://schema.org/course"),
         label = "course",
         comment = """A sub property of location. The course where this action was taken.""",
-        `@extends` = () => List(location.property),
-        `@range` = () => List(Place.ontology)
+        `@extends` = List(location.property),
+        `@range` = List(Place.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

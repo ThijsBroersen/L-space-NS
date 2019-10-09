@@ -8,8 +8,8 @@ object validFor extends PropertyDef(
         iris = Set("http://schema.org/validFor"),
         label = "validFor",
         comment = """The duration of validity of a permit or similar thing.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Duration.ontology)
+        `@extends` = List(),
+        `@range` = List(Duration.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

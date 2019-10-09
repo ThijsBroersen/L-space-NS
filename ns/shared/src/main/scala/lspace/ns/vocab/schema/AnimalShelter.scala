@@ -6,7 +6,7 @@ object AnimalShelter extends OntologyDef(
         iris = Set("http://schema.org/AnimalShelter"),
         label = "AnimalShelter",
         comment = """Animal shelter.""",
-        `@extends` = () => List(LocalBusiness.ontology)
+        `@extends` = List(LocalBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.LocalBusiness.Properties{
 

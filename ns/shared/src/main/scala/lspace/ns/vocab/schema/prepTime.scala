@@ -8,8 +8,8 @@ object prepTime extends PropertyDef(
         iris = Set("http://schema.org/prepTime"),
         label = "prepTime",
         comment = """The length of time it takes to prepare the items to be used in instructions or a direction, in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 duration format</a>.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Duration.ontology)
+        `@extends` = List(),
+        `@range` = List(Duration.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

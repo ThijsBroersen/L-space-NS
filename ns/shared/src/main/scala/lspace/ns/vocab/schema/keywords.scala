@@ -8,8 +8,8 @@ object keywords extends PropertyDef(
         iris = Set("http://schema.org/keywords"),
         label = "keywords",
         comment = """Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object Specialty extends OntologyDef(
         iris = Set("http://schema.org/Specialty"),
         label = "Specialty",
         comment = """Any branch of a field in which people typically develop specific expertise, usually after significant study, time, and effort.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

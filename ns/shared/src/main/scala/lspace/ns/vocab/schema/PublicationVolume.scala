@@ -10,7 +10,7 @@ object PublicationVolume extends OntologyDef(
 <pre><code>  &lt;br/&gt;&lt;br/&gt;See also &lt;a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html"&gt;blog post&lt;/a&gt;.
 </code></pre>
 """,
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val pageEnd = lspace.ns.vocab.schema.pageEnd.property

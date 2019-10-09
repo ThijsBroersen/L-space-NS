@@ -8,8 +8,8 @@ object weight extends PropertyDef(
         iris = Set("http://schema.org/weight"),
         label = "weight",
         comment = """The weight of the product or person.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

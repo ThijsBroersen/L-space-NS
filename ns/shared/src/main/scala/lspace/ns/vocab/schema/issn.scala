@@ -8,8 +8,8 @@ object issn extends PropertyDef(
         iris = Set("http://schema.org/issn"),
         label = "issn",
         comment = """The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.""",
-        `@extends` = () => List(identifier.property),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(identifier.property),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object legislationPassedBy extends PropertyDef(
         iris = Set("http://schema.org/legislationPassedBy"),
         label = "legislationPassedBy",
         comment = """The person or organization that originally passed or made the law : typically parliament (for primary legislation) or government (for secondary legislation). This indicates the "legal author" of the law, as opposed to its physical author.""",
-        `@extends` = () => List(creator.property),
-        `@range` = () => List(Organization.ontology, Person.ontology)
+        `@extends` = List(creator.property),
+        `@range` = List(Person.ontology, Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object background extends PropertyDef(
         iris = Set("http://schema.org/background"),
         label = "background",
         comment = """Descriptive information establishing a historical perspective on the supplement. May include the rationale for the name, the population where the supplement first came to prominence, etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

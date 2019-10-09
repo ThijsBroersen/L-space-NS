@@ -6,7 +6,7 @@ object CorrectionComment extends OntologyDef(
         iris = Set("http://schema.org/CorrectionComment"),
         label = "CorrectionComment",
         comment = """A <a class="localLink" href="http://schema.org/comment">comment</a> that corrects <a class="localLink" href="http://schema.org/CreativeWork">CreativeWork</a>.""",
-        `@extends` = () => List(Comment.ontology)
+        `@extends` = List(Comment.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Comment.Properties{
 

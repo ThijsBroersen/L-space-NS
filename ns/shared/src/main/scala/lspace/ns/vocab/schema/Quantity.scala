@@ -6,7 +6,7 @@ object Quantity extends OntologyDef(
         iris = Set("http://schema.org/Quantity"),
         label = "Quantity",
         comment = """Quantities such as distance, time, mass, weight, etc. Particular instances of say Mass are entities like '3 Kg' or '4 milligrams'.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 

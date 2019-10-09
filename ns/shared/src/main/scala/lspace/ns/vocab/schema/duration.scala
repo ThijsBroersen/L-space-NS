@@ -8,8 +8,8 @@ object duration extends PropertyDef(
         iris = Set("http://schema.org/duration"),
         label = "duration",
         comment = """The duration of the item (movie, audio recording, event, etc.) in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Duration.ontology)
+        `@extends` = List(),
+        `@range` = List(Duration.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

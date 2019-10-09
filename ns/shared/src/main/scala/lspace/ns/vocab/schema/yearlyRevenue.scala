@@ -8,8 +8,8 @@ object yearlyRevenue extends PropertyDef(
         iris = Set("http://schema.org/yearlyRevenue"),
         label = "yearlyRevenue",
         comment = """The size of the business in annual revenue.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

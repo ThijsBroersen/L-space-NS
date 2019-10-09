@@ -6,7 +6,7 @@ object BookFormatType extends OntologyDef(
         iris = Set("http://schema.org/BookFormatType"),
         label = "BookFormatType",
         comment = """The publication format of the book.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

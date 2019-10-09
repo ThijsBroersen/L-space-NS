@@ -8,8 +8,8 @@ object itemLocation extends PropertyDef(
         iris = Set("http://schema.org/itemLocation"),
         label = "itemLocation",
         comment = """Current location of the item.""",
-        `@extends` = () => List(location.property),
-        `@range` = () => List(PostalAddress.ontology, Place.ontology, Text.ontology)
+        `@extends` = List(location.property),
+        `@range` = List(PostalAddress.ontology, Place.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

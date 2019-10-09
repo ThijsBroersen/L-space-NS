@@ -6,7 +6,7 @@ object LiteraryEvent extends OntologyDef(
         iris = Set("http://schema.org/LiteraryEvent"),
         label = "LiteraryEvent",
         comment = """Event type: Literary event.""",
-        `@extends` = () => List(Event.ontology)
+        `@extends` = List(Event.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Event.Properties{
 

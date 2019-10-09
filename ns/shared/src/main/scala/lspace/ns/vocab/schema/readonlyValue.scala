@@ -8,8 +8,8 @@ object readonlyValue extends PropertyDef(
         iris = Set("http://schema.org/readonlyValue"),
         label = "readonlyValue",
         comment = """Whether or not a property is mutable.  Default is false. Specifying this for a property that also has a value makes it act similar to a "hidden" input in an HTML form.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object possibleComplication extends PropertyDef(
         iris = Set("http://schema.org/possibleComplication"),
         label = "possibleComplication",
         comment = """A possible unexpected and unfavorable evolution of a medical condition. Complications may include worsening of the signs or symptoms of the disease, extension of the condition to other organ systems, etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

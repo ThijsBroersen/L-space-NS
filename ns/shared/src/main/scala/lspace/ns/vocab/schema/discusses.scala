@@ -8,8 +8,8 @@ object discusses extends PropertyDef(
         iris = Set("http://schema.org/discusses"),
         label = "discusses",
         comment = """Specifies the CreativeWork associated with the UserComment.""",
-        `@extends` = () => List(),
-        `@range` = () => List(CreativeWork.ontology)
+        `@extends` = List(),
+        `@range` = List(CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

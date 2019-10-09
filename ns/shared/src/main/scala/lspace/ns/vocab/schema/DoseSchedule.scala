@@ -6,7 +6,7 @@ object DoseSchedule extends OntologyDef(
         iris = Set("http://schema.org/DoseSchedule"),
         label = "DoseSchedule",
         comment = """A specific dosing schedule for a drug or supplement.""",
-        `@extends` = () => List(MedicalIntangible.ontology)
+        `@extends` = List(MedicalIntangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalIntangible.Properties{
 lazy val doseUnit = lspace.ns.vocab.schema.doseUnit.property

@@ -6,7 +6,7 @@ object LiveBlogPosting extends OntologyDef(
         iris = Set("http://schema.org/LiveBlogPosting"),
         label = "LiveBlogPosting",
         comment = """A blog post intended to provide a rolling textual coverage of an ongoing event through continuous updates.""",
-        `@extends` = () => List(BlogPosting.ontology)
+        `@extends` = List(BlogPosting.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.BlogPosting.Properties{
 lazy val coverageEndTime = lspace.ns.vocab.schema.coverageEndTime.property

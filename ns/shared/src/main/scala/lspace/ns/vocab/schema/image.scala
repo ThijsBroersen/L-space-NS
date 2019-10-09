@@ -8,8 +8,8 @@ object image extends PropertyDef(
         iris = Set("http://schema.org/image"),
         label = "image",
         comment = """An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a> or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.""",
-        `@extends` = () => List(),
-        `@range` = () => List(ImageObject.ontology, URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology, ImageObject.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

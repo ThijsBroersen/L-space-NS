@@ -6,7 +6,7 @@ object ActionAccessSpecification extends OntologyDef(
         iris = Set("http://schema.org/ActionAccessSpecification"),
         label = "ActionAccessSpecification",
         comment = """A set of requirements that a must be fulfilled in order to perform an Action.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val availabilityEnds = lspace.ns.vocab.schema.availabilityEnds.property

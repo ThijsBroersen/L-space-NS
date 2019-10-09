@@ -6,7 +6,7 @@ object DriveWheelConfigurationValue extends OntologyDef(
         iris = Set("http://schema.org/DriveWheelConfigurationValue"),
         label = "DriveWheelConfigurationValue",
         comment = """A value indicating which roadwheels will receive torque.""",
-        `@extends` = () => List(QualitativeValue.ontology)
+        `@extends` = List(QualitativeValue.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.QualitativeValue.Properties{
 

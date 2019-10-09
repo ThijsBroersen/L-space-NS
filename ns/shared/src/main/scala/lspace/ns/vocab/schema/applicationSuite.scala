@@ -8,8 +8,8 @@ object applicationSuite extends PropertyDef(
         iris = Set("http://schema.org/applicationSuite"),
         label = "applicationSuite",
         comment = """The name of the application suite to which the application belongs (e.g. Excel belongs to Office).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

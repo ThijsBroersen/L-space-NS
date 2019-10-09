@@ -8,8 +8,8 @@ object mainEntityOfPage extends PropertyDef(
         iris = Set("http://schema.org/mainEntityOfPage"),
         label = "mainEntityOfPage",
         comment = """Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.""",
-        `@extends` = () => List(),
-        `@range` = () => List(CreativeWork.ontology, URL.ontology)
+        `@extends` = List(),
+        `@range` = List(CreativeWork.ontology, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object schemaVersion extends PropertyDef(
         iris = Set("http://schema.org/schemaVersion"),
         label = "schemaVersion",
         comment = """Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using an URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, URL.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

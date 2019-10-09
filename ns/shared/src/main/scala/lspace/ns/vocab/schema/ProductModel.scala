@@ -6,7 +6,7 @@ object ProductModel extends OntologyDef(
         iris = Set("http://schema.org/ProductModel"),
         label = "ProductModel",
         comment = """A datasheet or vendor specification of a product (in the sense of a prototypical description).""",
-        `@extends` = () => List(Product.ontology)
+        `@extends` = List(Product.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Product.Properties{
 lazy val isVariantOf = lspace.ns.vocab.schema.isVariantOf.property

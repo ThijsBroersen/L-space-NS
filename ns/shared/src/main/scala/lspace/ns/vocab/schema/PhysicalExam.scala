@@ -6,7 +6,7 @@ object PhysicalExam extends OntologyDef(
         iris = Set("http://schema.org/PhysicalExam"),
         label = "PhysicalExam",
         comment = """A type of physical examination of a patient performed by a physician.""",
-        `@extends` = () => List(MedicalProcedure.ontology, MedicalEnumeration.ontology)
+        `@extends` = List(MedicalProcedure.ontology, MedicalEnumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalProcedure.Properties with lspace.ns.vocab.schema.MedicalEnumeration.Properties{
 

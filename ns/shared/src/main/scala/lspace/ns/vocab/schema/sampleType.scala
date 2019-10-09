@@ -8,8 +8,8 @@ object sampleType extends PropertyDef(
         iris = Set("http://schema.org/sampleType"),
         label = "sampleType",
         comment = """What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -10,8 +10,8 @@ object seatingCapacity extends PropertyDef(
         comment = """The number of persons that can be seated (e.g. in a vehicle), both in terms of the physical space available, and in terms of limitations set by law.<br/><br/>
 
 Typical unit code(s): C62 for persons""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`, QuantitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology, `@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

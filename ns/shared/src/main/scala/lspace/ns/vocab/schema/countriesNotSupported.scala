@@ -8,8 +8,8 @@ object countriesNotSupported extends PropertyDef(
         iris = Set("http://schema.org/countriesNotSupported"),
         label = "countriesNotSupported",
         comment = """Countries for which the application is not supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

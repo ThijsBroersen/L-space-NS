@@ -6,7 +6,7 @@ object AchieveAction extends OntologyDef(
         iris = Set("http://schema.org/AchieveAction"),
         label = "AchieveAction",
         comment = """The act of accomplishing something via previous efforts. It is an instantaneous action rather than an ongoing process.""",
-        `@extends` = () => List(Action.ontology)
+        `@extends` = List(Action.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Action.Properties{
 

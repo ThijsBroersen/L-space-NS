@@ -6,7 +6,7 @@ object QuantitativeValueDistribution extends OntologyDef(
         iris = Set("http://schema.org/QuantitativeValueDistribution"),
         label = "QuantitativeValueDistribution",
         comment = """A statistical distribution of values.""",
-        `@extends` = () => List(StructuredValue.ontology)
+        `@extends` = List(StructuredValue.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.StructuredValue.Properties{
 lazy val duration = lspace.ns.vocab.schema.duration.property

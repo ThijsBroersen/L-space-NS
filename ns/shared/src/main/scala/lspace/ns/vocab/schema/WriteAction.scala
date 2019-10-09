@@ -6,7 +6,7 @@ object WriteAction extends OntologyDef(
         iris = Set("http://schema.org/WriteAction"),
         label = "WriteAction",
         comment = """The act of authoring written creative content.""",
-        `@extends` = () => List(CreateAction.ontology)
+        `@extends` = List(CreateAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreateAction.Properties{
 lazy val inLanguage = lspace.ns.vocab.schema.inLanguage.property

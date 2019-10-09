@@ -8,8 +8,8 @@ object healthPlanMarketingUrl extends PropertyDef(
         iris = Set("http://schema.org/healthPlanMarketingUrl"),
         label = "healthPlanMarketingUrl",
         comment = """The URL that goes directly to the plan brochure for the specific standard plan or plan variation.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

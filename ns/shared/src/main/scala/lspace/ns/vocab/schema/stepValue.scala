@@ -8,8 +8,8 @@ object stepValue extends PropertyDef(
         iris = Set("http://schema.org/stepValue"),
         label = "stepValue",
         comment = """The stepValue attribute indicates the granularity that is expected (and required) of the value in a PropertyValueSpecification.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

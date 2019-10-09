@@ -6,7 +6,7 @@ object TieAction extends OntologyDef(
         iris = Set("http://schema.org/TieAction"),
         label = "TieAction",
         comment = """The act of reaching a draw in a competitive activity.""",
-        `@extends` = () => List(AchieveAction.ontology)
+        `@extends` = List(AchieveAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.AchieveAction.Properties{
 

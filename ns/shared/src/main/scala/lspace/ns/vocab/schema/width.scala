@@ -8,8 +8,8 @@ object width extends PropertyDef(
         iris = Set("http://schema.org/width"),
         label = "width",
         comment = """The width of the item.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Distance.ontology, QuantitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology, Distance.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

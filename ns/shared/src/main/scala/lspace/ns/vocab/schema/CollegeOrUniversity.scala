@@ -6,7 +6,7 @@ object CollegeOrUniversity extends OntologyDef(
         iris = Set("http://schema.org/CollegeOrUniversity"),
         label = "CollegeOrUniversity",
         comment = """A college, university, or other third-level educational institution.""",
-        `@extends` = () => List(EducationalOrganization.ontology)
+        `@extends` = List(EducationalOrganization.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.EducationalOrganization.Properties{
 

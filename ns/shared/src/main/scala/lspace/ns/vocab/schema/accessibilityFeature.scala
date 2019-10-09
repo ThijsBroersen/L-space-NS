@@ -8,8 +8,8 @@ object accessibilityFeature extends PropertyDef(
         iris = Set("http://schema.org/accessibilityFeature"),
         label = "accessibilityFeature",
         comment = """Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility (<a href="http://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas wiki lists possible values</a>).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

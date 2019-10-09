@@ -6,7 +6,7 @@ object StructuredValue extends OntologyDef(
         iris = Set("http://schema.org/StructuredValue"),
         label = "StructuredValue",
         comment = """Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 

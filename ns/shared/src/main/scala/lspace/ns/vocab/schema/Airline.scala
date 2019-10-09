@@ -6,7 +6,7 @@ object Airline extends OntologyDef(
         iris = Set("http://schema.org/Airline"),
         label = "Airline",
         comment = """An organization that provides flights for passengers.""",
-        `@extends` = () => List(Organization.ontology)
+        `@extends` = List(Organization.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Organization.Properties{
 lazy val boardingPolicy = lspace.ns.vocab.schema.boardingPolicy.property

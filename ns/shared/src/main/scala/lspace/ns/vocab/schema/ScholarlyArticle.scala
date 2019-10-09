@@ -6,7 +6,7 @@ object ScholarlyArticle extends OntologyDef(
         iris = Set("http://schema.org/ScholarlyArticle"),
         label = "ScholarlyArticle",
         comment = """A scholarly article.""",
-        `@extends` = () => List(Article.ontology)
+        `@extends` = List(Article.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Article.Properties{
 

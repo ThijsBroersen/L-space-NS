@@ -8,8 +8,8 @@ object tool extends PropertyDef(
         iris = Set("http://schema.org/tool"),
         label = "tool",
         comment = """A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.""",
-        `@extends` = () => List(instrument.property),
-        `@range` = () => List(Text.ontology, HowToTool.ontology)
+        `@extends` = List(instrument.property),
+        `@range` = List(HowToTool.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

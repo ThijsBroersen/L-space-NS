@@ -6,7 +6,7 @@ object ReportedDoseSchedule extends OntologyDef(
         iris = Set("http://schema.org/ReportedDoseSchedule"),
         label = "ReportedDoseSchedule",
         comment = """A patient-reported or observed dosing schedule for a drug or supplement.""",
-        `@extends` = () => List(DoseSchedule.ontology)
+        `@extends` = List(DoseSchedule.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.DoseSchedule.Properties{
 

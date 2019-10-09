@@ -6,7 +6,7 @@ object MusicComposition extends OntologyDef(
         iris = Set("http://schema.org/MusicComposition"),
         label = "MusicComposition",
         comment = """A musical composition.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val composer = lspace.ns.vocab.schema.composer.property

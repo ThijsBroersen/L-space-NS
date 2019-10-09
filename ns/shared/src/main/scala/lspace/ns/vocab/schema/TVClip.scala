@@ -6,7 +6,7 @@ object TVClip extends OntologyDef(
         iris = Set("http://schema.org/TVClip"),
         label = "TVClip",
         comment = """A short TV program or a segment/part of a TV program.""",
-        `@extends` = () => List(Clip.ontology)
+        `@extends` = List(Clip.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Clip.Properties{
 

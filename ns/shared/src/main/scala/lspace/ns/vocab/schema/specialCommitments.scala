@@ -8,8 +8,8 @@ object specialCommitments extends PropertyDef(
         iris = Set("http://schema.org/specialCommitments"),
         label = "specialCommitments",
         comment = """Any special commitments associated with this job posting. Valid entries include VeteranCommit, MilitarySpouseCommit, etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

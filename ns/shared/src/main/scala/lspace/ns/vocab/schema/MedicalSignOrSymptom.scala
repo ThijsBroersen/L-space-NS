@@ -6,7 +6,7 @@ object MedicalSignOrSymptom extends OntologyDef(
         iris = Set("http://schema.org/MedicalSignOrSymptom"),
         label = "MedicalSignOrSymptom",
         comment = """Any feature associated or not with a medical condition. In medicine a symptom is generally subjective while a sign is objective.""",
-        `@extends` = () => List(MedicalCondition.ontology)
+        `@extends` = List(MedicalCondition.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalCondition.Properties{
 

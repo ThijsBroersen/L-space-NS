@@ -8,8 +8,8 @@ object variableMeasured extends PropertyDef(
         iris = Set("http://schema.org/variableMeasured"),
         label = "variableMeasured",
         comment = """The variableMeasured property can indicate (repeated as necessary) the  variables that are measured in some dataset, either described as text or as pairs of identifier and description using PropertyValue.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, PropertyValue.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, PropertyValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object validUntil extends PropertyDef(
         iris = Set("http://schema.org/validUntil"),
         label = "validUntil",
         comment = """The date when the item is no longer valid.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@date`)
+        `@extends` = List(),
+        `@range` = List(`@date`)
        ){
 
 override lazy val properties: List[LProperty] = List()

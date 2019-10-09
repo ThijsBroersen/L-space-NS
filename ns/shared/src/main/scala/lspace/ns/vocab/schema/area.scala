@@ -8,8 +8,8 @@ object area extends PropertyDef(
         iris = Set("http://schema.org/area"),
         label = "area",
         comment = """The area within which users can expect to reach the broadcast service.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Place.ontology)
+        `@extends` = List(),
+        `@range` = List(Place.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

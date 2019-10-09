@@ -6,7 +6,7 @@ object VideoGame extends OntologyDef(
         iris = Set("http://schema.org/VideoGame"),
         label = "VideoGame",
         comment = """A video game is an electronic game that involves human interaction with a user interface to generate visual feedback on a video device.""",
-        `@extends` = () => List(Game.ontology, SoftwareApplication.ontology)
+        `@extends` = List(Game.ontology, SoftwareApplication.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Game.Properties with lspace.ns.vocab.schema.SoftwareApplication.Properties{
 lazy val actor = lspace.ns.vocab.schema.actor.property

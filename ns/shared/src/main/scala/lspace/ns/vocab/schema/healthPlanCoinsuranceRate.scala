@@ -8,8 +8,8 @@ object healthPlanCoinsuranceRate extends PropertyDef(
         iris = Set("http://schema.org/healthPlanCoinsuranceRate"),
         label = "healthPlanCoinsuranceRate",
         comment = """Whether The rate of coinsurance expressed as a number between 0.0 and 1.0.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

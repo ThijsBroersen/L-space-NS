@@ -8,8 +8,8 @@ object firstAppearance extends PropertyDef(
         iris = Set("http://schema.org/firstAppearance"),
         label = "firstAppearance",
         comment = """Indicates the first known occurence of a <a class="localLink" href="http://schema.org/Claim">Claim</a> in some <a class="localLink" href="http://schema.org/CreativeWork">CreativeWork</a>.""",
-        `@extends` = () => List(workExample.property),
-        `@range` = () => List(CreativeWork.ontology)
+        `@extends` = List(workExample.property),
+        `@range` = List(CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

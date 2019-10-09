@@ -8,8 +8,8 @@ object typeOfBed extends PropertyDef(
         iris = Set("http://schema.org/typeOfBed"),
         label = "typeOfBed",
         comment = """The type of bed to which the BedDetail refers, i.e. the type of bed available in the quantity indicated by quantity.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, BedType.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, BedType.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

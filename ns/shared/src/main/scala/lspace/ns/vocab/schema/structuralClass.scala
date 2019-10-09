@@ -8,8 +8,8 @@ object structuralClass extends PropertyDef(
         iris = Set("http://schema.org/structuralClass"),
         label = "structuralClass",
         comment = """The name given to how bone physically connects to each other.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

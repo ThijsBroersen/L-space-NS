@@ -6,7 +6,7 @@ object MovieClip extends OntologyDef(
         iris = Set("http://schema.org/MovieClip"),
         label = "MovieClip",
         comment = """A short segment/part of a movie.""",
-        `@extends` = () => List(Clip.ontology)
+        `@extends` = List(Clip.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Clip.Properties{
 

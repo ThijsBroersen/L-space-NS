@@ -8,8 +8,8 @@ object verificationFactCheckingPolicy extends PropertyDef(
         iris = Set("http://schema.org/verificationFactCheckingPolicy"),
         label = "verificationFactCheckingPolicy",
         comment = """Disclosure about verification and fact-checking processes for a <a class="localLink" href="http://schema.org/NewsMediaOrganization">NewsMediaOrganization</a> or other fact-checking <a class="localLink" href="http://schema.org/Organization">Organization</a>.""",
-        `@extends` = () => List(publishingPrinciples.property),
-        `@range` = () => List(URL.ontology, CreativeWork.ontology)
+        `@extends` = List(publishingPrinciples.property),
+        `@range` = List(URL.ontology, CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

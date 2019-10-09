@@ -6,7 +6,7 @@ object DigitalDocumentPermission extends OntologyDef(
         iris = Set("http://schema.org/DigitalDocumentPermission"),
         label = "DigitalDocumentPermission",
         comment = """A permission for a particular person or group to access a particular file.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val grantee = lspace.ns.vocab.schema.grantee.property

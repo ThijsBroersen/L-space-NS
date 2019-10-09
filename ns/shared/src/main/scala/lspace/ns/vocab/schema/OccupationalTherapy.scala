@@ -6,7 +6,7 @@ object OccupationalTherapy extends OntologyDef(
         iris = Set("http://schema.org/OccupationalTherapy"),
         label = "OccupationalTherapy",
         comment = """A treatment of people with physical, emotional, or social problems, using purposeful activity to help them overcome or learn to deal with their problems.""",
-        `@extends` = () => List(MedicalTherapy.ontology)
+        `@extends` = List(MedicalTherapy.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalTherapy.Properties{
 

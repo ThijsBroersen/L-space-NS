@@ -8,8 +8,8 @@ object earlyPrepaymentPenalty extends PropertyDef(
         iris = Set("http://schema.org/earlyPrepaymentPenalty"),
         label = "earlyPrepaymentPenalty",
         comment = """The amount to be paid as a penalty in the event of early payment of the loan.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MonetaryAmount.ontology)
+        `@extends` = List(),
+        `@range` = List(MonetaryAmount.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object arterialBranch extends PropertyDef(
         iris = Set("http://schema.org/arterialBranch"),
         label = "arterialBranch",
         comment = """The branches that comprise the arterial structure.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AnatomicalStructure.ontology)
+        `@extends` = List(),
+        `@range` = List(AnatomicalStructure.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

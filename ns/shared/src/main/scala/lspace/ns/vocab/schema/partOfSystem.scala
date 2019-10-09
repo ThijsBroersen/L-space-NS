@@ -8,8 +8,8 @@ object partOfSystem extends PropertyDef(
         iris = Set("http://schema.org/partOfSystem"),
         label = "partOfSystem",
         comment = """The anatomical or organ system that this structure is part of.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AnatomicalSystem.ontology)
+        `@extends` = List(),
+        `@range` = List(AnatomicalSystem.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

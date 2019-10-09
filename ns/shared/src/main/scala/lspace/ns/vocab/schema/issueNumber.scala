@@ -8,8 +8,8 @@ object issueNumber extends PropertyDef(
         iris = Set("http://schema.org/issueNumber"),
         label = "issueNumber",
         comment = """Identifies the issue of publication; for example, "iii" or "2".""",
-        `@extends` = () => List(position.property),
-        `@range` = () => List(Text.ontology, `@int`)
+        `@extends` = List(position.property),
+        `@range` = List(`@string`, `@int`)
        ){
 
 override lazy val properties: List[LProperty] = List()

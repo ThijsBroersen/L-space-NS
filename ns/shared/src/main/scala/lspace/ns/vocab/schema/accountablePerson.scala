@@ -8,8 +8,8 @@ object accountablePerson extends PropertyDef(
         iris = Set("http://schema.org/accountablePerson"),
         label = "accountablePerson",
         comment = """Specifies the Person that is legally accountable for the CreativeWork.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

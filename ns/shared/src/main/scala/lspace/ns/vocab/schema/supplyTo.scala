@@ -8,8 +8,8 @@ object supplyTo extends PropertyDef(
         iris = Set("http://schema.org/supplyTo"),
         label = "supplyTo",
         comment = """The area to which the artery supplies blood.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AnatomicalStructure.ontology)
+        `@extends` = List(),
+        `@range` = List(AnatomicalStructure.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

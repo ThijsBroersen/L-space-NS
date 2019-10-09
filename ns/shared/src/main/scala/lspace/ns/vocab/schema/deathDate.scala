@@ -8,8 +8,8 @@ object deathDate extends PropertyDef(
         iris = Set("http://schema.org/deathDate"),
         label = "deathDate",
         comment = """Date of death.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@date`)
+        `@extends` = List(),
+        `@range` = List(`@date`)
        ){
 
 override lazy val properties: List[LProperty] = List()

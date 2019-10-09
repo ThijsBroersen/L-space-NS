@@ -8,8 +8,8 @@ object installUrl extends PropertyDef(
         iris = Set("http://schema.org/installUrl"),
         label = "installUrl",
         comment = """URL at which the app may be installed, if different from the URL of the item.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

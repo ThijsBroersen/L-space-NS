@@ -6,7 +6,7 @@ object MobileApplication extends OntologyDef(
         iris = Set("http://schema.org/MobileApplication"),
         label = "MobileApplication",
         comment = """A software application designed specifically to work well on a mobile device such as a telephone.""",
-        `@extends` = () => List(SoftwareApplication.ontology)
+        `@extends` = List(SoftwareApplication.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.SoftwareApplication.Properties{
 lazy val carrierRequirements = lspace.ns.vocab.schema.carrierRequirements.property

@@ -6,7 +6,7 @@ object PerformanceRole extends OntologyDef(
         iris = Set("http://schema.org/PerformanceRole"),
         label = "PerformanceRole",
         comment = """A PerformanceRole is a Role that some entity places with regard to a theatrical performance, e.g. in a Movie, TVSeries etc.""",
-        `@extends` = () => List(Role.ontology)
+        `@extends` = List(Role.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Role.Properties{
 lazy val characterName = lspace.ns.vocab.schema.characterName.property

@@ -6,7 +6,7 @@ object MediaSubscription extends OntologyDef(
         iris = Set("http://schema.org/MediaSubscription"),
         label = "MediaSubscription",
         comment = """A subscription which allows a user to access media including audio, video, books, etc.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val authenticator = lspace.ns.vocab.schema.authenticator.property

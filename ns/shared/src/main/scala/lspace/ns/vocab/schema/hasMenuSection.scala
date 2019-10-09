@@ -8,8 +8,8 @@ object hasMenuSection extends PropertyDef(
         iris = Set("http://schema.org/hasMenuSection"),
         label = "hasMenuSection",
         comment = """A subgrouping of the menu (by dishes, course, serving time period, etc.).""",
-        `@extends` = () => List(),
-        `@range` = () => List(MenuSection.ontology)
+        `@extends` = List(),
+        `@range` = List(MenuSection.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

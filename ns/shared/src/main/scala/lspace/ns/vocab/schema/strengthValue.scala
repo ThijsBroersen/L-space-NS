@@ -8,8 +8,8 @@ object strengthValue extends PropertyDef(
         iris = Set("http://schema.org/strengthValue"),
         label = "strengthValue",
         comment = """The value of an active ingredient's strength, e.g. 325.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

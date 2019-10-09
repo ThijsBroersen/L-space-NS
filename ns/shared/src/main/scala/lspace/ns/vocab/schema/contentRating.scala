@@ -8,8 +8,8 @@ object contentRating extends PropertyDef(
         iris = Set("http://schema.org/contentRating"),
         label = "contentRating",
         comment = """Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Rating.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(Rating.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

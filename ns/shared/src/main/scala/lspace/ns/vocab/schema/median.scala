@@ -8,8 +8,8 @@ object median extends PropertyDef(
         iris = Set("http://schema.org/median"),
         label = "median",
         comment = """The median value.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

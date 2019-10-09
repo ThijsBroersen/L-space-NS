@@ -6,7 +6,7 @@ object SiteNavigationElement extends OntologyDef(
         iris = Set("http://schema.org/SiteNavigationElement"),
         label = "SiteNavigationElement",
         comment = """A navigation element of the page.""",
-        `@extends` = () => List(WebPageElement.ontology)
+        `@extends` = List(WebPageElement.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.WebPageElement.Properties{
 

@@ -8,8 +8,8 @@ object playMode extends PropertyDef(
         iris = Set("http://schema.org/playMode"),
         label = "playMode",
         comment = """Indicates whether this game is multi-player, co-op or single-player.  The game can be marked as multi-player, co-op and single-player at the same time.""",
-        `@extends` = () => List(),
-        `@range` = () => List(GamePlayMode.ontology)
+        `@extends` = List(),
+        `@range` = List(GamePlayMode.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

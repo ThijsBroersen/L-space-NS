@@ -6,7 +6,7 @@ object MedicalCondition extends OntologyDef(
         iris = Set("http://schema.org/MedicalCondition"),
         label = "MedicalCondition",
         comment = """Any condition of the human body that affects the normal functioning of a person, whether physically or mentally. Includes diseases, injuries, disabilities, disorders, syndromes, etc.""",
-        `@extends` = () => List(MedicalEntity.ontology)
+        `@extends` = List(MedicalEntity.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEntity.Properties{
 lazy val associatedAnatomy = lspace.ns.vocab.schema.associatedAnatomy.property

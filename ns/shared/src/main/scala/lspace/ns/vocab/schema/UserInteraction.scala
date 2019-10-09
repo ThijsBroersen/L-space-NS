@@ -6,7 +6,7 @@ object UserInteraction extends OntologyDef(
         iris = Set("http://schema.org/UserInteraction"),
         label = "UserInteraction",
         comment = """UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use <a class="localLink" href="http://schema.org/Action">Action</a>-based vocabulary, alongside types such as <a class="localLink" href="http://schema.org/Comment">Comment</a>.""",
-        `@extends` = () => List(Event.ontology)
+        `@extends` = List(Event.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Event.Properties{
 

@@ -6,7 +6,7 @@ object MedicalOrganization extends OntologyDef(
         iris = Set("http://schema.org/MedicalOrganization"),
         label = "MedicalOrganization",
         comment = """A medical organization (physical or not), such as hospital, institution or clinic.""",
-        `@extends` = () => List(Organization.ontology)
+        `@extends` = List(Organization.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Organization.Properties{
 lazy val healthPlanNetworkId = lspace.ns.vocab.schema.healthPlanNetworkId.property

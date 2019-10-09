@@ -13,7 +13,7 @@ Related actions:<br/><br/>
 <li><a class="localLink" href="http://schema.org/AskAction">AskAction</a>: Appears generally as an origin of a ReplyAction.</li>
 </ul>
 """,
-        `@extends` = () => List(CommunicateAction.ontology)
+        `@extends` = List(CommunicateAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CommunicateAction.Properties{
 lazy val resultComment = lspace.ns.vocab.schema.resultComment.property

@@ -8,8 +8,8 @@ object validThrough extends PropertyDef(
         iris = Set("http://schema.org/validThrough"),
         label = "validThrough",
         comment = """The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@datetime`)
+        `@extends` = List(),
+        `@range` = List(`@datetime`)
        ){
 
 override lazy val properties: List[LProperty] = List()

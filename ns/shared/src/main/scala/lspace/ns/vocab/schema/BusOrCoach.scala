@@ -6,7 +6,7 @@ object BusOrCoach extends OntologyDef(
         iris = Set("http://schema.org/BusOrCoach"),
         label = "BusOrCoach",
         comment = """A bus (also omnibus or autobus) is a road vehicle designed to carry passengers. Coaches are luxury busses, usually in service for long distance travel.""",
-        `@extends` = () => List(Vehicle.ontology)
+        `@extends` = List(Vehicle.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Vehicle.Properties{
 lazy val acrissCode = lspace.ns.vocab.schema.acrissCode.property

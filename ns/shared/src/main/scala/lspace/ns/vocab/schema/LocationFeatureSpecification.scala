@@ -6,7 +6,7 @@ object LocationFeatureSpecification extends OntologyDef(
         iris = Set("http://schema.org/LocationFeatureSpecification"),
         label = "LocationFeatureSpecification",
         comment = """Specifies a location feature by providing a structured value representing a feature of an accommodation as a property-value pair of varying degrees of formality.""",
-        `@extends` = () => List(PropertyValue.ontology)
+        `@extends` = List(PropertyValue.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.PropertyValue.Properties{
 lazy val hoursAvailable = lspace.ns.vocab.schema.hoursAvailable.property

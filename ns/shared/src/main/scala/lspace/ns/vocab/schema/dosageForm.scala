@@ -8,8 +8,8 @@ object dosageForm extends PropertyDef(
         iris = Set("http://schema.org/dosageForm"),
         label = "dosageForm",
         comment = """A dosage form in which this drug/supplement is available, e.g. 'tablet', 'suspension', 'injection'.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

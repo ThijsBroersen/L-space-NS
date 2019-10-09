@@ -8,8 +8,8 @@ object gameItem extends PropertyDef(
         iris = Set("http://schema.org/gameItem"),
         label = "gameItem",
         comment = """An item is an object within the game world that can be collected by a player or, occasionally, a non-player character.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Thing.ontology)
+        `@extends` = List(),
+        `@range` = List(Thing.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

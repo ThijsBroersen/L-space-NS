@@ -8,8 +8,8 @@ object costPerUnit extends PropertyDef(
         iris = Set("http://schema.org/costPerUnit"),
         label = "costPerUnit",
         comment = """The cost per unit of the drug.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`, QualitativeValue.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@number`, QualitativeValue.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

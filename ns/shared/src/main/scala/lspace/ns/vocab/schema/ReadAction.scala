@@ -6,7 +6,7 @@ object ReadAction extends OntologyDef(
         iris = Set("http://schema.org/ReadAction"),
         label = "ReadAction",
         comment = """The act of consuming written content.""",
-        `@extends` = () => List(ConsumeAction.ontology)
+        `@extends` = List(ConsumeAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ConsumeAction.Properties{
 

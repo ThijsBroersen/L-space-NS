@@ -8,8 +8,8 @@ object valueMinLength extends PropertyDef(
         iris = Set("http://schema.org/valueMinLength"),
         label = "valueMinLength",
         comment = """Specifies the minimum allowed range for number of characters in a literal value.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

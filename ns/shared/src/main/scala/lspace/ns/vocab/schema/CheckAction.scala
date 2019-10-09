@@ -6,7 +6,7 @@ object CheckAction extends OntologyDef(
         iris = Set("http://schema.org/CheckAction"),
         label = "CheckAction",
         comment = """An agent inspects, determines, investigates, inquires, or examines an object's accuracy, quality, condition, or state.""",
-        `@extends` = () => List(FindAction.ontology)
+        `@extends` = List(FindAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.FindAction.Properties{
 

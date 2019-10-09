@@ -8,8 +8,8 @@ object parentItem extends PropertyDef(
         iris = Set("http://schema.org/parentItem"),
         label = "parentItem",
         comment = """The parent of a question, answer or item in general.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Question.ontology)
+        `@extends` = List(),
+        `@range` = List(Question.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

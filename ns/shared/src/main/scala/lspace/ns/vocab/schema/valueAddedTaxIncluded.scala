@@ -8,8 +8,8 @@ object valueAddedTaxIncluded extends PropertyDef(
         iris = Set("http://schema.org/valueAddedTaxIncluded"),
         label = "valueAddedTaxIncluded",
         comment = """Specifies whether the applicable value-added tax (VAT) is included in the price specification or not.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

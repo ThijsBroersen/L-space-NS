@@ -8,8 +8,8 @@ object antagonist extends PropertyDef(
         iris = Set("http://schema.org/antagonist"),
         label = "antagonist",
         comment = """The muscle whose action counteracts the specified muscle.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Muscle.ontology)
+        `@extends` = List(),
+        `@range` = List(Muscle.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

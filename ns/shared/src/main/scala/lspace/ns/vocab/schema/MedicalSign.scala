@@ -6,7 +6,7 @@ object MedicalSign extends OntologyDef(
         iris = Set("http://schema.org/MedicalSign"),
         label = "MedicalSign",
         comment = """Any physical manifestation of a person's medical condition discoverable by objective diagnostic tests or physical examination.""",
-        `@extends` = () => List(MedicalSignOrSymptom.ontology)
+        `@extends` = List(MedicalSignOrSymptom.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalSignOrSymptom.Properties{
 lazy val identifyingExam = lspace.ns.vocab.schema.identifyingExam.property

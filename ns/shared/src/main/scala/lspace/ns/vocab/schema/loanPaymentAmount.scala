@@ -8,8 +8,8 @@ object loanPaymentAmount extends PropertyDef(
         iris = Set("http://schema.org/loanPaymentAmount"),
         label = "loanPaymentAmount",
         comment = """The amount of money to pay in a single payment.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MonetaryAmount.ontology)
+        `@extends` = List(),
+        `@range` = List(MonetaryAmount.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

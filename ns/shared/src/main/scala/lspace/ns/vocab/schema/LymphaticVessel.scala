@@ -6,7 +6,7 @@ object LymphaticVessel extends OntologyDef(
         iris = Set("http://schema.org/LymphaticVessel"),
         label = "LymphaticVessel",
         comment = """A type of blood vessel that specifically carries lymph fluid unidirectionally toward the heart.""",
-        `@extends` = () => List(Vessel.ontology)
+        `@extends` = List(Vessel.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Vessel.Properties{
 lazy val originatesFrom = lspace.ns.vocab.schema.originatesFrom.property

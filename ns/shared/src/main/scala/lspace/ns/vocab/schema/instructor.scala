@@ -8,8 +8,8 @@ object instructor extends PropertyDef(
         iris = Set("http://schema.org/instructor"),
         label = "instructor",
         comment = """A person assigned to instruct or provide instructional assistance for the <a class="localLink" href="http://schema.org/CourseInstance">CourseInstance</a>.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object broadcastChannelId extends PropertyDef(
         iris = Set("http://schema.org/broadcastChannelId"),
         label = "broadcastChannelId",
         comment = """The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

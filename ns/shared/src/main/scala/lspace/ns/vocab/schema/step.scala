@@ -8,8 +8,8 @@ object step extends PropertyDef(
         iris = Set("http://schema.org/step"),
         label = "step",
         comment = """A single step item (as HowToStep, text, document, video, etc.) or a HowToSection.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, CreativeWork.ontology, HowToSection.ontology, HowToStep.ontology)
+        `@extends` = List(),
+        `@range` = List(HowToStep.ontology, HowToSection.ontology, CreativeWork.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

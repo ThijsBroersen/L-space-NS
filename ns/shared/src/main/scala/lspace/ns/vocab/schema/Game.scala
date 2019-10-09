@@ -6,7 +6,7 @@ object Game extends OntologyDef(
         iris = Set("http://schema.org/Game"),
         label = "Game",
         comment = """The Game type represents things which are games. These are typically rule-governed recreational activities, e.g. role-playing games in which players assume the role of characters in a fictional setting.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val characterAttribute = lspace.ns.vocab.schema.characterAttribute.property

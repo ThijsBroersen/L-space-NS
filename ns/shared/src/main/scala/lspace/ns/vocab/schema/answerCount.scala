@@ -8,8 +8,8 @@ object answerCount extends PropertyDef(
         iris = Set("http://schema.org/answerCount"),
         label = "answerCount",
         comment = """The number of answers this question has received.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@int`)
+        `@extends` = List(),
+        `@range` = List(`@int`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object driveWheelConfiguration extends PropertyDef(
         iris = Set("http://schema.org/driveWheelConfiguration"),
         label = "driveWheelConfiguration",
         comment = """The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle's engine via the drivetrain.""",
-        `@extends` = () => List(),
-        `@range` = () => List(DriveWheelConfigurationValue.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(DriveWheelConfigurationValue.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

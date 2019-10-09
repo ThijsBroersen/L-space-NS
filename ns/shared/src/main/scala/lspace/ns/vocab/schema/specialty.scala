@@ -8,8 +8,8 @@ object specialty extends PropertyDef(
         iris = Set("http://schema.org/specialty"),
         label = "specialty",
         comment = """One of the domain specialities to which this web page's content applies.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Specialty.ontology)
+        `@extends` = List(),
+        `@range` = List(Specialty.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

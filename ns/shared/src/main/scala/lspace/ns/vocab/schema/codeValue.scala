@@ -8,8 +8,8 @@ object codeValue extends PropertyDef(
         iris = Set("http://schema.org/codeValue"),
         label = "codeValue",
         comment = """A short textual code that uniquely identifies the value.""",
-        `@extends` = () => List(termCode.property),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(termCode.property),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

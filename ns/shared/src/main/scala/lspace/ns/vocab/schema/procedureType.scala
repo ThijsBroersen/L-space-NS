@@ -8,8 +8,8 @@ object procedureType extends PropertyDef(
         iris = Set("http://schema.org/procedureType"),
         label = "procedureType",
         comment = """The type of procedure, for example Surgical, Noninvasive, or Percutaneous.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MedicalProcedureType.ontology)
+        `@extends` = List(),
+        `@range` = List(MedicalProcedureType.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

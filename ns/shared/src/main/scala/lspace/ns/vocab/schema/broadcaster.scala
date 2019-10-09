@@ -8,8 +8,8 @@ object broadcaster extends PropertyDef(
         iris = Set("http://schema.org/broadcaster"),
         label = "broadcaster",
         comment = """The organization owning or operating the broadcast service.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

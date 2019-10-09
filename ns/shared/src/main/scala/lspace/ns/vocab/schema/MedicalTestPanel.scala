@@ -6,7 +6,7 @@ object MedicalTestPanel extends OntologyDef(
         iris = Set("http://schema.org/MedicalTestPanel"),
         label = "MedicalTestPanel",
         comment = """Any collection of tests commonly ordered together.""",
-        `@extends` = () => List(MedicalTest.ontology)
+        `@extends` = List(MedicalTest.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalTest.Properties{
 lazy val subTest = lspace.ns.vocab.schema.subTest.property

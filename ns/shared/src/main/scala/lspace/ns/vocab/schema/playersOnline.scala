@@ -8,8 +8,8 @@ object playersOnline extends PropertyDef(
         iris = Set("http://schema.org/playersOnline"),
         label = "playersOnline",
         comment = """Number of players on the server.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@int`)
+        `@extends` = List(),
+        `@range` = List(`@int`)
        ){
 
 override lazy val properties: List[LProperty] = List()

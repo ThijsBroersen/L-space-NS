@@ -8,8 +8,8 @@ object activityFrequency extends PropertyDef(
         iris = Set("http://schema.org/activityFrequency"),
         label = "activityFrequency",
         comment = """How often one should engage in the activity.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QualitativeValue.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(QualitativeValue.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

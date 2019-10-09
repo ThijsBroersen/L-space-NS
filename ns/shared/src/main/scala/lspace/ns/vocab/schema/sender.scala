@@ -8,8 +8,8 @@ object sender extends PropertyDef(
         iris = Set("http://schema.org/sender"),
         label = "sender",
         comment = """A sub property of participant. The participant who is at the sending end of the action.""",
-        `@extends` = () => List(participant.property),
-        `@range` = () => List(Organization.ontology, Audience.ontology, Person.ontology)
+        `@extends` = List(participant.property),
+        `@range` = List(Organization.ontology, Person.ontology, Audience.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

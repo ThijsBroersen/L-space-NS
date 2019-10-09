@@ -6,7 +6,7 @@ object GenderType extends OntologyDef(
         iris = Set("http://schema.org/GenderType"),
         label = "GenderType",
         comment = """An enumeration of genders.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

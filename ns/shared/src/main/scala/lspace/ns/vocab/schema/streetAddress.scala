@@ -8,8 +8,8 @@ object streetAddress extends PropertyDef(
         iris = Set("http://schema.org/streetAddress"),
         label = "streetAddress",
         comment = """The street address. For example, 1600 Amphitheatre Pkwy.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

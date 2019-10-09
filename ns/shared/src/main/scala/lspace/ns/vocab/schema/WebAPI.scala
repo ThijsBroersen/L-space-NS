@@ -6,7 +6,7 @@ object WebAPI extends OntologyDef(
         iris = Set("http://schema.org/WebAPI"),
         label = "WebAPI",
         comment = """An application programming interface accessible over Web/Internet technologies.""",
-        `@extends` = () => List(Service.ontology)
+        `@extends` = List(Service.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Service.Properties{
 lazy val documentation = lspace.ns.vocab.schema.documentation.property

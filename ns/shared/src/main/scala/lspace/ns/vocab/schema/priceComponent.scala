@@ -8,8 +8,8 @@ object priceComponent extends PropertyDef(
         iris = Set("http://schema.org/priceComponent"),
         label = "priceComponent",
         comment = """This property links to all <a class="localLink" href="http://schema.org/UnitPriceSpecification">UnitPriceSpecification</a> nodes that apply in parallel for the <a class="localLink" href="http://schema.org/CompoundPriceSpecification">CompoundPriceSpecification</a> node.""",
-        `@extends` = () => List(),
-        `@range` = () => List(UnitPriceSpecification.ontology)
+        `@extends` = List(),
+        `@range` = List(UnitPriceSpecification.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

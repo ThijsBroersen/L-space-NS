@@ -8,8 +8,8 @@ object liveBlogUpdate extends PropertyDef(
         iris = Set("http://schema.org/liveBlogUpdate"),
         label = "liveBlogUpdate",
         comment = """An update to the LiveBlog.""",
-        `@extends` = () => List(),
-        `@range` = () => List(BlogPosting.ontology)
+        `@extends` = List(),
+        `@range` = List(BlogPosting.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

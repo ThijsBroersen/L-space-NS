@@ -8,8 +8,8 @@ object bestRating extends PropertyDef(
         iris = Set("http://schema.org/bestRating"),
         label = "bestRating",
         comment = """The highest value allowed in this rating system. If bestRating is omitted, 5 is assumed.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, `@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

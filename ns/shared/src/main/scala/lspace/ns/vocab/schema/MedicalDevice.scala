@@ -6,7 +6,7 @@ object MedicalDevice extends OntologyDef(
         iris = Set("http://schema.org/MedicalDevice"),
         label = "MedicalDevice",
         comment = """Any object used in a medical capacity, such as to diagnose or treat a patient.""",
-        `@extends` = () => List(MedicalEntity.ontology)
+        `@extends` = List(MedicalEntity.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEntity.Properties{
 lazy val adverseOutcome = lspace.ns.vocab.schema.adverseOutcome.property

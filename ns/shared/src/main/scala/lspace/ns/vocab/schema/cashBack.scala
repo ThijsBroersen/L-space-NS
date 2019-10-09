@@ -8,8 +8,8 @@ object cashBack extends PropertyDef(
         iris = Set("http://schema.org/cashBack"),
         label = "cashBack",
         comment = """A cardholder benefit that pays the cardholder a small percentage of their net expenditures.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`, `@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`, `@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

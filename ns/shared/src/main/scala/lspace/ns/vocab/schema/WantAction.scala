@@ -6,7 +6,7 @@ object WantAction extends OntologyDef(
         iris = Set("http://schema.org/WantAction"),
         label = "WantAction",
         comment = """The act of expressing a desire about the object. An agent wants an object.""",
-        `@extends` = () => List(ReactAction.ontology)
+        `@extends` = List(ReactAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ReactAction.Properties{
 

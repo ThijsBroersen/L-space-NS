@@ -8,8 +8,8 @@ object exerciseType extends PropertyDef(
         iris = Set("http://schema.org/exerciseType"),
         label = "exerciseType",
         comment = """Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

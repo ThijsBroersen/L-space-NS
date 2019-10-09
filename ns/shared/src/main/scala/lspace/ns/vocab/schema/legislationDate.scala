@@ -8,8 +8,8 @@ object legislationDate extends PropertyDef(
         iris = Set("http://schema.org/legislationDate"),
         label = "legislationDate",
         comment = """The date of adoption or signature of the legislation. This is the date at which the text is officially aknowledged to be a legislation, even though it might not even be published or in force.""",
-        `@extends` = () => List(dateCreated.property),
-        `@range` = () => List(`@date`)
+        `@extends` = List(dateCreated.property),
+        `@range` = List(`@date`)
        ){
 
 override lazy val properties: List[LProperty] = List()

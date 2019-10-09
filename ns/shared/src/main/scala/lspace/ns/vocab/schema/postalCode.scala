@@ -8,8 +8,8 @@ object postalCode extends PropertyDef(
         iris = Set("http://schema.org/postalCode"),
         label = "postalCode",
         comment = """The postal code. For example, 94043.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

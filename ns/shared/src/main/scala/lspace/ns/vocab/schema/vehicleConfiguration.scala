@@ -8,8 +8,8 @@ object vehicleConfiguration extends PropertyDef(
         iris = Set("http://schema.org/vehicleConfiguration"),
         label = "vehicleConfiguration",
         comment = """A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST 2.5 MT 225 hp' or 'limited edition'.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

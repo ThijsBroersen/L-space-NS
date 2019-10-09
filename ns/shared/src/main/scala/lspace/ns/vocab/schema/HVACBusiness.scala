@@ -6,7 +6,7 @@ object HVACBusiness extends OntologyDef(
         iris = Set("http://schema.org/HVACBusiness"),
         label = "HVACBusiness",
         comment = """A business that provide Heating, Ventilation and Air Conditioning services.""",
-        `@extends` = () => List(HomeAndConstructionBusiness.ontology)
+        `@extends` = List(HomeAndConstructionBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.HomeAndConstructionBusiness.Properties{
 

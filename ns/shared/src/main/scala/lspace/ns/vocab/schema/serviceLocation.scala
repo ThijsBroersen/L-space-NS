@@ -8,8 +8,8 @@ object serviceLocation extends PropertyDef(
         iris = Set("http://schema.org/serviceLocation"),
         label = "serviceLocation",
         comment = """The location (e.g. civic structure, local business, etc.) where a person can go to access the service.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Place.ontology)
+        `@extends` = List(),
+        `@range` = List(Place.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object Mosque extends OntologyDef(
         iris = Set("http://schema.org/Mosque"),
         label = "Mosque",
         comment = """A mosque.""",
-        `@extends` = () => List(PlaceOfWorship.ontology)
+        `@extends` = List(PlaceOfWorship.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.PlaceOfWorship.Properties{
 

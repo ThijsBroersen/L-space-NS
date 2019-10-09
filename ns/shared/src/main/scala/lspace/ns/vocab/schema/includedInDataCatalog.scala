@@ -8,8 +8,8 @@ object includedInDataCatalog extends PropertyDef(
         iris = Set("http://schema.org/includedInDataCatalog"),
         label = "includedInDataCatalog",
         comment = """A data catalog which contains this dataset.""",
-        `@extends` = () => List(),
-        `@range` = () => List(DataCatalog.ontology)
+        `@extends` = List(),
+        `@range` = List(DataCatalog.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

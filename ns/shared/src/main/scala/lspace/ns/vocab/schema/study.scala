@@ -8,8 +8,8 @@ object study extends PropertyDef(
         iris = Set("http://schema.org/study"),
         label = "study",
         comment = """A medical study or trial related to this entity.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MedicalStudy.ontology)
+        `@extends` = List(),
+        `@range` = List(MedicalStudy.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

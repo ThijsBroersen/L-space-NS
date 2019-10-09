@@ -8,8 +8,8 @@ object sodiumContent extends PropertyDef(
         iris = Set("http://schema.org/sodiumContent"),
         label = "sodiumContent",
         comment = """The number of milligrams of sodium.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Mass.ontology)
+        `@extends` = List(),
+        `@range` = List(Mass.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

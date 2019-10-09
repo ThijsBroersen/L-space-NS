@@ -8,8 +8,8 @@ object geoMidpoint extends PropertyDef(
         iris = Set("http://schema.org/geoMidpoint"),
         label = "geoMidpoint",
         comment = """Indicates the GeoCoordinates at the centre of a GeoShape e.g. GeoCircle.""",
-        `@extends` = () => List(),
-        `@range` = () => List(GeoCoordinates.ontology)
+        `@extends` = List(),
+        `@range` = List(GeoCoordinates.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

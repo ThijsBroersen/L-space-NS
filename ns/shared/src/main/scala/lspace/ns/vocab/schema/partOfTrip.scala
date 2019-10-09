@@ -8,8 +8,8 @@ object partOfTrip extends PropertyDef(
         iris = Set("http://schema.org/partOfTrip"),
         label = "partOfTrip",
         comment = """Identifies that this <a class="localLink" href="http://schema.org/Trip">Trip</a> is a subTrip of another Trip.  For example Day 1, Day 2, etc. of a multi-day trip.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Trip.ontology)
+        `@extends` = List(),
+        `@range` = List(Trip.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

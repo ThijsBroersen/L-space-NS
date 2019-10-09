@@ -6,7 +6,7 @@ object QuoteAction extends OntologyDef(
         iris = Set("http://schema.org/QuoteAction"),
         label = "QuoteAction",
         comment = """An agent quotes/estimates/appraises an object/product/service with a price at a location/store.""",
-        `@extends` = () => List(TradeAction.ontology)
+        `@extends` = List(TradeAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.TradeAction.Properties{
 

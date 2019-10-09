@@ -8,8 +8,8 @@ object hasPOS extends PropertyDef(
         iris = Set("http://schema.org/hasPOS"),
         label = "hasPOS",
         comment = """Points-of-Sales operated by the organization or person.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Place.ontology)
+        `@extends` = List(),
+        `@range` = List(Place.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

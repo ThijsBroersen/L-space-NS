@@ -8,8 +8,8 @@ object articleBody extends PropertyDef(
         iris = Set("http://schema.org/articleBody"),
         label = "articleBody",
         comment = """The actual body of the article.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

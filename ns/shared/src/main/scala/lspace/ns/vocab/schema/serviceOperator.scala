@@ -8,8 +8,8 @@ object serviceOperator extends PropertyDef(
         iris = Set("http://schema.org/serviceOperator"),
         label = "serviceOperator",
         comment = """The operating organization, if different from the provider.  This enables the representation of services that are provided by an organization, but operated by another organization like a subcontractor.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

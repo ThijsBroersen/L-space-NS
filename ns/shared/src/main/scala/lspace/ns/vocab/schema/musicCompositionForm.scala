@@ -8,8 +8,8 @@ object musicCompositionForm extends PropertyDef(
         iris = Set("http://schema.org/musicCompositionForm"),
         label = "musicCompositionForm",
         comment = """The type of composition (e.g. overture, sonata, symphony, etc.).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

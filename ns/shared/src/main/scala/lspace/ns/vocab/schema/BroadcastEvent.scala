@@ -6,7 +6,7 @@ object BroadcastEvent extends OntologyDef(
         iris = Set("http://schema.org/BroadcastEvent"),
         label = "BroadcastEvent",
         comment = """An over the air or online broadcast event.""",
-        `@extends` = () => List(PublicationEvent.ontology)
+        `@extends` = List(PublicationEvent.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.PublicationEvent.Properties{
 lazy val broadcastOfEvent = lspace.ns.vocab.schema.broadcastOfEvent.property

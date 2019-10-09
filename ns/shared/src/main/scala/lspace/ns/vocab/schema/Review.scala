@@ -6,7 +6,7 @@ object Review extends OntologyDef(
         iris = Set("http://schema.org/Review"),
         label = "Review",
         comment = """A review of an item - for example, of a restaurant, movie, or store.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val itemReviewed = lspace.ns.vocab.schema.itemReviewed.property

@@ -8,8 +8,8 @@ object mainEntity extends PropertyDef(
         iris = Set("http://schema.org/mainEntity"),
         label = "mainEntity",
         comment = """Indicates the primary entity described in some page or other CreativeWork.""",
-        `@extends` = () => List(about.property),
-        `@range` = () => List(Thing.ontology)
+        `@extends` = List(about.property),
+        `@range` = List(Thing.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

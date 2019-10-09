@@ -8,8 +8,8 @@ object inBroadcastLineup extends PropertyDef(
         iris = Set("http://schema.org/inBroadcastLineup"),
         label = "inBroadcastLineup",
         comment = """The CableOrSatelliteService offering the channel.""",
-        `@extends` = () => List(),
-        `@range` = () => List(CableOrSatelliteService.ontology)
+        `@extends` = List(),
+        `@range` = List(CableOrSatelliteService.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

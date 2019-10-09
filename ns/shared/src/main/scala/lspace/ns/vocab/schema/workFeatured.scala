@@ -9,8 +9,8 @@ object workFeatured extends PropertyDef(
         label = "workFeatured",
         comment = """A work featured in some event, e.g. exhibited in an ExhibitionEvent.
        Specific subproperties are available for workPerformed (e.g. a play), or a workPresented (a Movie at a ScreeningEvent).""",
-        `@extends` = () => List(),
-        `@range` = () => List(CreativeWork.ontology)
+        `@extends` = List(),
+        `@range` = List(CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

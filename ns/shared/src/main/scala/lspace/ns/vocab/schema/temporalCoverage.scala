@@ -12,8 +12,8 @@ object temporalCoverage extends PropertyDef(
       Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via "1939/1945".<br/><br/>
 
 Open-ended date ranges can be written with ".." in place of the end date. For example, "2015-11/.." indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, URL.ontology, `@datetime`)
+        `@extends` = List(),
+        `@range` = List(`@string`, URL.ontology, `@datetime`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object editor extends PropertyDef(
         iris = Set("http://schema.org/editor"),
         label = "editor",
         comment = """Specifies the Person who edited the CreativeWork.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -16,8 +16,8 @@ object enginePower extends PropertyDef(
 <li>Note 3: You can use <a class="localLink" href="http://schema.org/minValue">minValue</a> and <a class="localLink" href="http://schema.org/maxValue">maxValue</a> to indicate ranges.</li>
 </ul>
 """,
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

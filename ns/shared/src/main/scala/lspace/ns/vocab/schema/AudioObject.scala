@@ -6,7 +6,7 @@ object AudioObject extends OntologyDef(
         iris = Set("http://schema.org/AudioObject"),
         label = "AudioObject",
         comment = """An audio file.""",
-        `@extends` = () => List(MediaObject.ontology)
+        `@extends` = List(MediaObject.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MediaObject.Properties{
 lazy val caption = lspace.ns.vocab.schema.caption.property

@@ -8,8 +8,8 @@ object permissions extends PropertyDef(
         iris = Set("http://schema.org/permissions"),
         label = "permissions",
         comment = """Permission(s) required to run the app (for example, a mobile app may require full internet access or may run only on wifi).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

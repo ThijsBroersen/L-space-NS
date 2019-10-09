@@ -8,8 +8,8 @@ object events extends PropertyDef(
         iris = Set("http://schema.org/events"),
         label = "events",
         comment = """Upcoming or past events associated with this place or organization.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Event.ontology)
+        `@extends` = List(),
+        `@range` = List(Event.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

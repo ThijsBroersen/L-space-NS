@@ -8,8 +8,8 @@ object cookTime extends PropertyDef(
         iris = Set("http://schema.org/cookTime"),
         label = "cookTime",
         comment = """The time it takes to actually cook the dish, in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 duration format</a>.""",
-        `@extends` = () => List(performTime.property),
-        `@range` = () => List(Duration.ontology)
+        `@extends` = List(performTime.property),
+        `@range` = List(Duration.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

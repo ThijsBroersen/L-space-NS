@@ -6,7 +6,7 @@ object BroadcastFrequencySpecification extends OntologyDef(
         iris = Set("http://schema.org/BroadcastFrequencySpecification"),
         label = "BroadcastFrequencySpecification",
         comment = """The frequency in MHz and the modulation used for a particular BroadcastService.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val broadcastFrequencyValue = lspace.ns.vocab.schema.broadcastFrequencyValue.property

@@ -6,7 +6,7 @@ object ResumeAction extends OntologyDef(
         iris = Set("http://schema.org/ResumeAction"),
         label = "ResumeAction",
         comment = """The act of resuming a device or application which was formerly paused (e.g. resume music playback or resume a timer).""",
-        `@extends` = () => List(ControlAction.ontology)
+        `@extends` = List(ControlAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ControlAction.Properties{
 

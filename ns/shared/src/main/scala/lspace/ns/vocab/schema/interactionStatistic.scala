@@ -8,8 +8,8 @@ object interactionStatistic extends PropertyDef(
         iris = Set("http://schema.org/interactionStatistic"),
         label = "interactionStatistic",
         comment = """The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used.""",
-        `@extends` = () => List(),
-        `@range` = () => List(InteractionCounter.ontology)
+        `@extends` = List(),
+        `@range` = List(InteractionCounter.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

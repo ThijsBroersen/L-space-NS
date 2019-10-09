@@ -8,8 +8,8 @@ object sourcedFrom extends PropertyDef(
         iris = Set("http://schema.org/sourcedFrom"),
         label = "sourcedFrom",
         comment = """The neurological pathway that originates the neurons.""",
-        `@extends` = () => List(),
-        `@range` = () => List(BrainStructure.ontology)
+        `@extends` = List(),
+        `@range` = List(BrainStructure.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

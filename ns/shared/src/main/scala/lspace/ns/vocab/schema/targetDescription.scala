@@ -8,8 +8,8 @@ object targetDescription extends PropertyDef(
         iris = Set("http://schema.org/targetDescription"),
         label = "targetDescription",
         comment = """The description of a node in an established educational framework.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

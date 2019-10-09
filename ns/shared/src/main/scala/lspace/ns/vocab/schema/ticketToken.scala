@@ -8,8 +8,8 @@ object ticketToken extends PropertyDef(
         iris = Set("http://schema.org/ticketToken"),
         label = "ticketToken",
         comment = """Reference to an asset (e.g., Barcode, QR code image or PDF) usable for entrance.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

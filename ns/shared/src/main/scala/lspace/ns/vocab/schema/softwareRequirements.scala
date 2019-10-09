@@ -8,8 +8,8 @@ object softwareRequirements extends PropertyDef(
         iris = Set("http://schema.org/softwareRequirements"),
         label = "softwareRequirements",
         comment = """Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime).""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

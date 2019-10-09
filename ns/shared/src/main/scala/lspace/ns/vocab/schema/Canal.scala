@@ -6,7 +6,7 @@ object Canal extends OntologyDef(
         iris = Set("http://schema.org/Canal"),
         label = "Canal",
         comment = """A canal, like the Panama Canal.""",
-        `@extends` = () => List(BodyOfWater.ontology)
+        `@extends` = List(BodyOfWater.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.BodyOfWater.Properties{
 

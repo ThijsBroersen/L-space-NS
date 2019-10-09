@@ -6,7 +6,7 @@ object Audience extends OntologyDef(
         iris = Set("http://schema.org/Audience"),
         label = "Audience",
         comment = """Intended audience for an item, i.e. the group for whom the item was created.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val audienceType = lspace.ns.vocab.schema.audienceType.property

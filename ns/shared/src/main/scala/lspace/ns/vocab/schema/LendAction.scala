@@ -13,7 +13,7 @@ Related actions:<br/><br/>
 <li><a class="localLink" href="http://schema.org/BorrowAction">BorrowAction</a>: Reciprocal of LendAction.</li>
 </ul>
 """,
-        `@extends` = () => List(TransferAction.ontology)
+        `@extends` = List(TransferAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.TransferAction.Properties{
 lazy val borrower = lspace.ns.vocab.schema.borrower.property

@@ -8,8 +8,8 @@ object legislationType extends PropertyDef(
         iris = Set("http://schema.org/legislationType"),
         label = "legislationType",
         comment = """The type of the legislation. Examples of values are "law", "act", "directive", "decree", "regulation", "statutory instrument", "loi organique", "règlement grand-ducal", etc., depending on the country.""",
-        `@extends` = () => List(genre.property),
-        `@range` = () => List(CategoryCode.ontology, Text.ontology)
+        `@extends` = List(genre.property),
+        `@range` = List(CategoryCode.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object volumeNumber extends PropertyDef(
         iris = Set("http://schema.org/volumeNumber"),
         label = "volumeNumber",
         comment = """Identifies the volume of publication or multi-part work; for example, "iii" or "2".""",
-        `@extends` = () => List(position.property),
-        `@range` = () => List(Text.ontology, `@int`)
+        `@extends` = List(position.property),
+        `@range` = List(`@string`, `@int`)
        ){
 
 override lazy val properties: List[LProperty] = List()

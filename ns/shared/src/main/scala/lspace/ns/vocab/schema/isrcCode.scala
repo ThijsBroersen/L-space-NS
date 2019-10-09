@@ -8,8 +8,8 @@ object isrcCode extends PropertyDef(
         iris = Set("http://schema.org/isrcCode"),
         label = "isrcCode",
         comment = """The International Standard Recording Code for the recording.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

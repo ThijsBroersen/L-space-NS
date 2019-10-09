@@ -8,8 +8,8 @@ object feesAndCommissionsSpecification extends PropertyDef(
         iris = Set("http://schema.org/feesAndCommissionsSpecification"),
         label = "feesAndCommissionsSpecification",
         comment = """Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

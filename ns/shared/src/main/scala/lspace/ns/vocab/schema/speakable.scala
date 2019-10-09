@@ -19,8 +19,8 @@ The <em>speakable</em> property can be repeated an arbitrary number of times, wi
 
 For more sophisticated markup of speakable sections beyond simple ID references, either CSS selectors or XPath expressions to pick out document section(s) as speakable. For this
 we define a supporting type, <a class="localLink" href="http://schema.org/SpeakableSpecification">SpeakableSpecification</a>  which is defined to be a possible value of the <em>speakable</em> property.""",
-        `@extends` = () => List(),
-        `@range` = () => List(SpeakableSpecification.ontology, URL.ontology)
+        `@extends` = List(),
+        `@range` = List(SpeakableSpecification.ontology, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

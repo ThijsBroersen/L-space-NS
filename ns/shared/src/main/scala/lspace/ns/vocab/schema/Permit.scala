@@ -6,7 +6,7 @@ object Permit extends OntologyDef(
         iris = Set("http://schema.org/Permit"),
         label = "Permit",
         comment = """A permit issued by an organization, e.g. a parking pass.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val issuedBy = lspace.ns.vocab.schema.issuedBy.property

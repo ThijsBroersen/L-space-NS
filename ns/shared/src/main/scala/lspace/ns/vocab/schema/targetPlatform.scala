@@ -8,8 +8,8 @@ object targetPlatform extends PropertyDef(
         iris = Set("http://schema.org/targetPlatform"),
         label = "targetPlatform",
         comment = """Type of app development: phone, Metro style, desktop, XBox, etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

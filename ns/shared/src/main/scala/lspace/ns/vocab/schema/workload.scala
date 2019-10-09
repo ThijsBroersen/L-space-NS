@@ -8,8 +8,8 @@ object workload extends PropertyDef(
         iris = Set("http://schema.org/workload"),
         label = "workload",
         comment = """Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Energy.ontology, QualitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QualitativeValue.ontology, Energy.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

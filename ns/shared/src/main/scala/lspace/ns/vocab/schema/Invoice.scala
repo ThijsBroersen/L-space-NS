@@ -6,7 +6,7 @@ object Invoice extends OntologyDef(
         iris = Set("http://schema.org/Invoice"),
         label = "Invoice",
         comment = """A statement of the money due for goods or services; a bill.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val accountId = lspace.ns.vocab.schema.accountId.property

@@ -8,8 +8,8 @@ object messageAttachment extends PropertyDef(
         iris = Set("http://schema.org/messageAttachment"),
         label = "messageAttachment",
         comment = """A CreativeWork attached to the message.""",
-        `@extends` = () => List(),
-        `@range` = () => List(CreativeWork.ontology)
+        `@extends` = List(),
+        `@range` = List(CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

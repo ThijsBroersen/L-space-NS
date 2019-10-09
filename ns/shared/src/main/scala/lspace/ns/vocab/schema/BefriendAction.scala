@@ -13,7 +13,7 @@ Related actions:<br/><br/>
 <li><a class="localLink" href="http://schema.org/FollowAction">FollowAction</a>: Unlike FollowAction, BefriendAction implies that the connection is reciprocal.</li>
 </ul>
 """,
-        `@extends` = () => List(InteractAction.ontology)
+        `@extends` = List(InteractAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.InteractAction.Properties{
 

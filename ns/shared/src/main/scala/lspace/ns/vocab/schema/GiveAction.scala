@@ -14,7 +14,7 @@ Related actions:<br/><br/>
 <li><a class="localLink" href="http://schema.org/SendAction">SendAction</a>: Unlike SendAction, GiveAction implies that ownership is being transferred (e.g. I may send my laptop to you, but that doesn't mean I'm giving it to you).</li>
 </ul>
 """,
-        `@extends` = () => List(TransferAction.ontology)
+        `@extends` = List(TransferAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.TransferAction.Properties{
 lazy val recipient = lspace.ns.vocab.schema.recipient.property

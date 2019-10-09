@@ -8,8 +8,8 @@ object mapType extends PropertyDef(
         iris = Set("http://schema.org/mapType"),
         label = "mapType",
         comment = """Indicates the kind of Map, from the MapCategoryType Enumeration.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MapCategoryType.ontology)
+        `@extends` = List(),
+        `@range` = List(MapCategoryType.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

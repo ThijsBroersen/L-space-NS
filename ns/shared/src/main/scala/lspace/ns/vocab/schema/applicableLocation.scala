@@ -8,8 +8,8 @@ object applicableLocation extends PropertyDef(
         iris = Set("http://schema.org/applicableLocation"),
         label = "applicableLocation",
         comment = """The location in which the status applies.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AdministrativeArea.ontology)
+        `@extends` = List(),
+        `@range` = List(AdministrativeArea.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

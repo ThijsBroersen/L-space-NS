@@ -8,8 +8,8 @@ object infectiousAgentClass extends PropertyDef(
         iris = Set("http://schema.org/infectiousAgentClass"),
         label = "infectiousAgentClass",
         comment = """The class of infectious agent (bacteria, prion, etc.) that causes the disease.""",
-        `@extends` = () => List(),
-        `@range` = () => List(InfectiousAgentClass.ontology)
+        `@extends` = List(),
+        `@range` = List(InfectiousAgentClass.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

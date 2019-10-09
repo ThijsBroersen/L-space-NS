@@ -8,8 +8,8 @@ object vatID extends PropertyDef(
         iris = Set("http://schema.org/vatID"),
         label = "vatID",
         comment = """The Value-added Tax ID of the organization or person.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

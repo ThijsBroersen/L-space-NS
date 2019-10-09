@@ -8,8 +8,8 @@ object maxPrice extends PropertyDef(
         iris = Set("http://schema.org/maxPrice"),
         label = "maxPrice",
         comment = """The highest price if the price is a range.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

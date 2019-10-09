@@ -6,7 +6,7 @@ object Table extends OntologyDef(
         iris = Set("http://schema.org/Table"),
         label = "Table",
         comment = """A table on a Web page.""",
-        `@extends` = () => List(WebPageElement.ontology)
+        `@extends` = List(WebPageElement.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.WebPageElement.Properties{
 

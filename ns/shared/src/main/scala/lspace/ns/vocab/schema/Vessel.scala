@@ -6,7 +6,7 @@ object Vessel extends OntologyDef(
         iris = Set("http://schema.org/Vessel"),
         label = "Vessel",
         comment = """A component of the human body circulatory system comprised of an intricate network of hollow tubes that transport blood throughout the entire body.""",
-        `@extends` = () => List(AnatomicalStructure.ontology)
+        `@extends` = List(AnatomicalStructure.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.AnatomicalStructure.Properties{
 

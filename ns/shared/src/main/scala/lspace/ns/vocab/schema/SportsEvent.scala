@@ -6,7 +6,7 @@ object SportsEvent extends OntologyDef(
         iris = Set("http://schema.org/SportsEvent"),
         label = "SportsEvent",
         comment = """Event type: Sports event.""",
-        `@extends` = () => List(Event.ontology)
+        `@extends` = List(Event.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Event.Properties{
 lazy val awayTeam = lspace.ns.vocab.schema.awayTeam.property

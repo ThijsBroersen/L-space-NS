@@ -8,8 +8,8 @@ object ownedThrough extends PropertyDef(
         iris = Set("http://schema.org/ownedThrough"),
         label = "ownedThrough",
         comment = """The date and time of giving up ownership on the product.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@datetime`)
+        `@extends` = List(),
+        `@range` = List(`@datetime`)
        ){
 
 override lazy val properties: List[LProperty] = List()

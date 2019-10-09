@@ -8,8 +8,8 @@ object numberedPosition extends PropertyDef(
         iris = Set("http://schema.org/numberedPosition"),
         label = "numberedPosition",
         comment = """A number associated with a role in an organization, for example, the number on an athlete's jersey.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

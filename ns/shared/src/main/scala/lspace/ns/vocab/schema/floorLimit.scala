@@ -8,8 +8,8 @@ object floorLimit extends PropertyDef(
         iris = Set("http://schema.org/floorLimit"),
         label = "floorLimit",
         comment = """A floor limit is the amount of money above which credit card transactions must be authorized.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MonetaryAmount.ontology)
+        `@extends` = List(),
+        `@range` = List(MonetaryAmount.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

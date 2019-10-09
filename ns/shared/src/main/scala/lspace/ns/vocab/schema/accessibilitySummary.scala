@@ -8,8 +8,8 @@ object accessibilitySummary extends PropertyDef(
         iris = Set("http://schema.org/accessibilitySummary"),
         label = "accessibilitySummary",
         comment = """A human-readable summary of specific accessibility features or deficiencies, consistent with the other accessibility metadata but expressing subtleties such as "short descriptions are present but long descriptions will be needed for non-visual users" or "short descriptions are present and no long descriptions are needed."""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

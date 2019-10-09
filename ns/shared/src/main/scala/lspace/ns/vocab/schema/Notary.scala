@@ -6,7 +6,7 @@ object Notary extends OntologyDef(
         iris = Set("http://schema.org/Notary"),
         label = "Notary",
         comment = """A notary.""",
-        `@extends` = () => List(LegalService.ontology)
+        `@extends` = List(LegalService.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.LegalService.Properties{
 

@@ -8,8 +8,8 @@ object comprisedOf extends PropertyDef(
         iris = Set("http://schema.org/comprisedOf"),
         label = "comprisedOf",
         comment = """Specifying something physically contained by something else. Typically used here for the underlying anatomical structures, such as organs, that comprise the anatomical system.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AnatomicalStructure.ontology, AnatomicalSystem.ontology)
+        `@extends` = List(),
+        `@range` = List(AnatomicalStructure.ontology, AnatomicalSystem.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

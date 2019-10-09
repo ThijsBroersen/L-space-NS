@@ -8,8 +8,8 @@ object termsOfService extends PropertyDef(
         iris = Set("http://schema.org/termsOfService"),
         label = "termsOfService",
         comment = """Human-readable terms of service documentation.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object Place extends OntologyDef(
         iris = Set("http://schema.org/Place"),
         label = "Place",
         comment = """Entities that have a somewhat fixed, physical extension.""",
-        `@extends` = () => List(Thing.ontology)
+        `@extends` = List(Thing.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Thing.Properties{
 lazy val additionalProperty = lspace.ns.vocab.schema.additionalProperty.property

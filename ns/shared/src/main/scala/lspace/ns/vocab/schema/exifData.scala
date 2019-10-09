@@ -8,8 +8,8 @@ object exifData extends PropertyDef(
         iris = Set("http://schema.org/exifData"),
         label = "exifData",
         comment = """exif data for this object.""",
-        `@extends` = () => List(),
-        `@range` = () => List(PropertyValue.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(PropertyValue.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object estimatedCost extends PropertyDef(
         iris = Set("http://schema.org/estimatedCost"),
         label = "estimatedCost",
         comment = """The estimated cost of the supply or supplies consumed when performing instructions.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, MonetaryAmount.ontology)
+        `@extends` = List(),
+        `@range` = List(MonetaryAmount.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

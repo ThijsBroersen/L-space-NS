@@ -8,8 +8,8 @@ object breadcrumb extends PropertyDef(
         iris = Set("http://schema.org/breadcrumb"),
         label = "breadcrumb",
         comment = """A set of links that can help a user understand and navigate a website hierarchy.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, BreadcrumbList.ontology)
+        `@extends` = List(),
+        `@range` = List(BreadcrumbList.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object DataFeedItem extends OntologyDef(
         iris = Set("http://schema.org/DataFeedItem"),
         label = "DataFeedItem",
         comment = """A single item within a larger data feed.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val dateCreated = lspace.ns.vocab.schema.dateCreated.property

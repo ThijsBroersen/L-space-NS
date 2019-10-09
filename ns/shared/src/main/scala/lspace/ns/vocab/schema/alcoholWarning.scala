@@ -8,8 +8,8 @@ object alcoholWarning extends PropertyDef(
         iris = Set("http://schema.org/alcoholWarning"),
         label = "alcoholWarning",
         comment = """Any precaution, guidance, contraindication, etc. related to consumption of alcohol while taking this drug.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

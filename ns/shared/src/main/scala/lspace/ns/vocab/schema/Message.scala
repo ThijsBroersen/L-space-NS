@@ -6,7 +6,7 @@ object Message extends OntologyDef(
         iris = Set("http://schema.org/Message"),
         label = "Message",
         comment = """A single message from a sender to one or more organizations or people.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val bccRecipient = lspace.ns.vocab.schema.bccRecipient.property

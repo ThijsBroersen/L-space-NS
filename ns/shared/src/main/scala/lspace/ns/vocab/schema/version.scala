@@ -8,8 +8,8 @@ object version extends PropertyDef(
         iris = Set("http://schema.org/version"),
         label = "version",
         comment = """The version of the CreativeWork embodied by a specified resource.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@number`, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

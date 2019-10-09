@@ -8,8 +8,8 @@ object hasOfferCatalog extends PropertyDef(
         iris = Set("http://schema.org/hasOfferCatalog"),
         label = "hasOfferCatalog",
         comment = """Indicates an OfferCatalog listing for this Organization, Person, or Service.""",
-        `@extends` = () => List(),
-        `@range` = () => List(OfferCatalog.ontology)
+        `@extends` = List(),
+        `@range` = List(OfferCatalog.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

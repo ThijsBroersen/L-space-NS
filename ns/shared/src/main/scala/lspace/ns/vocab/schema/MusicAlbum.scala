@@ -6,7 +6,7 @@ object MusicAlbum extends OntologyDef(
         iris = Set("http://schema.org/MusicAlbum"),
         label = "MusicAlbum",
         comment = """A collection of music tracks.""",
-        `@extends` = () => List(MusicPlaylist.ontology)
+        `@extends` = List(MusicPlaylist.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MusicPlaylist.Properties{
 lazy val albumProductionType = lspace.ns.vocab.schema.albumProductionType.property

@@ -8,8 +8,8 @@ object coach extends PropertyDef(
         iris = Set("http://schema.org/coach"),
         label = "coach",
         comment = """A person that acts in a coaching role for a sports team.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

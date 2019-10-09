@@ -8,8 +8,8 @@ object validIn extends PropertyDef(
         iris = Set("http://schema.org/validIn"),
         label = "validIn",
         comment = """The geographic area where a permit or similar thing is valid.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AdministrativeArea.ontology)
+        `@extends` = List(),
+        `@range` = List(AdministrativeArea.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

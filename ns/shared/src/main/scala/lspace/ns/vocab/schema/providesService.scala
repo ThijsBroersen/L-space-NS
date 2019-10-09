@@ -8,8 +8,8 @@ object providesService extends PropertyDef(
         iris = Set("http://schema.org/providesService"),
         label = "providesService",
         comment = """The service provided by this channel.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Service.ontology)
+        `@extends` = List(),
+        `@range` = List(Service.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object familyName extends PropertyDef(
         iris = Set("http://schema.org/familyName"),
         label = "familyName",
         comment = """Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the name property.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

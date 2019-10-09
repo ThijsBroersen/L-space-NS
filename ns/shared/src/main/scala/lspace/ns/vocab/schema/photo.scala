@@ -8,8 +8,8 @@ object photo extends PropertyDef(
         iris = Set("http://schema.org/photo"),
         label = "photo",
         comment = """A photograph of this place.""",
-        `@extends` = () => List(image.property),
-        `@range` = () => List(Photograph.ontology, ImageObject.ontology)
+        `@extends` = List(image.property),
+        `@range` = List(ImageObject.ontology, Photograph.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

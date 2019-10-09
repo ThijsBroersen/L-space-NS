@@ -6,7 +6,7 @@ object SpreadsheetDigitalDocument extends OntologyDef(
         iris = Set("http://schema.org/SpreadsheetDigitalDocument"),
         label = "SpreadsheetDigitalDocument",
         comment = """A spreadsheet file.""",
-        `@extends` = () => List(DigitalDocument.ontology)
+        `@extends` = List(DigitalDocument.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.DigitalDocument.Properties{
 

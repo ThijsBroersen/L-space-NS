@@ -8,8 +8,8 @@ object deliveryMethod extends PropertyDef(
         iris = Set("http://schema.org/deliveryMethod"),
         label = "deliveryMethod",
         comment = """A sub property of instrument. The method of delivery.""",
-        `@extends` = () => List(instrument.property),
-        `@range` = () => List(DeliveryMethod.ontology)
+        `@extends` = List(instrument.property),
+        `@range` = List(DeliveryMethod.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object question extends PropertyDef(
         iris = Set("http://schema.org/question"),
         label = "question",
         comment = """A sub property of object. A question.""",
-        `@extends` = () => List(`object`.property),
-        `@range` = () => List(Question.ontology)
+        `@extends` = List(`object`.property),
+        `@range` = List(Question.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

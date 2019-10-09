@@ -8,8 +8,8 @@ object missionCoveragePrioritiesPolicy extends PropertyDef(
         iris = Set("http://schema.org/missionCoveragePrioritiesPolicy"),
         label = "missionCoveragePrioritiesPolicy",
         comment = """For a <a class="localLink" href="http://schema.org/NewsMediaOrganization">NewsMediaOrganization</a>, a statement on coverage priorities, including any public agenda or stance on issues.""",
-        `@extends` = () => List(publishingPrinciples.property),
-        `@range` = () => List(CreativeWork.ontology, URL.ontology)
+        `@extends` = List(publishingPrinciples.property),
+        `@range` = List(CreativeWork.ontology, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

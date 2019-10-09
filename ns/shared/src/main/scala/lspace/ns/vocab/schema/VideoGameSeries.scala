@@ -6,7 +6,7 @@ object VideoGameSeries extends OntologyDef(
         iris = Set("http://schema.org/VideoGameSeries"),
         label = "VideoGameSeries",
         comment = """A video game series.""",
-        `@extends` = () => List(CreativeWorkSeries.ontology)
+        `@extends` = List(CreativeWorkSeries.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWorkSeries.Properties{
 lazy val actor = lspace.ns.vocab.schema.actor.property

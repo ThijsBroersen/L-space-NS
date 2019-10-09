@@ -8,8 +8,8 @@ object diversityStaffingReport extends PropertyDef(
         iris = Set("http://schema.org/diversityStaffingReport"),
         label = "diversityStaffingReport",
         comment = """For an <a class="localLink" href="http://schema.org/Organization">Organization</a> (often but not necessarily a <a class="localLink" href="http://schema.org/NewsMediaOrganization">NewsMediaOrganization</a>), a report on staffing diversity issues. In a news context this might be for example ASNE or RTDNA (US) reports, or self-reported.""",
-        `@extends` = () => List(publishingPrinciples.property),
-        `@range` = () => List(Article.ontology, URL.ontology)
+        `@extends` = List(publishingPrinciples.property),
+        `@range` = List(Article.ontology, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

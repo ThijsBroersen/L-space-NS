@@ -6,7 +6,7 @@ object ParcelDelivery extends OntologyDef(
         iris = Set("http://schema.org/ParcelDelivery"),
         label = "ParcelDelivery",
         comment = """The delivery of a parcel either via the postal service or a commercial service.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val deliveryAddress = lspace.ns.vocab.schema.deliveryAddress.property

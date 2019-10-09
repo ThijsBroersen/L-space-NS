@@ -8,8 +8,8 @@ object endDate extends PropertyDef(
         iris = Set("http://schema.org/endDate"),
         label = "endDate",
         comment = """The end date and time of the item (in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>).""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@date`, `@datetime`)
+        `@extends` = List(),
+        `@range` = List(`@datetime`, `@date`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object LandmarksOrHistoricalBuildings extends OntologyDef(
         iris = Set("http://schema.org/LandmarksOrHistoricalBuildings"),
         label = "LandmarksOrHistoricalBuildings",
         comment = """An historical landmark or building.""",
-        `@extends` = () => List(Place.ontology)
+        `@extends` = List(Place.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Place.Properties{
 

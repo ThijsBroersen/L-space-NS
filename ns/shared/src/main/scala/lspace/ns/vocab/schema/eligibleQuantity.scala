@@ -8,8 +8,8 @@ object eligibleQuantity extends PropertyDef(
         iris = Set("http://schema.org/eligibleQuantity"),
         label = "eligibleQuantity",
         comment = """The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g. specifying that a certain freight charge is valid only for a certain quantity.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

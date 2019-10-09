@@ -14,8 +14,8 @@ object value extends PropertyDef(
 <li>For <a class="localLink" href="http://schema.org/PropertyValue">PropertyValue</a>, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.</li>
 </ul>
 """,
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`, `@boolean`, StructuredValue.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@number`, `@boolean`, StructuredValue.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

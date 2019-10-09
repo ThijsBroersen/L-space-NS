@@ -8,8 +8,8 @@ object locationCreated extends PropertyDef(
         iris = Set("http://schema.org/locationCreated"),
         label = "locationCreated",
         comment = """The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Place.ontology)
+        `@extends` = List(),
+        `@range` = List(Place.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

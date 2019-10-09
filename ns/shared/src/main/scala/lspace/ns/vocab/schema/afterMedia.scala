@@ -8,8 +8,8 @@ object afterMedia extends PropertyDef(
         iris = Set("http://schema.org/afterMedia"),
         label = "afterMedia",
         comment = """A media object representing the circumstances after performing this direction.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MediaObject.ontology, URL.ontology)
+        `@extends` = List(),
+        `@range` = List(MediaObject.ontology, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

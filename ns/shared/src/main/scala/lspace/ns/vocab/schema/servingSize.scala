@@ -8,8 +8,8 @@ object servingSize extends PropertyDef(
         iris = Set("http://schema.org/servingSize"),
         label = "servingSize",
         comment = """The serving size, in terms of the number of volume or mass.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

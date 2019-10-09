@@ -8,8 +8,8 @@ object birthPlace extends PropertyDef(
         iris = Set("http://schema.org/birthPlace"),
         label = "birthPlace",
         comment = """The place where the person was born.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Place.ontology)
+        `@extends` = List(),
+        `@range` = List(Place.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

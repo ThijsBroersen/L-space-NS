@@ -8,8 +8,8 @@ object touristType extends PropertyDef(
         iris = Set("http://schema.org/touristType"),
         label = "touristType",
         comment = """Attraction suitable for type(s) of tourist. eg. Children, visitors from a particular country, etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, Audience.ontology)
+        `@extends` = List(),
+        `@range` = List(Audience.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

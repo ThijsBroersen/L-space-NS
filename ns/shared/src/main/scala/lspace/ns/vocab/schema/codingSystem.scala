@@ -8,8 +8,8 @@ object codingSystem extends PropertyDef(
         iris = Set("http://schema.org/codingSystem"),
         label = "codingSystem",
         comment = """The coding system, e.g. 'ICD-10'.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

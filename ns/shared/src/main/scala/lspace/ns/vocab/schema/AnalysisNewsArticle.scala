@@ -6,7 +6,7 @@ object AnalysisNewsArticle extends OntologyDef(
         iris = Set("http://schema.org/AnalysisNewsArticle"),
         label = "AnalysisNewsArticle",
         comment = """An AnalysisNewsArticle is a <a class="localLink" href="http://schema.org/NewsArticle">NewsArticle</a> that, while based on factual reporting, incorporates the expertise of the author/producer, offering interpretations and conclusions.""",
-        `@extends` = () => List(NewsArticle.ontology)
+        `@extends` = List(NewsArticle.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.NewsArticle.Properties{
 

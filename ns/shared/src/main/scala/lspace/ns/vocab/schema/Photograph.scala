@@ -6,7 +6,7 @@ object Photograph extends OntologyDef(
         iris = Set("http://schema.org/Photograph"),
         label = "Photograph",
         comment = """A photograph.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 

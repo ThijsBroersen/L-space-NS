@@ -6,7 +6,7 @@ object MobilePhoneStore extends OntologyDef(
         iris = Set("http://schema.org/MobilePhoneStore"),
         label = "MobilePhoneStore",
         comment = """A store that sells mobile phones and related accessories.""",
-        `@extends` = () => List(Store.ontology)
+        `@extends` = List(Store.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Store.Properties{
 

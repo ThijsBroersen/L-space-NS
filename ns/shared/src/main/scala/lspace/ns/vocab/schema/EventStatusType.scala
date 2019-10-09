@@ -6,7 +6,7 @@ object EventStatusType extends OntologyDef(
         iris = Set("http://schema.org/EventStatusType"),
         label = "EventStatusType",
         comment = """EventStatusType is an enumeration type whose instances represent several states that an Event may be in.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

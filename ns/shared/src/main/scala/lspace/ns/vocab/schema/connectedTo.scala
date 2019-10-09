@@ -8,8 +8,8 @@ object connectedTo extends PropertyDef(
         iris = Set("http://schema.org/connectedTo"),
         label = "connectedTo",
         comment = """Other anatomical structures to which this structure is connected.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AnatomicalStructure.ontology)
+        `@extends` = List(),
+        `@range` = List(AnatomicalStructure.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

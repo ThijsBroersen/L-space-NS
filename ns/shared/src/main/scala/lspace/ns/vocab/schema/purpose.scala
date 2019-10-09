@@ -8,8 +8,8 @@ object purpose extends PropertyDef(
         iris = Set("http://schema.org/purpose"),
         label = "purpose",
         comment = """A goal towards an action is taken. Can be concrete or abstract.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Thing.ontology, MedicalDevicePurpose.ontology)
+        `@extends` = List(),
+        `@range` = List(Thing.ontology, MedicalDevicePurpose.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

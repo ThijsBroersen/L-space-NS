@@ -6,7 +6,7 @@ object VideoGameClip extends OntologyDef(
         iris = Set("http://schema.org/VideoGameClip"),
         label = "VideoGameClip",
         comment = """A short segment/part of a video game.""",
-        `@extends` = () => List(Clip.ontology)
+        `@extends` = List(Clip.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Clip.Properties{
 

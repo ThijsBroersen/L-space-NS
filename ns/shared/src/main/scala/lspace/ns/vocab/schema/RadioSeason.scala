@@ -6,7 +6,7 @@ object RadioSeason extends OntologyDef(
         iris = Set("http://schema.org/RadioSeason"),
         label = "RadioSeason",
         comment = """Season dedicated to radio broadcast and associated online delivery.""",
-        `@extends` = () => List(CreativeWorkSeason.ontology)
+        `@extends` = List(CreativeWorkSeason.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWorkSeason.Properties{
 

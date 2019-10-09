@@ -8,8 +8,8 @@ object representativeOfPage extends PropertyDef(
         iris = Set("http://schema.org/representativeOfPage"),
         label = "representativeOfPage",
         comment = """Indicates whether this image is representative of the content of the page.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

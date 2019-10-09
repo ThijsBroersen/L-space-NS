@@ -8,8 +8,8 @@ object currentExchangeRate extends PropertyDef(
         iris = Set("http://schema.org/currentExchangeRate"),
         label = "currentExchangeRate",
         comment = """The current price of a currency.""",
-        `@extends` = () => List(),
-        `@range` = () => List(UnitPriceSpecification.ontology)
+        `@extends` = List(),
+        `@range` = List(UnitPriceSpecification.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

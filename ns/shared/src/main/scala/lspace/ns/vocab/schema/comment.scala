@@ -8,8 +8,8 @@ object comment extends PropertyDef(
         iris = Set("http://schema.org/comment"),
         label = "comment",
         comment = """Comments, typically from users.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Comment.ontology)
+        `@extends` = List(),
+        `@range` = List(Comment.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

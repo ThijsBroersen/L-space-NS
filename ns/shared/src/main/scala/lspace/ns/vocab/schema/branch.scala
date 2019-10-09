@@ -8,8 +8,8 @@ object branch extends PropertyDef(
         iris = Set("http://schema.org/branch"),
         label = "branch",
         comment = """The branches that delineate from the nerve bundle. Not to be confused with <a class="localLink" href="http://schema.org/branchOf">branchOf</a>.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AnatomicalStructure.ontology)
+        `@extends` = List(),
+        `@range` = List(AnatomicalStructure.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

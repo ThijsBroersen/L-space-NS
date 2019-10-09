@@ -6,7 +6,7 @@ object AssignAction extends OntologyDef(
         iris = Set("http://schema.org/AssignAction"),
         label = "AssignAction",
         comment = """The act of allocating an action/event/task to some destination (someone or something).""",
-        `@extends` = () => List(AllocateAction.ontology)
+        `@extends` = List(AllocateAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.AllocateAction.Properties{
 

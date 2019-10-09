@@ -8,8 +8,8 @@ object broadcastServiceTier extends PropertyDef(
         iris = Set("http://schema.org/broadcastServiceTier"),
         label = "broadcastServiceTier",
         comment = """The type of service required to have access to the channel (e.g. Standard or Premium).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

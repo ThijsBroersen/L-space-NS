@@ -8,8 +8,8 @@ object expectsAcceptanceOf extends PropertyDef(
         iris = Set("http://schema.org/expectsAcceptanceOf"),
         label = "expectsAcceptanceOf",
         comment = """An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Offer.ontology)
+        `@extends` = List(),
+        `@range` = List(Offer.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

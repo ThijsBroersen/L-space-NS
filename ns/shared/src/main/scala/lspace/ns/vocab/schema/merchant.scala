@@ -8,8 +8,8 @@ object merchant extends PropertyDef(
         iris = Set("http://schema.org/merchant"),
         label = "merchant",
         comment = """'merchant' is an out-dated term for 'seller'.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology, Organization.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology, Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

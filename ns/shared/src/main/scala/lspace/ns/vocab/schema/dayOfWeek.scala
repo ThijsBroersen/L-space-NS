@@ -8,8 +8,8 @@ object dayOfWeek extends PropertyDef(
         iris = Set("http://schema.org/dayOfWeek"),
         label = "dayOfWeek",
         comment = """The day of the week for which these opening hours are valid.""",
-        `@extends` = () => List(),
-        `@range` = () => List(DayOfWeek.ontology)
+        `@extends` = List(),
+        `@range` = List(DayOfWeek.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

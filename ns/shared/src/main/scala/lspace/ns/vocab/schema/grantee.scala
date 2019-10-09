@@ -8,8 +8,8 @@ object grantee extends PropertyDef(
         iris = Set("http://schema.org/grantee"),
         label = "grantee",
         comment = """The person, organization, contact point, or audience that has been granted this permission.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology, ContactPoint.ontology, Audience.ontology, Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology, Organization.ontology, ContactPoint.ontology, Audience.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

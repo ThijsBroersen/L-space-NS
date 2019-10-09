@@ -15,7 +15,7 @@ Related actions:<br/><br/>
 <li><a class="localLink" href="http://schema.org/ConfirmAction">ConfirmAction</a>: Unlike ConfirmAction, CheckInAction implies that the agent is informing/confirming the <em>start</em> of a previously reserved service rather than its validity/existence.</li>
 </ul>
 """,
-        `@extends` = () => List(CommunicateAction.ontology)
+        `@extends` = List(CommunicateAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CommunicateAction.Properties{
 

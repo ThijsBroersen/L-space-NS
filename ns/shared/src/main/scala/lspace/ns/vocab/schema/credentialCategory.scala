@@ -8,8 +8,8 @@ object credentialCategory extends PropertyDef(
         iris = Set("http://schema.org/credentialCategory"),
         label = "credentialCategory",
         comment = """The category or type of credential being described, for example "degree”, “certificate”, “badge”, or more specific term.""",
-        `@extends` = () => List(),
-        `@range` = () => List(DefinedTerm.ontology, Text.ontology, URL.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, URL.ontology, DefinedTerm.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

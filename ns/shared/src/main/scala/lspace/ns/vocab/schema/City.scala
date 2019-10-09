@@ -6,7 +6,7 @@ object City extends OntologyDef(
         iris = Set("http://schema.org/City"),
         label = "City",
         comment = """A city or town.""",
-        `@extends` = () => List(AdministrativeArea.ontology)
+        `@extends` = List(AdministrativeArea.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.AdministrativeArea.Properties{
 

@@ -6,7 +6,7 @@ object Airport extends OntologyDef(
         iris = Set("http://schema.org/Airport"),
         label = "Airport",
         comment = """An airport.""",
-        `@extends` = () => List(CivicStructure.ontology)
+        `@extends` = List(CivicStructure.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CivicStructure.Properties{
 lazy val iataCode = lspace.ns.vocab.schema.iataCode.property

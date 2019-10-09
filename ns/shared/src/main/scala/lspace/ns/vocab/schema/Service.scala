@@ -6,7 +6,7 @@ object Service extends OntologyDef(
         iris = Set("http://schema.org/Service"),
         label = "Service",
         comment = """A service provided by an organization, e.g. delivery service, print services, etc.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val aggregateRating = lspace.ns.vocab.schema.aggregateRating.property

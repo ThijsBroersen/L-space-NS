@@ -8,8 +8,8 @@ object expectedArrivalUntil extends PropertyDef(
         iris = Set("http://schema.org/expectedArrivalUntil"),
         label = "expectedArrivalUntil",
         comment = """The latest date the package may arrive.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@datetime`)
+        `@extends` = List(),
+        `@range` = List(`@datetime`)
        ){
 
 override lazy val properties: List[LProperty] = List()

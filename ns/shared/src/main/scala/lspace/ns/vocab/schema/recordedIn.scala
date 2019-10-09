@@ -8,8 +8,8 @@ object recordedIn extends PropertyDef(
         iris = Set("http://schema.org/recordedIn"),
         label = "recordedIn",
         comment = """The CreativeWork that captured all or part of this Event.""",
-        `@extends` = () => List(),
-        `@range` = () => List(CreativeWork.ontology)
+        `@extends` = List(),
+        `@range` = List(CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

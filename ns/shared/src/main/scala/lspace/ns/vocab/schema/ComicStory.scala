@@ -8,7 +8,7 @@ object ComicStory extends OntologyDef(
         comment = """The term "story" is any indivisible, re-printable
     unit of a comic, including the interior stories, covers, and backmatter. Most
     comics have at least two stories: a cover (ComicCoverArt) and an interior story.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val artist = lspace.ns.vocab.schema.artist.property

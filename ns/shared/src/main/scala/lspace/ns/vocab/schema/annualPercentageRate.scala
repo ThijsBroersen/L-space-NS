@@ -8,8 +8,8 @@ object annualPercentageRate extends PropertyDef(
         iris = Set("http://schema.org/annualPercentageRate"),
         label = "annualPercentageRate",
         comment = """The annual rate that is charged for borrowing (or made by investing), expressed as a single percentage number that represents the actual yearly cost of funds over the term of a loan. This includes any fees or additional costs associated with the transaction.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology, `@number`)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology, `@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object ShortStory extends OntologyDef(
         iris = Set("http://schema.org/ShortStory"),
         label = "ShortStory",
         comment = """Short story or tale. A brief work of literature, usually written in narrative prose.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 

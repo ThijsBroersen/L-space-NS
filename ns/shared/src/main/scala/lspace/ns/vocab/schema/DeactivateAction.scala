@@ -6,7 +6,7 @@ object DeactivateAction extends OntologyDef(
         iris = Set("http://schema.org/DeactivateAction"),
         label = "DeactivateAction",
         comment = """The act of stopping or deactivating a device or application (e.g. stopping a timer or turning off a flashlight).""",
-        `@extends` = () => List(ControlAction.ontology)
+        `@extends` = List(ControlAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ControlAction.Properties{
 

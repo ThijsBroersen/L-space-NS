@@ -8,8 +8,8 @@ object loanMortgageMandateAmount extends PropertyDef(
         iris = Set("http://schema.org/loanMortgageMandateAmount"),
         label = "loanMortgageMandateAmount",
         comment = """Amount of mortgage mandate that can be converted into a proper mortgage at a later stage.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MonetaryAmount.ontology)
+        `@extends` = List(),
+        `@range` = List(MonetaryAmount.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

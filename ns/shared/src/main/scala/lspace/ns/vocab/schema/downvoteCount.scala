@@ -8,8 +8,8 @@ object downvoteCount extends PropertyDef(
         iris = Set("http://schema.org/downvoteCount"),
         label = "downvoteCount",
         comment = """The number of downvotes this question, answer or comment has received from the community.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@int`)
+        `@extends` = List(),
+        `@range` = List(`@int`)
        ){
 
 override lazy val properties: List[LProperty] = List()

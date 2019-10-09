@@ -6,7 +6,7 @@ object PostOffice extends OntologyDef(
         iris = Set("http://schema.org/PostOffice"),
         label = "PostOffice",
         comment = """A post office.""",
-        `@extends` = () => List(GovernmentOffice.ontology)
+        `@extends` = List(GovernmentOffice.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.GovernmentOffice.Properties{
 

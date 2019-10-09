@@ -8,8 +8,8 @@ object mealService extends PropertyDef(
         iris = Set("http://schema.org/mealService"),
         label = "mealService",
         comment = """Description of the meals that will be provided or available for purchase.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

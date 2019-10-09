@@ -8,8 +8,8 @@ object calories extends PropertyDef(
         iris = Set("http://schema.org/calories"),
         label = "calories",
         comment = """The number of calories.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Energy.ontology)
+        `@extends` = List(),
+        `@range` = List(Energy.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

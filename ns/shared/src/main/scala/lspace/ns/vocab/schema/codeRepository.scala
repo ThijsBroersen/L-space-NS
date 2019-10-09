@@ -8,8 +8,8 @@ object codeRepository extends PropertyDef(
         iris = Set("http://schema.org/codeRepository"),
         label = "codeRepository",
         comment = """Link to the repository where the un-compiled, human readable code and related code is located (SVN, github, CodePlex).""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object broadcastOfEvent extends PropertyDef(
         iris = Set("http://schema.org/broadcastOfEvent"),
         label = "broadcastOfEvent",
         comment = """The event being broadcast such as a sporting event or awards ceremony.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Event.ontology)
+        `@extends` = List(),
+        `@range` = List(Event.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

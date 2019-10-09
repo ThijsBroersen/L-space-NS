@@ -8,8 +8,8 @@ object insertion extends PropertyDef(
         iris = Set("http://schema.org/insertion"),
         label = "insertion",
         comment = """The place of attachment of a muscle, or what the muscle moves.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AnatomicalStructure.ontology)
+        `@extends` = List(),
+        `@range` = List(AnatomicalStructure.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

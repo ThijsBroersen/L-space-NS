@@ -6,7 +6,7 @@ object DataDownload extends OntologyDef(
         iris = Set("http://schema.org/DataDownload"),
         label = "DataDownload",
         comment = """A dataset in downloadable form.""",
-        `@extends` = () => List(MediaObject.ontology)
+        `@extends` = List(MediaObject.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MediaObject.Properties{
 lazy val measurementTechnique = lspace.ns.vocab.schema.measurementTechnique.property

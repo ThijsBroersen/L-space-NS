@@ -8,8 +8,8 @@ object duns extends PropertyDef(
         iris = Set("http://schema.org/duns"),
         label = "duns",
         comment = """The Dun &amp; Bradstreet DUNS number for identifying an organization or business person.""",
-        `@extends` = () => List(identifier.property),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(identifier.property),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

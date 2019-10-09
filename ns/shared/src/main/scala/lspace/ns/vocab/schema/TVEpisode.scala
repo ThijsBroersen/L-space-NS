@@ -6,7 +6,7 @@ object TVEpisode extends OntologyDef(
         iris = Set("http://schema.org/TVEpisode"),
         label = "TVEpisode",
         comment = """A TV episode which can be part of a series or season.""",
-        `@extends` = () => List(Episode.ontology)
+        `@extends` = List(Episode.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Episode.Properties{
 lazy val countryOfOrigin = lspace.ns.vocab.schema.countryOfOrigin.property

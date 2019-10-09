@@ -8,8 +8,8 @@ object employmentType extends PropertyDef(
         iris = Set("http://schema.org/employmentType"),
         label = "employmentType",
         comment = """Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

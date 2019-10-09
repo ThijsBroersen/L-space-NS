@@ -8,8 +8,8 @@ object subStructure extends PropertyDef(
         iris = Set("http://schema.org/subStructure"),
         label = "subStructure",
         comment = """Component (sub-)structure(s) that comprise this anatomical structure.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AnatomicalStructure.ontology)
+        `@extends` = List(),
+        `@range` = List(AnatomicalStructure.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

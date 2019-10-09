@@ -6,7 +6,7 @@ object Conversation extends OntologyDef(
         iris = Set("http://schema.org/Conversation"),
         label = "Conversation",
         comment = """One or more messages between organizations or people on a particular topic. Individual messages can be linked to the conversation with isPartOf or hasPart properties.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 

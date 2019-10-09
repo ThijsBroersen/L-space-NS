@@ -8,8 +8,8 @@ object timeRequired extends PropertyDef(
         iris = Set("http://schema.org/timeRequired"),
         label = "timeRequired",
         comment = """Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Duration.ontology)
+        `@extends` = List(),
+        `@range` = List(Duration.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

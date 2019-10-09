@@ -6,7 +6,7 @@ object SocialMediaPosting extends OntologyDef(
         iris = Set("http://schema.org/SocialMediaPosting"),
         label = "SocialMediaPosting",
         comment = """A post to a social media platform, including blog posts, tweets, Facebook posts, etc.""",
-        `@extends` = () => List(Article.ontology)
+        `@extends` = List(Article.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Article.Properties{
 lazy val sharedContent = lspace.ns.vocab.schema.sharedContent.property

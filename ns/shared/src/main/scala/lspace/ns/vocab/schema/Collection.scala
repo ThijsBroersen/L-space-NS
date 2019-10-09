@@ -6,7 +6,7 @@ object Collection extends OntologyDef(
         iris = Set("http://schema.org/Collection"),
         label = "Collection",
         comment = """A created collection of Creative Works or other artefacts.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val collectionSize = lspace.ns.vocab.schema.collectionSize.property

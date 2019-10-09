@@ -8,8 +8,8 @@ object dissolutionDate extends PropertyDef(
         iris = Set("http://schema.org/dissolutionDate"),
         label = "dissolutionDate",
         comment = """The date that this organization was dissolved.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@date`)
+        `@extends` = List(),
+        `@range` = List(`@date`)
        ){
 
 override lazy val properties: List[LProperty] = List()

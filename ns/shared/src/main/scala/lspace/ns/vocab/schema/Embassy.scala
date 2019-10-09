@@ -6,7 +6,7 @@ object Embassy extends OntologyDef(
         iris = Set("http://schema.org/Embassy"),
         label = "Embassy",
         comment = """An embassy.""",
-        `@extends` = () => List(GovernmentBuilding.ontology)
+        `@extends` = List(GovernmentBuilding.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.GovernmentBuilding.Properties{
 

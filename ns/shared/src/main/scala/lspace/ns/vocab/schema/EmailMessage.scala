@@ -6,7 +6,7 @@ object EmailMessage extends OntologyDef(
         iris = Set("http://schema.org/EmailMessage"),
         label = "EmailMessage",
         comment = """An email message.""",
-        `@extends` = () => List(Message.ontology)
+        `@extends` = List(Message.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Message.Properties{
 

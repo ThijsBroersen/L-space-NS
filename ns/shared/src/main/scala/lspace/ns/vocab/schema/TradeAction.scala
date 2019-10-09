@@ -6,7 +6,7 @@ object TradeAction extends OntologyDef(
         iris = Set("http://schema.org/TradeAction"),
         label = "TradeAction",
         comment = """The act of participating in an exchange of goods and services for monetary compensation. An agent trades an object, product or service with a participant in exchange for a one time or periodic payment.""",
-        `@extends` = () => List(Action.ontology)
+        `@extends` = List(Action.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Action.Properties{
 lazy val price = lspace.ns.vocab.schema.price.property

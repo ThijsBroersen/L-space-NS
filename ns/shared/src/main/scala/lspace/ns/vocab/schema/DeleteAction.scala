@@ -6,7 +6,7 @@ object DeleteAction extends OntologyDef(
         iris = Set("http://schema.org/DeleteAction"),
         label = "DeleteAction",
         comment = """The act of editing a recipient by removing one of its objects.""",
-        `@extends` = () => List(UpdateAction.ontology)
+        `@extends` = List(UpdateAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.UpdateAction.Properties{
 

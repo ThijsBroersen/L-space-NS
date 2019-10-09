@@ -8,8 +8,8 @@ object geographicArea extends PropertyDef(
         iris = Set("http://schema.org/geographicArea"),
         label = "geographicArea",
         comment = """The geographic area associated with the audience.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AdministrativeArea.ontology)
+        `@extends` = List(),
+        `@range` = List(AdministrativeArea.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

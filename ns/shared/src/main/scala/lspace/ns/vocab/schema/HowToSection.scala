@@ -6,7 +6,7 @@ object HowToSection extends OntologyDef(
         iris = Set("http://schema.org/HowToSection"),
         label = "HowToSection",
         comment = """A sub-grouping of steps in the instructions for how to achieve a result (e.g. steps for making a pie crust within a pie recipe).""",
-        `@extends` = () => List(ListItem.ontology, CreativeWork.ontology, ItemList.ontology)
+        `@extends` = List(ListItem.ontology, CreativeWork.ontology, ItemList.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ListItem.Properties with lspace.ns.vocab.schema.CreativeWork.Properties with lspace.ns.vocab.schema.ItemList.Properties{
 

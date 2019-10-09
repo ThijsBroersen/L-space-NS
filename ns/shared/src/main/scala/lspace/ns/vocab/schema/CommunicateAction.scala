@@ -6,7 +6,7 @@ object CommunicateAction extends OntologyDef(
         iris = Set("http://schema.org/CommunicateAction"),
         label = "CommunicateAction",
         comment = """The act of conveying information to another person via a communication medium (instrument) such as speech, email, or telephone conversation.""",
-        `@extends` = () => List(InteractAction.ontology)
+        `@extends` = List(InteractAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.InteractAction.Properties{
 lazy val about = lspace.ns.vocab.schema.about.property

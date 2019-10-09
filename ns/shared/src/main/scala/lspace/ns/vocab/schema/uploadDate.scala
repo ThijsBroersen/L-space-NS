@@ -8,8 +8,8 @@ object uploadDate extends PropertyDef(
         iris = Set("http://schema.org/uploadDate"),
         label = "uploadDate",
         comment = """Date when this media object was uploaded to this site.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@date`)
+        `@extends` = List(),
+        `@range` = List(`@date`)
        ){
 
 override lazy val properties: List[LProperty] = List()

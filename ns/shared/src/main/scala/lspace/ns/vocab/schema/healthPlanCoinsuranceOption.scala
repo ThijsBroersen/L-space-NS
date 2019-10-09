@@ -8,8 +8,8 @@ object healthPlanCoinsuranceOption extends PropertyDef(
         iris = Set("http://schema.org/healthPlanCoinsuranceOption"),
         label = "healthPlanCoinsuranceOption",
         comment = """Whether the coinsurance applies before or after deductible, etc. TODO: Is this a closed set?""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

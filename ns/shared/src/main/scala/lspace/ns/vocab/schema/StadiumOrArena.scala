@@ -6,7 +6,7 @@ object StadiumOrArena extends OntologyDef(
         iris = Set("http://schema.org/StadiumOrArena"),
         label = "StadiumOrArena",
         comment = """A stadium.""",
-        `@extends` = () => List(CivicStructure.ontology, SportsActivityLocation.ontology)
+        `@extends` = List(CivicStructure.ontology, SportsActivityLocation.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CivicStructure.Properties with lspace.ns.vocab.schema.SportsActivityLocation.Properties{
 

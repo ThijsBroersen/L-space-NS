@@ -8,8 +8,8 @@ object foodEstablishment extends PropertyDef(
         iris = Set("http://schema.org/foodEstablishment"),
         label = "foodEstablishment",
         comment = """A sub property of location. The specific food establishment where the action occurred.""",
-        `@extends` = () => List(location.property),
-        `@range` = () => List(FoodEstablishment.ontology, Place.ontology)
+        `@extends` = List(location.property),
+        `@range` = List(FoodEstablishment.ontology, Place.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

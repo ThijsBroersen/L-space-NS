@@ -15,7 +15,7 @@ Related actions:<br/><br/>
 <li><a class="localLink" href="http://schema.org/FollowAction">FollowAction</a>: Unlike FollowAction, JoinAction does not imply that you'll be polling for updates.</li>
 </ul>
 """,
-        `@extends` = () => List(InteractAction.ontology)
+        `@extends` = List(InteractAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.InteractAction.Properties{
 lazy val event = lspace.ns.vocab.schema.event.property

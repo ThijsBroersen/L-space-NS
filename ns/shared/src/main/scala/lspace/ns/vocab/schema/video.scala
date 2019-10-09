@@ -8,8 +8,8 @@ object video extends PropertyDef(
         iris = Set("http://schema.org/video"),
         label = "video",
         comment = """An embedded video object.""",
-        `@extends` = () => List(),
-        `@range` = () => List(VideoObject.ontology, Clip.ontology)
+        `@extends` = List(),
+        `@range` = List(VideoObject.ontology, Clip.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

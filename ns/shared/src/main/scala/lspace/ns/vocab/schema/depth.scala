@@ -8,8 +8,8 @@ object depth extends PropertyDef(
         iris = Set("http://schema.org/depth"),
         label = "depth",
         comment = """The depth of the item.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology, Distance.ontology)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology, Distance.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

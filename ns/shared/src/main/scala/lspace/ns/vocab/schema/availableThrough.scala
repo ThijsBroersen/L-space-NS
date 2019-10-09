@@ -8,8 +8,8 @@ object availableThrough extends PropertyDef(
         iris = Set("http://schema.org/availableThrough"),
         label = "availableThrough",
         comment = """After this date, the item will no longer be available for pickup.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@datetime`)
+        `@extends` = List(),
+        `@range` = List(`@datetime`)
        ){
 
 override lazy val properties: List[LProperty] = List()

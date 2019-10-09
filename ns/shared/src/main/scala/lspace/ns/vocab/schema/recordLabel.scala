@@ -8,8 +8,8 @@ object recordLabel extends PropertyDef(
         iris = Set("http://schema.org/recordLabel"),
         label = "recordLabel",
         comment = """The label that issued the release.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

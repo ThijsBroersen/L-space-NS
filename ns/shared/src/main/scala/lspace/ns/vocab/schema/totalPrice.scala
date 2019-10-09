@@ -8,8 +8,8 @@ object totalPrice extends PropertyDef(
         iris = Set("http://schema.org/totalPrice"),
         label = "totalPrice",
         comment = """The total price for the reservation or ticket, including applicable taxes, shipping, etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, PriceSpecification.ontology, `@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`, PriceSpecification.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

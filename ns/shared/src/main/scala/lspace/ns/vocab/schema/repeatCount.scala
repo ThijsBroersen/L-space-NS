@@ -8,8 +8,8 @@ object repeatCount extends PropertyDef(
         iris = Set("http://schema.org/repeatCount"),
         label = "repeatCount",
         comment = """Defines the number of times a recurring <a class="localLink" href="http://schema.org/Event">Event</a> will take place""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@int`)
+        `@extends` = List(),
+        `@range` = List(`@int`)
        ){
 
 override lazy val properties: List[LProperty] = List()

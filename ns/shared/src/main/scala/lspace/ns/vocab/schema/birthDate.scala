@@ -8,8 +8,8 @@ object birthDate extends PropertyDef(
         iris = Set("http://schema.org/birthDate"),
         label = "birthDate",
         comment = """Date of birth.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@date`)
+        `@extends` = List(),
+        `@range` = List(`@date`)
        ){
 
 override lazy val properties: List[LProperty] = List()

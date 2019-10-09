@@ -8,8 +8,8 @@ object interactionCount extends PropertyDef(
         iris = Set("http://schema.org/interactionCount"),
         label = "interactionCount",
         comment = """This property is deprecated, alongside the UserInteraction types on which it depended.""",
-        `@extends` = () => List(),
-        `@range` = () => List()
+        `@extends` = List(),
+        `@range` = List()
        ){
 
 override lazy val properties: List[LProperty] = List()

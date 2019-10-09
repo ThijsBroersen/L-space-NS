@@ -8,8 +8,8 @@ object primaryPrevention extends PropertyDef(
         iris = Set("http://schema.org/primaryPrevention"),
         label = "primaryPrevention",
         comment = """A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MedicalTherapy.ontology)
+        `@extends` = List(),
+        `@range` = List(MedicalTherapy.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

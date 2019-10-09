@@ -10,8 +10,8 @@ object mileageFromOdometer extends PropertyDef(
         comment = """The total distance travelled by the particular vehicle since its initial production, as read from its odometer.<br/><br/>
 
 Typical unit code(s): KMT for kilometers, SMI for statute miles""",
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

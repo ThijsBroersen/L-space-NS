@@ -13,7 +13,7 @@ Related actions:<br/><br/>
 <li><a class="localLink" href="http://schema.org/RegisterAction">RegisterAction</a>: Unlike RegisterAction, ApplyAction has no guarantees that the application will be accepted.</li>
 </ul>
 """,
-        `@extends` = () => List(OrganizeAction.ontology)
+        `@extends` = List(OrganizeAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.OrganizeAction.Properties{
 

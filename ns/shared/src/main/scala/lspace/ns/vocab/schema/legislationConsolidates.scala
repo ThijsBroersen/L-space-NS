@@ -8,8 +8,8 @@ object legislationConsolidates extends PropertyDef(
         iris = Set("http://schema.org/legislationConsolidates"),
         label = "legislationConsolidates",
         comment = """Indicates another legislation taken into account in this consolidated legislation (which is usually the product of an editorial process that revises the legislation). This property should be used multiple times to refer to both the original version or the previous consolidated version, and to the legislations making the change.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Legislation.ontology)
+        `@extends` = List(),
+        `@range` = List(Legislation.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

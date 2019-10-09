@@ -6,7 +6,7 @@ object SoftwareApplication extends OntologyDef(
         iris = Set("http://schema.org/SoftwareApplication"),
         label = "SoftwareApplication",
         comment = """A software application.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val applicationCategory = lspace.ns.vocab.schema.applicationCategory.property

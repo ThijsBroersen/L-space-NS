@@ -8,8 +8,8 @@ object honorificSuffix extends PropertyDef(
         iris = Set("http://schema.org/honorificSuffix"),
         label = "honorificSuffix",
         comment = """An honorific suffix preceding a Person's name such as M.D. /PhD/MSCSW.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

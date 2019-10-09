@@ -6,7 +6,7 @@ object SingleFamilyResidence extends OntologyDef(
         iris = Set("http://schema.org/SingleFamilyResidence"),
         label = "SingleFamilyResidence",
         comment = """Residence type: Single-family home.""",
-        `@extends` = () => List(House.ontology)
+        `@extends` = List(House.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.House.Properties{
 lazy val occupancy = lspace.ns.vocab.schema.occupancy.property

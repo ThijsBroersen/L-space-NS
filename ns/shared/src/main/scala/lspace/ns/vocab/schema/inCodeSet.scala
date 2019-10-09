@@ -8,8 +8,8 @@ object inCodeSet extends PropertyDef(
         iris = Set("http://schema.org/inCodeSet"),
         label = "inCodeSet",
         comment = """A <a class="localLink" href="http://schema.org/CategoryCodeSet">CategoryCodeSet</a> that contains this category code.""",
-        `@extends` = () => List(inDefinedTermSet.property),
-        `@range` = () => List(URL.ontology, CategoryCodeSet.ontology)
+        `@extends` = List(inDefinedTermSet.property),
+        `@range` = List(URL.ontology, CategoryCodeSet.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

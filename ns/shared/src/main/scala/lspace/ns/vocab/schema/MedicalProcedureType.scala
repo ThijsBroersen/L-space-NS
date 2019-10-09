@@ -6,7 +6,7 @@ object MedicalProcedureType extends OntologyDef(
         iris = Set("http://schema.org/MedicalProcedureType"),
         label = "MedicalProcedureType",
         comment = """An enumeration that describes different types of medical procedures.""",
-        `@extends` = () => List(MedicalEnumeration.ontology)
+        `@extends` = List(MedicalEnumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
 

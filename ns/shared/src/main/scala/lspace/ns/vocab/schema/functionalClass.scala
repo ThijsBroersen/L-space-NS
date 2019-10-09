@@ -8,8 +8,8 @@ object functionalClass extends PropertyDef(
         iris = Set("http://schema.org/functionalClass"),
         label = "functionalClass",
         comment = """The degree of mobility the joint allows.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, MedicalEntity.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, MedicalEntity.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

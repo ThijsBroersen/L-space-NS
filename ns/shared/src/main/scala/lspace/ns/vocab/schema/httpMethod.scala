@@ -8,8 +8,8 @@ object httpMethod extends PropertyDef(
         iris = Set("http://schema.org/httpMethod"),
         label = "httpMethod",
         comment = """An HTTP method that specifies the appropriate HTTP method for a request to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

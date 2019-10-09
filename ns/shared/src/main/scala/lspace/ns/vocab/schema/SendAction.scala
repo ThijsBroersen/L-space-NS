@@ -12,7 +12,7 @@ object SendAction extends OntologyDef(
 <li><a class="localLink" href="http://schema.org/GiveAction">GiveAction</a>: Unlike GiveAction, SendAction does not imply the transfer of ownership (e.g. I can send you my laptop, but I'm not necessarily giving it to you).</li>
 </ul>
 """,
-        `@extends` = () => List(TransferAction.ontology)
+        `@extends` = List(TransferAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.TransferAction.Properties{
 lazy val deliveryMethod = lspace.ns.vocab.schema.deliveryMethod.property

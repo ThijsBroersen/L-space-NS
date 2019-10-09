@@ -8,8 +8,8 @@ object exerciseRelatedDiet extends PropertyDef(
         iris = Set("http://schema.org/exerciseRelatedDiet"),
         label = "exerciseRelatedDiet",
         comment = """A sub property of instrument. The diet used in this action.""",
-        `@extends` = () => List(instrument.property),
-        `@range` = () => List(Diet.ontology)
+        `@extends` = List(instrument.property),
+        `@range` = List(Diet.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

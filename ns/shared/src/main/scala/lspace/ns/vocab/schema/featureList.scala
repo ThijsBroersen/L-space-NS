@@ -8,8 +8,8 @@ object featureList extends PropertyDef(
         iris = Set("http://schema.org/featureList"),
         label = "featureList",
         comment = """Features or modules provided by this application (and possibly required by other applications).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, URL.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

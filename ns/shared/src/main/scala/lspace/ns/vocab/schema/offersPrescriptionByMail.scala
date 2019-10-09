@@ -8,8 +8,8 @@ object offersPrescriptionByMail extends PropertyDef(
         iris = Set("http://schema.org/offersPrescriptionByMail"),
         label = "offersPrescriptionByMail",
         comment = """Whether prescriptions can be delivered by mail.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object LakeBodyOfWater extends OntologyDef(
         iris = Set("http://schema.org/LakeBodyOfWater"),
         label = "LakeBodyOfWater",
         comment = """A lake (for example, Lake Pontrachain).""",
-        `@extends` = () => List(BodyOfWater.ontology)
+        `@extends` = List(BodyOfWater.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.BodyOfWater.Properties{
 

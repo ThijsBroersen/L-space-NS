@@ -6,7 +6,7 @@ object MedicalGuidelineRecommendation extends OntologyDef(
         iris = Set("http://schema.org/MedicalGuidelineRecommendation"),
         label = "MedicalGuidelineRecommendation",
         comment = """A guideline recommendation that is regarded as efficacious and where quality of the data supporting the recommendation is sound.""",
-        `@extends` = () => List(MedicalGuideline.ontology)
+        `@extends` = List(MedicalGuideline.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalGuideline.Properties{
 lazy val recommendationStrength = lspace.ns.vocab.schema.recommendationStrength.property

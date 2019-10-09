@@ -6,7 +6,7 @@ object MedicalStudyStatus extends OntologyDef(
         iris = Set("http://schema.org/MedicalStudyStatus"),
         label = "MedicalStudyStatus",
         comment = """The status of a medical study. Enumerated type.""",
-        `@extends` = () => List(MedicalEnumeration.ontology)
+        `@extends` = List(MedicalEnumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
 

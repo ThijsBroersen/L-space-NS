@@ -8,8 +8,8 @@ object subjectOf extends PropertyDef(
         iris = Set("http://schema.org/subjectOf"),
         label = "subjectOf",
         comment = """A CreativeWork or Event about this Thing..""",
-        `@extends` = () => List(),
-        `@range` = () => List(Event.ontology, CreativeWork.ontology)
+        `@extends` = List(),
+        `@range` = List(Event.ontology, CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

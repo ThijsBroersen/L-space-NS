@@ -8,8 +8,8 @@ object lastReviewed extends PropertyDef(
         iris = Set("http://schema.org/lastReviewed"),
         label = "lastReviewed",
         comment = """Date on which the content on this web page was last reviewed for accuracy and/or completeness.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@date`)
+        `@extends` = List(),
+        `@range` = List(`@date`)
        ){
 
 override lazy val properties: List[LProperty] = List()

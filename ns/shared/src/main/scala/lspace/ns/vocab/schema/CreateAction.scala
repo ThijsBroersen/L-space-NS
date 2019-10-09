@@ -6,7 +6,7 @@ object CreateAction extends OntologyDef(
         iris = Set("http://schema.org/CreateAction"),
         label = "CreateAction",
         comment = """The act of deliberately creating/producing/generating/building a result out of the agent.""",
-        `@extends` = () => List(Action.ontology)
+        `@extends` = List(Action.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Action.Properties{
 

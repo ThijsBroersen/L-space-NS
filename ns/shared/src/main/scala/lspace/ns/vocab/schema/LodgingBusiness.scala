@@ -6,7 +6,7 @@ object LodgingBusiness extends OntologyDef(
         iris = Set("http://schema.org/LodgingBusiness"),
         label = "LodgingBusiness",
         comment = """A lodging business, such as a motel, hotel, or inn.""",
-        `@extends` = () => List(LocalBusiness.ontology)
+        `@extends` = List(LocalBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.LocalBusiness.Properties{
 lazy val audience = lspace.ns.vocab.schema.audience.property

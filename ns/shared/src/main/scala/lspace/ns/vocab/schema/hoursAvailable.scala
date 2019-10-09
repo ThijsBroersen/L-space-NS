@@ -8,8 +8,8 @@ object hoursAvailable extends PropertyDef(
         iris = Set("http://schema.org/hoursAvailable"),
         label = "hoursAvailable",
         comment = """The hours during which this service or contact is available.""",
-        `@extends` = () => List(),
-        `@range` = () => List(OpeningHoursSpecification.ontology)
+        `@extends` = List(),
+        `@range` = List(OpeningHoursSpecification.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

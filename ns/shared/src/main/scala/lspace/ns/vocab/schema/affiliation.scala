@@ -8,8 +8,8 @@ object affiliation extends PropertyDef(
         iris = Set("http://schema.org/affiliation"),
         label = "affiliation",
         comment = """An organization that this person is affiliated with. For example, a school/university, a club, or a team.""",
-        `@extends` = () => List(memberOf.property),
-        `@range` = () => List(Organization.ontology)
+        `@extends` = List(memberOf.property),
+        `@range` = List(Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

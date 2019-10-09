@@ -6,7 +6,7 @@ object BusTrip extends OntologyDef(
         iris = Set("http://schema.org/BusTrip"),
         label = "BusTrip",
         comment = """A trip on a commercial bus line.""",
-        `@extends` = () => List(Trip.ontology)
+        `@extends` = List(Trip.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Trip.Properties{
 lazy val arrivalBusStop = lspace.ns.vocab.schema.arrivalBusStop.property

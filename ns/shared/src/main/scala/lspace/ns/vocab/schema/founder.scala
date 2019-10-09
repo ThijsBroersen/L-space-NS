@@ -8,8 +8,8 @@ object founder extends PropertyDef(
         iris = Set("http://schema.org/founder"),
         label = "founder",
         comment = """A person who founded this organization.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

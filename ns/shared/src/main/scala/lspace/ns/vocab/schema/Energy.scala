@@ -6,7 +6,7 @@ object Energy extends OntologyDef(
         iris = Set("http://schema.org/Energy"),
         label = "Energy",
         comment = """Properties that take Energy as values are of the form '&lt;Number&gt; &lt;Energy unit of measure&gt;'.""",
-        `@extends` = () => List(Quantity.ontology)
+        `@extends` = List(Quantity.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Quantity.Properties{
 

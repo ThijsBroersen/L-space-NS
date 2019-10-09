@@ -8,8 +8,8 @@ object duplicateTherapy extends PropertyDef(
         iris = Set("http://schema.org/duplicateTherapy"),
         label = "duplicateTherapy",
         comment = """A therapy that duplicates or overlaps this one.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MedicalTherapy.ontology)
+        `@extends` = List(),
+        `@range` = List(MedicalTherapy.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

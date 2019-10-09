@@ -6,7 +6,7 @@ object HowToStep extends OntologyDef(
         iris = Set("http://schema.org/HowToStep"),
         label = "HowToStep",
         comment = """A step in the instructions for how to achieve a result. It is an ordered list with HowToDirection and/or HowToTip items.""",
-        `@extends` = () => List(ListItem.ontology, CreativeWork.ontology, ItemList.ontology)
+        `@extends` = List(ListItem.ontology, CreativeWork.ontology, ItemList.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ListItem.Properties with lspace.ns.vocab.schema.CreativeWork.Properties with lspace.ns.vocab.schema.ItemList.Properties{
 

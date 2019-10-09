@@ -8,8 +8,8 @@ object deliveryLeadTime extends PropertyDef(
         iris = Set("http://schema.org/deliveryLeadTime"),
         label = "deliveryLeadTime",
         comment = """The typical delay between the receipt of the order and the goods either leaving the warehouse or being prepared for pickup, in case the delivery method is on site pickup.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

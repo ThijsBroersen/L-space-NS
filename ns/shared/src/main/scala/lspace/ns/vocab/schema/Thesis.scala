@@ -6,7 +6,7 @@ object Thesis extends OntologyDef(
         iris = Set("http://schema.org/Thesis"),
         label = "Thesis",
         comment = """A thesis or dissertation document submitted in support of candidature for an academic degree or professional qualification.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val inSupportOf = lspace.ns.vocab.schema.inSupportOf.property

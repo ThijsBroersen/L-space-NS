@@ -8,8 +8,8 @@ object competencyRequired extends PropertyDef(
         iris = Set("http://schema.org/competencyRequired"),
         label = "competencyRequired",
         comment = """Knowledge, skill, ability or personal attribute that must be demonstrated by a person or other entity.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology, Text.ontology, DefinedTerm.ontology)
+        `@extends` = List(),
+        `@range` = List(DefinedTerm.ontology, `@string`, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

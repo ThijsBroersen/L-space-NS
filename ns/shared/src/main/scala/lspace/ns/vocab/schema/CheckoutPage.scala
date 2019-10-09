@@ -6,7 +6,7 @@ object CheckoutPage extends OntologyDef(
         iris = Set("http://schema.org/CheckoutPage"),
         label = "CheckoutPage",
         comment = """Web page type: Checkout page.""",
-        `@extends` = () => List(WebPage.ontology)
+        `@extends` = List(WebPage.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.WebPage.Properties{
 

@@ -8,8 +8,8 @@ object publishedBy extends PropertyDef(
         iris = Set("http://schema.org/publishedBy"),
         label = "publishedBy",
         comment = """An agent associated with the publication event.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology, Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology, Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

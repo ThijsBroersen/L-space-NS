@@ -6,7 +6,7 @@ object HowTo extends OntologyDef(
         iris = Set("http://schema.org/HowTo"),
         label = "HowTo",
         comment = """Instructions that explain how to achieve a result by performing a sequence of steps.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val estimatedCost = lspace.ns.vocab.schema.estimatedCost.property

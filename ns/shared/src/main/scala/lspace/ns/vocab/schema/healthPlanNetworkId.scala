@@ -8,8 +8,8 @@ object healthPlanNetworkId extends PropertyDef(
         iris = Set("http://schema.org/healthPlanNetworkId"),
         label = "healthPlanNetworkId",
         comment = """Name or unique ID of network. (Networks are often reused across different insurance plans).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

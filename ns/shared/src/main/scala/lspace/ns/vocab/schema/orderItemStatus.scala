@@ -8,8 +8,8 @@ object orderItemStatus extends PropertyDef(
         iris = Set("http://schema.org/orderItemStatus"),
         label = "orderItemStatus",
         comment = """The current status of the order item.""",
-        `@extends` = () => List(),
-        `@range` = () => List(OrderStatus.ontology)
+        `@extends` = List(),
+        `@range` = List(OrderStatus.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

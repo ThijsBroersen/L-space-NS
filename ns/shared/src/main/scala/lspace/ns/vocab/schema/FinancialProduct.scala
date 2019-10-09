@@ -6,7 +6,7 @@ object FinancialProduct extends OntologyDef(
         iris = Set("http://schema.org/FinancialProduct"),
         label = "FinancialProduct",
         comment = """A product provided to consumers and businesses by financial institutions such as banks, insurance companies, brokerage firms, consumer finance companies, and investment companies which comprise the financial services industry.""",
-        `@extends` = () => List(Service.ontology)
+        `@extends` = List(Service.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Service.Properties{
 lazy val annualPercentageRate = lspace.ns.vocab.schema.annualPercentageRate.property

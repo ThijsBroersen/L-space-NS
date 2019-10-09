@@ -8,8 +8,8 @@ object copyrightHolder extends PropertyDef(
         iris = Set("http://schema.org/copyrightHolder"),
         label = "copyrightHolder",
         comment = """The party holding the legal copyright to the CreativeWork.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology, Organization.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology, Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

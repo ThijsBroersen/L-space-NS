@@ -6,7 +6,7 @@ object AdultEntertainment extends OntologyDef(
         iris = Set("http://schema.org/AdultEntertainment"),
         label = "AdultEntertainment",
         comment = """An adult entertainment establishment.""",
-        `@extends` = () => List(EntertainmentBusiness.ontology)
+        `@extends` = List(EntertainmentBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.EntertainmentBusiness.Properties{
 

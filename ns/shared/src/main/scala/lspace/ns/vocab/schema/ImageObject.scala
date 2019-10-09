@@ -6,7 +6,7 @@ object ImageObject extends OntologyDef(
         iris = Set("http://schema.org/ImageObject"),
         label = "ImageObject",
         comment = """An image file.""",
-        `@extends` = () => List(MediaObject.ontology)
+        `@extends` = List(MediaObject.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MediaObject.Properties{
 lazy val caption = lspace.ns.vocab.schema.caption.property

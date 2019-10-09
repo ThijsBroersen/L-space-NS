@@ -8,8 +8,8 @@ object nationality extends PropertyDef(
         iris = Set("http://schema.org/nationality"),
         label = "nationality",
         comment = """Nationality of the person.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Country.ontology)
+        `@extends` = List(),
+        `@range` = List(Country.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

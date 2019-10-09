@@ -6,7 +6,7 @@ object AddAction extends OntologyDef(
         iris = Set("http://schema.org/AddAction"),
         label = "AddAction",
         comment = """The act of editing by adding an object to a collection.""",
-        `@extends` = () => List(UpdateAction.ontology)
+        `@extends` = List(UpdateAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.UpdateAction.Properties{
 

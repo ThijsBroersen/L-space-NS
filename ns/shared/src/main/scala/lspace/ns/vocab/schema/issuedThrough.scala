@@ -8,8 +8,8 @@ object issuedThrough extends PropertyDef(
         iris = Set("http://schema.org/issuedThrough"),
         label = "issuedThrough",
         comment = """The service through with the permit was granted.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Service.ontology)
+        `@extends` = List(),
+        `@range` = List(Service.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object reservationId extends PropertyDef(
         iris = Set("http://schema.org/reservationId"),
         label = "reservationId",
         comment = """A unique identifier for the reservation.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

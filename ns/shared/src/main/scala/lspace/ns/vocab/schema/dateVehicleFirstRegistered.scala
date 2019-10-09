@@ -8,8 +8,8 @@ object dateVehicleFirstRegistered extends PropertyDef(
         iris = Set("http://schema.org/dateVehicleFirstRegistered"),
         label = "dateVehicleFirstRegistered",
         comment = """The date of the first registration of the vehicle with the respective public authorities.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@date`)
+        `@extends` = List(),
+        `@range` = List(`@date`)
        ){
 
 override lazy val properties: List[LProperty] = List()

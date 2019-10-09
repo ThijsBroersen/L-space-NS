@@ -8,8 +8,8 @@ object greaterOrEqual extends PropertyDef(
         iris = Set("http://schema.org/greaterOrEqual"),
         label = "greaterOrEqual",
         comment = """This ordering relation for qualitative values indicates that the subject is greater than or equal to the object.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QualitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QualitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

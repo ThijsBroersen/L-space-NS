@@ -8,8 +8,8 @@ object slogan extends PropertyDef(
         iris = Set("http://schema.org/slogan"),
         label = "slogan",
         comment = """A slogan or motto associated with the item.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

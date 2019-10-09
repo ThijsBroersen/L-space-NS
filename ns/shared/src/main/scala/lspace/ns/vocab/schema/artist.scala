@@ -10,8 +10,8 @@ object artist extends PropertyDef(
         comment = """The primary artist for a work
     in a medium other than pencils or digital line art--for example, if the
     primary artwork is done in watercolors or digital paints.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

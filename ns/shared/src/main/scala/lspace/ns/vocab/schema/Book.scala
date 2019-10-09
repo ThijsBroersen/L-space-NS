@@ -6,7 +6,7 @@ object Book extends OntologyDef(
         iris = Set("http://schema.org/Book"),
         label = "Book",
         comment = """A book.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val abridged = lspace.ns.vocab.schema.abridged.property

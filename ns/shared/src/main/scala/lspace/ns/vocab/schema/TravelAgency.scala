@@ -6,7 +6,7 @@ object TravelAgency extends OntologyDef(
         iris = Set("http://schema.org/TravelAgency"),
         label = "TravelAgency",
         comment = """A travel agency.""",
-        `@extends` = () => List(LocalBusiness.ontology)
+        `@extends` = List(LocalBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.LocalBusiness.Properties{
 

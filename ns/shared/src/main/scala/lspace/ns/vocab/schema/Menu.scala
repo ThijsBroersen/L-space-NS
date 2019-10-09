@@ -6,7 +6,7 @@ object Menu extends OntologyDef(
         iris = Set("http://schema.org/Menu"),
         label = "Menu",
         comment = """A structured representation of food or drink items available from a FoodEstablishment.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val hasMenuItem = lspace.ns.vocab.schema.hasMenuItem.property

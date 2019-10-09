@@ -8,8 +8,8 @@ object parent extends PropertyDef(
         iris = Set("http://schema.org/parent"),
         label = "parent",
         comment = """A parent of this person.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

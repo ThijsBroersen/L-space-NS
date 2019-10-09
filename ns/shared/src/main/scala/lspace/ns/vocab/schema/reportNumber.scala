@@ -8,8 +8,8 @@ object reportNumber extends PropertyDef(
         iris = Set("http://schema.org/reportNumber"),
         label = "reportNumber",
         comment = """The number or other unique designator assigned to a Report by the publishing organization.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

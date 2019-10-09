@@ -8,8 +8,8 @@ object inventoryLevel extends PropertyDef(
         iris = Set("http://schema.org/inventoryLevel"),
         label = "inventoryLevel",
         comment = """The current approximate inventory level for the item or items.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

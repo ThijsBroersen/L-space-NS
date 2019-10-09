@@ -8,8 +8,8 @@ object educationRequirements extends PropertyDef(
         iris = Set("http://schema.org/educationRequirements"),
         label = "educationRequirements",
         comment = """Educational background needed for the position or Occupation.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, EducationalOccupationalCredential.ontology)
+        `@extends` = List(),
+        `@range` = List(EducationalOccupationalCredential.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

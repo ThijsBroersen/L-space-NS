@@ -8,8 +8,8 @@ object abridged extends PropertyDef(
         iris = Set("http://schema.org/abridged"),
         label = "abridged",
         comment = """Indicates whether the book is an abridged edition.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

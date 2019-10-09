@@ -12,7 +12,7 @@ object File extends OntologyDef(Lspace + "File", label = "File", comment = "A Fi
         extends PropertyDef(NS.vocab.Lspace + "name",
                             "name",
                             "The name of the file",
-                            `@range` = () => DataType.default.`@string` :: Nil)
+                            `@range` = DataType.default.`@string` :: Nil)
     lazy val `schema:name@String`: TypedProperty[String] = `lspace:name` as DataType.default.`@string`
 
     /**
@@ -30,7 +30,7 @@ object File extends OntologyDef(Lspace + "File", label = "File", comment = "A Fi
         extends PropertyDef(Lspace + "filesystem/File/dateCreated",
                             "dateCreated",
                             "The date on which the file was created.",
-                            `@extends` = () => Property(schema + "dateCreated") :: Nil)
+                            `@extends` = Property(schema + "dateCreated") :: Nil)
     object `lspace:File/lastAccessedOn`
         extends PropertyDef(Lspace + "File/lastAccessedOn",
                             "lastAccessedOn",

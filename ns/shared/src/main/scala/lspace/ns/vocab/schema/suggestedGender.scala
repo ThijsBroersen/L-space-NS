@@ -8,8 +8,8 @@ object suggestedGender extends PropertyDef(
         iris = Set("http://schema.org/suggestedGender"),
         label = "suggestedGender",
         comment = """The gender of the person or audience.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object endOffset extends PropertyDef(
         iris = Set("http://schema.org/endOffset"),
         label = "endOffset",
         comment = """The end time of the clip expressed as the number of seconds from the beginning of the work.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

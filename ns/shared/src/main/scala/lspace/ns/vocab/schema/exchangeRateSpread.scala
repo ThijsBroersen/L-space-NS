@@ -8,8 +8,8 @@ object exchangeRateSpread extends PropertyDef(
         iris = Set("http://schema.org/exchangeRateSpread"),
         label = "exchangeRateSpread",
         comment = """The difference between the price at which a broker or other intermediary buys and sells foreign currency.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`, MonetaryAmount.ontology)
+        `@extends` = List(),
+        `@range` = List(`@number`, MonetaryAmount.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

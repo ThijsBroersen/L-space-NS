@@ -6,7 +6,7 @@ object BedType extends OntologyDef(
         iris = Set("http://schema.org/BedType"),
         label = "BedType",
         comment = """A type of bed. This is used for indicating the bed or beds available in an accommodation.""",
-        `@extends` = () => List(QualitativeValue.ontology)
+        `@extends` = List(QualitativeValue.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.QualitativeValue.Properties{
 

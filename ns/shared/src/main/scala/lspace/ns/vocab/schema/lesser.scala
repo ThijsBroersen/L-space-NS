@@ -8,8 +8,8 @@ object lesser extends PropertyDef(
         iris = Set("http://schema.org/lesser"),
         label = "lesser",
         comment = """This ordering relation for qualitative values indicates that the subject is lesser than the object.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QualitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QualitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

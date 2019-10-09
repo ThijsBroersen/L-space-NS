@@ -8,8 +8,8 @@ object fiberContent extends PropertyDef(
         iris = Set("http://schema.org/fiberContent"),
         label = "fiberContent",
         comment = """The number of grams of fiber.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Mass.ontology)
+        `@extends` = List(),
+        `@range` = List(Mass.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

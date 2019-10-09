@@ -8,8 +8,8 @@ object agent extends PropertyDef(
         iris = Set("http://schema.org/agent"),
         label = "agent",
         comment = """The direct performer or driver of the action (animate or inanimate). e.g. <em>John</em> wrote a book.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology, Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology, Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object TelevisionChannel extends OntologyDef(
         iris = Set("http://schema.org/TelevisionChannel"),
         label = "TelevisionChannel",
         comment = """A unique instance of a television BroadcastService on a CableOrSatelliteService lineup.""",
-        `@extends` = () => List(BroadcastChannel.ontology)
+        `@extends` = List(BroadcastChannel.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.BroadcastChannel.Properties{
 

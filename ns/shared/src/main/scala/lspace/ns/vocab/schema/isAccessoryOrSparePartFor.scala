@@ -8,8 +8,8 @@ object isAccessoryOrSparePartFor extends PropertyDef(
         iris = Set("http://schema.org/isAccessoryOrSparePartFor"),
         label = "isAccessoryOrSparePartFor",
         comment = """A pointer to another product (or multiple products) for which this product is an accessory or spare part.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Product.ontology)
+        `@extends` = List(),
+        `@range` = List(Product.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

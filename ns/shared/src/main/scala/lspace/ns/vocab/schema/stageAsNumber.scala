@@ -8,8 +8,8 @@ object stageAsNumber extends PropertyDef(
         iris = Set("http://schema.org/stageAsNumber"),
         label = "stageAsNumber",
         comment = """The stage represented as a number, e.g. 3.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

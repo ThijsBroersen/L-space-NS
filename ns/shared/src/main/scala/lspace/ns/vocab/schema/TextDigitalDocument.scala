@@ -6,7 +6,7 @@ object TextDigitalDocument extends OntologyDef(
         iris = Set("http://schema.org/TextDigitalDocument"),
         label = "TextDigitalDocument",
         comment = """A file composed primarily of text.""",
-        `@extends` = () => List(DigitalDocument.ontology)
+        `@extends` = List(DigitalDocument.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.DigitalDocument.Properties{
 

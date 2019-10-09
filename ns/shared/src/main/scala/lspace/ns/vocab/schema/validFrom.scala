@@ -8,8 +8,8 @@ object validFrom extends PropertyDef(
         iris = Set("http://schema.org/validFrom"),
         label = "validFrom",
         comment = """The date when the item becomes valid.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@datetime`)
+        `@extends` = List(),
+        `@range` = List(`@datetime`)
        ){
 
 override lazy val properties: List[LProperty] = List()

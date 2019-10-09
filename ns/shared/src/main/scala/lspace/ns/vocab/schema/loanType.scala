@@ -8,8 +8,8 @@ object loanType extends PropertyDef(
         iris = Set("http://schema.org/loanType"),
         label = "loanType",
         comment = """The type of a loan or credit.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

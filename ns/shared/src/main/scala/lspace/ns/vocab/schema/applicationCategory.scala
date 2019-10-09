@@ -8,8 +8,8 @@ object applicationCategory extends PropertyDef(
         iris = Set("http://schema.org/applicationCategory"),
         label = "applicationCategory",
         comment = """Type of software application, e.g. 'Game, Multimedia'.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

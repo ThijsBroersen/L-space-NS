@@ -6,7 +6,7 @@ object HowToSupply extends OntologyDef(
         iris = Set("http://schema.org/HowToSupply"),
         label = "HowToSupply",
         comment = """A supply consumed when performing the instructions for how to achieve a result.""",
-        `@extends` = () => List(HowToItem.ontology)
+        `@extends` = List(HowToItem.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.HowToItem.Properties{
 lazy val estimatedCost = lspace.ns.vocab.schema.estimatedCost.property

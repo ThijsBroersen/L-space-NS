@@ -6,7 +6,7 @@ object Thing extends OntologyDef(
         iris = Set("http://schema.org/Thing"),
         label = "Thing",
         comment = """The most generic type of item.""",
-        `@extends` = () => List()
+        `@extends` = List()
        ){
 object keys {
 lazy val additionalType = lspace.ns.vocab.schema.additionalType.property

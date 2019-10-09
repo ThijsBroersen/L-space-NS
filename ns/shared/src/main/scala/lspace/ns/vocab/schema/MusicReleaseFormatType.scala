@@ -6,7 +6,7 @@ object MusicReleaseFormatType extends OntologyDef(
         iris = Set("http://schema.org/MusicReleaseFormatType"),
         label = "MusicReleaseFormatType",
         comment = """Format of this release (the type of recording media used, ie. compact disc, digital media, LP, etc.).""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

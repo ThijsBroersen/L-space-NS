@@ -8,8 +8,8 @@ object numberOfPlayers extends PropertyDef(
         iris = Set("http://schema.org/numberOfPlayers"),
         label = "numberOfPlayers",
         comment = """Indicate how many people can play this game (minimum, maximum, or range).""",
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

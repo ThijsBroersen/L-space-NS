@@ -8,8 +8,8 @@ object serviceSmsNumber extends PropertyDef(
         iris = Set("http://schema.org/serviceSmsNumber"),
         label = "serviceSmsNumber",
         comment = """The number to access the service by text message.""",
-        `@extends` = () => List(),
-        `@range` = () => List(ContactPoint.ontology)
+        `@extends` = List(),
+        `@range` = List(ContactPoint.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

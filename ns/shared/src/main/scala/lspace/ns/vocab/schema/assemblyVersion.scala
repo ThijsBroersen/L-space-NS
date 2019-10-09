@@ -8,8 +8,8 @@ object assemblyVersion extends PropertyDef(
         iris = Set("http://schema.org/assemblyVersion"),
         label = "assemblyVersion",
         comment = """Associated product/technology version. e.g., .NET Framework 4.5.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

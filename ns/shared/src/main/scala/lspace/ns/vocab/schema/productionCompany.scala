@@ -8,8 +8,8 @@ object productionCompany extends PropertyDef(
         iris = Set("http://schema.org/productionCompany"),
         label = "productionCompany",
         comment = """The production company or studio responsible for the item e.g. series, video game, episode etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object PerformingGroup extends OntologyDef(
         iris = Set("http://schema.org/PerformingGroup"),
         label = "PerformingGroup",
         comment = """A performance group, such as a band, an orchestra, or a circus.""",
-        `@extends` = () => List(Organization.ontology)
+        `@extends` = List(Organization.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Organization.Properties{
 

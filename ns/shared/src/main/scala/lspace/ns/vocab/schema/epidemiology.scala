@@ -8,8 +8,8 @@ object epidemiology extends PropertyDef(
         iris = Set("http://schema.org/epidemiology"),
         label = "epidemiology",
         comment = """The characteristics of associated patients, such as age, gender, race etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

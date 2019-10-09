@@ -12,8 +12,8 @@ object cargoVolume extends PropertyDef(
 Typical unit code(s): LTR for liters, FTQ for cubic foot/feet<br/><br/>
 
 Note: You can use <a class="localLink" href="http://schema.org/minValue">minValue</a> and <a class="localLink" href="http://schema.org/maxValue">maxValue</a> to indicate ranges.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

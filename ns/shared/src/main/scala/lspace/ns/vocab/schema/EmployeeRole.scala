@@ -6,7 +6,7 @@ object EmployeeRole extends OntologyDef(
         iris = Set("http://schema.org/EmployeeRole"),
         label = "EmployeeRole",
         comment = """A subclass of OrganizationRole used to describe employee relationships.""",
-        `@extends` = () => List(OrganizationRole.ontology)
+        `@extends` = List(OrganizationRole.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.OrganizationRole.Properties{
 lazy val baseSalary = lspace.ns.vocab.schema.baseSalary.property

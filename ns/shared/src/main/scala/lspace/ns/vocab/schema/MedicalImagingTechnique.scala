@@ -6,7 +6,7 @@ object MedicalImagingTechnique extends OntologyDef(
         iris = Set("http://schema.org/MedicalImagingTechnique"),
         label = "MedicalImagingTechnique",
         comment = """Any medical imaging modality typically used for diagnostic purposes. Enumerated type.""",
-        `@extends` = () => List(MedicalEnumeration.ontology)
+        `@extends` = List(MedicalEnumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
 

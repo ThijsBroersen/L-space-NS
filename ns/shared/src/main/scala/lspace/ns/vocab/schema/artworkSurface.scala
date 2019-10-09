@@ -8,8 +8,8 @@ object artworkSurface extends PropertyDef(
         iris = Set("http://schema.org/artworkSurface"),
         label = "artworkSurface",
         comment = """The supporting materials for the artwork, e.g. Canvas, Paper, Wood, Board, etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object AggregateRating extends OntologyDef(
         iris = Set("http://schema.org/AggregateRating"),
         label = "AggregateRating",
         comment = """The average rating based on multiple ratings or reviews.""",
-        `@extends` = () => List(Rating.ontology)
+        `@extends` = List(Rating.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Rating.Properties{
 lazy val itemReviewed = lspace.ns.vocab.schema.itemReviewed.property

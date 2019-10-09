@@ -8,8 +8,8 @@ object activityDuration extends PropertyDef(
         iris = Set("http://schema.org/activityDuration"),
         label = "activityDuration",
         comment = """Length of time to engage in the activity.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Duration.ontology, QualitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(Duration.ontology, QualitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

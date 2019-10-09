@@ -6,7 +6,7 @@ object ElementarySchool extends OntologyDef(
         iris = Set("http://schema.org/ElementarySchool"),
         label = "ElementarySchool",
         comment = """An elementary school.""",
-        `@extends` = () => List(EducationalOrganization.ontology)
+        `@extends` = List(EducationalOrganization.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.EducationalOrganization.Properties{
 

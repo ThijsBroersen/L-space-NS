@@ -8,8 +8,8 @@ object readBy extends PropertyDef(
         iris = Set("http://schema.org/readBy"),
         label = "readBy",
         comment = """A person who reads (performs) the audiobook.""",
-        `@extends` = () => List(actor.property),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(actor.property),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

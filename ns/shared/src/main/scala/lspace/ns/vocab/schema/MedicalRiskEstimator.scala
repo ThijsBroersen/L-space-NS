@@ -6,7 +6,7 @@ object MedicalRiskEstimator extends OntologyDef(
         iris = Set("http://schema.org/MedicalRiskEstimator"),
         label = "MedicalRiskEstimator",
         comment = """Any rule set or interactive tool for estimating the risk of developing a complication or condition.""",
-        `@extends` = () => List(MedicalEntity.ontology)
+        `@extends` = List(MedicalEntity.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEntity.Properties{
 lazy val estimatesRiskOf = lspace.ns.vocab.schema.estimatesRiskOf.property

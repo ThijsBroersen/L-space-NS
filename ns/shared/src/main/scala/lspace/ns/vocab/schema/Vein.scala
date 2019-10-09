@@ -6,7 +6,7 @@ object Vein extends OntologyDef(
         iris = Set("http://schema.org/Vein"),
         label = "Vein",
         comment = """A type of blood vessel that specifically carries blood to the heart.""",
-        `@extends` = () => List(Vessel.ontology)
+        `@extends` = List(Vessel.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Vessel.Properties{
 lazy val drainsTo = lspace.ns.vocab.schema.drainsTo.property

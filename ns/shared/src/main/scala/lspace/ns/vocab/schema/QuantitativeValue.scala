@@ -6,7 +6,7 @@ object QuantitativeValue extends OntologyDef(
         iris = Set("http://schema.org/QuantitativeValue"),
         label = "QuantitativeValue",
         comment = """A point value or interval for product characteristics and other purposes.""",
-        `@extends` = () => List(StructuredValue.ontology)
+        `@extends` = List(StructuredValue.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.StructuredValue.Properties{
 lazy val additionalProperty = lspace.ns.vocab.schema.additionalProperty.property

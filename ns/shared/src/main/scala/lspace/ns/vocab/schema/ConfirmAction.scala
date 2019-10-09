@@ -13,7 +13,7 @@ Related actions:<br/><br/>
 <li><a class="localLink" href="http://schema.org/CancelAction">CancelAction</a>: The antonym of ConfirmAction.</li>
 </ul>
 """,
-        `@extends` = () => List(InformAction.ontology)
+        `@extends` = List(InformAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.InformAction.Properties{
 

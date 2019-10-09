@@ -8,8 +8,8 @@ object recipe extends PropertyDef(
         iris = Set("http://schema.org/recipe"),
         label = "recipe",
         comment = """A sub property of instrument. The recipe/instructions used to perform the action.""",
-        `@extends` = () => List(instrument.property),
-        `@range` = () => List(Recipe.ontology)
+        `@extends` = List(instrument.property),
+        `@range` = List(Recipe.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

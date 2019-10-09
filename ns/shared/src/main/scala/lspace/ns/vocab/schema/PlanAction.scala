@@ -6,7 +6,7 @@ object PlanAction extends OntologyDef(
         iris = Set("http://schema.org/PlanAction"),
         label = "PlanAction",
         comment = """The act of planning the execution of an event/task/action/reservation/plan to a future date.""",
-        `@extends` = () => List(OrganizeAction.ontology)
+        `@extends` = List(OrganizeAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.OrganizeAction.Properties{
 lazy val scheduledTime = lspace.ns.vocab.schema.scheduledTime.property

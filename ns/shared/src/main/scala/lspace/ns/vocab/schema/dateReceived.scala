@@ -8,8 +8,8 @@ object dateReceived extends PropertyDef(
         iris = Set("http://schema.org/dateReceived"),
         label = "dateReceived",
         comment = """The date/time the message was received if a single recipient exists.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@datetime`)
+        `@extends` = List(),
+        `@range` = List(`@datetime`)
        ){
 
 override lazy val properties: List[LProperty] = List()

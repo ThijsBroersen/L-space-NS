@@ -8,8 +8,8 @@ object creator extends PropertyDef(
         iris = Set("http://schema.org/creator"),
         label = "creator",
         comment = """The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology, Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology, Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

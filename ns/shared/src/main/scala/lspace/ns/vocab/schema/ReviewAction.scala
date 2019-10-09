@@ -6,7 +6,7 @@ object ReviewAction extends OntologyDef(
         iris = Set("http://schema.org/ReviewAction"),
         label = "ReviewAction",
         comment = """The act of producing a balanced opinion about the object for an audience. An agent reviews an object with participants resulting in a review.""",
-        `@extends` = () => List(AssessAction.ontology)
+        `@extends` = List(AssessAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.AssessAction.Properties{
 lazy val resultReview = lspace.ns.vocab.schema.resultReview.property

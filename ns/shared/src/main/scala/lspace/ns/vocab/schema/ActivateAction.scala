@@ -6,7 +6,7 @@ object ActivateAction extends OntologyDef(
         iris = Set("http://schema.org/ActivateAction"),
         label = "ActivateAction",
         comment = """The act of starting or activating a device or application (e.g. starting a timer or turning on a flashlight).""",
-        `@extends` = () => List(ControlAction.ontology)
+        `@extends` = List(ControlAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ControlAction.Properties{
 

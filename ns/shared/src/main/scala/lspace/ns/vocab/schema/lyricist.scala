@@ -8,8 +8,8 @@ object lyricist extends PropertyDef(
         iris = Set("http://schema.org/lyricist"),
         label = "lyricist",
         comment = """The person who wrote the words.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

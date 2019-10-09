@@ -8,8 +8,8 @@ object interestRate extends PropertyDef(
         iris = Set("http://schema.org/interestRate"),
         label = "interestRate",
         comment = """The interest rate, charged or paid, applicable to the financial product. Note: This is different from the calculated annualPercentageRate.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`, QuantitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology, `@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

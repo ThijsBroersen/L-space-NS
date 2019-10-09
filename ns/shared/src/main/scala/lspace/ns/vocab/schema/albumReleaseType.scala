@@ -8,8 +8,8 @@ object albumReleaseType extends PropertyDef(
         iris = Set("http://schema.org/albumReleaseType"),
         label = "albumReleaseType",
         comment = """The kind of release which this album is: single, EP or album.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MusicAlbumReleaseType.ontology)
+        `@extends` = List(),
+        `@range` = List(MusicAlbumReleaseType.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

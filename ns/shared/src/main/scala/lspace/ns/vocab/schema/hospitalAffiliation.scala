@@ -8,8 +8,8 @@ object hospitalAffiliation extends PropertyDef(
         iris = Set("http://schema.org/hospitalAffiliation"),
         label = "hospitalAffiliation",
         comment = """A hospital with which the physician or office is affiliated.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Hospital.ontology)
+        `@extends` = List(),
+        `@range` = List(Hospital.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

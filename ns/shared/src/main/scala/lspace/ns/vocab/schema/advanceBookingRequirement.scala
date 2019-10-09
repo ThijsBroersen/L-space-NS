@@ -8,8 +8,8 @@ object advanceBookingRequirement extends PropertyDef(
         iris = Set("http://schema.org/advanceBookingRequirement"),
         label = "advanceBookingRequirement",
         comment = """The amount of time that is required between accepting the offer and the actual usage of the resource or service.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

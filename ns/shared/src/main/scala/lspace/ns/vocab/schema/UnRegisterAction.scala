@@ -14,7 +14,7 @@ Related actions:<br/><br/>
 <li><a class="localLink" href="http://schema.org/LeaveAction">LeaveAction</a>: Unlike LeaveAction, UnRegisterAction implies that you are unregistering from a service you werer previously registered, rather than leaving a team/group of people.</li>
 </ul>
 """,
-        `@extends` = () => List(InteractAction.ontology)
+        `@extends` = List(InteractAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.InteractAction.Properties{
 

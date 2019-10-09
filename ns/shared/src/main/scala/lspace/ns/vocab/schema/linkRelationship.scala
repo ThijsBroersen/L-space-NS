@@ -8,8 +8,8 @@ object linkRelationship extends PropertyDef(
         iris = Set("http://schema.org/linkRelationship"),
         label = "linkRelationship",
         comment = """Indicates the relationship type of a Web link.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

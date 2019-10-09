@@ -8,8 +8,8 @@ object requiresSubscription extends PropertyDef(
         iris = Set("http://schema.org/requiresSubscription"),
         label = "requiresSubscription",
         comment = """Indicates if use of the media require a subscription  (either paid or free). Allowed values are <code>true</code> or <code>false</code> (note that an earlier version had 'yes', 'no').""",
-        `@extends` = () => List(),
-        `@range` = () => List(MediaSubscription.ontology, `@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`, MediaSubscription.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object ExerciseAction extends OntologyDef(
         iris = Set("http://schema.org/ExerciseAction"),
         label = "ExerciseAction",
         comment = """The act of participating in exertive activity for the purposes of improving health and fitness.""",
-        `@extends` = () => List(PlayAction.ontology)
+        `@extends` = List(PlayAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.PlayAction.Properties{
 lazy val diet = lspace.ns.vocab.schema.diet.property

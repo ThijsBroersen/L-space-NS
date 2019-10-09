@@ -6,7 +6,7 @@ object PaymentStatusType extends OntologyDef(
         iris = Set("http://schema.org/PaymentStatusType"),
         label = "PaymentStatusType",
         comment = """A specific payment status. For example, PaymentDue, PaymentComplete, etc.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

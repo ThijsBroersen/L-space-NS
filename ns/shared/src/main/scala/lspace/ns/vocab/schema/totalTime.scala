@@ -8,8 +8,8 @@ object totalTime extends PropertyDef(
         iris = Set("http://schema.org/totalTime"),
         label = "totalTime",
         comment = """The total time required to perform instructions or a direction (including time to prepare the supplies), in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 duration format</a>.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Duration.ontology)
+        `@extends` = List(),
+        `@range` = List(Duration.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

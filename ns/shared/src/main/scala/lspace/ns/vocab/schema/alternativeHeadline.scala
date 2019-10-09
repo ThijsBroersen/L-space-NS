@@ -8,8 +8,8 @@ object alternativeHeadline extends PropertyDef(
         iris = Set("http://schema.org/alternativeHeadline"),
         label = "alternativeHeadline",
         comment = """A secondary title of the CreativeWork.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

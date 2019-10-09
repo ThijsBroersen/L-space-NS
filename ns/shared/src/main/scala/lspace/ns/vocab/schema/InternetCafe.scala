@@ -6,7 +6,7 @@ object InternetCafe extends OntologyDef(
         iris = Set("http://schema.org/InternetCafe"),
         label = "InternetCafe",
         comment = """An internet cafe.""",
-        `@extends` = () => List(LocalBusiness.ontology)
+        `@extends` = List(LocalBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.LocalBusiness.Properties{
 

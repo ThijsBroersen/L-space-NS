@@ -8,8 +8,8 @@ object firstPerformance extends PropertyDef(
         iris = Set("http://schema.org/firstPerformance"),
         label = "firstPerformance",
         comment = """The date and place the work was first performed.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Event.ontology)
+        `@extends` = List(),
+        `@range` = List(Event.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

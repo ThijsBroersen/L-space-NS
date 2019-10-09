@@ -6,7 +6,7 @@ object CommentAction extends OntologyDef(
         iris = Set("http://schema.org/CommentAction"),
         label = "CommentAction",
         comment = """The act of generating a comment about a subject.""",
-        `@extends` = () => List(CommunicateAction.ontology)
+        `@extends` = List(CommunicateAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CommunicateAction.Properties{
 lazy val resultComment = lspace.ns.vocab.schema.resultComment.property

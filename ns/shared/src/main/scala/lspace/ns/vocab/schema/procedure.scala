@@ -8,8 +8,8 @@ object procedure extends PropertyDef(
         iris = Set("http://schema.org/procedure"),
         label = "procedure",
         comment = """A description of the procedure involved in setting up, using, and/or installing the device.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

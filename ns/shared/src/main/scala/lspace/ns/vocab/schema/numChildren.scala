@@ -8,8 +8,8 @@ object numChildren extends PropertyDef(
         iris = Set("http://schema.org/numChildren"),
         label = "numChildren",
         comment = """The number of children staying in the unit.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology, `@int`)
+        `@extends` = List(),
+        `@range` = List(`@int`, QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

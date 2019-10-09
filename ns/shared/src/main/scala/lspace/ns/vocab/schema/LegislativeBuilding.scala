@@ -6,7 +6,7 @@ object LegislativeBuilding extends OntologyDef(
         iris = Set("http://schema.org/LegislativeBuilding"),
         label = "LegislativeBuilding",
         comment = """A legislative building&#x2014;for example, the state capitol.""",
-        `@extends` = () => List(GovernmentBuilding.ontology)
+        `@extends` = List(GovernmentBuilding.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.GovernmentBuilding.Properties{
 

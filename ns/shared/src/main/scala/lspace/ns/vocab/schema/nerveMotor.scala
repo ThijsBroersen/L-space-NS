@@ -8,8 +8,8 @@ object nerveMotor extends PropertyDef(
         iris = Set("http://schema.org/nerveMotor"),
         label = "nerveMotor",
         comment = """The neurological pathway extension that involves muscle control.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Muscle.ontology)
+        `@extends` = List(),
+        `@range` = List(Muscle.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

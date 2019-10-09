@@ -8,8 +8,8 @@ object evidenceOrigin extends PropertyDef(
         iris = Set("http://schema.org/evidenceOrigin"),
         label = "evidenceOrigin",
         comment = """Source of the data used to formulate the guidance, e.g. RCT, consensus opinion, etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

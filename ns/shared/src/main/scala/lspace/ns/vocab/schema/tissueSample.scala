@@ -8,8 +8,8 @@ object tissueSample extends PropertyDef(
         iris = Set("http://schema.org/tissueSample"),
         label = "tissueSample",
         comment = """The type of tissue sample required for the test.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

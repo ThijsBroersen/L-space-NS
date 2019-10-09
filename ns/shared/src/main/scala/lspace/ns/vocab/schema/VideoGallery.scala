@@ -6,7 +6,7 @@ object VideoGallery extends OntologyDef(
         iris = Set("http://schema.org/VideoGallery"),
         label = "VideoGallery",
         comment = """Web page type: Video gallery page.""",
-        `@extends` = () => List(CollectionPage.ontology)
+        `@extends` = List(CollectionPage.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CollectionPage.Properties{
 

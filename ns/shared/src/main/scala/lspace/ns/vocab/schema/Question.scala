@@ -6,7 +6,7 @@ object Question extends OntologyDef(
         iris = Set("http://schema.org/Question"),
         label = "Question",
         comment = """A specific question - e.g. from a user seeking answers online, or collected in a Frequently Asked Questions (FAQ) document.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val acceptedAnswer = lspace.ns.vocab.schema.acceptedAnswer.property

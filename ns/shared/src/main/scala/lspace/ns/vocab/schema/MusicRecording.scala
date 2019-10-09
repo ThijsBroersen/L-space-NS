@@ -6,7 +6,7 @@ object MusicRecording extends OntologyDef(
         iris = Set("http://schema.org/MusicRecording"),
         label = "MusicRecording",
         comment = """A music recording (track), usually a single song.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val byArtist = lspace.ns.vocab.schema.byArtist.property

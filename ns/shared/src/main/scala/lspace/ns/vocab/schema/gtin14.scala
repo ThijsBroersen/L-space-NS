@@ -8,8 +8,8 @@ object gtin14 extends PropertyDef(
         iris = Set("http://schema.org/gtin14"),
         label = "gtin14",
         comment = """The GTIN-14 code of the product, or the product to which the offer refers. See <a href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN Summary</a> for more details.""",
-        `@extends` = () => List(identifier.property),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(identifier.property),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

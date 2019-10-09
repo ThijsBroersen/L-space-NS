@@ -8,7 +8,7 @@ object RentalCarReservation extends OntologyDef(
         comment = """A reservation for a rental car.<br/><br/>
 
 Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.""",
-        `@extends` = () => List(Reservation.ontology)
+        `@extends` = List(Reservation.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Reservation.Properties{
 lazy val dropoffLocation = lspace.ns.vocab.schema.dropoffLocation.property

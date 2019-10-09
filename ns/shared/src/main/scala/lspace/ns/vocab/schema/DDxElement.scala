@@ -6,7 +6,7 @@ object DDxElement extends OntologyDef(
         iris = Set("http://schema.org/DDxElement"),
         label = "DDxElement",
         comment = """An alternative, closely-related condition typically considered later in the differential diagnosis process along with the signs that are used to distinguish it.""",
-        `@extends` = () => List(MedicalIntangible.ontology)
+        `@extends` = List(MedicalIntangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalIntangible.Properties{
 lazy val diagnosis = lspace.ns.vocab.schema.diagnosis.property

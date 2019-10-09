@@ -8,7 +8,7 @@ object Attorney extends OntologyDef(
         comment = """Professional service: Attorney. <br/><br/>
 
 This type is deprecated - <a class="localLink" href="http://schema.org/LegalService">LegalService</a> is more inclusive and less ambiguous.""",
-        `@extends` = () => List(LegalService.ontology)
+        `@extends` = List(LegalService.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.LegalService.Properties{
 

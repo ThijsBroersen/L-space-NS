@@ -6,7 +6,7 @@ object TransferAction extends OntologyDef(
         iris = Set("http://schema.org/TransferAction"),
         label = "TransferAction",
         comment = """The act of transferring/moving (abstract or concrete) animate or inanimate objects from one place to another.""",
-        `@extends` = () => List(Action.ontology)
+        `@extends` = List(Action.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Action.Properties{
 lazy val fromLocation = lspace.ns.vocab.schema.fromLocation.property

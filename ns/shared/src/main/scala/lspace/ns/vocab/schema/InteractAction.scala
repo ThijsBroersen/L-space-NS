@@ -6,7 +6,7 @@ object InteractAction extends OntologyDef(
         iris = Set("http://schema.org/InteractAction"),
         label = "InteractAction",
         comment = """The act of interacting with another person or organization.""",
-        `@extends` = () => List(Action.ontology)
+        `@extends` = List(Action.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Action.Properties{
 

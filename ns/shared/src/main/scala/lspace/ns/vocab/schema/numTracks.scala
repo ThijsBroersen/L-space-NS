@@ -8,8 +8,8 @@ object numTracks extends PropertyDef(
         iris = Set("http://schema.org/numTracks"),
         label = "numTracks",
         comment = """The number of tracks in this album or playlist.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@int`)
+        `@extends` = List(),
+        `@range` = List(`@int`)
        ){
 
 override lazy val properties: List[LProperty] = List()

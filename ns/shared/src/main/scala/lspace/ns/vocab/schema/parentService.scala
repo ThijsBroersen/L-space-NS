@@ -8,8 +8,8 @@ object parentService extends PropertyDef(
         iris = Set("http://schema.org/parentService"),
         label = "parentService",
         comment = """A broadcast service to which the broadcast service may belong to such as regional variations of a national channel.""",
-        `@extends` = () => List(),
-        `@range` = () => List(BroadcastService.ontology)
+        `@extends` = List(),
+        `@range` = List(BroadcastService.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

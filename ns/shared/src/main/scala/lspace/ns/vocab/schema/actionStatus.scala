@@ -8,8 +8,8 @@ object actionStatus extends PropertyDef(
         iris = Set("http://schema.org/actionStatus"),
         label = "actionStatus",
         comment = """Indicates the current disposition of the Action.""",
-        `@extends` = () => List(),
-        `@range` = () => List(ActionStatusType.ontology)
+        `@extends` = List(),
+        `@range` = List(ActionStatusType.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

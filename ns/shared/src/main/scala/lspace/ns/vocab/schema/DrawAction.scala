@@ -6,7 +6,7 @@ object DrawAction extends OntologyDef(
         iris = Set("http://schema.org/DrawAction"),
         label = "DrawAction",
         comment = """The act of producing a visual/graphical representation of an object, typically with a pen/pencil and paper as instruments.""",
-        `@extends` = () => List(CreateAction.ontology)
+        `@extends` = List(CreateAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreateAction.Properties{
 

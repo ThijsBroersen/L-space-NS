@@ -8,8 +8,8 @@ object offeredBy extends PropertyDef(
         iris = Set("http://schema.org/offeredBy"),
         label = "offeredBy",
         comment = """A pointer to the organization or person making the offer.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology, Organization.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology, Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

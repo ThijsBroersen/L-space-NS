@@ -6,7 +6,7 @@ object MonetaryAmountDistribution extends OntologyDef(
         iris = Set("http://schema.org/MonetaryAmountDistribution"),
         label = "MonetaryAmountDistribution",
         comment = """A statistical distribution of monetary amounts.""",
-        `@extends` = () => List(QuantitativeValueDistribution.ontology)
+        `@extends` = List(QuantitativeValueDistribution.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.QuantitativeValueDistribution.Properties{
 lazy val currency = lspace.ns.vocab.schema.currency.property

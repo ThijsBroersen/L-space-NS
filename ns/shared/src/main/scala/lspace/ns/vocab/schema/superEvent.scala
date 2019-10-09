@@ -8,8 +8,8 @@ object superEvent extends PropertyDef(
         iris = Set("http://schema.org/superEvent"),
         label = "superEvent",
         comment = """An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Event.ontology)
+        `@extends` = List(),
+        `@range` = List(Event.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

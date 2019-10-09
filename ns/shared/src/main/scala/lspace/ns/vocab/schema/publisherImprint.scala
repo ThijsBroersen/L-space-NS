@@ -8,8 +8,8 @@ object publisherImprint extends PropertyDef(
         iris = Set("http://schema.org/publisherImprint"),
         label = "publisherImprint",
         comment = """The publishing division which published the comic.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

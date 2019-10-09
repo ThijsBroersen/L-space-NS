@@ -8,8 +8,8 @@ object cssSelector extends PropertyDef(
         iris = Set("http://schema.org/cssSelector"),
         label = "cssSelector",
         comment = """A CSS selector, e.g. of a <a class="localLink" href="http://schema.org/SpeakableSpecification">SpeakableSpecification</a> or <a class="localLink" href="http://schema.org/WebPageElement">WebPageElement</a>. In the latter case, multiple matches within a page can constitute a single conceptual "Web page element".""",
-        `@extends` = () => List(),
-        `@range` = () => List(CssSelectorType.ontology)
+        `@extends` = List(),
+        `@range` = List(CssSelectorType.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

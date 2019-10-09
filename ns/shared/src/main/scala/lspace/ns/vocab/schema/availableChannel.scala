@@ -8,8 +8,8 @@ object availableChannel extends PropertyDef(
         iris = Set("http://schema.org/availableChannel"),
         label = "availableChannel",
         comment = """A means of accessing the service (e.g. a phone bank, a web site, a location, etc.).""",
-        `@extends` = () => List(),
-        `@range` = () => List(ServiceChannel.ontology)
+        `@extends` = List(),
+        `@range` = List(ServiceChannel.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

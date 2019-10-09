@@ -8,8 +8,8 @@ object hasCategoryCode extends PropertyDef(
         iris = Set("http://schema.org/hasCategoryCode"),
         label = "hasCategoryCode",
         comment = """A Category code contained in this code set.""",
-        `@extends` = () => List(hasDefinedTerm.property),
-        `@range` = () => List(CategoryCode.ontology)
+        `@extends` = List(hasDefinedTerm.property),
+        `@range` = List(CategoryCode.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

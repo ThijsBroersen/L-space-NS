@@ -8,8 +8,8 @@ object monthlyMinimumRepaymentAmount extends PropertyDef(
         iris = Set("http://schema.org/monthlyMinimumRepaymentAmount"),
         label = "monthlyMinimumRepaymentAmount",
         comment = """The minimum payment is the lowest amount of money that one is required to pay on a credit card statement each month.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`, MonetaryAmount.ontology)
+        `@extends` = List(),
+        `@range` = List(MonetaryAmount.ontology, `@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

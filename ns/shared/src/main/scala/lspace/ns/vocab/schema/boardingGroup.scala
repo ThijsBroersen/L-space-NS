@@ -8,8 +8,8 @@ object boardingGroup extends PropertyDef(
         iris = Set("http://schema.org/boardingGroup"),
         label = "boardingGroup",
         comment = """The airline-specific indicator of boarding order / preference.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

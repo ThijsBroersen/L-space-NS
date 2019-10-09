@@ -8,8 +8,8 @@ object equal extends PropertyDef(
         iris = Set("http://schema.org/equal"),
         label = "equal",
         comment = """This ordering relation for qualitative values indicates that the subject is equal to the object.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QualitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QualitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

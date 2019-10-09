@@ -8,8 +8,8 @@ object iswcCode extends PropertyDef(
         iris = Set("http://schema.org/iswcCode"),
         label = "iswcCode",
         comment = """The International Standard Musical Work Code for the composition.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

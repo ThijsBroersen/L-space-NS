@@ -8,8 +8,8 @@ object requiredMinAge extends PropertyDef(
         iris = Set("http://schema.org/requiredMinAge"),
         label = "requiredMinAge",
         comment = """Audiences defined by a person's minimum age.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@int`)
+        `@extends` = List(),
+        `@range` = List(`@int`)
        ){
 
 override lazy val properties: List[LProperty] = List()

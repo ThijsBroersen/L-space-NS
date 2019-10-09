@@ -6,7 +6,7 @@ object Bridge extends OntologyDef(
         iris = Set("http://schema.org/Bridge"),
         label = "Bridge",
         comment = """A bridge.""",
-        `@extends` = () => List(CivicStructure.ontology)
+        `@extends` = List(CivicStructure.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CivicStructure.Properties{
 

@@ -6,7 +6,7 @@ object ClaimReview extends OntologyDef(
         iris = Set("http://schema.org/ClaimReview"),
         label = "ClaimReview",
         comment = """A fact-checking review of claims made (or reported) in some creative work (referenced via itemReviewed).""",
-        `@extends` = () => List(Review.ontology)
+        `@extends` = List(Review.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Review.Properties{
 lazy val claimReviewed = lspace.ns.vocab.schema.claimReviewed.property

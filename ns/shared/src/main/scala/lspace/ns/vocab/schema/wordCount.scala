@@ -8,8 +8,8 @@ object wordCount extends PropertyDef(
         iris = Set("http://schema.org/wordCount"),
         label = "wordCount",
         comment = """The number of words in the text of the Article.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@int`)
+        `@extends` = List(),
+        `@range` = List(`@int`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object relatedTo extends PropertyDef(
         iris = Set("http://schema.org/relatedTo"),
         label = "relatedTo",
         comment = """The most generic familial relation.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

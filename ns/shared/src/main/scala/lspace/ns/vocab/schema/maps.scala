@@ -8,8 +8,8 @@ object maps extends PropertyDef(
         iris = Set("http://schema.org/maps"),
         label = "maps",
         comment = """A URL to a map of the place.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

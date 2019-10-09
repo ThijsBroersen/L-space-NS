@@ -6,7 +6,7 @@ object ReplaceAction extends OntologyDef(
         iris = Set("http://schema.org/ReplaceAction"),
         label = "ReplaceAction",
         comment = """The act of editing a recipient by replacing an old object with a new object.""",
-        `@extends` = () => List(UpdateAction.ontology)
+        `@extends` = List(UpdateAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.UpdateAction.Properties{
 lazy val replacee = lspace.ns.vocab.schema.replacee.property

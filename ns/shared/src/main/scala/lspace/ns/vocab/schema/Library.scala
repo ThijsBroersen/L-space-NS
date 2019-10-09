@@ -6,7 +6,7 @@ object Library extends OntologyDef(
         iris = Set("http://schema.org/Library"),
         label = "Library",
         comment = """A library.""",
-        `@extends` = () => List(LocalBusiness.ontology)
+        `@extends` = List(LocalBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.LocalBusiness.Properties{
 

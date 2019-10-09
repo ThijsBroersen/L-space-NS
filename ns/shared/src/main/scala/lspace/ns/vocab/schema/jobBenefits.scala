@@ -8,8 +8,8 @@ object jobBenefits extends PropertyDef(
         iris = Set("http://schema.org/jobBenefits"),
         label = "jobBenefits",
         comment = """Description of benefits associated with the job.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

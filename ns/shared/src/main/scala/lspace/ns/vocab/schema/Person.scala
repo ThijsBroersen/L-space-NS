@@ -6,7 +6,7 @@ object Person extends OntologyDef(
         iris = Set("http://schema.org/Person"),
         label = "Person",
         comment = """A person (alive, dead, undead, or fictional).""",
-        `@extends` = () => List(Thing.ontology)
+        `@extends` = List(Thing.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Thing.Properties{
 lazy val additionalName = lspace.ns.vocab.schema.additionalName.property

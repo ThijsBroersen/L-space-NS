@@ -8,8 +8,8 @@ object game extends PropertyDef(
         iris = Set("http://schema.org/game"),
         label = "game",
         comment = """Video game which is played on this server.""",
-        `@extends` = () => List(),
-        `@range` = () => List(VideoGame.ontology)
+        `@extends` = List(),
+        `@range` = List(VideoGame.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

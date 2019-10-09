@@ -8,8 +8,8 @@ object programmingModel extends PropertyDef(
         iris = Set("http://schema.org/programmingModel"),
         label = "programmingModel",
         comment = """Indicates whether API is managed or unmanaged.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

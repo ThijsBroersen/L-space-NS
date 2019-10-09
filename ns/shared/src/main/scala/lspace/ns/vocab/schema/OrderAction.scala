@@ -6,7 +6,7 @@ object OrderAction extends OntologyDef(
         iris = Set("http://schema.org/OrderAction"),
         label = "OrderAction",
         comment = """An agent orders an object/product/service to be delivered/sent.""",
-        `@extends` = () => List(TradeAction.ontology)
+        `@extends` = List(TradeAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.TradeAction.Properties{
 lazy val deliveryMethod = lspace.ns.vocab.schema.deliveryMethod.property

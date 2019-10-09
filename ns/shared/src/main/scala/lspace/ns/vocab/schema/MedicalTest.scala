@@ -6,7 +6,7 @@ object MedicalTest extends OntologyDef(
         iris = Set("http://schema.org/MedicalTest"),
         label = "MedicalTest",
         comment = """Any medical test, typically performed for diagnostic purposes.""",
-        `@extends` = () => List(MedicalEntity.ontology)
+        `@extends` = List(MedicalEntity.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEntity.Properties{
 lazy val affectedBy = lspace.ns.vocab.schema.affectedBy.property

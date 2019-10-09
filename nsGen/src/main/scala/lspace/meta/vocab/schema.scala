@@ -102,7 +102,7 @@ object schema {
         iris = ${ontology.iris.map(v => s""""$v"""")},
         label = "${ontology.label("en").getOrElse("")}",
         comment = \"\"\"${comment}\"\"\",
-        `@extends` = () => ${ontology
+        `@extends` = ${ontology
         .extendedClasses()
         .map {
           case c if c.iri.startsWith("@") => s"`${c.iri}`"
@@ -262,7 +262,7 @@ object schema {
         iris = ${property.iris.map(v => s""""$v"""")},
         label = "${property.label("en").getOrElse("")}",
         comment = \"\"\"${comment}\"\"\",
-        `@extends` = () => ${property
+        `@extends` = ${property
         .extendedClasses()
         .map {
           case c if c.iri.startsWith("@") => s"`${c.iri}`"
@@ -272,7 +272,7 @@ object schema {
               .reverse
               .validObjectName + ".property"
         }},
-        `@range` = () => ${property
+        `@range` = ${property
         .range()
         .map {
           case c: Ontology =>

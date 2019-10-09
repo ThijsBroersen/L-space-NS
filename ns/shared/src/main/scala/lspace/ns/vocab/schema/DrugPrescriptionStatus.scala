@@ -6,7 +6,7 @@ object DrugPrescriptionStatus extends OntologyDef(
         iris = Set("http://schema.org/DrugPrescriptionStatus"),
         label = "DrugPrescriptionStatus",
         comment = """Indicates whether this drug is available by prescription or over-the-counter.""",
-        `@extends` = () => List(MedicalEnumeration.ontology)
+        `@extends` = List(MedicalEnumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
 

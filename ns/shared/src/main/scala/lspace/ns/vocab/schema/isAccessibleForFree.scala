@@ -8,8 +8,8 @@ object isAccessibleForFree extends PropertyDef(
         iris = Set("http://schema.org/isAccessibleForFree"),
         label = "isAccessibleForFree",
         comment = """A flag to signal that the item, event, or place is accessible for free.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

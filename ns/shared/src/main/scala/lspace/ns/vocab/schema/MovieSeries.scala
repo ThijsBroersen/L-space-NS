@@ -6,7 +6,7 @@ object MovieSeries extends OntologyDef(
         iris = Set("http://schema.org/MovieSeries"),
         label = "MovieSeries",
         comment = """A series of movies. Included movies can be indicated with the hasPart property.""",
-        `@extends` = () => List(CreativeWorkSeries.ontology)
+        `@extends` = List(CreativeWorkSeries.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWorkSeries.Properties{
 lazy val actor = lspace.ns.vocab.schema.actor.property

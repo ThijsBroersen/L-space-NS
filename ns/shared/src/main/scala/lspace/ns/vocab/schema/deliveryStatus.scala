@@ -8,8 +8,8 @@ object deliveryStatus extends PropertyDef(
         iris = Set("http://schema.org/deliveryStatus"),
         label = "deliveryStatus",
         comment = """New entry added as the package passes through each leg of its journey (from shipment to final delivery).""",
-        `@extends` = () => List(),
-        `@range` = () => List(DeliveryEvent.ontology)
+        `@extends` = List(),
+        `@range` = List(DeliveryEvent.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

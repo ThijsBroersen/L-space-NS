@@ -8,8 +8,8 @@ object contributor extends PropertyDef(
         iris = Set("http://schema.org/contributor"),
         label = "contributor",
         comment = """A secondary contributor to the CreativeWork or Event.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology, Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology, Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

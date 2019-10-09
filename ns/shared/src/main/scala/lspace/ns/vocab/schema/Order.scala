@@ -6,7 +6,7 @@ object Order extends OntologyDef(
         iris = Set("http://schema.org/Order"),
         label = "Order",
         comment = """An order is a confirmation of a transaction (a receipt), which can contain multiple line items, each represented by an Offer that has been accepted by the customer.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val acceptedOffer = lspace.ns.vocab.schema.acceptedOffer.property

@@ -8,8 +8,8 @@ object buyer extends PropertyDef(
         iris = Set("http://schema.org/buyer"),
         label = "buyer",
         comment = """A sub property of participant. The participant/person/organization that bought the object.""",
-        `@extends` = () => List(participant.property),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(participant.property),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

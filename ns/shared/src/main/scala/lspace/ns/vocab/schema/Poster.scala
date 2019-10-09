@@ -6,7 +6,7 @@ object Poster extends OntologyDef(
         iris = Set("http://schema.org/Poster"),
         label = "Poster",
         comment = """A large, usually printed placard, bill, or announcement, often illustrated, that is posted to advertise or publicize something.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 

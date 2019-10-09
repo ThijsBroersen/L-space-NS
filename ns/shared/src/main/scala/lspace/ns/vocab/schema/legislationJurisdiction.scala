@@ -8,8 +8,8 @@ object legislationJurisdiction extends PropertyDef(
         iris = Set("http://schema.org/legislationJurisdiction"),
         label = "legislationJurisdiction",
         comment = """The jurisdiction from which the legislation originates.""",
-        `@extends` = () => List(spatialCoverage.property),
-        `@range` = () => List(AdministrativeArea.ontology, Text.ontology)
+        `@extends` = List(spatialCoverage.property),
+        `@range` = List(`@string`, AdministrativeArea.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

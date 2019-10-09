@@ -6,7 +6,7 @@ object NutritionInformation extends OntologyDef(
         iris = Set("http://schema.org/NutritionInformation"),
         label = "NutritionInformation",
         comment = """Nutritional information about the recipe.""",
-        `@extends` = () => List(StructuredValue.ontology)
+        `@extends` = List(StructuredValue.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.StructuredValue.Properties{
 lazy val calories = lspace.ns.vocab.schema.calories.property

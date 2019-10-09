@@ -8,8 +8,8 @@ object followup extends PropertyDef(
         iris = Set("http://schema.org/followup"),
         label = "followup",
         comment = """Typical or recommended followup care after the procedure is performed.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

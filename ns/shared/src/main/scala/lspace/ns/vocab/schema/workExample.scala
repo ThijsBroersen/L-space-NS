@@ -8,8 +8,8 @@ object workExample extends PropertyDef(
         iris = Set("http://schema.org/workExample"),
         label = "workExample",
         comment = """Example/instance/realization/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook.""",
-        `@extends` = () => List(),
-        `@range` = () => List(CreativeWork.ontology)
+        `@extends` = List(),
+        `@range` = List(CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

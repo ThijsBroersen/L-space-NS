@@ -8,8 +8,8 @@ object taxID extends PropertyDef(
         iris = Set("http://schema.org/taxID"),
         label = "taxID",
         comment = """The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.""",
-        `@extends` = () => List(identifier.property),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(identifier.property),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

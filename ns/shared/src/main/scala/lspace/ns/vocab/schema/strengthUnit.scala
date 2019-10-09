@@ -8,8 +8,8 @@ object strengthUnit extends PropertyDef(
         iris = Set("http://schema.org/strengthUnit"),
         label = "strengthUnit",
         comment = """The units of an active ingredient's strength, e.g. mg.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

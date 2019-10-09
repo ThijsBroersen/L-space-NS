@@ -8,8 +8,8 @@ object referenceQuantity extends PropertyDef(
         iris = Set("http://schema.org/referenceQuantity"),
         label = "referenceQuantity",
         comment = """The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh of electricity. This property is a replacement for unitOfMeasurement for the advanced cases where the price does not relate to a standard unit.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

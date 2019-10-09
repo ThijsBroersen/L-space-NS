@@ -8,8 +8,8 @@ object aggregateRating extends PropertyDef(
         iris = Set("http://schema.org/aggregateRating"),
         label = "aggregateRating",
         comment = """The overall rating, based on a collection of reviews or ratings, of the item.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AggregateRating.ontology)
+        `@extends` = List(),
+        `@range` = List(AggregateRating.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object infectiousAgent extends PropertyDef(
         iris = Set("http://schema.org/infectiousAgent"),
         label = "infectiousAgent",
         comment = """The actual infectious agent, such as a specific bacterium.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

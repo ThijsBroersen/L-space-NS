@@ -8,8 +8,8 @@ object bodyType extends PropertyDef(
         iris = Set("http://schema.org/bodyType"),
         label = "bodyType",
         comment = """Indicates the design and body style of the vehicle (e.g. station wagon, hatchback, etc.).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, QualitativeValue.ontology, URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology, `@string`, QualitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

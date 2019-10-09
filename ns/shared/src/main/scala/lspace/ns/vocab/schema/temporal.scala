@@ -9,8 +9,8 @@ object temporal extends PropertyDef(
         label = "temporal",
         comment = """The "temporal" property can be used in cases where more specific properties
 (e.g. <a class="localLink" href="http://schema.org/temporalCoverage">temporalCoverage</a>, <a class="localLink" href="http://schema.org/dateCreated">dateCreated</a>, <a class="localLink" href="http://schema.org/dateModified">dateModified</a>, <a class="localLink" href="http://schema.org/datePublished">datePublished</a>) are not known to be appropriate.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@datetime`, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@datetime`, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

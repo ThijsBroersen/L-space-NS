@@ -6,7 +6,7 @@ object ReturnAction extends OntologyDef(
         iris = Set("http://schema.org/ReturnAction"),
         label = "ReturnAction",
         comment = """The act of returning to the origin that which was previously received (concrete objects) or taken (ownership).""",
-        `@extends` = () => List(TransferAction.ontology)
+        `@extends` = List(TransferAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.TransferAction.Properties{
 lazy val recipient = lspace.ns.vocab.schema.recipient.property

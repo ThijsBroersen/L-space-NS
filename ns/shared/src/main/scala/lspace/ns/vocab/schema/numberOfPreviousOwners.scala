@@ -10,8 +10,8 @@ object numberOfPreviousOwners extends PropertyDef(
         comment = """The number of owners of the vehicle, including the current one.<br/><br/>
 
 Typical unit code(s): C62""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`, QuantitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology, `@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object SelfStorage extends OntologyDef(
         iris = Set("http://schema.org/SelfStorage"),
         label = "SelfStorage",
         comment = """A self-storage facility.""",
-        `@extends` = () => List(LocalBusiness.ontology)
+        `@extends` = List(LocalBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.LocalBusiness.Properties{
 

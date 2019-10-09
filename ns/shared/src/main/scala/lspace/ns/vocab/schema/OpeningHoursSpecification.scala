@@ -10,7 +10,7 @@ object OpeningHoursSpecification extends OntologyDef(
 The place is <strong>open</strong> if the <a class="localLink" href="http://schema.org/opens">opens</a> property is specified, and <strong>closed</strong> otherwise.<br/><br/>
 
 If the value for the <a class="localLink" href="http://schema.org/closes">closes</a> property is less than the value for the <a class="localLink" href="http://schema.org/opens">opens</a> property then the hour range is assumed to span over the next day.""",
-        `@extends` = () => List(StructuredValue.ontology)
+        `@extends` = List(StructuredValue.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.StructuredValue.Properties{
 lazy val closes = lspace.ns.vocab.schema.closes.property

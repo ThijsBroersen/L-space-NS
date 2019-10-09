@@ -6,7 +6,7 @@ object Ligament extends OntologyDef(
         iris = Set("http://schema.org/Ligament"),
         label = "Ligament",
         comment = """A short band of tough, flexible, fibrous connective tissue that functions to connect multiple bones, cartilages, and structurally support joints.""",
-        `@extends` = () => List(AnatomicalStructure.ontology)
+        `@extends` = List(AnatomicalStructure.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.AnatomicalStructure.Properties{
 

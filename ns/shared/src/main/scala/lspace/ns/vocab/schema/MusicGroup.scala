@@ -6,7 +6,7 @@ object MusicGroup extends OntologyDef(
         iris = Set("http://schema.org/MusicGroup"),
         label = "MusicGroup",
         comment = """A musical group, such as a band, an orchestra, or a choir. Can also be a solo musician.""",
-        `@extends` = () => List(PerformingGroup.ontology)
+        `@extends` = List(PerformingGroup.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.PerformingGroup.Properties{
 lazy val album = lspace.ns.vocab.schema.album.property

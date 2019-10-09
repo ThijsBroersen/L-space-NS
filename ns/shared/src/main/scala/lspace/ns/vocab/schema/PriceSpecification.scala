@@ -6,7 +6,7 @@ object PriceSpecification extends OntologyDef(
         iris = Set("http://schema.org/PriceSpecification"),
         label = "PriceSpecification",
         comment = """A structured value representing a price or price range. Typically, only the subclasses of this type are used for markup. It is recommended to use <a class="localLink" href="http://schema.org/MonetaryAmount">MonetaryAmount</a> to describe independent amounts of money such as a salary, credit card limits, etc.""",
-        `@extends` = () => List(StructuredValue.ontology)
+        `@extends` = List(StructuredValue.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.StructuredValue.Properties{
 lazy val eligibleQuantity = lspace.ns.vocab.schema.eligibleQuantity.property

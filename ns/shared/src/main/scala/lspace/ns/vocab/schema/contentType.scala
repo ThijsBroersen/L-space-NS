@@ -8,8 +8,8 @@ object contentType extends PropertyDef(
         iris = Set("http://schema.org/contentType"),
         label = "contentType",
         comment = """The supported content type(s) for an EntryPoint response.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

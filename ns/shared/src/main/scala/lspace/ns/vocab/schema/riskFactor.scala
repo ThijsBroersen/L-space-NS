@@ -8,8 +8,8 @@ object riskFactor extends PropertyDef(
         iris = Set("http://schema.org/riskFactor"),
         label = "riskFactor",
         comment = """A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MedicalRiskFactor.ontology)
+        `@extends` = List(),
+        `@range` = List(MedicalRiskFactor.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

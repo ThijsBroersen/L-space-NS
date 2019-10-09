@@ -8,8 +8,8 @@ object itemReviewed extends PropertyDef(
         iris = Set("http://schema.org/itemReviewed"),
         label = "itemReviewed",
         comment = """The item that is being reviewed/rated.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Thing.ontology)
+        `@extends` = List(),
+        `@range` = List(Thing.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

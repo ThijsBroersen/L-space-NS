@@ -8,8 +8,8 @@ object includesHealthPlanNetwork extends PropertyDef(
         iris = Set("http://schema.org/includesHealthPlanNetwork"),
         label = "includesHealthPlanNetwork",
         comment = """Networks covered by this plan.""",
-        `@extends` = () => List(),
-        `@range` = () => List(HealthPlanNetwork.ontology)
+        `@extends` = List(),
+        `@range` = List(HealthPlanNetwork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

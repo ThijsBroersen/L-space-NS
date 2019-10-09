@@ -8,8 +8,8 @@ object memoryRequirements extends PropertyDef(
         iris = Set("http://schema.org/memoryRequirements"),
         label = "memoryRequirements",
         comment = """Minimum memory requirements.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, URL.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

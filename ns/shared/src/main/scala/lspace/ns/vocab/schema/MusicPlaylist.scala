@@ -6,7 +6,7 @@ object MusicPlaylist extends OntologyDef(
         iris = Set("http://schema.org/MusicPlaylist"),
         label = "MusicPlaylist",
         comment = """A collection of music tracks in playlist form.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val numTracks = lspace.ns.vocab.schema.numTracks.property

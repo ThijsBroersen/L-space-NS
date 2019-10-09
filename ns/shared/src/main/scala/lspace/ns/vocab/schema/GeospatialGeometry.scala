@@ -6,7 +6,7 @@ object GeospatialGeometry extends OntologyDef(
         iris = Set("http://schema.org/GeospatialGeometry"),
         label = "GeospatialGeometry",
         comment = """(Eventually to be defined as) a supertype of GeoShape designed to accommodate definitions from Geo-Spatial best practices.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val geoContains = lspace.ns.vocab.schema.geoContains.property

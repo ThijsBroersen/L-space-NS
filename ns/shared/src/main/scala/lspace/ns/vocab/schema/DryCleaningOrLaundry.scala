@@ -6,7 +6,7 @@ object DryCleaningOrLaundry extends OntologyDef(
         iris = Set("http://schema.org/DryCleaningOrLaundry"),
         label = "DryCleaningOrLaundry",
         comment = """A dry-cleaning business.""",
-        `@extends` = () => List(LocalBusiness.ontology)
+        `@extends` = List(LocalBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.LocalBusiness.Properties{
 

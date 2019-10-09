@@ -6,7 +6,7 @@ object Ticket extends OntologyDef(
         iris = Set("http://schema.org/Ticket"),
         label = "Ticket",
         comment = """Used to describe a ticket to an event, a flight, a bus ride, etc.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val dateIssued = lspace.ns.vocab.schema.dateIssued.property

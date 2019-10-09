@@ -8,8 +8,8 @@ object orderNumber extends PropertyDef(
         iris = Set("http://schema.org/orderNumber"),
         label = "orderNumber",
         comment = """The identifier of the transaction.""",
-        `@extends` = () => List(identifier.property),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(identifier.property),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object AdministrativeArea extends OntologyDef(
         iris = Set("http://schema.org/AdministrativeArea"),
         label = "AdministrativeArea",
         comment = """A geographical region, typically under the jurisdiction of a particular government.""",
-        `@extends` = () => List(Place.ontology)
+        `@extends` = List(Place.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Place.Properties{
 

@@ -8,8 +8,8 @@ object permitAudience extends PropertyDef(
         iris = Set("http://schema.org/permitAudience"),
         label = "permitAudience",
         comment = """The target audience for this permit.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Audience.ontology)
+        `@extends` = List(),
+        `@range` = List(Audience.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

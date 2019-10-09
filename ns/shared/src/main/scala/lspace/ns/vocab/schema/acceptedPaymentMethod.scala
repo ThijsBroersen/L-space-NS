@@ -8,8 +8,8 @@ object acceptedPaymentMethod extends PropertyDef(
         iris = Set("http://schema.org/acceptedPaymentMethod"),
         label = "acceptedPaymentMethod",
         comment = """The payment method(s) accepted by seller for this offer.""",
-        `@extends` = () => List(),
-        `@range` = () => List(PaymentMethod.ontology, LoanOrCredit.ontology)
+        `@extends` = List(),
+        `@range` = List(LoanOrCredit.ontology, PaymentMethod.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

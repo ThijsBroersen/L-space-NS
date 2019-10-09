@@ -8,8 +8,8 @@ object catalogNumber extends PropertyDef(
         iris = Set("http://schema.org/catalogNumber"),
         label = "catalogNumber",
         comment = """The catalog number for the release.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

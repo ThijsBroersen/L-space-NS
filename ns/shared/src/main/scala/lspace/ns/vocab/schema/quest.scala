@@ -8,8 +8,8 @@ object quest extends PropertyDef(
         iris = Set("http://schema.org/quest"),
         label = "quest",
         comment = """The task that a player-controlled character, or group of characters may complete in order to gain a reward.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Thing.ontology)
+        `@extends` = List(),
+        `@range` = List(Thing.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

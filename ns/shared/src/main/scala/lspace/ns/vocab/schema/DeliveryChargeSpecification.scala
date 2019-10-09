@@ -6,7 +6,7 @@ object DeliveryChargeSpecification extends OntologyDef(
         iris = Set("http://schema.org/DeliveryChargeSpecification"),
         label = "DeliveryChargeSpecification",
         comment = """The price for the delivery of an offer using a particular delivery method.""",
-        `@extends` = () => List(PriceSpecification.ontology)
+        `@extends` = List(PriceSpecification.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.PriceSpecification.Properties{
 lazy val appliesToDeliveryMethod = lspace.ns.vocab.schema.appliesToDeliveryMethod.property

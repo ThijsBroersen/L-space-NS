@@ -8,8 +8,8 @@ object mentions extends PropertyDef(
         iris = Set("http://schema.org/mentions"),
         label = "mentions",
         comment = """Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Thing.ontology)
+        `@extends` = List(),
+        `@range` = List(Thing.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -13,7 +13,7 @@ Related actions:<br/><br/>
 <li><a class="localLink" href="http://schema.org/AcceptAction">AcceptAction</a>: The antonym of RejectAction.</li>
 </ul>
 """,
-        `@extends` = () => List(AllocateAction.ontology)
+        `@extends` = List(AllocateAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.AllocateAction.Properties{
 

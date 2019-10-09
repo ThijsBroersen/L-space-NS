@@ -8,8 +8,8 @@ object urlTemplate extends PropertyDef(
         iris = Set("http://schema.org/urlTemplate"),
         label = "urlTemplate",
         comment = """An url template (RFC6570) that will be used to construct the target of the execution of the action.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

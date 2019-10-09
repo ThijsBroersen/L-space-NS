@@ -6,7 +6,7 @@ object AutomatedTeller extends OntologyDef(
         iris = Set("http://schema.org/AutomatedTeller"),
         label = "AutomatedTeller",
         comment = """ATM/cash machine.""",
-        `@extends` = () => List(FinancialService.ontology)
+        `@extends` = List(FinancialService.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.FinancialService.Properties{
 

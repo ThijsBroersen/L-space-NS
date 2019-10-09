@@ -8,8 +8,8 @@ object operatingSystem extends PropertyDef(
         iris = Set("http://schema.org/operatingSystem"),
         label = "operatingSystem",
         comment = """Operating systems supported (Windows 7, OSX 10.6, Android 1.6).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

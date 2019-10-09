@@ -8,8 +8,8 @@ object bookFormat extends PropertyDef(
         iris = Set("http://schema.org/bookFormat"),
         label = "bookFormat",
         comment = """The format of the book.""",
-        `@extends` = () => List(),
-        `@range` = () => List(BookFormatType.ontology)
+        `@extends` = List(),
+        `@range` = List(BookFormatType.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

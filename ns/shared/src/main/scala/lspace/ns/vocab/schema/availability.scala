@@ -8,8 +8,8 @@ object availability extends PropertyDef(
         iris = Set("http://schema.org/availability"),
         label = "availability",
         comment = """The availability of this item&#x2014;for example In stock, Out of stock, Pre-order, etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(ItemAvailability.ontology)
+        `@extends` = List(),
+        `@range` = List(ItemAvailability.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

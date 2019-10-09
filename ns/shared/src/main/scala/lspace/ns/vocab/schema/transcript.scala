@@ -8,8 +8,8 @@ object transcript extends PropertyDef(
         iris = Set("http://schema.org/transcript"),
         label = "transcript",
         comment = """If this MediaObject is an AudioObject or VideoObject, the transcript of that object.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

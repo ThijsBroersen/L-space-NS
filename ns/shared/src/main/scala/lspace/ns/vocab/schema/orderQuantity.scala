@@ -8,8 +8,8 @@ object orderQuantity extends PropertyDef(
         iris = Set("http://schema.org/orderQuantity"),
         label = "orderQuantity",
         comment = """The number of the item ordered. If the property is not set, assume the quantity is one.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

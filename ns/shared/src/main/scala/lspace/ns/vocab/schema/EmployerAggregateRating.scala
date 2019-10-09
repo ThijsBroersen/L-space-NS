@@ -6,7 +6,7 @@ object EmployerAggregateRating extends OntologyDef(
         iris = Set("http://schema.org/EmployerAggregateRating"),
         label = "EmployerAggregateRating",
         comment = """An aggregate rating of an Organization related to its role as an employer.""",
-        `@extends` = () => List(AggregateRating.ontology)
+        `@extends` = List(AggregateRating.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.AggregateRating.Properties{
 

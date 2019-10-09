@@ -8,8 +8,8 @@ object clipNumber extends PropertyDef(
         iris = Set("http://schema.org/clipNumber"),
         label = "clipNumber",
         comment = """Position of the clip within an ordered group of clips.""",
-        `@extends` = () => List(position.property),
-        `@range` = () => List(`@int`, Text.ontology)
+        `@extends` = List(position.property),
+        `@range` = List(`@string`, `@int`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object billingPeriod extends PropertyDef(
         iris = Set("http://schema.org/billingPeriod"),
         label = "billingPeriod",
         comment = """The time interval used to compute the invoice.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Duration.ontology)
+        `@extends` = List(),
+        `@range` = List(Duration.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

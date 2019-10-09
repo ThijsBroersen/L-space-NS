@@ -6,7 +6,7 @@ object LiquorStore extends OntologyDef(
         iris = Set("http://schema.org/LiquorStore"),
         label = "LiquorStore",
         comment = """A shop that sells alcoholic drinks such as wine, beer, whisky and other spirits.""",
-        `@extends` = () => List(Store.ontology)
+        `@extends` = List(Store.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Store.Properties{
 

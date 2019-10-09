@@ -8,8 +8,8 @@ object valueName extends PropertyDef(
         iris = Set("http://schema.org/valueName"),
         label = "valueName",
         comment = """Indicates the name of the PropertyValueSpecification to be used in URL templates and form encoding in a manner analogous to HTML's input@name.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

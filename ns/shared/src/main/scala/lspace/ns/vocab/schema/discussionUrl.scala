@@ -8,8 +8,8 @@ object discussionUrl extends PropertyDef(
         iris = Set("http://schema.org/discussionUrl"),
         label = "discussionUrl",
         comment = """A link to the page containing the comments of the CreativeWork.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

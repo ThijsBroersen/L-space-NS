@@ -8,8 +8,8 @@ object contentUrl extends PropertyDef(
         iris = Set("http://schema.org/contentUrl"),
         label = "contentUrl",
         comment = """Actual bytes of the media object, for example the image file or video file.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

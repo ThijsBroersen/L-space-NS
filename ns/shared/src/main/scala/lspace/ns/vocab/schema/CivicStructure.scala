@@ -6,7 +6,7 @@ object CivicStructure extends OntologyDef(
         iris = Set("http://schema.org/CivicStructure"),
         label = "CivicStructure",
         comment = """A public structure, such as a town hall or concert hall.""",
-        `@extends` = () => List(Place.ontology)
+        `@extends` = List(Place.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Place.Properties{
 lazy val openingHours = lspace.ns.vocab.schema.openingHours.property

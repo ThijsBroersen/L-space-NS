@@ -8,8 +8,8 @@ object location extends PropertyDef(
         iris = Set("http://schema.org/location"),
         label = "location",
         comment = """The location of for example where the event is happening, an organization is located, or where an action takes place.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Place.ontology, Text.ontology, PostalAddress.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, Place.ontology, PostalAddress.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

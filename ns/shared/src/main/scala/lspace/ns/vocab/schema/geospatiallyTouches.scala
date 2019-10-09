@@ -8,8 +8,8 @@ object geospatiallyTouches extends PropertyDef(
         iris = Set("http://schema.org/geospatiallyTouches"),
         label = "",
         comment = """""",
-        `@extends` = () => List(),
-        `@range` = () => List()
+        `@extends` = List(),
+        `@range` = List()
        ){
 
 override lazy val properties: List[LProperty] = List()

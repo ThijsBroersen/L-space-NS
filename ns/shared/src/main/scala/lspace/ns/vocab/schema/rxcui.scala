@@ -8,8 +8,8 @@ object rxcui extends PropertyDef(
         iris = Set("http://schema.org/rxcui"),
         label = "rxcui",
         comment = """The RxCUI drug identifier from RXNORM.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

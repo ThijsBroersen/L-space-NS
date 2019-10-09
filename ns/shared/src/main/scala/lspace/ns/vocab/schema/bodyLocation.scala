@@ -8,8 +8,8 @@ object bodyLocation extends PropertyDef(
         iris = Set("http://schema.org/bodyLocation"),
         label = "bodyLocation",
         comment = """Location in the body of the anatomical structure.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object videoFormat extends PropertyDef(
         iris = Set("http://schema.org/videoFormat"),
         label = "videoFormat",
         comment = """The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object bankAccountType extends PropertyDef(
         iris = Set("http://schema.org/bankAccountType"),
         label = "bankAccountType",
         comment = """The type of a bank account.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

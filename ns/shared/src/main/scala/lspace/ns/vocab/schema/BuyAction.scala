@@ -6,7 +6,7 @@ object BuyAction extends OntologyDef(
         iris = Set("http://schema.org/BuyAction"),
         label = "BuyAction",
         comment = """The act of giving money to a seller in exchange for goods or services rendered. An agent buys an object, product, or service from a seller for a price. Reciprocal of SellAction.""",
-        `@extends` = () => List(TradeAction.ontology)
+        `@extends` = List(TradeAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.TradeAction.Properties{
 lazy val seller = lspace.ns.vocab.schema.seller.property

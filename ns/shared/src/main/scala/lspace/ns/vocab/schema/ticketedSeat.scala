@@ -8,8 +8,8 @@ object ticketedSeat extends PropertyDef(
         iris = Set("http://schema.org/ticketedSeat"),
         label = "ticketedSeat",
         comment = """The seat associated with the ticket.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Seat.ontology)
+        `@extends` = List(),
+        `@range` = List(Seat.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object MedicineSystem extends OntologyDef(
         iris = Set("http://schema.org/MedicineSystem"),
         label = "MedicineSystem",
         comment = """Systems of medical practice.""",
-        `@extends` = () => List(MedicalEnumeration.ontology)
+        `@extends` = List(MedicalEnumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
 

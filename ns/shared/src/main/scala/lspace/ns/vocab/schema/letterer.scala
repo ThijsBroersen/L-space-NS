@@ -8,8 +8,8 @@ object letterer extends PropertyDef(
         iris = Set("http://schema.org/letterer"),
         label = "letterer",
         comment = """The individual who adds lettering, including speech balloons and sound effects, to artwork.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object nextItem extends PropertyDef(
         iris = Set("http://schema.org/nextItem"),
         label = "nextItem",
         comment = """A link to the ListItem that follows the current one.""",
-        `@extends` = () => List(),
-        `@range` = () => List(ListItem.ontology)
+        `@extends` = List(),
+        `@range` = List(ListItem.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object valueReference extends PropertyDef(
         iris = Set("http://schema.org/valueReference"),
         label = "valueReference",
         comment = """A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology, PropertyValue.ontology, StructuredValue.ontology, QualitativeValue.ontology, Enumeration.ontology)
+        `@extends` = List(),
+        `@range` = List(Enumeration.ontology, QualitativeValue.ontology, QuantitativeValue.ontology, StructuredValue.ontology, PropertyValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

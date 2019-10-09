@@ -6,7 +6,7 @@ object ResearchProject extends OntologyDef(
         iris = Set("http://schema.org/ResearchProject"),
         label = "ResearchProject",
         comment = """A Research project.""",
-        `@extends` = () => List(Project.ontology)
+        `@extends` = List(Project.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Project.Properties{
 

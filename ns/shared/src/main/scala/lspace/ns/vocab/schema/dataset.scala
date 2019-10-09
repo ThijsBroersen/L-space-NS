@@ -8,8 +8,8 @@ object dataset extends PropertyDef(
         iris = Set("http://schema.org/dataset"),
         label = "dataset",
         comment = """A dataset contained in this catalog.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Dataset.ontology)
+        `@extends` = List(),
+        `@range` = List(Dataset.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

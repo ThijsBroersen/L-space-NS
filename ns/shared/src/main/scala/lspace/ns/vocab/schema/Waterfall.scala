@@ -6,7 +6,7 @@ object Waterfall extends OntologyDef(
         iris = Set("http://schema.org/Waterfall"),
         label = "Waterfall",
         comment = """A waterfall, like Niagara.""",
-        `@extends` = () => List(BodyOfWater.ontology)
+        `@extends` = List(BodyOfWater.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.BodyOfWater.Properties{
 

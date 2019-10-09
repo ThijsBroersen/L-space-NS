@@ -6,7 +6,7 @@ object Substance extends OntologyDef(
         iris = Set("http://schema.org/Substance"),
         label = "Substance",
         comment = """Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.""",
-        `@extends` = () => List(MedicalEntity.ontology)
+        `@extends` = List(MedicalEntity.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEntity.Properties{
 lazy val activeIngredient = lspace.ns.vocab.schema.activeIngredient.property

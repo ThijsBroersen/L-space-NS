@@ -6,7 +6,7 @@ object BookSeries extends OntologyDef(
         iris = Set("http://schema.org/BookSeries"),
         label = "BookSeries",
         comment = """A series of books. Included books can be indicated with the hasPart property.""",
-        `@extends` = () => List(CreativeWorkSeries.ontology)
+        `@extends` = List(CreativeWorkSeries.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWorkSeries.Properties{
 

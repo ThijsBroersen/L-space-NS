@@ -8,8 +8,8 @@ object significantLinks extends PropertyDef(
         iris = Set("http://schema.org/significantLinks"),
         label = "significantLinks",
         comment = """The most significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

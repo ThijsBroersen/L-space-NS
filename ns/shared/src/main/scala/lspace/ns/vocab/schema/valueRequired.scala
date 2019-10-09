@@ -8,8 +8,8 @@ object valueRequired extends PropertyDef(
         iris = Set("http://schema.org/valueRequired"),
         label = "valueRequired",
         comment = """Whether the property must be filled in to complete the action.  Default is false.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

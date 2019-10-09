@@ -6,7 +6,7 @@ object VeterinaryCare extends OntologyDef(
         iris = Set("http://schema.org/VeterinaryCare"),
         label = "VeterinaryCare",
         comment = """A vet's office.""",
-        `@extends` = () => List(MedicalOrganization.ontology)
+        `@extends` = List(MedicalOrganization.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalOrganization.Properties{
 

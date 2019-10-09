@@ -15,7 +15,7 @@ Related actions:<br/><br/>
 <li><a class="localLink" href="http://schema.org/JoinAction">JoinAction</a>: Unlike JoinAction, SubscribeAction implies that the agent is interested in continuing receiving updates from the object.</li>
 </ul>
 """,
-        `@extends` = () => List(InteractAction.ontology)
+        `@extends` = List(InteractAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.InteractAction.Properties{
 

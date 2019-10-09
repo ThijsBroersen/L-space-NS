@@ -8,8 +8,8 @@ object instrument extends PropertyDef(
         iris = Set("http://schema.org/instrument"),
         label = "instrument",
         comment = """The object that helped the agent perform the action. e.g. John wrote a book with <em>a pen</em>.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Thing.ontology)
+        `@extends` = List(),
+        `@range` = List(Thing.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

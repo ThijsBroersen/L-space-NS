@@ -6,7 +6,7 @@ object ParentAudience extends OntologyDef(
         iris = Set("http://schema.org/ParentAudience"),
         label = "ParentAudience",
         comment = """A set of characteristics describing parents, who can be interested in viewing some content.""",
-        `@extends` = () => List(PeopleAudience.ontology)
+        `@extends` = List(PeopleAudience.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.PeopleAudience.Properties{
 lazy val childMaxAge = lspace.ns.vocab.schema.childMaxAge.property

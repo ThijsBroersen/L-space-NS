@@ -6,7 +6,7 @@ object VideoObject extends OntologyDef(
         iris = Set("http://schema.org/VideoObject"),
         label = "VideoObject",
         comment = """A video file.""",
-        `@extends` = () => List(MediaObject.ontology)
+        `@extends` = List(MediaObject.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MediaObject.Properties{
 lazy val actor = lspace.ns.vocab.schema.actor.property

@@ -8,8 +8,8 @@ object flightNumber extends PropertyDef(
         iris = Set("http://schema.org/flightNumber"),
         label = "flightNumber",
         comment = """The unique identifier for a flight including the airline IATA code. For example, if describing United flight 110, where the IATA code for United is 'UA', the flightNumber is 'UA110'.""",
-        `@extends` = () => List(identifier.property),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(identifier.property),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

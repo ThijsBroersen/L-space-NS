@@ -8,8 +8,8 @@ object targetCollection extends PropertyDef(
         iris = Set("http://schema.org/targetCollection"),
         label = "targetCollection",
         comment = """A sub property of object. The collection target of the action.""",
-        `@extends` = () => List(`object`.property),
-        `@range` = () => List(Thing.ontology)
+        `@extends` = List(`object`.property),
+        `@range` = List(Thing.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

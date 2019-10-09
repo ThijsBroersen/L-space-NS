@@ -6,7 +6,7 @@ object MoneyTransfer extends OntologyDef(
         iris = Set("http://schema.org/MoneyTransfer"),
         label = "MoneyTransfer",
         comment = """The act of transferring money from one place to another place. This may occur electronically or physically.""",
-        `@extends` = () => List(TransferAction.ontology)
+        `@extends` = List(TransferAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.TransferAction.Properties{
 lazy val amount = lspace.ns.vocab.schema.amount.property

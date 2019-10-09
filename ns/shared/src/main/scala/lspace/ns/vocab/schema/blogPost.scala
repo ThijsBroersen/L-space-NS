@@ -8,8 +8,8 @@ object blogPost extends PropertyDef(
         iris = Set("http://schema.org/blogPost"),
         label = "blogPost",
         comment = """A posting that is part of this blog.""",
-        `@extends` = () => List(),
-        `@range` = () => List(BlogPosting.ontology)
+        `@extends` = List(),
+        `@range` = List(BlogPosting.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

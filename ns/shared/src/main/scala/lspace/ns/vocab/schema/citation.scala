@@ -8,8 +8,8 @@ object citation extends PropertyDef(
         iris = Set("http://schema.org/citation"),
         label = "citation",
         comment = """A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, CreativeWork.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

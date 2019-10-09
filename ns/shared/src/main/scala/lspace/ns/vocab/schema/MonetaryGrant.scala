@@ -6,7 +6,7 @@ object MonetaryGrant extends OntologyDef(
         iris = Set("http://schema.org/MonetaryGrant"),
         label = "MonetaryGrant",
         comment = """A monetary grant.""",
-        `@extends` = () => List(Grant.ontology)
+        `@extends` = List(Grant.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Grant.Properties{
 lazy val amount = lspace.ns.vocab.schema.amount.property

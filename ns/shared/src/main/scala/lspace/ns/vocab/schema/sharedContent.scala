@@ -8,8 +8,8 @@ object sharedContent extends PropertyDef(
         iris = Set("http://schema.org/sharedContent"),
         label = "sharedContent",
         comment = """A CreativeWork such as an image, video, or audio clip shared as part of this posting.""",
-        `@extends` = () => List(),
-        `@range` = () => List(CreativeWork.ontology)
+        `@extends` = List(),
+        `@range` = List(CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

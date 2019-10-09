@@ -8,8 +8,8 @@ object isFamilyFriendly extends PropertyDef(
         iris = Set("http://schema.org/isFamilyFriendly"),
         label = "isFamilyFriendly",
         comment = """Indicates whether this content is family friendly.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object Organization extends OntologyDef(
         iris = Set("http://schema.org/Organization"),
         label = "Organization",
         comment = """An organization such as a school, NGO, corporation, club, etc.""",
-        `@extends` = () => List(Thing.ontology)
+        `@extends` = List(Thing.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Thing.Properties{
 lazy val actionableFeedbackPolicy = lspace.ns.vocab.schema.actionableFeedbackPolicy.property

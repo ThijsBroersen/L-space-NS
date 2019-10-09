@@ -8,8 +8,8 @@ object height extends PropertyDef(
         iris = Set("http://schema.org/height"),
         label = "height",
         comment = """The height of the item.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Distance.ontology, QuantitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(Distance.ontology, QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

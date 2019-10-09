@@ -14,7 +14,7 @@ Related actions:<br/><br/>
 <li><a class="localLink" href="http://schema.org/SubscribeAction">SubscribeAction</a>: Unlike SubscribeAction, TrackAction refers to  the interest on the location of innanimate objects.</li>
 </ul>
 """,
-        `@extends` = () => List(FindAction.ontology)
+        `@extends` = List(FindAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.FindAction.Properties{
 lazy val deliveryMethod = lspace.ns.vocab.schema.deliveryMethod.property

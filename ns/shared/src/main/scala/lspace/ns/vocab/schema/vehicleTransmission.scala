@@ -8,8 +8,8 @@ object vehicleTransmission extends PropertyDef(
         iris = Set("http://schema.org/vehicleTransmission"),
         label = "vehicleTransmission",
         comment = """The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s) ("gearbox" for cars).""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology, Text.ontology, QualitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, URL.ontology, QualitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

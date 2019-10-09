@@ -8,8 +8,8 @@ object authenticator extends PropertyDef(
         iris = Set("http://schema.org/authenticator"),
         label = "authenticator",
         comment = """The Organization responsible for authenticating the user's subscription. For example, many media apps require a cable/satellite provider to authenticate your subscription before playing media.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

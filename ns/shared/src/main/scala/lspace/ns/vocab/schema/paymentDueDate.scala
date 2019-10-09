@@ -8,8 +8,8 @@ object paymentDueDate extends PropertyDef(
         iris = Set("http://schema.org/paymentDueDate"),
         label = "paymentDueDate",
         comment = """The date that payment is due.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@datetime`)
+        `@extends` = List(),
+        `@range` = List(`@datetime`)
        ){
 
 override lazy val properties: List[LProperty] = List()

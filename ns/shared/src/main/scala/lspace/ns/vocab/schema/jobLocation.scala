@@ -8,8 +8,8 @@ object jobLocation extends PropertyDef(
         iris = Set("http://schema.org/jobLocation"),
         label = "jobLocation",
         comment = """A (typically single) geographic location associated with the job position.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Place.ontology)
+        `@extends` = List(),
+        `@range` = List(Place.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

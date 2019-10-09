@@ -8,8 +8,8 @@ object referencesOrder extends PropertyDef(
         iris = Set("http://schema.org/referencesOrder"),
         label = "referencesOrder",
         comment = """The Order(s) related to this Invoice. One or more Orders may be combined into a single Invoice.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Order.ontology)
+        `@extends` = List(),
+        `@range` = List(Order.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

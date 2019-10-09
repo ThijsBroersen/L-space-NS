@@ -8,8 +8,8 @@ object musicArrangement extends PropertyDef(
         iris = Set("http://schema.org/musicArrangement"),
         label = "musicArrangement",
         comment = """An arrangement derived from the composition.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MusicComposition.ontology)
+        `@extends` = List(),
+        `@range` = List(MusicComposition.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

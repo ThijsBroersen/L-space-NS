@@ -8,8 +8,8 @@ object originatesFrom extends PropertyDef(
         iris = Set("http://schema.org/originatesFrom"),
         label = "originatesFrom",
         comment = """The vasculature the lymphatic structure originates, or afferents, from.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Vessel.ontology)
+        `@extends` = List(),
+        `@range` = List(Vessel.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

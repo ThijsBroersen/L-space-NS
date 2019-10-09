@@ -8,8 +8,8 @@ object subtitleLanguage extends PropertyDef(
         iris = Set("http://schema.org/subtitleLanguage"),
         label = "subtitleLanguage",
         comment = """Languages in which subtitles/captions are available, in <a href="http://tools.ietf.org/html/bcp47">IETF BCP 47 standard format</a>.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, Language.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, Language.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

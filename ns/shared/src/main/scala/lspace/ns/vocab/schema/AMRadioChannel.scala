@@ -6,7 +6,7 @@ object AMRadioChannel extends OntologyDef(
         iris = Set("http://schema.org/AMRadioChannel"),
         label = "AMRadioChannel",
         comment = """A radio channel that uses AM.""",
-        `@extends` = () => List(RadioChannel.ontology)
+        `@extends` = List(RadioChannel.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.RadioChannel.Properties{
 

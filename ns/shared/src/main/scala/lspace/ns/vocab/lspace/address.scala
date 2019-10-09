@@ -9,6 +9,6 @@ object address
       NS.vocab.Lspace + "address",
       label = "address",
       comment = "Physical address of the item.",
-      `@range` = () => PostalAddress.ontology :: Nil,
-      `@extends` = () => schema.address.property :: Nil
+      `@range` = PostalAddress.ontology :: Nil,
+      `@extends` = schema.address.property :: Nil
     )

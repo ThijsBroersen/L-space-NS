@@ -6,7 +6,7 @@ object QualitativeValue extends OntologyDef(
         iris = Set("http://schema.org/QualitativeValue"),
         label = "QualitativeValue",
         comment = """A predefined value for a product characteristic, e.g. the power cord plug type 'US' or the garment sizes 'S', 'M', 'L', and 'XL'.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 lazy val additionalProperty = lspace.ns.vocab.schema.additionalProperty.property

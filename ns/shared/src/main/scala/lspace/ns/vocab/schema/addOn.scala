@@ -8,8 +8,8 @@ object addOn extends PropertyDef(
         iris = Set("http://schema.org/addOn"),
         label = "addOn",
         comment = """An additional offer that can only be obtained in combination with the first base offer (e.g. supplements and extensions that are available for a surcharge).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Offer.ontology)
+        `@extends` = List(),
+        `@range` = List(Offer.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

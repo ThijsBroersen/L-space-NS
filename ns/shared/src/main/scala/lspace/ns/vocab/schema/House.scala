@@ -6,7 +6,7 @@ object House extends OntologyDef(
         iris = Set("http://schema.org/House"),
         label = "House",
         comment = """A house is a building or structure that has the ability to be occupied for habitation by humans or other creatures (Source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/House">http://en.wikipedia.org/wiki/House</a>).""",
-        `@extends` = () => List(Accommodation.ontology)
+        `@extends` = List(Accommodation.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Accommodation.Properties{
 

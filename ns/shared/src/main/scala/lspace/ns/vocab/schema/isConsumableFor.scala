@@ -8,8 +8,8 @@ object isConsumableFor extends PropertyDef(
         iris = Set("http://schema.org/isConsumableFor"),
         label = "isConsumableFor",
         comment = """A pointer to another product (or multiple products) for which this product is a consumable.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Product.ontology)
+        `@extends` = List(),
+        `@range` = List(Product.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

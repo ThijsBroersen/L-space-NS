@@ -8,8 +8,8 @@ object legislationResponsible extends PropertyDef(
         iris = Set("http://schema.org/legislationResponsible"),
         label = "legislationResponsible",
         comment = """An individual or organization that has some kind of responsibility for the legislation. Typically the ministry who is/was in charge of elaborating the legislation, or the adressee for potential questions about the legislation once it is published.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology, Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology, Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

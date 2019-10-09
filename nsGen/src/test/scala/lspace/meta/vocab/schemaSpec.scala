@@ -10,6 +10,7 @@ import org.scalatest.{AsyncWordSpec, Matchers}
 
 class schemaSpec extends AsyncWordSpec with Matchers {
 
+  lspace.Graph.graphs
   "schema" should {
     "get https://schema.org/.. from schema.org and create *Def-files accordingly" in {
       Task

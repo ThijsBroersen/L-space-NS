@@ -8,8 +8,8 @@ object actionAccessibilityRequirement extends PropertyDef(
         iris = Set("http://schema.org/actionAccessibilityRequirement"),
         label = "actionAccessibilityRequirement",
         comment = """A set of requirements that a must be fulfilled in order to perform an Action. If more than one value is specied, fulfilling one set of requirements will allow the Action to be performed.""",
-        `@extends` = () => List(),
-        `@range` = () => List(ActionAccessSpecification.ontology)
+        `@extends` = List(),
+        `@range` = List(ActionAccessSpecification.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object artform extends PropertyDef(
         iris = Set("http://schema.org/artform"),
         label = "artform",
         comment = """e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage, Collage, etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

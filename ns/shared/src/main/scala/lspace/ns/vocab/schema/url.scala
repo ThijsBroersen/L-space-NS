@@ -8,8 +8,8 @@ object url extends PropertyDef(
         iris = Set("http://schema.org/url"),
         label = "url",
         comment = """URL of the item.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

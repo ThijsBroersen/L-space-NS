@@ -8,8 +8,8 @@ object screenCount extends PropertyDef(
         iris = Set("http://schema.org/screenCount"),
         label = "screenCount",
         comment = """The number of screens in the movie theater.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

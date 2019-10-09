@@ -8,8 +8,8 @@ object option extends PropertyDef(
         iris = Set("http://schema.org/option"),
         label = "option",
         comment = """A sub property of object. The options subject to this action.""",
-        `@extends` = () => List(`object`.property),
-        `@range` = () => List(Thing.ontology, Text.ontology)
+        `@extends` = List(`object`.property),
+        `@range` = List(Thing.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

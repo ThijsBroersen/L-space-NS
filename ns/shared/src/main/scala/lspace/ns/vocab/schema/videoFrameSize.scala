@@ -8,8 +8,8 @@ object videoFrameSize extends PropertyDef(
         iris = Set("http://schema.org/videoFrameSize"),
         label = "videoFrameSize",
         comment = """The frame size of the video.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

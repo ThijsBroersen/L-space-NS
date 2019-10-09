@@ -6,7 +6,7 @@ object ShareAction extends OntologyDef(
         iris = Set("http://schema.org/ShareAction"),
         label = "ShareAction",
         comment = """The act of distributing content to people for their amusement or edification.""",
-        `@extends` = () => List(CommunicateAction.ontology)
+        `@extends` = List(CommunicateAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CommunicateAction.Properties{
 

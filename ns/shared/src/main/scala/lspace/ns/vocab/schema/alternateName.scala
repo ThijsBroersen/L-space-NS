@@ -8,8 +8,8 @@ object alternateName extends PropertyDef(
         iris = Set("http://schema.org/alternateName"),
         label = "alternateName",
         comment = """An alias for the item.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

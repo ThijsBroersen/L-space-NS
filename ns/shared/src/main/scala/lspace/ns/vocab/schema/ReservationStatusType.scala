@@ -6,7 +6,7 @@ object ReservationStatusType extends OntologyDef(
         iris = Set("http://schema.org/ReservationStatusType"),
         label = "ReservationStatusType",
         comment = """Enumerated status values for Reservation.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

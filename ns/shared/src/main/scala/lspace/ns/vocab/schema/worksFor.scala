@@ -8,8 +8,8 @@ object worksFor extends PropertyDef(
         iris = Set("http://schema.org/worksFor"),
         label = "worksFor",
         comment = """Organizations that the person works for.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

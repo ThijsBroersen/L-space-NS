@@ -6,7 +6,7 @@ object ItemAvailability extends OntologyDef(
         iris = Set("http://schema.org/ItemAvailability"),
         label = "ItemAvailability",
         comment = """A list of possible product availability options.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

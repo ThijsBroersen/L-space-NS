@@ -8,8 +8,8 @@ object pickupLocation extends PropertyDef(
         iris = Set("http://schema.org/pickupLocation"),
         label = "pickupLocation",
         comment = """Where a taxi will pick up a passenger or a rental car can be picked up.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Place.ontology)
+        `@extends` = List(),
+        `@range` = List(Place.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

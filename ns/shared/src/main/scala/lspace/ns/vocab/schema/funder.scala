@@ -8,8 +8,8 @@ object funder extends PropertyDef(
         iris = Set("http://schema.org/funder"),
         label = "funder",
         comment = """A person or organization that supports (sponsors) something through some kind of financial contribution.""",
-        `@extends` = () => List(sponsor.property),
-        `@range` = () => List(Organization.ontology, Person.ontology)
+        `@extends` = List(sponsor.property),
+        `@range` = List(Organization.ontology, Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

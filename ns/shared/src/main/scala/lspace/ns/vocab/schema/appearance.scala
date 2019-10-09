@@ -8,8 +8,8 @@ object appearance extends PropertyDef(
         iris = Set("http://schema.org/appearance"),
         label = "appearance",
         comment = """Indicates an occurence of a <a class="localLink" href="http://schema.org/Claim">Claim</a> in some <a class="localLink" href="http://schema.org/CreativeWork">CreativeWork</a>.""",
-        `@extends` = () => List(workExample.property),
-        `@range` = () => List(CreativeWork.ontology)
+        `@extends` = List(workExample.property),
+        `@range` = List(CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

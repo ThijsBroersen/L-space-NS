@@ -8,8 +8,8 @@ object articleSection extends PropertyDef(
         iris = Set("http://schema.org/articleSection"),
         label = "articleSection",
         comment = """Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

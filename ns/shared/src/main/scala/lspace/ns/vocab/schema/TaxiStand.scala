@@ -6,7 +6,7 @@ object TaxiStand extends OntologyDef(
         iris = Set("http://schema.org/TaxiStand"),
         label = "TaxiStand",
         comment = """A taxi stand.""",
-        `@extends` = () => List(CivicStructure.ontology)
+        `@extends` = List(CivicStructure.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CivicStructure.Properties{
 

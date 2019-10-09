@@ -12,7 +12,7 @@ object FundingAgency extends OntologyDef(
 <pre><code>Examples of funding agencies include ERC, REA, NIH, Bill and Melinda Gates Foundation...
 </code></pre>
 """,
-        `@extends` = () => List(Project.ontology)
+        `@extends` = List(Project.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Project.Properties{
 

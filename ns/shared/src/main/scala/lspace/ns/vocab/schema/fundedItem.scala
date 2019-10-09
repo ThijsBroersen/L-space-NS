@@ -8,8 +8,8 @@ object fundedItem extends PropertyDef(
         iris = Set("http://schema.org/fundedItem"),
         label = "fundedItem",
         comment = """Indicates an item funded or sponsored through a <a class="localLink" href="http://schema.org/Grant">Grant</a>.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Thing.ontology)
+        `@extends` = List(),
+        `@range` = List(Thing.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

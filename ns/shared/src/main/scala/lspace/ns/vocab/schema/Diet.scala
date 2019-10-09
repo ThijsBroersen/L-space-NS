@@ -6,7 +6,7 @@ object Diet extends OntologyDef(
         iris = Set("http://schema.org/Diet"),
         label = "Diet",
         comment = """A strategy of regulating the intake of food to achieve or maintain a specific health-related goal.""",
-        `@extends` = () => List(LifestyleModification.ontology, CreativeWork.ontology)
+        `@extends` = List(LifestyleModification.ontology, CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.LifestyleModification.Properties with lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val dietFeatures = lspace.ns.vocab.schema.dietFeatures.property

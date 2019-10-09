@@ -8,8 +8,8 @@ object query extends PropertyDef(
         iris = Set("http://schema.org/query"),
         label = "query",
         comment = """A sub property of instrument. The query used on this action.""",
-        `@extends` = () => List(instrument.property),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(instrument.property),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object encodingType extends PropertyDef(
         iris = Set("http://schema.org/encodingType"),
         label = "encodingType",
         comment = """The supported encoding type(s) for an EntryPoint request.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

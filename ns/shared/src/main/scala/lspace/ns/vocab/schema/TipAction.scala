@@ -6,7 +6,7 @@ object TipAction extends OntologyDef(
         iris = Set("http://schema.org/TipAction"),
         label = "TipAction",
         comment = """The act of giving money voluntarily to a beneficiary in recognition of services rendered.""",
-        `@extends` = () => List(TradeAction.ontology)
+        `@extends` = List(TradeAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.TradeAction.Properties{
 lazy val recipient = lspace.ns.vocab.schema.recipient.property

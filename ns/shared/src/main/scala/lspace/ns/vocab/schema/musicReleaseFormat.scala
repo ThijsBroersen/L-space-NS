@@ -8,8 +8,8 @@ object musicReleaseFormat extends PropertyDef(
         iris = Set("http://schema.org/musicReleaseFormat"),
         label = "musicReleaseFormat",
         comment = """Format of this release (the type of recording media used, ie. compact disc, digital media, LP, etc.).""",
-        `@extends` = () => List(),
-        `@range` = () => List(MusicReleaseFormatType.ontology)
+        `@extends` = List(),
+        `@range` = List(MusicReleaseFormatType.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

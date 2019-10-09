@@ -8,8 +8,8 @@ object inker extends PropertyDef(
         iris = Set("http://schema.org/inker"),
         label = "inker",
         comment = """The individual who traces over the pencil drawings in ink after pencils are complete.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

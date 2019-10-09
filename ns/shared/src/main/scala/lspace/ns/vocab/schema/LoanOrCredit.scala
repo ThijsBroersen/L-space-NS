@@ -6,7 +6,7 @@ object LoanOrCredit extends OntologyDef(
         iris = Set("http://schema.org/LoanOrCredit"),
         label = "LoanOrCredit",
         comment = """A financial product for the loaning of an amount of money under agreed terms and charges.""",
-        `@extends` = () => List(FinancialProduct.ontology)
+        `@extends` = List(FinancialProduct.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.FinancialProduct.Properties{
 lazy val amount = lspace.ns.vocab.schema.amount.property

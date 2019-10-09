@@ -6,7 +6,7 @@ object ArchiveOrganization extends OntologyDef(
         iris = Set("http://schema.org/ArchiveOrganization"),
         label = "ArchiveOrganization",
         comment = """An organization with archival holdings. An organization which keeps and preserves archival material and typically makes it accessible to the public.""",
-        `@extends` = () => List(LocalBusiness.ontology)
+        `@extends` = List(LocalBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.LocalBusiness.Properties{
 lazy val archiveHeld = lspace.ns.vocab.schema.archiveHeld.property

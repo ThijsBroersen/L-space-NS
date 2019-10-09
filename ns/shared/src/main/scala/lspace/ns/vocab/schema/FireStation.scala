@@ -6,7 +6,7 @@ object FireStation extends OntologyDef(
         iris = Set("http://schema.org/FireStation"),
         label = "FireStation",
         comment = """A fire station. With firemen.""",
-        `@extends` = () => List(CivicStructure.ontology, EmergencyService.ontology)
+        `@extends` = List(CivicStructure.ontology, EmergencyService.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CivicStructure.Properties with lspace.ns.vocab.schema.EmergencyService.Properties{
 

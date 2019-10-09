@@ -8,8 +8,8 @@ object sdLicense extends PropertyDef(
         iris = Set("http://schema.org/sdLicense"),
         label = "sdLicense",
         comment = """A license document that applies to this structured data, typically indicated by URL.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology, CreativeWork.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology, CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

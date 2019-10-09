@@ -8,8 +8,8 @@ object contactPoint extends PropertyDef(
         iris = Set("http://schema.org/contactPoint"),
         label = "contactPoint",
         comment = """A contact point for a person or organization.""",
-        `@extends` = () => List(),
-        `@range` = () => List(ContactPoint.ontology)
+        `@extends` = List(),
+        `@range` = List(ContactPoint.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

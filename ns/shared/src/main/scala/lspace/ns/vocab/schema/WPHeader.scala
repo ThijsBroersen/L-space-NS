@@ -6,7 +6,7 @@ object WPHeader extends OntologyDef(
         iris = Set("http://schema.org/WPHeader"),
         label = "WPHeader",
         comment = """The header section of the page.""",
-        `@extends` = () => List(WebPageElement.ontology)
+        `@extends` = List(WebPageElement.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.WebPageElement.Properties{
 

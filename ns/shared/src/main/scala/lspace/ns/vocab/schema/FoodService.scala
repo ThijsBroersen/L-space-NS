@@ -6,7 +6,7 @@ object FoodService extends OntologyDef(
         iris = Set("http://schema.org/FoodService"),
         label = "FoodService",
         comment = """A food service, like breakfast, lunch, or dinner.""",
-        `@extends` = () => List(Service.ontology)
+        `@extends` = List(Service.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Service.Properties{
 

@@ -8,8 +8,8 @@ object performers extends PropertyDef(
         iris = Set("http://schema.org/performers"),
         label = "performers",
         comment = """The main performer or performers of the event&#x2014;for example, a presenter, musician, or actor.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology, Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology, Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

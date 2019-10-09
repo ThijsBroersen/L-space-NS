@@ -8,8 +8,8 @@ object category extends PropertyDef(
         iris = Set("http://schema.org/category"),
         label = "category",
         comment = """A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.""",
-        `@extends` = () => List(),
-        `@range` = () => List(PhysicalActivityCategory.ontology, Text.ontology, Thing.ontology)
+        `@extends` = List(),
+        `@range` = List(Thing.ontology, `@string`, PhysicalActivityCategory.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

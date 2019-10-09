@@ -6,7 +6,7 @@ object MedicalScholarlyArticle extends OntologyDef(
         iris = Set("http://schema.org/MedicalScholarlyArticle"),
         label = "MedicalScholarlyArticle",
         comment = """A scholarly article in the medical domain.""",
-        `@extends` = () => List(ScholarlyArticle.ontology)
+        `@extends` = List(ScholarlyArticle.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ScholarlyArticle.Properties{
 lazy val publicationType = lspace.ns.vocab.schema.publicationType.property

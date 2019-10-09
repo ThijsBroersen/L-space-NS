@@ -8,8 +8,8 @@ object distance extends PropertyDef(
         iris = Set("http://schema.org/distance"),
         label = "distance",
         comment = """The distance travelled, e.g. exercising or travelling.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Distance.ontology)
+        `@extends` = List(),
+        `@range` = List(Distance.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

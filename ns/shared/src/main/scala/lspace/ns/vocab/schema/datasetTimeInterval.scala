@@ -8,8 +8,8 @@ object datasetTimeInterval extends PropertyDef(
         iris = Set("http://schema.org/datasetTimeInterval"),
         label = "datasetTimeInterval",
         comment = """The range of temporal applicability of a dataset, e.g. for a 2011 census dataset, the year 2011 (in ISO 8601 time interval format).""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@datetime`)
+        `@extends` = List(),
+        `@range` = List(`@datetime`)
        ){
 
 override lazy val properties: List[LProperty] = List()

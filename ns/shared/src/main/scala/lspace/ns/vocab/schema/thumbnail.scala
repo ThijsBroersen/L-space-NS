@@ -8,8 +8,8 @@ object thumbnail extends PropertyDef(
         iris = Set("http://schema.org/thumbnail"),
         label = "thumbnail",
         comment = """Thumbnail image for an image or video.""",
-        `@extends` = () => List(),
-        `@range` = () => List(ImageObject.ontology)
+        `@extends` = List(),
+        `@range` = List(ImageObject.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

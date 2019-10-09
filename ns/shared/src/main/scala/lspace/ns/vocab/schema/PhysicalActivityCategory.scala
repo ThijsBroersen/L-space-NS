@@ -6,7 +6,7 @@ object PhysicalActivityCategory extends OntologyDef(
         iris = Set("http://schema.org/PhysicalActivityCategory"),
         label = "PhysicalActivityCategory",
         comment = """Categories of physical activity, organized by physiologic classification.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

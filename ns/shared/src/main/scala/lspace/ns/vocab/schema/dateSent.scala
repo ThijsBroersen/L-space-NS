@@ -8,8 +8,8 @@ object dateSent extends PropertyDef(
         iris = Set("http://schema.org/dateSent"),
         label = "dateSent",
         comment = """The date/time at which the message was sent.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@datetime`)
+        `@extends` = List(),
+        `@range` = List(`@datetime`)
        ){
 
 override lazy val properties: List[LProperty] = List()

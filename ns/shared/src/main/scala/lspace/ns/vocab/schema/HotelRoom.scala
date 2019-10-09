@@ -8,7 +8,7 @@ object HotelRoom extends OntologyDef(
         comment = """A hotel room is a single room in a hotel.
 <br /><br />
 See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.""",
-        `@extends` = () => List(Room.ontology)
+        `@extends` = List(Room.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Room.Properties{
 lazy val bed = lspace.ns.vocab.schema.bed.property

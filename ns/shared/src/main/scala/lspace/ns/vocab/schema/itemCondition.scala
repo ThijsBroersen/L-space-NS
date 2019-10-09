@@ -8,8 +8,8 @@ object itemCondition extends PropertyDef(
         iris = Set("http://schema.org/itemCondition"),
         label = "itemCondition",
         comment = """A predefined value from OfferItemCondition or a textual description of the condition of the product or service, or the products or services included in the offer.""",
-        `@extends` = () => List(),
-        `@range` = () => List(OfferItemCondition.ontology)
+        `@extends` = List(),
+        `@range` = List(OfferItemCondition.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

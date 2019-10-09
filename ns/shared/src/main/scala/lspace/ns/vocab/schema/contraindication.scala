@@ -8,8 +8,8 @@ object contraindication extends PropertyDef(
         iris = Set("http://schema.org/contraindication"),
         label = "contraindication",
         comment = """A contraindication for this therapy.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, MedicalContraindication.ontology)
+        `@extends` = List(),
+        `@range` = List(MedicalContraindication.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

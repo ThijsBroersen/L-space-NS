@@ -8,8 +8,8 @@ object availableAtOrFrom extends PropertyDef(
         iris = Set("http://schema.org/availableAtOrFrom"),
         label = "availableAtOrFrom",
         comment = """The place(s) from which the offer can be obtained (e.g. store locations).""",
-        `@extends` = () => List(areaServed.property),
-        `@range` = () => List(Place.ontology)
+        `@extends` = List(areaServed.property),
+        `@range` = List(Place.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

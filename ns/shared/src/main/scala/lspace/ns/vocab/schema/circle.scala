@@ -8,8 +8,8 @@ object circle extends PropertyDef(
         iris = Set("http://schema.org/circle"),
         label = "circle",
         comment = """A circle is the circular region of a specified radius centered at a specified latitude and longitude. A circle is expressed as a pair followed by a radius in meters.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object AnatomicalStructure extends OntologyDef(
         iris = Set("http://schema.org/AnatomicalStructure"),
         label = "AnatomicalStructure",
         comment = """Any part of the human body, typically a component of an anatomical system. Organs, tissues, and cells are all anatomical structures.""",
-        `@extends` = () => List(MedicalEntity.ontology)
+        `@extends` = List(MedicalEntity.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEntity.Properties{
 lazy val associatedPathophysiology = lspace.ns.vocab.schema.associatedPathophysiology.property

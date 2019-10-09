@@ -8,8 +8,8 @@ object target extends PropertyDef(
         iris = Set("http://schema.org/target"),
         label = "target",
         comment = """Indicates a target EntryPoint for an Action.""",
-        `@extends` = () => List(),
-        `@range` = () => List(EntryPoint.ontology)
+        `@extends` = List(),
+        `@range` = List(EntryPoint.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

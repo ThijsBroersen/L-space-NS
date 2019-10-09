@@ -8,8 +8,8 @@ object reservationFor extends PropertyDef(
         iris = Set("http://schema.org/reservationFor"),
         label = "reservationFor",
         comment = """The thing -- flight, event, restaurant,etc. being reserved.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Thing.ontology)
+        `@extends` = List(),
+        `@range` = List(Thing.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

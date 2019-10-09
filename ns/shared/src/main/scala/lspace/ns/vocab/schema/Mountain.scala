@@ -6,7 +6,7 @@ object Mountain extends OntologyDef(
         iris = Set("http://schema.org/Mountain"),
         label = "Mountain",
         comment = """A mountain, like Mount Whitney or Mount Everest.""",
-        `@extends` = () => List(Landform.ontology)
+        `@extends` = List(Landform.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Landform.Properties{
 

@@ -8,8 +8,8 @@ object source extends PropertyDef(
         iris = Set("http://schema.org/source"),
         label = "source",
         comment = """The anatomical or organ system that the artery originates from.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AnatomicalStructure.ontology)
+        `@extends` = List(),
+        `@range` = List(AnatomicalStructure.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

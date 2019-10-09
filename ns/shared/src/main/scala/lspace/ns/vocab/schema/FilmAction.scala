@@ -6,7 +6,7 @@ object FilmAction extends OntologyDef(
         iris = Set("http://schema.org/FilmAction"),
         label = "FilmAction",
         comment = """The act of capturing sound and moving images on film, video, or digitally.""",
-        `@extends` = () => List(CreateAction.ontology)
+        `@extends` = List(CreateAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreateAction.Properties{
 

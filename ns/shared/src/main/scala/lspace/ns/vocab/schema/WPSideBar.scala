@@ -6,7 +6,7 @@ object WPSideBar extends OntologyDef(
         iris = Set("http://schema.org/WPSideBar"),
         label = "WPSideBar",
         comment = """A sidebar section of the page.""",
-        `@extends` = () => List(WebPageElement.ontology)
+        `@extends` = List(WebPageElement.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.WebPageElement.Properties{
 

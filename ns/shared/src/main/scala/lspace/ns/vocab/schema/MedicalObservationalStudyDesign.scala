@@ -6,7 +6,7 @@ object MedicalObservationalStudyDesign extends OntologyDef(
         iris = Set("http://schema.org/MedicalObservationalStudyDesign"),
         label = "MedicalObservationalStudyDesign",
         comment = """Design models for observational medical studies. Enumerated type.""",
-        `@extends` = () => List(MedicalEnumeration.ontology)
+        `@extends` = List(MedicalEnumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
 

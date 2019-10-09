@@ -6,7 +6,7 @@ object WatchAction extends OntologyDef(
         iris = Set("http://schema.org/WatchAction"),
         label = "WatchAction",
         comment = """The act of consuming dynamic/moving visual content.""",
-        `@extends` = () => List(ConsumeAction.ontology)
+        `@extends` = List(ConsumeAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ConsumeAction.Properties{
 

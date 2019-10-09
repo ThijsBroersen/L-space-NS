@@ -8,8 +8,8 @@ object associatedArticle extends PropertyDef(
         iris = Set("http://schema.org/associatedArticle"),
         label = "associatedArticle",
         comment = """A NewsArticle associated with the Media Object.""",
-        `@extends` = () => List(),
-        `@range` = () => List(NewsArticle.ontology)
+        `@extends` = List(),
+        `@range` = List(NewsArticle.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

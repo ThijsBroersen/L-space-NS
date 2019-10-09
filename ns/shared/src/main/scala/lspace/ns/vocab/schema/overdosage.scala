@@ -8,8 +8,8 @@ object overdosage extends PropertyDef(
         iris = Set("http://schema.org/overdosage"),
         label = "overdosage",
         comment = """Any information related to overdose on a drug, including signs or symptoms, treatments, contact information for emergency response.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

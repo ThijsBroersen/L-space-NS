@@ -8,8 +8,8 @@ object physiologicalBenefits extends PropertyDef(
         iris = Set("http://schema.org/physiologicalBenefits"),
         label = "physiologicalBenefits",
         comment = """Specific physiologic benefits associated to the plan.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

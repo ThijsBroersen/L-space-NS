@@ -6,7 +6,7 @@ object LibrarySystem extends OntologyDef(
         iris = Set("http://schema.org/LibrarySystem"),
         label = "LibrarySystem",
         comment = """A <a class="localLink" href="http://schema.org/LibrarySystem">LibrarySystem</a> is a collaborative system amongst several libraries.""",
-        `@extends` = () => List(Organization.ontology)
+        `@extends` = List(Organization.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Organization.Properties{
 

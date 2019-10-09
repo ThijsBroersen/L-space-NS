@@ -8,8 +8,8 @@ object partOfInvoice extends PropertyDef(
         iris = Set("http://schema.org/partOfInvoice"),
         label = "partOfInvoice",
         comment = """The order is being paid as part of the referenced Invoice.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Invoice.ontology)
+        `@extends` = List(),
+        `@range` = List(Invoice.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

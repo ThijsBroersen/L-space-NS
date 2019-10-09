@@ -8,8 +8,8 @@ object knownVehicleDamages extends PropertyDef(
         iris = Set("http://schema.org/knownVehicleDamages"),
         label = "knownVehicleDamages",
         comment = """A textual description of known damages, both repaired and unrepaired.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

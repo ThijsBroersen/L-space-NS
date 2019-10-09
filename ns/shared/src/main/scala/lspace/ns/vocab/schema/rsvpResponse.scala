@@ -8,8 +8,8 @@ object rsvpResponse extends PropertyDef(
         iris = Set("http://schema.org/rsvpResponse"),
         label = "rsvpResponse",
         comment = """The response (yes, no, maybe) to the RSVP.""",
-        `@extends` = () => List(),
-        `@range` = () => List(RsvpResponseType.ontology)
+        `@extends` = List(),
+        `@range` = List(RsvpResponseType.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

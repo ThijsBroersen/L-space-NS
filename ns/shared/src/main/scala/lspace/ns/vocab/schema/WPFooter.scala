@@ -6,7 +6,7 @@ object WPFooter extends OntologyDef(
         iris = Set("http://schema.org/WPFooter"),
         label = "WPFooter",
         comment = """The footer section of the page.""",
-        `@extends` = () => List(WebPageElement.ontology)
+        `@extends` = List(WebPageElement.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.WebPageElement.Properties{
 

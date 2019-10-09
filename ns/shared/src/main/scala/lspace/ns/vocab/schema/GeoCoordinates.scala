@@ -6,7 +6,7 @@ object GeoCoordinates extends OntologyDef(
         iris = Set("http://schema.org/GeoCoordinates"),
         label = "GeoCoordinates",
         comment = """The geographic coordinates of a place or event.""",
-        `@extends` = () => List(StructuredValue.ontology)
+        `@extends` = List(StructuredValue.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.StructuredValue.Properties{
 lazy val address = lspace.ns.vocab.schema.address.property

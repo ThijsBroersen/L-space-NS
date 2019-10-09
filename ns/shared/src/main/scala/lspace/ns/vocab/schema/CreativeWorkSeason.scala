@@ -6,7 +6,7 @@ object CreativeWorkSeason extends OntologyDef(
         iris = Set("http://schema.org/CreativeWorkSeason"),
         label = "CreativeWorkSeason",
         comment = """A media season e.g. tv, radio, video game etc.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val actor = lspace.ns.vocab.schema.actor.property

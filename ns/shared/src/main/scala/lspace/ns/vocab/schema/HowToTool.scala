@@ -6,7 +6,7 @@ object HowToTool extends OntologyDef(
         iris = Set("http://schema.org/HowToTool"),
         label = "HowToTool",
         comment = """A tool used (but not consumed) when performing instructions for how to achieve a result.""",
-        `@extends` = () => List(HowToItem.ontology)
+        `@extends` = List(HowToItem.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.HowToItem.Properties{
 

@@ -8,8 +8,8 @@ object award extends PropertyDef(
         iris = Set("http://schema.org/award"),
         label = "award",
         comment = """An award won by or for this item.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

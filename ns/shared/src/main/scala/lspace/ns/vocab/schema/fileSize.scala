@@ -8,8 +8,8 @@ object fileSize extends PropertyDef(
         iris = Set("http://schema.org/fileSize"),
         label = "fileSize",
         comment = """Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

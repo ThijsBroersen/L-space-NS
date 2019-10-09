@@ -8,8 +8,8 @@ object `yield` extends PropertyDef(
         iris = Set("http://schema.org/yield"),
         label = "yield",
         comment = """The quantity that results by performing instructions. For example, a paper airplane, 10 personalized candles.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

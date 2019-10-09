@@ -8,8 +8,8 @@ object runtime extends PropertyDef(
         iris = Set("http://schema.org/runtime"),
         label = "runtime",
         comment = """Runtime platform or script interpreter dependencies (Example - Java v1, Python2.3, .Net Framework 3.0).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

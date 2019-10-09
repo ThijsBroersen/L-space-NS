@@ -8,8 +8,8 @@ object minimumPaymentDue extends PropertyDef(
         iris = Set("http://schema.org/minimumPaymentDue"),
         label = "minimumPaymentDue",
         comment = """The minimum payment required at this time.""",
-        `@extends` = () => List(),
-        `@range` = () => List(PriceSpecification.ontology, MonetaryAmount.ontology)
+        `@extends` = List(),
+        `@range` = List(PriceSpecification.ontology, MonetaryAmount.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

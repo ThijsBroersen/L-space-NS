@@ -8,8 +8,8 @@ object engineType extends PropertyDef(
         iris = Set("http://schema.org/engineType"),
         label = "engineType",
         comment = """The type of engine or engines powering the vehicle.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology, Text.ontology, QualitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(QualitativeValue.ontology, URL.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

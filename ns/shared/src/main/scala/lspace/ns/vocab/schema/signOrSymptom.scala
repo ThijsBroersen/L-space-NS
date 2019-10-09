@@ -8,8 +8,8 @@ object signOrSymptom extends PropertyDef(
         iris = Set("http://schema.org/signOrSymptom"),
         label = "signOrSymptom",
         comment = """A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MedicalSignOrSymptom.ontology)
+        `@extends` = List(),
+        `@range` = List(MedicalSignOrSymptom.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

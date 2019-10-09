@@ -8,8 +8,8 @@ object isAvailableGenerically extends PropertyDef(
         iris = Set("http://schema.org/isAvailableGenerically"),
         label = "isAvailableGenerically",
         comment = """True if the drug is available in a generic form (regardless of name).""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

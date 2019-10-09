@@ -15,7 +15,7 @@ Related actions:<br/><br/>
 <li><a class="localLink" href="http://schema.org/CancelAction">CancelAction</a>: Unlike CancelAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.</li>
 </ul>
 """,
-        `@extends` = () => List(CommunicateAction.ontology)
+        `@extends` = List(CommunicateAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CommunicateAction.Properties{
 

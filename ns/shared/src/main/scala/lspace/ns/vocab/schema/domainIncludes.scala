@@ -8,8 +8,8 @@ object domainIncludes extends PropertyDef(
         iris = Set("https://schema.org/domainIncludes"),
         label = "",
         comment = """""",
-        `@extends` = () => List(),
-        `@range` = () => List()
+        `@extends` = List(),
+        `@range` = List()
        ){
 
 override lazy val properties: List[LProperty] = List()

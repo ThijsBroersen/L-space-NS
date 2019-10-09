@@ -6,7 +6,7 @@ object EngineSpecification extends OntologyDef(
         iris = Set("http://schema.org/EngineSpecification"),
         label = "EngineSpecification",
         comment = """Information about the engine of the vehicle. A vehicle can have multiple engines represented by multiple engine specification entities.""",
-        `@extends` = () => List(StructuredValue.ontology)
+        `@extends` = List(StructuredValue.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.StructuredValue.Properties{
 lazy val engineDisplacement = lspace.ns.vocab.schema.engineDisplacement.property

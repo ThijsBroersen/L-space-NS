@@ -8,8 +8,8 @@ object printColumn extends PropertyDef(
         iris = Set("http://schema.org/printColumn"),
         label = "printColumn",
         comment = """The number of the column in which the NewsArticle appears in the print edition.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

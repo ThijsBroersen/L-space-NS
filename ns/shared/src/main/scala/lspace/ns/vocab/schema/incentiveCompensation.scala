@@ -8,8 +8,8 @@ object incentiveCompensation extends PropertyDef(
         iris = Set("http://schema.org/incentiveCompensation"),
         label = "incentiveCompensation",
         comment = """Description of bonus and commission compensation aspects of the job.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object evidenceLevel extends PropertyDef(
         iris = Set("http://schema.org/evidenceLevel"),
         label = "evidenceLevel",
         comment = """Strength of evidence of the data used to formulate the guideline (enumerated).""",
-        `@extends` = () => List(),
-        `@range` = () => List(MedicalEvidenceLevel.ontology)
+        `@extends` = List(),
+        `@range` = List(MedicalEvidenceLevel.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

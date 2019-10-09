@@ -6,7 +6,7 @@ object BodyOfWater extends OntologyDef(
         iris = Set("http://schema.org/BodyOfWater"),
         label = "BodyOfWater",
         comment = """A body of water, such as a sea, ocean, or lake.""",
-        `@extends` = () => List(Landform.ontology)
+        `@extends` = List(Landform.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Landform.Properties{
 

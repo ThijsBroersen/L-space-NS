@@ -8,8 +8,8 @@ object providerMobility extends PropertyDef(
         iris = Set("http://schema.org/providerMobility"),
         label = "providerMobility",
         comment = """Indicates the mobility of a provided service (e.g. 'static', 'dynamic').""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

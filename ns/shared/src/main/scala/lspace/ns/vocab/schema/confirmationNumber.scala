@@ -8,8 +8,8 @@ object confirmationNumber extends PropertyDef(
         iris = Set("http://schema.org/confirmationNumber"),
         label = "confirmationNumber",
         comment = """A number that confirms the given order or payment has been received.""",
-        `@extends` = () => List(identifier.property),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(identifier.property),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

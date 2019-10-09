@@ -8,8 +8,8 @@ object remainingAttendeeCapacity extends PropertyDef(
         iris = Set("http://schema.org/remainingAttendeeCapacity"),
         label = "remainingAttendeeCapacity",
         comment = """The number of attendee places for an event that remain unallocated.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@int`)
+        `@extends` = List(),
+        `@range` = List(`@int`)
        ){
 
 override lazy val properties: List[LProperty] = List()

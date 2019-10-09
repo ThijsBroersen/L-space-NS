@@ -8,8 +8,8 @@ object supersededBy extends PropertyDef(
         iris = Set("http://schema.org/supersededBy"),
         label = "supersededBy",
         comment = """Relates a term (i.e. a property, class or enumeration) to one that supersedes it.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@class`, `@property`, Enumeration.ontology)
+        `@extends` = List(),
+        `@range` = List(`@class`, `@property`, Enumeration.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -12,8 +12,8 @@ object itemListElement extends PropertyDef(
 Text values are best if the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list or when the same item might be in different places in different lists.<br/><br/>
 
 Note: The order of elements in your mark-up is not sufficient for indicating the order or elements.  Use ListItem with a 'position' property in such cases.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, Thing.ontology, ListItem.ontology)
+        `@extends` = List(),
+        `@range` = List(ListItem.ontology, Thing.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

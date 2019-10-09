@@ -8,8 +8,8 @@ object productionDate extends PropertyDef(
         iris = Set("http://schema.org/productionDate"),
         label = "productionDate",
         comment = """The date of production of the item, e.g. vehicle.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@date`)
+        `@extends` = List(),
+        `@range` = List(`@date`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object ParkingFacility extends OntologyDef(
         iris = Set("http://schema.org/ParkingFacility"),
         label = "ParkingFacility",
         comment = """A parking lot or other parking facility.""",
-        `@extends` = () => List(CivicStructure.ontology)
+        `@extends` = List(CivicStructure.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CivicStructure.Properties{
 

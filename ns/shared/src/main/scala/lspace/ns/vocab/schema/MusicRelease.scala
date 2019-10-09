@@ -6,7 +6,7 @@ object MusicRelease extends OntologyDef(
         iris = Set("http://schema.org/MusicRelease"),
         label = "MusicRelease",
         comment = """A MusicRelease is a specific release of a music album.""",
-        `@extends` = () => List(MusicPlaylist.ontology)
+        `@extends` = List(MusicPlaylist.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MusicPlaylist.Properties{
 lazy val catalogNumber = lspace.ns.vocab.schema.catalogNumber.property

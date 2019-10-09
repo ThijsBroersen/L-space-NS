@@ -8,8 +8,8 @@ object downloadUrl extends PropertyDef(
         iris = Set("http://schema.org/downloadUrl"),
         label = "downloadUrl",
         comment = """If the file can be downloaded, URL to download the binary.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

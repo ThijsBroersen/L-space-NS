@@ -6,7 +6,7 @@ object OrderItem extends OntologyDef(
         iris = Set("http://schema.org/OrderItem"),
         label = "OrderItem",
         comment = """An order item is a line of an order. It includes the quantity and shipping details of a bought offer.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val orderDelivery = lspace.ns.vocab.schema.orderDelivery.property

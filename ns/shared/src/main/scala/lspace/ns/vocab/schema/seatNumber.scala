@@ -8,8 +8,8 @@ object seatNumber extends PropertyDef(
         iris = Set("http://schema.org/seatNumber"),
         label = "seatNumber",
         comment = """The location of the reserved seat (e.g., 27).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object nonProprietaryName extends PropertyDef(
         iris = Set("http://schema.org/nonProprietaryName"),
         label = "nonProprietaryName",
         comment = """The generic name of this drug or supplement.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

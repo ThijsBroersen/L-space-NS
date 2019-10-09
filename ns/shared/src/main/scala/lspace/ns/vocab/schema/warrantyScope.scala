@@ -8,8 +8,8 @@ object warrantyScope extends PropertyDef(
         iris = Set("http://schema.org/warrantyScope"),
         label = "warrantyScope",
         comment = """The scope of the warranty promise.""",
-        `@extends` = () => List(),
-        `@range` = () => List(WarrantyScope.ontology)
+        `@extends` = List(),
+        `@range` = List(WarrantyScope.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

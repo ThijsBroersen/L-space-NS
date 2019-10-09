@@ -6,7 +6,7 @@ object CarUsageType extends OntologyDef(
         iris = Set("http://schema.org/CarUsageType"),
         label = "CarUsageType",
         comment = """A value indicating a special usage of a car, e.g. commercial rental, driving school, or as a taxi.""",
-        `@extends` = () => List(QualitativeValue.ontology)
+        `@extends` = List(QualitativeValue.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.QualitativeValue.Properties{
 

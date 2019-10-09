@@ -8,8 +8,8 @@ object winner extends PropertyDef(
         iris = Set("http://schema.org/winner"),
         label = "winner",
         comment = """A sub property of participant. The winner of the action.""",
-        `@extends` = () => List(participant.property),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(participant.property),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

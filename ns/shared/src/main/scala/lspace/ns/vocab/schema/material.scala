@@ -8,8 +8,8 @@ object material extends PropertyDef(
         iris = Set("http://schema.org/material"),
         label = "material",
         comment = """A material that something is made from, e.g. leather, wool, cotton, paper.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Product.ontology, Text.ontology, URL.ontology)
+        `@extends` = List(),
+        `@range` = List(Product.ontology, `@string`, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

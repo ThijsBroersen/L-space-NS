@@ -8,8 +8,8 @@ object interactingDrug extends PropertyDef(
         iris = Set("http://schema.org/interactingDrug"),
         label = "interactingDrug",
         comment = """Another drug that is known to interact with this drug in a way that impacts the effect of this drug or causes a risk to the patient. Note: disease interactions are typically captured as contraindications.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Drug.ontology)
+        `@extends` = List(),
+        `@range` = List(Drug.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

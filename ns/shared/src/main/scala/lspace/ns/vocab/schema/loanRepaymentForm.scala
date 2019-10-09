@@ -8,8 +8,8 @@ object loanRepaymentForm extends PropertyDef(
         iris = Set("http://schema.org/loanRepaymentForm"),
         label = "loanRepaymentForm",
         comment = """A form of paying back money previously borrowed from a lender. Repayment usually takes the form of periodic payments that normally include part principal plus interest in each payment.""",
-        `@extends` = () => List(),
-        `@range` = () => List(RepaymentSpecification.ontology)
+        `@extends` = List(),
+        `@range` = List(RepaymentSpecification.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

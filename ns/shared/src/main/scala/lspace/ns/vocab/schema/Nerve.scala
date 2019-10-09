@@ -6,7 +6,7 @@ object Nerve extends OntologyDef(
         iris = Set("http://schema.org/Nerve"),
         label = "Nerve",
         comment = """A common pathway for the electrochemical nerve impulses that are transmitted along each of the axons.""",
-        `@extends` = () => List(AnatomicalStructure.ontology)
+        `@extends` = List(AnatomicalStructure.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.AnatomicalStructure.Properties{
 lazy val nerveMotor = lspace.ns.vocab.schema.nerveMotor.property

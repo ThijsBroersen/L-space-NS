@@ -8,8 +8,8 @@ object headline extends PropertyDef(
         iris = Set("http://schema.org/headline"),
         label = "headline",
         comment = """Headline of the article.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object OrderStatus extends OntologyDef(
         iris = Set("http://schema.org/OrderStatus"),
         label = "OrderStatus",
         comment = """Enumerated status values for Order.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

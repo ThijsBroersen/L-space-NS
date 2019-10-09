@@ -8,8 +8,8 @@ object steeringPosition extends PropertyDef(
         iris = Set("http://schema.org/steeringPosition"),
         label = "steeringPosition",
         comment = """The position of the steering wheel or similar device (mostly for cars).""",
-        `@extends` = () => List(),
-        `@range` = () => List(SteeringPositionValue.ontology)
+        `@extends` = List(),
+        `@range` = List(SteeringPositionValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

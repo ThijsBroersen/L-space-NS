@@ -8,8 +8,8 @@ object requiredCollateral extends PropertyDef(
         iris = Set("http://schema.org/requiredCollateral"),
         label = "requiredCollateral",
         comment = """Assets required to secure loan or credit repayments. It may take form of third party pledge, goods, financial instruments (cash, securities, etc.)""",
-        `@extends` = () => List(),
-        `@range` = () => List(Thing.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(Thing.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

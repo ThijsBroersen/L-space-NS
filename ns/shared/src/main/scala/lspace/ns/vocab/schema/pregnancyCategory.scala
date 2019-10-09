@@ -8,8 +8,8 @@ object pregnancyCategory extends PropertyDef(
         iris = Set("http://schema.org/pregnancyCategory"),
         label = "pregnancyCategory",
         comment = """Pregnancy category of this drug.""",
-        `@extends` = () => List(),
-        `@range` = () => List(DrugPregnancyCategory.ontology)
+        `@extends` = List(),
+        `@range` = List(DrugPregnancyCategory.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

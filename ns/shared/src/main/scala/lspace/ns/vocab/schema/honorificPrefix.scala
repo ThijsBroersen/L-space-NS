@@ -8,8 +8,8 @@ object honorificPrefix extends PropertyDef(
         iris = Set("http://schema.org/honorificPrefix"),
         label = "honorificPrefix",
         comment = """An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

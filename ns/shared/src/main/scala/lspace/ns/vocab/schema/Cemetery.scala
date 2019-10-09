@@ -6,7 +6,7 @@ object Cemetery extends OntologyDef(
         iris = Set("http://schema.org/Cemetery"),
         label = "Cemetery",
         comment = """A graveyard.""",
-        `@extends` = () => List(CivicStructure.ontology)
+        `@extends` = List(CivicStructure.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CivicStructure.Properties{
 

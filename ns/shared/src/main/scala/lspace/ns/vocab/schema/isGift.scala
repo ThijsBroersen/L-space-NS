@@ -8,8 +8,8 @@ object isGift extends PropertyDef(
         iris = Set("http://schema.org/isGift"),
         label = "isGift",
         comment = """Was the offer accepted as a gift for someone other than the buyer.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

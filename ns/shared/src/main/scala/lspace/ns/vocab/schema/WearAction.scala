@@ -6,7 +6,7 @@ object WearAction extends OntologyDef(
         iris = Set("http://schema.org/WearAction"),
         label = "WearAction",
         comment = """The act of dressing oneself in clothing.""",
-        `@extends` = () => List(UseAction.ontology)
+        `@extends` = List(UseAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.UseAction.Properties{
 

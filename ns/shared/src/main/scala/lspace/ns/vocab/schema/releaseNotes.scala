@@ -8,8 +8,8 @@ object releaseNotes extends PropertyDef(
         iris = Set("http://schema.org/releaseNotes"),
         label = "releaseNotes",
         comment = """Description of what changed in this version.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

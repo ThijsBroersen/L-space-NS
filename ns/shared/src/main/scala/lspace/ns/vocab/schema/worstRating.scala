@@ -8,8 +8,8 @@ object worstRating extends PropertyDef(
         iris = Set("http://schema.org/worstRating"),
         label = "worstRating",
         comment = """The lowest value allowed in this rating system. If worstRating is omitted, 1 is assumed.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@number`, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

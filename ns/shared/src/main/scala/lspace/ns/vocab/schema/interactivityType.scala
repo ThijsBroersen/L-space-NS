@@ -8,8 +8,8 @@ object interactivityType extends PropertyDef(
         iris = Set("http://schema.org/interactivityType"),
         label = "interactivityType",
         comment = """The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

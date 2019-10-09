@@ -8,8 +8,8 @@ object distribution extends PropertyDef(
         iris = Set("http://schema.org/distribution"),
         label = "distribution",
         comment = """A downloadable form of this dataset, at a specific location, in a specific format.""",
-        `@extends` = () => List(),
-        `@range` = () => List(DataDownload.ontology)
+        `@extends` = List(),
+        `@range` = List(DataDownload.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object DrugClass extends OntologyDef(
         iris = Set("http://schema.org/DrugClass"),
         label = "DrugClass",
         comment = """A class of medical drugs, e.g., statins. Classes can represent general pharmacological class, common mechanisms of action, common physiological effects, etc.""",
-        `@extends` = () => List(MedicalEnumeration.ontology)
+        `@extends` = List(MedicalEnumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
 lazy val drug = lspace.ns.vocab.schema.drug.property

@@ -8,8 +8,8 @@ object baseSalary extends PropertyDef(
         iris = Set("http://schema.org/baseSalary"),
         label = "baseSalary",
         comment = """The base salary of the job or of an employee in an EmployeeRole.""",
-        `@extends` = () => List(),
-        `@range` = () => List(PriceSpecification.ontology, `@number`, MonetaryAmount.ontology)
+        `@extends` = List(),
+        `@range` = List(MonetaryAmount.ontology, PriceSpecification.ontology, `@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

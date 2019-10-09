@@ -6,7 +6,7 @@ object FoodEvent extends OntologyDef(
         iris = Set("http://schema.org/FoodEvent"),
         label = "FoodEvent",
         comment = """Event type: Food event.""",
-        `@extends` = () => List(Event.ontology)
+        `@extends` = List(Event.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Event.Properties{
 

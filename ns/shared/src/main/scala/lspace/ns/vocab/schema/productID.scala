@@ -8,8 +8,8 @@ object productID extends PropertyDef(
         iris = Set("http://schema.org/productID"),
         label = "productID",
         comment = """The product identifier, such as ISBN. For example: <code>meta itemprop="productID" content="isbn:123-456-789"</code>.""",
-        `@extends` = () => List(identifier.property),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(identifier.property),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

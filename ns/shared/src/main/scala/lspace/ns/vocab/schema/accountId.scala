@@ -8,8 +8,8 @@ object accountId extends PropertyDef(
         iris = Set("http://schema.org/accountId"),
         label = "accountId",
         comment = """The identifier for the account the payment will be applied to.""",
-        `@extends` = () => List(identifier.property),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(identifier.property),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

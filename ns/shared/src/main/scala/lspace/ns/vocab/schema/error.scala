@@ -8,8 +8,8 @@ object error extends PropertyDef(
         iris = Set("http://schema.org/error"),
         label = "error",
         comment = """For failed actions, more information on the cause of the failure.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Thing.ontology)
+        `@extends` = List(),
+        `@range` = List(Thing.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

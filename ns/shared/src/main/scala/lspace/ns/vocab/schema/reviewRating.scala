@@ -8,8 +8,8 @@ object reviewRating extends PropertyDef(
         iris = Set("http://schema.org/reviewRating"),
         label = "reviewRating",
         comment = """The rating given in this review. Note that reviews can themselves be rated. The <code>reviewRating</code> applies to rating given by the review. The <a class="localLink" href="http://schema.org/aggregateRating">aggregateRating</a> property applies to the review itself, as a creative work.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Rating.ontology)
+        `@extends` = List(),
+        `@range` = List(Rating.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object SearchResultsPage extends OntologyDef(
         iris = Set("http://schema.org/SearchResultsPage"),
         label = "SearchResultsPage",
         comment = """Web page type: Search results page.""",
-        `@extends` = () => List(WebPage.ontology)
+        `@extends` = List(WebPage.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.WebPage.Properties{
 

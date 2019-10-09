@@ -8,8 +8,8 @@ object preOp extends PropertyDef(
         iris = Set("http://schema.org/preOp"),
         label = "preOp",
         comment = """A description of the workup, testing, and other preparations required before implanting this device.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

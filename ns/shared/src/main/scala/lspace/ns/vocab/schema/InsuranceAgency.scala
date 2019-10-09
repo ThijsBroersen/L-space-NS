@@ -6,7 +6,7 @@ object InsuranceAgency extends OntologyDef(
         iris = Set("http://schema.org/InsuranceAgency"),
         label = "InsuranceAgency",
         comment = """An Insurance agency.""",
-        `@extends` = () => List(FinancialService.ontology)
+        `@extends` = List(FinancialService.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.FinancialService.Properties{
 

@@ -8,8 +8,8 @@ object safetyConsideration extends PropertyDef(
         iris = Set("http://schema.org/safetyConsideration"),
         label = "safetyConsideration",
         comment = """Any potential safety concern associated with the supplement. May include interactions with other drugs and foods, pregnancy, breastfeeding, known adverse reactions, and documented efficacy of the supplement.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

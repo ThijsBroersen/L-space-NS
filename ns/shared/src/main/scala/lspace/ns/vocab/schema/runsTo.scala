@@ -8,8 +8,8 @@ object runsTo extends PropertyDef(
         iris = Set("http://schema.org/runsTo"),
         label = "runsTo",
         comment = """The vasculature the lymphatic structure runs, or efferents, to.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Vessel.ontology)
+        `@extends` = List(),
+        `@range` = List(Vessel.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

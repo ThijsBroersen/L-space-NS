@@ -8,8 +8,8 @@ object hasDefinedTerm extends PropertyDef(
         iris = Set("http://schema.org/hasDefinedTerm"),
         label = "hasDefinedTerm",
         comment = """A Defined Term contained in this term set.""",
-        `@extends` = () => List(hasPart.property),
-        `@range` = () => List(DefinedTerm.ontology)
+        `@extends` = List(hasPart.property),
+        `@range` = List(DefinedTerm.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

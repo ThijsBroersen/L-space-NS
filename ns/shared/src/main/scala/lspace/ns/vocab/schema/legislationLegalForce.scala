@@ -8,8 +8,8 @@ object legislationLegalForce extends PropertyDef(
         iris = Set("http://schema.org/legislationLegalForce"),
         label = "legislationLegalForce",
         comment = """Whether the legislation is currently in force, not in force, or partially in force.""",
-        `@extends` = () => List(),
-        `@range` = () => List(LegalForceStatus.ontology)
+        `@extends` = List(),
+        `@range` = List(LegalForceStatus.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

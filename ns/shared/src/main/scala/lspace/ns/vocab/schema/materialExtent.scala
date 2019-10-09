@@ -8,8 +8,8 @@ object materialExtent extends PropertyDef(
         iris = Set("http://schema.org/materialExtent"),
         label = "materialExtent",
         comment = """The quantity of the materials being described or an expression of the physical space they occupy.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

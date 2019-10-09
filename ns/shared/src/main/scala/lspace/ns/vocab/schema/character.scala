@@ -8,8 +8,8 @@ object character extends PropertyDef(
         iris = Set("http://schema.org/character"),
         label = "character",
         comment = """Fictional person connected with a creative work.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

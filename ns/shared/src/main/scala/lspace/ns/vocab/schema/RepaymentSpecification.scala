@@ -6,7 +6,7 @@ object RepaymentSpecification extends OntologyDef(
         iris = Set("http://schema.org/RepaymentSpecification"),
         label = "RepaymentSpecification",
         comment = """A structured value representing repayment.""",
-        `@extends` = () => List(StructuredValue.ontology)
+        `@extends` = List(StructuredValue.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.StructuredValue.Properties{
 lazy val downPayment = lspace.ns.vocab.schema.downPayment.property

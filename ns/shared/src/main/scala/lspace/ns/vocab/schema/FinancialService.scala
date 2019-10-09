@@ -6,7 +6,7 @@ object FinancialService extends OntologyDef(
         iris = Set("http://schema.org/FinancialService"),
         label = "FinancialService",
         comment = """Financial services business.""",
-        `@extends` = () => List(LocalBusiness.ontology)
+        `@extends` = List(LocalBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.LocalBusiness.Properties{
 lazy val feesAndCommissionsSpecification = lspace.ns.vocab.schema.feesAndCommissionsSpecification.property

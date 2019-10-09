@@ -6,7 +6,7 @@ object AutoPartsStore extends OntologyDef(
         iris = Set("http://schema.org/AutoPartsStore"),
         label = "AutoPartsStore",
         comment = """An auto parts store.""",
-        `@extends` = () => List(Store.ontology, AutomotiveBusiness.ontology)
+        `@extends` = List(Store.ontology, AutomotiveBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Store.Properties with lspace.ns.vocab.schema.AutomotiveBusiness.Properties{
 

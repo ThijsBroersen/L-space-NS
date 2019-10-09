@@ -6,7 +6,7 @@ object UpdateAction extends OntologyDef(
         iris = Set("http://schema.org/UpdateAction"),
         label = "UpdateAction",
         comment = """The act of managing by changing/editing the state of the object.""",
-        `@extends` = () => List(Action.ontology)
+        `@extends` = List(Action.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Action.Properties{
 lazy val targetCollection = lspace.ns.vocab.schema.targetCollection.property

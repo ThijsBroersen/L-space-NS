@@ -8,8 +8,8 @@ object additionalNumberOfGuests extends PropertyDef(
         iris = Set("http://schema.org/additionalNumberOfGuests"),
         label = "additionalNumberOfGuests",
         comment = """If responding yes, the number of guests who will attend in addition to the invitee.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object colorist extends PropertyDef(
         iris = Set("http://schema.org/colorist"),
         label = "colorist",
         comment = """The individual who adds color to inked drawings.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

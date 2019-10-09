@@ -8,8 +8,8 @@ object normalRange extends PropertyDef(
         iris = Set("http://schema.org/normalRange"),
         label = "normalRange",
         comment = """Range of acceptable values for a typical patient, when applicable.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, MedicalEnumeration.ontology)
+        `@extends` = List(),
+        `@range` = List(MedicalEnumeration.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

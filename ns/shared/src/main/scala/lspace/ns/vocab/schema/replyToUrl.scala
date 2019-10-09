@@ -8,8 +8,8 @@ object replyToUrl extends PropertyDef(
         iris = Set("http://schema.org/replyToUrl"),
         label = "replyToUrl",
         comment = """The URL at which a reply may be posted to the specified UserComment.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

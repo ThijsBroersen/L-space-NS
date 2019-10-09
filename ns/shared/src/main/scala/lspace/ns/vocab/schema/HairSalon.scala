@@ -6,7 +6,7 @@ object HairSalon extends OntologyDef(
         iris = Set("http://schema.org/HairSalon"),
         label = "HairSalon",
         comment = """A hair salon.""",
-        `@extends` = () => List(HealthAndBeautyBusiness.ontology)
+        `@extends` = List(HealthAndBeautyBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.HealthAndBeautyBusiness.Properties{
 

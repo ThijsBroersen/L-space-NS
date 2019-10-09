@@ -8,8 +8,8 @@ object suggestedAnswer extends PropertyDef(
         iris = Set("http://schema.org/suggestedAnswer"),
         label = "suggestedAnswer",
         comment = """An answer (possibly one of several, possibly incorrect) to a Question, e.g. on a Question/Answer site.""",
-        `@extends` = () => List(),
-        `@range` = () => List(ItemList.ontology, Answer.ontology)
+        `@extends` = List(),
+        `@range` = List(ItemList.ontology, Answer.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

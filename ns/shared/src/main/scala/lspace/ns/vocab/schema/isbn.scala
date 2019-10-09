@@ -8,8 +8,8 @@ object isbn extends PropertyDef(
         iris = Set("http://schema.org/isbn"),
         label = "isbn",
         comment = """The ISBN of the book.""",
-        `@extends` = () => List(identifier.property),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(identifier.property),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

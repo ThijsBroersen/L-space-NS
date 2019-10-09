@@ -8,8 +8,8 @@ object previousItem extends PropertyDef(
         iris = Set("http://schema.org/previousItem"),
         label = "previousItem",
         comment = """A link to the ListItem that preceeds the current one.""",
-        `@extends` = () => List(),
-        `@range` = () => List(ListItem.ontology)
+        `@extends` = List(),
+        `@range` = List(ListItem.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object labelDetails extends PropertyDef(
         iris = Set("http://schema.org/labelDetails"),
         label = "labelDetails",
         comment = """Link to the drug's label details.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

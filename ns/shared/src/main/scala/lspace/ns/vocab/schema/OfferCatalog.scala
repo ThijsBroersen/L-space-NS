@@ -6,7 +6,7 @@ object OfferCatalog extends OntologyDef(
         iris = Set("http://schema.org/OfferCatalog"),
         label = "OfferCatalog",
         comment = """An OfferCatalog is an ItemList that contains related Offers and/or further OfferCatalogs that are offeredBy the same provider.""",
-        `@extends` = () => List(ItemList.ontology)
+        `@extends` = List(ItemList.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ItemList.Properties{
 

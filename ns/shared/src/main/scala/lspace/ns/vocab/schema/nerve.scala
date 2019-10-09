@@ -8,8 +8,8 @@ object nerve extends PropertyDef(
         iris = Set("http://schema.org/nerve"),
         label = "nerve",
         comment = """The underlying innervation associated with the muscle.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Nerve.ontology)
+        `@extends` = List(),
+        `@range` = List(Nerve.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object PhysicalTherapy extends OntologyDef(
         iris = Set("http://schema.org/PhysicalTherapy"),
         label = "PhysicalTherapy",
         comment = """A process of progressive physical care and rehabilitation aimed at improving a health condition.""",
-        `@extends` = () => List(MedicalTherapy.ontology)
+        `@extends` = List(MedicalTherapy.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalTherapy.Properties{
 

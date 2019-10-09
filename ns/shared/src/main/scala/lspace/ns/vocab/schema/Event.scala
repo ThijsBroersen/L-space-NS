@@ -6,7 +6,7 @@ object Event extends OntologyDef(
         iris = Set("http://schema.org/Event"),
         label = "Event",
         comment = """An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing information may be added via the <a class="localLink" href="http://schema.org/offers">offers</a> property. Repeated events may be structured as separate Event objects.""",
-        `@extends` = () => List(Thing.ontology)
+        `@extends` = List(Thing.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Thing.Properties{
 lazy val about = lspace.ns.vocab.schema.about.property

@@ -8,8 +8,8 @@ object modifiedTime extends PropertyDef(
         iris = Set("http://schema.org/modifiedTime"),
         label = "modifiedTime",
         comment = """The date and time the reservation was modified.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@datetime`)
+        `@extends` = List(),
+        `@range` = List(`@datetime`)
        ){
 
 override lazy val properties: List[LProperty] = List()

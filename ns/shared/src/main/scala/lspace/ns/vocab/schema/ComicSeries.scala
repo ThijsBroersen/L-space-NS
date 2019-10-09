@@ -8,7 +8,7 @@ object ComicSeries extends OntologyDef(
         comment = """A sequential publication of comic stories under a
     unifying title, for example "The Amazing Spider-Man" or "Groo the
     Wanderer".""",
-        `@extends` = () => List(Periodical.ontology)
+        `@extends` = List(Periodical.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Periodical.Properties{
 

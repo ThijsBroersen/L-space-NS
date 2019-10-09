@@ -6,7 +6,7 @@ object FoodEstablishment extends OntologyDef(
         iris = Set("http://schema.org/FoodEstablishment"),
         label = "FoodEstablishment",
         comment = """A food-related business.""",
-        `@extends` = () => List(LocalBusiness.ontology)
+        `@extends` = List(LocalBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.LocalBusiness.Properties{
 lazy val acceptsReservations = lspace.ns.vocab.schema.acceptsReservations.property

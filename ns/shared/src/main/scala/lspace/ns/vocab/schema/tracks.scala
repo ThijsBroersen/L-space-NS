@@ -8,8 +8,8 @@ object tracks extends PropertyDef(
         iris = Set("http://schema.org/tracks"),
         label = "tracks",
         comment = """A music recording (track)&#x2014;usually a single song.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MusicRecording.ontology)
+        `@extends` = List(),
+        `@range` = List(MusicRecording.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

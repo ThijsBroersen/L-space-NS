@@ -8,8 +8,8 @@ object overview extends PropertyDef(
         iris = Set("http://schema.org/overview"),
         label = "overview",
         comment = """Descriptive information establishing the overarching theory/philosophy of the plan. May include the rationale for the name, the population where the plan first came to prominence, etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

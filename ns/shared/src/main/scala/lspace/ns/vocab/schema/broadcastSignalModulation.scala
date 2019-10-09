@@ -8,8 +8,8 @@ object broadcastSignalModulation extends PropertyDef(
         iris = Set("http://schema.org/broadcastSignalModulation"),
         label = "broadcastSignalModulation",
         comment = """The modulation (e.g. FM, AM, etc) used by a particular broadcast service""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, QualitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, QualitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object Muscle extends OntologyDef(
         iris = Set("http://schema.org/Muscle"),
         label = "Muscle",
         comment = """A muscle is an anatomical structure consisting of a contractile form of tissue that animals use to effect movement.""",
-        `@extends` = () => List(AnatomicalStructure.ontology)
+        `@extends` = List(AnatomicalStructure.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.AnatomicalStructure.Properties{
 lazy val action = lspace.ns.vocab.schema.action.property

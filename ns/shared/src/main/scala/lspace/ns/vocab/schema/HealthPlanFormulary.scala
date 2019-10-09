@@ -6,7 +6,7 @@ object HealthPlanFormulary extends OntologyDef(
         iris = Set("http://schema.org/HealthPlanFormulary"),
         label = "HealthPlanFormulary",
         comment = """For a given health insurance plan, the specification for costs and coverage of prescription drugs.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val healthPlanCostSharing = lspace.ns.vocab.schema.healthPlanCostSharing.property

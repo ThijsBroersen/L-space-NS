@@ -6,7 +6,7 @@ object InteractionCounter extends OntologyDef(
         iris = Set("http://schema.org/InteractionCounter"),
         label = "InteractionCounter",
         comment = """A summary of how users have interacted with this CreativeWork. In most cases, authors will use a subtype to specify the specific type of interaction.""",
-        `@extends` = () => List(StructuredValue.ontology)
+        `@extends` = List(StructuredValue.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.StructuredValue.Properties{
 lazy val interactionService = lspace.ns.vocab.schema.interactionService.property

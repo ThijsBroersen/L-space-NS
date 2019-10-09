@@ -8,8 +8,8 @@ object guideline extends PropertyDef(
         iris = Set("http://schema.org/guideline"),
         label = "guideline",
         comment = """A medical guideline related to this entity.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MedicalGuideline.ontology)
+        `@extends` = List(),
+        `@range` = List(MedicalGuideline.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object Corporation extends OntologyDef(
         iris = Set("http://schema.org/Corporation"),
         label = "Corporation",
         comment = """Organization: A business corporation.""",
-        `@extends` = () => List(Organization.ontology)
+        `@extends` = List(Organization.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Organization.Properties{
 lazy val tickerSymbol = lspace.ns.vocab.schema.tickerSymbol.property

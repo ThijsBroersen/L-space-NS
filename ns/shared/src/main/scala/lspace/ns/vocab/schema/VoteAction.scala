@@ -6,7 +6,7 @@ object VoteAction extends OntologyDef(
         iris = Set("http://schema.org/VoteAction"),
         label = "VoteAction",
         comment = """The act of expressing a preference from a fixed/finite/structured set of choices/options.""",
-        `@extends` = () => List(ChooseAction.ontology)
+        `@extends` = List(ChooseAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ChooseAction.Properties{
 lazy val candidate = lspace.ns.vocab.schema.candidate.property

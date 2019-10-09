@@ -6,7 +6,7 @@ object CurrencyConversionService extends OntologyDef(
         iris = Set("http://schema.org/CurrencyConversionService"),
         label = "CurrencyConversionService",
         comment = """A service to convert funds from one currency to another currency.""",
-        `@extends` = () => List(FinancialProduct.ontology)
+        `@extends` = List(FinancialProduct.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.FinancialProduct.Properties{
 

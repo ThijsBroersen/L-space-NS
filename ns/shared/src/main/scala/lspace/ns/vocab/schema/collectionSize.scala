@@ -8,8 +8,8 @@ object collectionSize extends PropertyDef(
         iris = Set("http://schema.org/collectionSize"),
         label = "collectionSize",
         comment = """The number of items in the <a class="localLink" href="http://schema.org/Collection">Collection</a>.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@int`)
+        `@extends` = List(),
+        `@range` = List(`@int`)
        ){
 
 override lazy val properties: List[LProperty] = List()

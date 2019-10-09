@@ -6,7 +6,7 @@ object Car extends OntologyDef(
         iris = Set("http://schema.org/Car"),
         label = "Car",
         comment = """A car is a wheeled, self-powered motor vehicle used for transportation.""",
-        `@extends` = () => List(Vehicle.ontology)
+        `@extends` = List(Vehicle.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Vehicle.Properties{
 lazy val acrissCode = lspace.ns.vocab.schema.acrissCode.property

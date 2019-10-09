@@ -6,7 +6,7 @@ object MusicVideoObject extends OntologyDef(
         iris = Set("http://schema.org/MusicVideoObject"),
         label = "MusicVideoObject",
         comment = """A music video file.""",
-        `@extends` = () => List(MediaObject.ontology)
+        `@extends` = List(MediaObject.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MediaObject.Properties{
 

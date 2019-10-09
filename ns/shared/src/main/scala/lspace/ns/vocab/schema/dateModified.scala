@@ -8,8 +8,8 @@ object dateModified extends PropertyDef(
         iris = Set("http://schema.org/dateModified"),
         label = "dateModified",
         comment = """The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@datetime`, `@date`)
+        `@extends` = List(),
+        `@range` = List(`@date`, `@datetime`)
        ){
 
 override lazy val properties: List[LProperty] = List()

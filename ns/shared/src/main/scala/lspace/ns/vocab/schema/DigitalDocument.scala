@@ -6,7 +6,7 @@ object DigitalDocument extends OntologyDef(
         iris = Set("http://schema.org/DigitalDocument"),
         label = "DigitalDocument",
         comment = """An electronic file or document.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val hasDigitalDocumentPermission = lspace.ns.vocab.schema.hasDigitalDocumentPermission.property

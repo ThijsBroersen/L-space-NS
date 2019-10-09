@@ -8,8 +8,8 @@ object hasCourseInstance extends PropertyDef(
         iris = Set("http://schema.org/hasCourseInstance"),
         label = "hasCourseInstance",
         comment = """An offering of the course at a specific time and place or through specific media or mode of study or to a specific section of students.""",
-        `@extends` = () => List(),
-        `@range` = () => List(CourseInstance.ontology)
+        `@extends` = List(),
+        `@range` = List(CourseInstance.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

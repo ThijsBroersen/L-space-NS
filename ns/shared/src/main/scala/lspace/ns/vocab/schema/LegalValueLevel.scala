@@ -6,7 +6,7 @@ object LegalValueLevel extends OntologyDef(
         iris = Set("http://schema.org/LegalValueLevel"),
         label = "LegalValueLevel",
         comment = """A list of possible levels for the legal validity of a legislation.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

@@ -8,8 +8,8 @@ object departurePlatform extends PropertyDef(
         iris = Set("http://schema.org/departurePlatform"),
         label = "departurePlatform",
         comment = """The platform from which the train departs.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object NGO extends OntologyDef(
         iris = Set("http://schema.org/NGO"),
         label = "NGO",
         comment = """Organization: Non-governmental Organization.""",
-        `@extends` = () => List(Organization.ontology)
+        `@extends` = List(Organization.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Organization.Properties{
 

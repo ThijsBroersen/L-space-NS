@@ -8,8 +8,8 @@ object text extends PropertyDef(
         iris = Set("http://schema.org/text"),
         label = "text",
         comment = """The textual content of this CreativeWork.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object thumbnailUrl extends PropertyDef(
         iris = Set("http://schema.org/thumbnailUrl"),
         label = "thumbnailUrl",
         comment = """A thumbnail image relevant to the Thing.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object PaintAction extends OntologyDef(
         iris = Set("http://schema.org/PaintAction"),
         label = "PaintAction",
         comment = """The act of producing a painting, typically with paint and canvas as instruments.""",
-        `@extends` = () => List(CreateAction.ontology)
+        `@extends` = List(CreateAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreateAction.Properties{
 

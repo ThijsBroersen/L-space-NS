@@ -8,8 +8,8 @@ object participant extends PropertyDef(
         iris = Set("http://schema.org/participant"),
         label = "participant",
         comment = """Other co-agents that participated in the action indirectly. e.g. John wrote a book with <em>Steve</em>.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology, Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology, Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

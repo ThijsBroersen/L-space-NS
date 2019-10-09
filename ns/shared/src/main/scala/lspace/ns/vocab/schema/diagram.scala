@@ -8,8 +8,8 @@ object diagram extends PropertyDef(
         iris = Set("http://schema.org/diagram"),
         label = "diagram",
         comment = """An image containing a diagram that illustrates the structure and/or its component substructures and/or connections with other structures.""",
-        `@extends` = () => List(),
-        `@range` = () => List(ImageObject.ontology)
+        `@extends` = List(),
+        `@range` = List(ImageObject.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

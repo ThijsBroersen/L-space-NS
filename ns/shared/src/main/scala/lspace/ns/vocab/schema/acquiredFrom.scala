@@ -8,8 +8,8 @@ object acquiredFrom extends PropertyDef(
         iris = Set("http://schema.org/acquiredFrom"),
         label = "acquiredFrom",
         comment = """The organization or person from which the product was acquired.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology, Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology, Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

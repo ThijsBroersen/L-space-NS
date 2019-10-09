@@ -8,8 +8,8 @@ object renegotiableLoan extends PropertyDef(
         iris = Set("http://schema.org/renegotiableLoan"),
         label = "renegotiableLoan",
         comment = """Whether the terms for payment of interest can be renegotiated during the life of the loan.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

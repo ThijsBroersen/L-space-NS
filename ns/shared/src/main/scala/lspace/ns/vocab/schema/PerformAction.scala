@@ -6,7 +6,7 @@ object PerformAction extends OntologyDef(
         iris = Set("http://schema.org/PerformAction"),
         label = "PerformAction",
         comment = """The act of participating in performance arts.""",
-        `@extends` = () => List(PlayAction.ontology)
+        `@extends` = List(PlayAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.PlayAction.Properties{
 lazy val entertainmentBusiness = lspace.ns.vocab.schema.entertainmentBusiness.property

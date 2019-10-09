@@ -6,7 +6,7 @@ object OrganizationRole extends OntologyDef(
         iris = Set("http://schema.org/OrganizationRole"),
         label = "OrganizationRole",
         comment = """A subclass of Role used to describe roles within organizations.""",
-        `@extends` = () => List(Role.ontology)
+        `@extends` = List(Role.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Role.Properties{
 lazy val numberedPosition = lspace.ns.vocab.schema.numberedPosition.property

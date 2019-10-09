@@ -6,7 +6,7 @@ object Map extends OntologyDef(
         iris = Set("http://schema.org/Map"),
         label = "Map",
         comment = """A map.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val mapType = lspace.ns.vocab.schema.mapType.property

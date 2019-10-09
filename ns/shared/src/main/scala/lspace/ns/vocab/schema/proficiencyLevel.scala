@@ -8,8 +8,8 @@ object proficiencyLevel extends PropertyDef(
         iris = Set("http://schema.org/proficiencyLevel"),
         label = "proficiencyLevel",
         comment = """Proficiency needed for this content; expected values: 'Beginner', 'Expert'.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

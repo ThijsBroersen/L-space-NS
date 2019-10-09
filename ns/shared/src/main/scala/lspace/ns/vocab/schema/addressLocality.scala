@@ -8,8 +8,8 @@ object addressLocality extends PropertyDef(
         iris = Set("http://schema.org/addressLocality"),
         label = "addressLocality",
         comment = """The locality. For example, Mountain View.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

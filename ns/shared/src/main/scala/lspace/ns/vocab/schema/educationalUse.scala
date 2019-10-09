@@ -8,8 +8,8 @@ object educationalUse extends PropertyDef(
         iris = Set("http://schema.org/educationalUse"),
         label = "educationalUse",
         comment = """The purpose of a work in the context of education; for example, 'assignment', 'group work'.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

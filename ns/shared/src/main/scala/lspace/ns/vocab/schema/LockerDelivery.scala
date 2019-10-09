@@ -6,7 +6,7 @@ object LockerDelivery extends OntologyDef(
         iris = Set("http://schema.org/LockerDelivery"),
         label = "LockerDelivery",
         comment = """A DeliveryMethod in which an item is made available via locker.""",
-        `@extends` = () => List(DeliveryMethod.ontology)
+        `@extends` = List(DeliveryMethod.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.DeliveryMethod.Properties{
 

@@ -6,7 +6,7 @@ object BankOrCreditUnion extends OntologyDef(
         iris = Set("http://schema.org/BankOrCreditUnion"),
         label = "BankOrCreditUnion",
         comment = """Bank or credit union.""",
-        `@extends` = () => List(FinancialService.ontology)
+        `@extends` = List(FinancialService.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.FinancialService.Properties{
 

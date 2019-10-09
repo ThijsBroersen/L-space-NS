@@ -8,8 +8,8 @@ object longitude extends PropertyDef(
         iris = Set("http://schema.org/longitude"),
         label = "longitude",
         comment = """The longitude of a location. For example <code>-122.08585</code> (<a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a>).""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, `@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

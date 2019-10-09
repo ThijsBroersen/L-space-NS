@@ -8,8 +8,8 @@ object processingTime extends PropertyDef(
         iris = Set("http://schema.org/processingTime"),
         label = "processingTime",
         comment = """Estimated processing time for the service using this channel.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Duration.ontology)
+        `@extends` = List(),
+        `@range` = List(Duration.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

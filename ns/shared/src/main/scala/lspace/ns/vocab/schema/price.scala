@@ -18,8 +18,8 @@ Usage guidelines:<br/><br/>
 <li>Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.</li>
 </ul>
 """,
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, `@number`)
+        `@extends` = List(),
+        `@range` = List(`@string`, `@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

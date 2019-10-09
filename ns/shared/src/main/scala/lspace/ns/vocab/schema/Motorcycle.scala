@@ -6,7 +6,7 @@ object Motorcycle extends OntologyDef(
         iris = Set("http://schema.org/Motorcycle"),
         label = "Motorcycle",
         comment = """A motorcycle or motorbike is a single-track, two-wheeled motor vehicle.""",
-        `@extends` = () => List(Vehicle.ontology)
+        `@extends` = List(Vehicle.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Vehicle.Properties{
 

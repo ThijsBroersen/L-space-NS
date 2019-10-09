@@ -6,7 +6,7 @@ object ItemPage extends OntologyDef(
         iris = Set("http://schema.org/ItemPage"),
         label = "ItemPage",
         comment = """A page devoted to a single item, such as a particular product or hotel.""",
-        `@extends` = () => List(WebPage.ontology)
+        `@extends` = List(WebPage.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.WebPage.Properties{
 

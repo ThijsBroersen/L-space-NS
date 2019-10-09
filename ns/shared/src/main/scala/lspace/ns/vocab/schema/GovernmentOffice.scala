@@ -6,7 +6,7 @@ object GovernmentOffice extends OntologyDef(
         iris = Set("http://schema.org/GovernmentOffice"),
         label = "GovernmentOffice",
         comment = """A government office&#x2014;for example, an IRS or DMV office.""",
-        `@extends` = () => List(LocalBusiness.ontology)
+        `@extends` = List(LocalBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.LocalBusiness.Properties{
 

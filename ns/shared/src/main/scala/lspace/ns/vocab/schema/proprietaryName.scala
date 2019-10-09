@@ -8,8 +8,8 @@ object proprietaryName extends PropertyDef(
         iris = Set("http://schema.org/proprietaryName"),
         label = "proprietaryName",
         comment = """Proprietary name given to the diet plan, typically by its originator or creator.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

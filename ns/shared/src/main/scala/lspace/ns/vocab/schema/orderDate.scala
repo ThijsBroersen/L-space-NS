@@ -8,8 +8,8 @@ object orderDate extends PropertyDef(
         iris = Set("http://schema.org/orderDate"),
         label = "orderDate",
         comment = """Date order was placed.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@datetime`)
+        `@extends` = List(),
+        `@range` = List(`@datetime`)
        ){
 
 override lazy val properties: List[LProperty] = List()

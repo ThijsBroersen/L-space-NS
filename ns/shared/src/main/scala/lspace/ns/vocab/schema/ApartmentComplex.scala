@@ -6,7 +6,7 @@ object ApartmentComplex extends OntologyDef(
         iris = Set("http://schema.org/ApartmentComplex"),
         label = "ApartmentComplex",
         comment = """Residence type: Apartment complex.""",
-        `@extends` = () => List(Residence.ontology)
+        `@extends` = List(Residence.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Residence.Properties{
 

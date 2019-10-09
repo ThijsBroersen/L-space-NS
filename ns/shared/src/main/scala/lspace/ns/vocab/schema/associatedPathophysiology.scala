@@ -8,8 +8,8 @@ object associatedPathophysiology extends PropertyDef(
         iris = Set("http://schema.org/associatedPathophysiology"),
         label = "associatedPathophysiology",
         comment = """If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

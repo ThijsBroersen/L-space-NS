@@ -6,7 +6,7 @@ object OfferItemCondition extends OntologyDef(
         iris = Set("http://schema.org/OfferItemCondition"),
         label = "OfferItemCondition",
         comment = """A list of possible conditions for the item.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

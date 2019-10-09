@@ -6,7 +6,7 @@ object MedicalDevicePurpose extends OntologyDef(
         iris = Set("http://schema.org/MedicalDevicePurpose"),
         label = "MedicalDevicePurpose",
         comment = """Categories of medical devices, organized by the purpose or intended use of the device.""",
-        `@extends` = () => List(MedicalEnumeration.ontology)
+        `@extends` = List(MedicalEnumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
 

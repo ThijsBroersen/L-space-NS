@@ -8,8 +8,8 @@ object subReservation extends PropertyDef(
         iris = Set("http://schema.org/subReservation"),
         label = "subReservation",
         comment = """The individual reservations included in the package. Typically a repeated property.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Reservation.ontology)
+        `@extends` = List(),
+        `@range` = List(Reservation.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

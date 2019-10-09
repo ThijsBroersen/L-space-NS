@@ -8,8 +8,8 @@ object bookingAgent extends PropertyDef(
         iris = Set("http://schema.org/bookingAgent"),
         label = "bookingAgent",
         comment = """'bookingAgent' is an out-dated term indicating a 'broker' that serves as a booking agent.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology, Organization.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology, Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

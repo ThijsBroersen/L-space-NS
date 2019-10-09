@@ -8,8 +8,8 @@ object email extends PropertyDef(
         iris = Set("http://schema.org/email"),
         label = "email",
         comment = """Email address.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

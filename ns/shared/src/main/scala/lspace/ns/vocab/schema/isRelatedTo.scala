@@ -8,8 +8,8 @@ object isRelatedTo extends PropertyDef(
         iris = Set("http://schema.org/isRelatedTo"),
         label = "isRelatedTo",
         comment = """A pointer to another, somehow related product (or multiple products).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Service.ontology, Product.ontology)
+        `@extends` = List(),
+        `@range` = List(Product.ontology, Service.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

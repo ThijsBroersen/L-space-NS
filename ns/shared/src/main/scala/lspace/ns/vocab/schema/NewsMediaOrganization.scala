@@ -6,7 +6,7 @@ object NewsMediaOrganization extends OntologyDef(
         iris = Set("http://schema.org/NewsMediaOrganization"),
         label = "NewsMediaOrganization",
         comment = """A News/Media organization such as a newspaper or TV station.""",
-        `@extends` = () => List(Organization.ontology)
+        `@extends` = List(Organization.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Organization.Properties{
 lazy val masthead = lspace.ns.vocab.schema.masthead.property

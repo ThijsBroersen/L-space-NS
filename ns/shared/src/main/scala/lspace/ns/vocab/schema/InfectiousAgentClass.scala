@@ -6,7 +6,7 @@ object InfectiousAgentClass extends OntologyDef(
         iris = Set("http://schema.org/InfectiousAgentClass"),
         label = "InfectiousAgentClass",
         comment = """Classes of agents or pathogens that transmit infectious diseases. Enumerated type.""",
-        `@extends` = () => List(MedicalEnumeration.ontology)
+        `@extends` = List(MedicalEnumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
 

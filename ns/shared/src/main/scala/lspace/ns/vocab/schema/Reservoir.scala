@@ -6,7 +6,7 @@ object Reservoir extends OntologyDef(
         iris = Set("http://schema.org/Reservoir"),
         label = "Reservoir",
         comment = """A reservoir of water, typically an artificially created lake, like the Lake Kariba reservoir.""",
-        `@extends` = () => List(BodyOfWater.ontology)
+        `@extends` = List(BodyOfWater.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.BodyOfWater.Properties{
 

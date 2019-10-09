@@ -8,8 +8,8 @@ object typeOfGood extends PropertyDef(
         iris = Set("http://schema.org/typeOfGood"),
         label = "typeOfGood",
         comment = """The product that this structured value is referring to.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Service.ontology, Product.ontology)
+        `@extends` = List(),
+        `@range` = List(Product.ontology, Service.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

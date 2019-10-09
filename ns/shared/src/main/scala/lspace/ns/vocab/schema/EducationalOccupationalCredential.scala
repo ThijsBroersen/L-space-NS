@@ -6,7 +6,7 @@ object EducationalOccupationalCredential extends OntologyDef(
         iris = Set("http://schema.org/EducationalOccupationalCredential"),
         label = "EducationalOccupationalCredential",
         comment = """An educational or occupational credential. A diploma, academic degree, certification, qualification, badge, etc., that may be awarded to a person or other entity that meets the requirements defined by the credentialer.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val competencyRequired = lspace.ns.vocab.schema.competencyRequired.property

@@ -8,8 +8,8 @@ object manufacturer extends PropertyDef(
         iris = Set("http://schema.org/manufacturer"),
         label = "manufacturer",
         comment = """The manufacturer of the product.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

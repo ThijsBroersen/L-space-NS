@@ -8,8 +8,8 @@ object tributary extends PropertyDef(
         iris = Set("http://schema.org/tributary"),
         label = "tributary",
         comment = """The anatomical or organ system that the vein flows into; a larger structure that the vein connects to.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AnatomicalStructure.ontology)
+        `@extends` = List(),
+        `@range` = List(AnatomicalStructure.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

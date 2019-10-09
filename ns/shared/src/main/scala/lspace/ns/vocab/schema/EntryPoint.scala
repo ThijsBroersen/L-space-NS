@@ -6,7 +6,7 @@ object EntryPoint extends OntologyDef(
         iris = Set("http://schema.org/EntryPoint"),
         label = "EntryPoint",
         comment = """An entry point, within some Web-based protocol.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val actionApplication = lspace.ns.vocab.schema.actionApplication.property

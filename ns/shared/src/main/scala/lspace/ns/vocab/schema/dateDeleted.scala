@@ -8,8 +8,8 @@ object dateDeleted extends PropertyDef(
         iris = Set("http://schema.org/dateDeleted"),
         label = "dateDeleted",
         comment = """The datetime the item was removed from the DataFeed.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@datetime`)
+        `@extends` = List(),
+        `@range` = List(`@datetime`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object audio extends PropertyDef(
         iris = Set("http://schema.org/audio"),
         label = "audio",
         comment = """An embedded audio object.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Clip.ontology, AudioObject.ontology)
+        `@extends` = List(),
+        `@range` = List(Clip.ontology, AudioObject.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

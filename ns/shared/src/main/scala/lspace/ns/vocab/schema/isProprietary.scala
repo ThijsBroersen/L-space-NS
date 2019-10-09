@@ -8,8 +8,8 @@ object isProprietary extends PropertyDef(
         iris = Set("http://schema.org/isProprietary"),
         label = "isProprietary",
         comment = """True if this item's name is a proprietary/brand name (vs. generic name).""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

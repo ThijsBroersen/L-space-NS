@@ -8,8 +8,8 @@ object educationalAlignment extends PropertyDef(
         iris = Set("http://schema.org/educationalAlignment"),
         label = "educationalAlignment",
         comment = """An alignment to an established educational framework.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AlignmentObject.ontology)
+        `@extends` = List(),
+        `@range` = List(AlignmentObject.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

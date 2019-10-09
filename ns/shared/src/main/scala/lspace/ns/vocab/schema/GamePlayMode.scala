@@ -6,7 +6,7 @@ object GamePlayMode extends OntologyDef(
         iris = Set("http://schema.org/GamePlayMode"),
         label = "GamePlayMode",
         comment = """Indicates whether this game is multi-player, co-op or single-player.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

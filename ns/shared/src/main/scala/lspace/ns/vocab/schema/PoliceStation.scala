@@ -6,7 +6,7 @@ object PoliceStation extends OntologyDef(
         iris = Set("http://schema.org/PoliceStation"),
         label = "PoliceStation",
         comment = """A police station.""",
-        `@extends` = () => List(EmergencyService.ontology, CivicStructure.ontology)
+        `@extends` = List(EmergencyService.ontology, CivicStructure.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.EmergencyService.Properties with lspace.ns.vocab.schema.CivicStructure.Properties{
 

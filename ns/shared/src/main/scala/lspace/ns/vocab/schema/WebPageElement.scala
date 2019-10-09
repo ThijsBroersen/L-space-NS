@@ -6,7 +6,7 @@ object WebPageElement extends OntologyDef(
         iris = Set("http://schema.org/WebPageElement"),
         label = "WebPageElement",
         comment = """A web page element, like a table or an image.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val cssSelector = lspace.ns.vocab.schema.cssSelector.property

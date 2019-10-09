@@ -8,8 +8,8 @@ object browserRequirements extends PropertyDef(
         iris = Set("http://schema.org/browserRequirements"),
         label = "browserRequirements",
         comment = """Specifies browser requirements in human-readable text. For example, 'requires HTML5 support'.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

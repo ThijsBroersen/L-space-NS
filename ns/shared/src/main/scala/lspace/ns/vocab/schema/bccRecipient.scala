@@ -8,8 +8,8 @@ object bccRecipient extends PropertyDef(
         iris = Set("http://schema.org/bccRecipient"),
         label = "bccRecipient",
         comment = """A sub property of recipient. The recipient blind copied on a message.""",
-        `@extends` = () => List(recipient.property),
-        `@range` = () => List(Organization.ontology, Person.ontology, ContactPoint.ontology)
+        `@extends` = List(recipient.property),
+        `@range` = List(Organization.ontology, Person.ontology, ContactPoint.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

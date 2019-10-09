@@ -6,7 +6,7 @@ object ComicCoverArt extends OntologyDef(
         iris = Set("http://schema.org/ComicCoverArt"),
         label = "ComicCoverArt",
         comment = """The artwork on the cover of a comic.""",
-        `@extends` = () => List(ComicStory.ontology, CoverArt.ontology)
+        `@extends` = List(ComicStory.ontology, CoverArt.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ComicStory.Properties with lspace.ns.vocab.schema.CoverArt.Properties{
 

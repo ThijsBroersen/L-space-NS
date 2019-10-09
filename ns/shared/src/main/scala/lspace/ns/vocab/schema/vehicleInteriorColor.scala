@@ -8,8 +8,8 @@ object vehicleInteriorColor extends PropertyDef(
         iris = Set("http://schema.org/vehicleInteriorColor"),
         label = "vehicleInteriorColor",
         comment = """The color or color combination of the interior of the vehicle.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

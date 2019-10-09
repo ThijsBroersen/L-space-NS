@@ -6,7 +6,7 @@ object TreatmentIndication extends OntologyDef(
         iris = Set("http://schema.org/TreatmentIndication"),
         label = "TreatmentIndication",
         comment = """An indication for treating an underlying condition, symptom, etc.""",
-        `@extends` = () => List(MedicalIndication.ontology)
+        `@extends` = List(MedicalIndication.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalIndication.Properties{
 

@@ -8,8 +8,8 @@ object numberOfBeds extends PropertyDef(
         iris = Set("http://schema.org/numberOfBeds"),
         label = "numberOfBeds",
         comment = """The quantity of the given bed type available in the HotelRoom, Suite, House, or Apartment.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

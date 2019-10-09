@@ -6,7 +6,7 @@ object EmployerReview extends OntologyDef(
         iris = Set("http://schema.org/EmployerReview"),
         label = "EmployerReview",
         comment = """An <a class="localLink" href="http://schema.org/EmployerReview">EmployerReview</a> is a review of an <a class="localLink" href="http://schema.org/Organization">Organization</a> regarding its role as an employer, written by a current or former employee of that organization.""",
-        `@extends` = () => List(Review.ontology)
+        `@extends` = List(Review.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Review.Properties{
 

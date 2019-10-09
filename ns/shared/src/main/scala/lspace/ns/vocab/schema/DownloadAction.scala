@@ -6,7 +6,7 @@ object DownloadAction extends OntologyDef(
         iris = Set("http://schema.org/DownloadAction"),
         label = "DownloadAction",
         comment = """The act of downloading an object.""",
-        `@extends` = () => List(TransferAction.ontology)
+        `@extends` = List(TransferAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.TransferAction.Properties{
 

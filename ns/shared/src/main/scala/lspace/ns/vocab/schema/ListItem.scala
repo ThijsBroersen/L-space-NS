@@ -6,7 +6,7 @@ object ListItem extends OntologyDef(
         iris = Set("http://schema.org/ListItem"),
         label = "ListItem",
         comment = """An list item, e.g. a step in a checklist or how-to description.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val item = lspace.ns.vocab.schema.item.property

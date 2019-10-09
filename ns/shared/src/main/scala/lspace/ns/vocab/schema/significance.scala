@@ -8,8 +8,8 @@ object significance extends PropertyDef(
         iris = Set("http://schema.org/significance"),
         label = "significance",
         comment = """The significance associated with the superficial anatomy; as an example, how characteristics of the superficial anatomy can suggest underlying medical conditions or courses of treatment.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

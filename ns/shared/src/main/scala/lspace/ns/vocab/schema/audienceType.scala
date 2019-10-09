@@ -8,8 +8,8 @@ object audienceType extends PropertyDef(
         iris = Set("http://schema.org/audienceType"),
         label = "audienceType",
         comment = """The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

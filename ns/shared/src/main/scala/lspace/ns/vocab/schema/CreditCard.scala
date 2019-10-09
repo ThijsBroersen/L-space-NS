@@ -18,7 +18,7 @@ Commonly used values:<br/><br/>
 <li>http://purl.org/goodrelations/v1#VISA</li>
 </ul>
 """,
-        `@extends` = () => List(LoanOrCredit.ontology, PaymentCard.ontology)
+        `@extends` = List(LoanOrCredit.ontology, PaymentCard.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.LoanOrCredit.Properties with lspace.ns.vocab.schema.PaymentCard.Properties{
 lazy val monthlyMinimumRepaymentAmount = lspace.ns.vocab.schema.monthlyMinimumRepaymentAmount.property

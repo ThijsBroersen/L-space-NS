@@ -8,8 +8,8 @@ object pageStart extends PropertyDef(
         iris = Set("http://schema.org/pageStart"),
         label = "pageStart",
         comment = """The page on which the work starts; for example "135" or "xiii".""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, `@int`)
+        `@extends` = List(),
+        `@range` = List(`@string`, `@int`)
        ){
 
 override lazy val properties: List[LProperty] = List()

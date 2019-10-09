@@ -6,7 +6,7 @@ object Atlas extends OntologyDef(
         iris = Set("http://schema.org/Atlas"),
         label = "Atlas",
         comment = """A collection or bound volume of maps, charts, plates or tables, physical or in media form illustrating any subject.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 

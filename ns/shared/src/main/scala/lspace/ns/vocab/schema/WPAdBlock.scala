@@ -6,7 +6,7 @@ object WPAdBlock extends OntologyDef(
         iris = Set("http://schema.org/WPAdBlock"),
         label = "WPAdBlock",
         comment = """An advertising section of the page.""",
-        `@extends` = () => List(WebPageElement.ontology)
+        `@extends` = List(WebPageElement.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.WebPageElement.Properties{
 

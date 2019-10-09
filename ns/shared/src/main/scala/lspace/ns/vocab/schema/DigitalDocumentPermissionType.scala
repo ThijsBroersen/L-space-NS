@@ -6,7 +6,7 @@ object DigitalDocumentPermissionType extends OntologyDef(
         iris = Set("http://schema.org/DigitalDocumentPermissionType"),
         label = "DigitalDocumentPermissionType",
         comment = """A type of permission which can be granted for accessing a digital document.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

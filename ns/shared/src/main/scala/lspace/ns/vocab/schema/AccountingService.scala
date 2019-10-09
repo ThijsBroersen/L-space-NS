@@ -8,7 +8,7 @@ object AccountingService extends OntologyDef(
         comment = """Accountancy business.<br/><br/>
 
 As a <a class="localLink" href="http://schema.org/LocalBusiness">LocalBusiness</a> it can be described as a <a class="localLink" href="http://schema.org/provider">provider</a> of one or more <a class="localLink" href="http://schema.org/Service">Service</a>(s).""",
-        `@extends` = () => List(FinancialService.ontology)
+        `@extends` = List(FinancialService.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.FinancialService.Properties{
 

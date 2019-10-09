@@ -6,7 +6,7 @@ object Intangible extends OntologyDef(
         iris = Set("http://schema.org/Intangible"),
         label = "Intangible",
         comment = """A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc.""",
-        `@extends` = () => List(Thing.ontology)
+        `@extends` = List(Thing.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Thing.Properties{
 

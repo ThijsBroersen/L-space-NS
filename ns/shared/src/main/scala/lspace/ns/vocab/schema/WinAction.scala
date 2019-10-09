@@ -6,7 +6,7 @@ object WinAction extends OntologyDef(
         iris = Set("http://schema.org/WinAction"),
         label = "WinAction",
         comment = """The act of achieving victory in a competitive activity.""",
-        `@extends` = () => List(AchieveAction.ontology)
+        `@extends` = List(AchieveAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.AchieveAction.Properties{
 lazy val loser = lspace.ns.vocab.schema.loser.property

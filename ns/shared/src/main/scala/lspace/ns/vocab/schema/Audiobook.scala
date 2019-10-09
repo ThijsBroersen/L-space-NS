@@ -6,7 +6,7 @@ object Audiobook extends OntologyDef(
         iris = Set("http://schema.org/Audiobook"),
         label = "Audiobook",
         comment = """An audiobook.""",
-        `@extends` = () => List(AudioObject.ontology, Book.ontology)
+        `@extends` = List(AudioObject.ontology, Book.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.AudioObject.Properties with lspace.ns.vocab.schema.Book.Properties{
 lazy val readBy = lspace.ns.vocab.schema.readBy.property

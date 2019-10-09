@@ -13,7 +13,7 @@ Related actions:<br/><br/>
 <li><a class="localLink" href="http://schema.org/ReserveAction">ReserveAction</a>: Unlike ReserveAction, ScheduleAction allocates future actions (e.g. an event, a task, etc) towards a time slot / spatial allocation.</li>
 </ul>
 """,
-        `@extends` = () => List(PlanAction.ontology)
+        `@extends` = List(PlanAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.PlanAction.Properties{
 

@@ -8,8 +8,8 @@ object broadcastDisplayName extends PropertyDef(
         iris = Set("http://schema.org/broadcastDisplayName"),
         label = "broadcastDisplayName",
         comment = """The name displayed in the channel guide. For many US affiliates, it is the network name.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

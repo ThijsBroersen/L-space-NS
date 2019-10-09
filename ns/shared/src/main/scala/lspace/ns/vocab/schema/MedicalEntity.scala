@@ -6,7 +6,7 @@ object MedicalEntity extends OntologyDef(
         iris = Set("http://schema.org/MedicalEntity"),
         label = "MedicalEntity",
         comment = """The most generic type of entity related to health and the practice of medicine.""",
-        `@extends` = () => List(Thing.ontology)
+        `@extends` = List(Thing.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Thing.Properties{
 lazy val code = lspace.ns.vocab.schema.code.property

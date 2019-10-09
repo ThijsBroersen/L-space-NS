@@ -8,8 +8,8 @@ object passengerPriorityStatus extends PropertyDef(
         iris = Set("http://schema.org/passengerPriorityStatus"),
         label = "passengerPriorityStatus",
         comment = """The priority status assigned to a passenger for security or boarding (e.g. FastTrack or Priority).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, QualitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, QualitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object backstory extends PropertyDef(
         iris = Set("http://schema.org/backstory"),
         label = "backstory",
         comment = """For an <a class="localLink" href="http://schema.org/Article">Article</a>, typically a <a class="localLink" href="http://schema.org/NewsArticle">NewsArticle</a>, the backstory property provides a textual summary giving a brief explanation of why and how an article was created. In a journalistic setting this could include information about reporting process, methods, interviews, data sources, etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(CreativeWork.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

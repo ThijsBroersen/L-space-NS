@@ -6,7 +6,7 @@ object CookAction extends OntologyDef(
         iris = Set("http://schema.org/CookAction"),
         label = "CookAction",
         comment = """The act of producing/preparing food.""",
-        `@extends` = () => List(CreateAction.ontology)
+        `@extends` = List(CreateAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreateAction.Properties{
 lazy val foodEstablishment = lspace.ns.vocab.schema.foodEstablishment.property

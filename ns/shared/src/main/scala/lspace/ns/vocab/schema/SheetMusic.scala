@@ -6,7 +6,7 @@ object SheetMusic extends OntologyDef(
         iris = Set("http://schema.org/SheetMusic"),
         label = "SheetMusic",
         comment = """Printed music, as opposed to performed or recorded music.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 

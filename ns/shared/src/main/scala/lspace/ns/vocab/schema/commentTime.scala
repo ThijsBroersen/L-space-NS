@@ -8,8 +8,8 @@ object commentTime extends PropertyDef(
         iris = Set("http://schema.org/commentTime"),
         label = "commentTime",
         comment = """The time at which the UserComment was made.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@date`, `@datetime`)
+        `@extends` = List(),
+        `@range` = List(`@date`, `@datetime`)
        ){
 
 override lazy val properties: List[LProperty] = List()

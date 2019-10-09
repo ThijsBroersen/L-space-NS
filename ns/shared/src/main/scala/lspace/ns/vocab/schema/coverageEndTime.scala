@@ -8,8 +8,8 @@ object coverageEndTime extends PropertyDef(
         iris = Set("http://schema.org/coverageEndTime"),
         label = "coverageEndTime",
         comment = """The time when the live blog will stop covering the Event. Note that coverage may continue after the Event concludes.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@datetime`)
+        `@extends` = List(),
+        `@range` = List(`@datetime`)
        ){
 
 override lazy val properties: List[LProperty] = List()

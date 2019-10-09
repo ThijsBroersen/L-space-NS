@@ -6,7 +6,7 @@ object PresentationDigitalDocument extends OntologyDef(
         iris = Set("http://schema.org/PresentationDigitalDocument"),
         label = "PresentationDigitalDocument",
         comment = """A file containing slides or used for a presentation.""",
-        `@extends` = () => List(DigitalDocument.ontology)
+        `@extends` = List(DigitalDocument.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.DigitalDocument.Properties{
 

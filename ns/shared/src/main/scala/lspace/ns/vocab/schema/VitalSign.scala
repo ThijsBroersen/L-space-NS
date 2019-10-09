@@ -6,7 +6,7 @@ object VitalSign extends OntologyDef(
         iris = Set("http://schema.org/VitalSign"),
         label = "VitalSign",
         comment = """Vital signs are measures of various physiological functions in order to assess the most basic body functions.""",
-        `@extends` = () => List(MedicalSign.ontology)
+        `@extends` = List(MedicalSign.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalSign.Properties{
 

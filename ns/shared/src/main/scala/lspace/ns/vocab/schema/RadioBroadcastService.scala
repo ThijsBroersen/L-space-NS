@@ -6,7 +6,7 @@ object RadioBroadcastService extends OntologyDef(
         iris = Set("http://schema.org/RadioBroadcastService"),
         label = "RadioBroadcastService",
         comment = """A delivery service through which radio content is provided via broadcast over the air or online.""",
-        `@extends` = () => List(BroadcastService.ontology)
+        `@extends` = List(BroadcastService.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.BroadcastService.Properties{
 lazy val callSign = lspace.ns.vocab.schema.callSign.property

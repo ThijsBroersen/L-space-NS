@@ -8,8 +8,8 @@ object ingredients extends PropertyDef(
         iris = Set("http://schema.org/ingredients"),
         label = "ingredients",
         comment = """A single ingredient used in the recipe, e.g. sugar, flour or garlic.""",
-        `@extends` = () => List(supply.property),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(supply.property),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

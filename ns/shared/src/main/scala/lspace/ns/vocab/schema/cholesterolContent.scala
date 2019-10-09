@@ -8,8 +8,8 @@ object cholesterolContent extends PropertyDef(
         iris = Set("http://schema.org/cholesterolContent"),
         label = "cholesterolContent",
         comment = """The number of milligrams of cholesterol.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Mass.ontology)
+        `@extends` = List(),
+        `@range` = List(Mass.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

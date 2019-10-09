@@ -8,8 +8,8 @@ object occupationalCategory extends PropertyDef(
         iris = Set("http://schema.org/occupationalCategory"),
         label = "occupationalCategory",
         comment = """Category or categories describing the job. Use BLS O*NET-SOC taxonomy: http://www.onetcenter.org/taxonomy.html. Ideally includes textual label and formal code, with the property repeated for each applicable value.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

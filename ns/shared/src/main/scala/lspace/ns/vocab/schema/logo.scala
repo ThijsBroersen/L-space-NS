@@ -8,8 +8,8 @@ object logo extends PropertyDef(
         iris = Set("http://schema.org/logo"),
         label = "logo",
         comment = """An associated logo.""",
-        `@extends` = () => List(image.property),
-        `@range` = () => List(URL.ontology, ImageObject.ontology)
+        `@extends` = List(image.property),
+        `@range` = List(URL.ontology, ImageObject.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

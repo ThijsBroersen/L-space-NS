@@ -6,7 +6,7 @@ object VisualArtwork extends OntologyDef(
         iris = Set("http://schema.org/VisualArtwork"),
         label = "VisualArtwork",
         comment = """A work of art that is primarily visual in character.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val artEdition = lspace.ns.vocab.schema.artEdition.property

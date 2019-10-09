@@ -10,8 +10,8 @@ object numberOfAxles extends PropertyDef(
         comment = """The number of axles.<br/><br/>
 
 Typical unit code(s): C62""",
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology, `@number`)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology, `@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object InvestmentFund extends OntologyDef(
         iris = Set("http://schema.org/InvestmentFund"),
         label = "InvestmentFund",
         comment = """A company or fund that gathers capital from a number of investors to create a pool of money that is then re-invested into stocks, bonds and other assets.""",
-        `@extends` = () => List(InvestmentOrDeposit.ontology)
+        `@extends` = List(InvestmentOrDeposit.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.InvestmentOrDeposit.Properties{
 

@@ -8,8 +8,8 @@ object geo extends PropertyDef(
         iris = Set("http://schema.org/geo"),
         label = "geo",
         comment = """The geo coordinates of the place.""",
-        `@extends` = () => List(),
-        `@range` = () => List(GeoCoordinates.ontology, GeoShape.ontology)
+        `@extends` = List(),
+        `@range` = List(GeoCoordinates.ontology, GeoShape.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

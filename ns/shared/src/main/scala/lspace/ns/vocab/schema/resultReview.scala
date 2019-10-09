@@ -8,8 +8,8 @@ object resultReview extends PropertyDef(
         iris = Set("http://schema.org/resultReview"),
         label = "resultReview",
         comment = """A sub property of result. The review that resulted in the performing of the action.""",
-        `@extends` = () => List(result.property),
-        `@range` = () => List(Review.ontology)
+        `@extends` = List(result.property),
+        `@range` = List(Review.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

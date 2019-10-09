@@ -8,8 +8,8 @@ object educationalFramework extends PropertyDef(
         iris = Set("http://schema.org/educationalFramework"),
         label = "educationalFramework",
         comment = """The framework to which the resource being described is aligned.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

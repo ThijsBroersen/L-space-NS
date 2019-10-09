@@ -8,8 +8,8 @@ object warning extends PropertyDef(
         iris = Set("http://schema.org/warning"),
         label = "warning",
         comment = """Any FDA or other warnings about the drug (text or URL).""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object MapCategoryType extends OntologyDef(
         iris = Set("http://schema.org/MapCategoryType"),
         label = "MapCategoryType",
         comment = """An enumeration of several kinds of Map.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

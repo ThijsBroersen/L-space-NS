@@ -6,7 +6,7 @@ object Bone extends OntologyDef(
         iris = Set("http://schema.org/Bone"),
         label = "Bone",
         comment = """Rigid connective tissue that comprises up the skeletal structure of the human body.""",
-        `@extends` = () => List(AnatomicalStructure.ontology)
+        `@extends` = List(AnatomicalStructure.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.AnatomicalStructure.Properties{
 

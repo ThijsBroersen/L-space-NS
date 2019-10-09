@@ -6,7 +6,7 @@ object DepartAction extends OntologyDef(
         iris = Set("http://schema.org/DepartAction"),
         label = "DepartAction",
         comment = """The act of  departing from a place. An agent departs from an fromLocation for a destination, optionally with participants.""",
-        `@extends` = () => List(MoveAction.ontology)
+        `@extends` = List(MoveAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MoveAction.Properties{
 

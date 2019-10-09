@@ -6,7 +6,7 @@ object ControlAction extends OntologyDef(
         iris = Set("http://schema.org/ControlAction"),
         label = "ControlAction",
         comment = """An agent controls a device or application.""",
-        `@extends` = () => List(Action.ontology)
+        `@extends` = List(Action.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Action.Properties{
 

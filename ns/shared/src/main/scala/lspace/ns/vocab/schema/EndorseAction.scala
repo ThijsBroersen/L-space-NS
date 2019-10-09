@@ -6,7 +6,7 @@ object EndorseAction extends OntologyDef(
         iris = Set("http://schema.org/EndorseAction"),
         label = "EndorseAction",
         comment = """An agent approves/certifies/likes/supports/sanction an object.""",
-        `@extends` = () => List(ReactAction.ontology)
+        `@extends` = List(ReactAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ReactAction.Properties{
 lazy val endorsee = lspace.ns.vocab.schema.endorsee.property

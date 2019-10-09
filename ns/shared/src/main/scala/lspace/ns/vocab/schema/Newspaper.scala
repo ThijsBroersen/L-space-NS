@@ -6,7 +6,7 @@ object Newspaper extends OntologyDef(
         iris = Set("http://schema.org/Newspaper"),
         label = "Newspaper",
         comment = """A publication containing information about varied topics that are pertinent to general information, a geographic area, or a specific subject matter (i.e. business, culture, education). Often published daily.""",
-        `@extends` = () => List(Periodical.ontology)
+        `@extends` = List(Periodical.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Periodical.Properties{
 

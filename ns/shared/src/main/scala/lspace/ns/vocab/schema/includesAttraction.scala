@@ -8,8 +8,8 @@ object includesAttraction extends PropertyDef(
         iris = Set("http://schema.org/includesAttraction"),
         label = "includesAttraction",
         comment = """Attraction located at destination.""",
-        `@extends` = () => List(),
-        `@range` = () => List(TouristAttraction.ontology)
+        `@extends` = List(),
+        `@range` = List(TouristAttraction.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

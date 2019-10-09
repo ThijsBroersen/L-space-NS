@@ -6,7 +6,7 @@ object DataCatalog extends OntologyDef(
         iris = Set("http://schema.org/DataCatalog"),
         label = "DataCatalog",
         comment = """A collection of datasets.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val dataset = lspace.ns.vocab.schema.dataset.property

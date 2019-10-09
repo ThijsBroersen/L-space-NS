@@ -6,7 +6,7 @@ object MusicStore extends OntologyDef(
         iris = Set("http://schema.org/MusicStore"),
         label = "MusicStore",
         comment = """A music store.""",
-        `@extends` = () => List(Store.ontology)
+        `@extends` = List(Store.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Store.Properties{
 

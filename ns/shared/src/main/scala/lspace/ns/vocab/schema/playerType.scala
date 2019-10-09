@@ -8,8 +8,8 @@ object playerType extends PropertyDef(
         iris = Set("http://schema.org/playerType"),
         label = "playerType",
         comment = """Player type required&#x2014;for example, Flash or Silverlight.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

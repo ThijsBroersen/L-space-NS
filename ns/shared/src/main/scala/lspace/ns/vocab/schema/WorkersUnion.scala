@@ -6,7 +6,7 @@ object WorkersUnion extends OntologyDef(
         iris = Set("http://schema.org/WorkersUnion"),
         label = "WorkersUnion",
         comment = """A Workers Union (also known as a Labor Union, Labour Union, or Trade Union) is an organization that promotes the interests of its worker members by collectively bargaining with management, organizing, and political lobbying.""",
-        `@extends` = () => List(Organization.ontology)
+        `@extends` = List(Organization.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Organization.Properties{
 

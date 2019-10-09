@@ -8,8 +8,8 @@ object accessModeSufficient extends PropertyDef(
         iris = Set("http://schema.org/accessModeSufficient"),
         label = "accessModeSufficient",
         comment = """A list of single or combined accessModes that are sufficient to understand all the intellectual content of a resource. Expected values include:  auditory, tactile, textual, visual.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

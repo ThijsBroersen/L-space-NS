@@ -8,8 +8,8 @@ object percentile10 extends PropertyDef(
         iris = Set("http://schema.org/percentile10"),
         label = "percentile10",
         comment = """The 10th percentile value.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

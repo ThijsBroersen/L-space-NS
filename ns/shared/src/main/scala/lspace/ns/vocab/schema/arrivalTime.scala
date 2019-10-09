@@ -8,8 +8,8 @@ object arrivalTime extends PropertyDef(
         iris = Set("http://schema.org/arrivalTime"),
         label = "arrivalTime",
         comment = """The expected arrival time.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@datetime`)
+        `@extends` = List(),
+        `@range` = List(`@datetime`)
        ){
 
 override lazy val properties: List[LProperty] = List()

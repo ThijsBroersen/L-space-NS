@@ -6,7 +6,7 @@ object Playground extends OntologyDef(
         iris = Set("http://schema.org/Playground"),
         label = "Playground",
         comment = """A playground.""",
-        `@extends` = () => List(CivicStructure.ontology)
+        `@extends` = List(CivicStructure.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CivicStructure.Properties{
 

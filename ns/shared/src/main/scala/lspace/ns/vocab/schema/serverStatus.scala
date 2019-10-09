@@ -8,8 +8,8 @@ object serverStatus extends PropertyDef(
         iris = Set("http://schema.org/serverStatus"),
         label = "serverStatus",
         comment = """Status of a game server.""",
-        `@extends` = () => List(),
-        `@range` = () => List(GameServerStatus.ontology)
+        `@extends` = List(),
+        `@range` = List(GameServerStatus.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

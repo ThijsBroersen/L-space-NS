@@ -10,8 +10,8 @@ object numberOfForwardGears extends PropertyDef(
         comment = """The total number of forward gears available for the transmission system of the vehicle.<br/><br/>
 
 Typical unit code(s): C62""",
-        `@extends` = () => List(),
-        `@range` = () => List(QuantitativeValue.ontology, `@number`)
+        `@extends` = List(),
+        `@range` = List(QuantitativeValue.ontology, `@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

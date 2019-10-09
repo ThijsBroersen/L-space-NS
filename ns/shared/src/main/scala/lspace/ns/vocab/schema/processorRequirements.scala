@@ -8,8 +8,8 @@ object processorRequirements extends PropertyDef(
         iris = Set("http://schema.org/processorRequirements"),
         label = "processorRequirements",
         comment = """Processor architecture required to run the application (e.g. IA64).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

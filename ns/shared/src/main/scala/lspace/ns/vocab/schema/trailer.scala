@@ -8,8 +8,8 @@ object trailer extends PropertyDef(
         iris = Set("http://schema.org/trailer"),
         label = "trailer",
         comment = """The trailer of a movie or tv/radio series, season, episode, etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(VideoObject.ontology)
+        `@extends` = List(),
+        `@range` = List(VideoObject.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

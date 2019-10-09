@@ -8,8 +8,8 @@ object recourseLoan extends PropertyDef(
         iris = Set("http://schema.org/recourseLoan"),
         label = "recourseLoan",
         comment = """The only way you get the money back in the event of default is the security. Recourse is where you still have the opportunity to go back to the borrower for the rest of the money.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

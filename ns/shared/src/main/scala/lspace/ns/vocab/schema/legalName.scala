@@ -8,8 +8,8 @@ object legalName extends PropertyDef(
         iris = Set("http://schema.org/legalName"),
         label = "legalName",
         comment = """The official name of the organization, e.g. the registered company name.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object ReviewNewsArticle extends OntologyDef(
         iris = Set("http://schema.org/ReviewNewsArticle"),
         label = "ReviewNewsArticle",
         comment = """A <a class="localLink" href="http://schema.org/NewsArticle">NewsArticle</a> and <a class="localLink" href="http://schema.org/CriticReview">CriticReview</a> providing a professional critic's assessment of a service, product, performance, or artistic or literary work.""",
-        `@extends` = () => List(CriticReview.ontology, NewsArticle.ontology)
+        `@extends` = List(CriticReview.ontology, NewsArticle.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CriticReview.Properties with lspace.ns.vocab.schema.NewsArticle.Properties{
 

@@ -6,7 +6,7 @@ object MedicalProcedure extends OntologyDef(
         iris = Set("http://schema.org/MedicalProcedure"),
         label = "MedicalProcedure",
         comment = """A process of care used in either a diagnostic, therapeutic, preventive or palliative capacity that relies on invasive (surgical), non-invasive, or other techniques.""",
-        `@extends` = () => List(MedicalEntity.ontology)
+        `@extends` = List(MedicalEntity.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEntity.Properties{
 lazy val bodyLocation = lspace.ns.vocab.schema.bodyLocation.property

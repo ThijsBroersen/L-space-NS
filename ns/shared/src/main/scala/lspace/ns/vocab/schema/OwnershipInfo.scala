@@ -6,7 +6,7 @@ object OwnershipInfo extends OntologyDef(
         iris = Set("http://schema.org/OwnershipInfo"),
         label = "OwnershipInfo",
         comment = """A structured value providing information about when a certain organization or person owned a certain product.""",
-        `@extends` = () => List(StructuredValue.ontology)
+        `@extends` = List(StructuredValue.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.StructuredValue.Properties{
 lazy val acquiredFrom = lspace.ns.vocab.schema.acquiredFrom.property

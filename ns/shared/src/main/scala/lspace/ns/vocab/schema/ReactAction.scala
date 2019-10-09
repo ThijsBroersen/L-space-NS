@@ -6,7 +6,7 @@ object ReactAction extends OntologyDef(
         iris = Set("http://schema.org/ReactAction"),
         label = "ReactAction",
         comment = """The act of responding instinctively and emotionally to an object, expressing a sentiment.""",
-        `@extends` = () => List(AssessAction.ontology)
+        `@extends` = List(AssessAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.AssessAction.Properties{
 

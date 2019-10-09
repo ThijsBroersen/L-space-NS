@@ -6,7 +6,7 @@ object RadioStation extends OntologyDef(
         iris = Set("http://schema.org/RadioStation"),
         label = "RadioStation",
         comment = """A radio station.""",
-        `@extends` = () => List(LocalBusiness.ontology)
+        `@extends` = List(LocalBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.LocalBusiness.Properties{
 

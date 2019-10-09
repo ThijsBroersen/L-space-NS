@@ -8,8 +8,8 @@ object subTest extends PropertyDef(
         iris = Set("http://schema.org/subTest"),
         label = "subTest",
         comment = """A component test of the panel.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MedicalTest.ontology)
+        `@extends` = List(),
+        `@range` = List(MedicalTest.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

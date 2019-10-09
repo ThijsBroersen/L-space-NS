@@ -8,8 +8,8 @@ object position extends PropertyDef(
         iris = Set("http://schema.org/position"),
         label = "position",
         comment = """The position of an item in a series or sequence of items.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@int`, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, `@int`)
        ){
 
 override lazy val properties: List[LProperty] = List()

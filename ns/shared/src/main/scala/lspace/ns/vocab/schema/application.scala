@@ -8,8 +8,8 @@ object application extends PropertyDef(
         iris = Set("http://schema.org/application"),
         label = "application",
         comment = """An application that can complete the request.""",
-        `@extends` = () => List(),
-        `@range` = () => List(SoftwareApplication.ontology)
+        `@extends` = List(),
+        `@range` = List(SoftwareApplication.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

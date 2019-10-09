@@ -8,8 +8,8 @@ object responsibilities extends PropertyDef(
         iris = Set("http://schema.org/responsibilities"),
         label = "responsibilities",
         comment = """Responsibilities associated with this role or Occupation.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object addressCountry extends PropertyDef(
         iris = Set("http://schema.org/addressCountry"),
         label = "addressCountry",
         comment = """The country. For example, USA. You can also provide the two-letter <a href="http://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1 alpha-2 country code</a>.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Country.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(Country.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

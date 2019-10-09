@@ -8,8 +8,8 @@ object inSupportOf extends PropertyDef(
         iris = Set("http://schema.org/inSupportOf"),
         label = "inSupportOf",
         comment = """Qualification, candidature, degree, application that Thesis supports.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

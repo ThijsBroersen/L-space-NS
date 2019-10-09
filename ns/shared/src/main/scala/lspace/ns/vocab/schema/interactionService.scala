@@ -8,8 +8,8 @@ object interactionService extends PropertyDef(
         iris = Set("http://schema.org/interactionService"),
         label = "interactionService",
         comment = """The WebSite or SoftwareApplication where the interactions took place.""",
-        `@extends` = () => List(),
-        `@range` = () => List(WebSite.ontology, SoftwareApplication.ontology)
+        `@extends` = List(),
+        `@range` = List(WebSite.ontology, SoftwareApplication.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

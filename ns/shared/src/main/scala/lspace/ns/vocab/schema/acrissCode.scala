@@ -8,8 +8,8 @@ object acrissCode extends PropertyDef(
         iris = Set("http://schema.org/acrissCode"),
         label = "acrissCode",
         comment = """The ACRISS Car Classification Code is a code used by many car rental companies, for classifying vehicles. ACRISS stands for Association of Car Rental Industry Systems and Standards.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

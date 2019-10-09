@@ -8,8 +8,8 @@ object costCurrency extends PropertyDef(
         iris = Set("http://schema.org/costCurrency"),
         label = "costCurrency",
         comment = """The currency (in 3-letter of the drug cost. See: http://en.wikipedia.org/wiki/ISO_4217""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

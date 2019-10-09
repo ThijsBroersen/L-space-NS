@@ -8,8 +8,8 @@ object healthCondition extends PropertyDef(
         iris = Set("http://schema.org/healthCondition"),
         label = "healthCondition",
         comment = """Specifying the health condition(s) of a patient, medical study, or other target audience.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MedicalCondition.ontology)
+        `@extends` = List(),
+        `@range` = List(MedicalCondition.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

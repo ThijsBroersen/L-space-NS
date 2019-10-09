@@ -6,7 +6,7 @@ object PaymentCard extends OntologyDef(
         iris = Set("http://schema.org/PaymentCard"),
         label = "PaymentCard",
         comment = """A payment method using a credit, debit, store or other card to associate the payment with an account.""",
-        `@extends` = () => List(FinancialProduct.ontology, PaymentMethod.ontology)
+        `@extends` = List(FinancialProduct.ontology, PaymentMethod.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.FinancialProduct.Properties with lspace.ns.vocab.schema.PaymentMethod.Properties{
 lazy val cashBack = lspace.ns.vocab.schema.cashBack.property

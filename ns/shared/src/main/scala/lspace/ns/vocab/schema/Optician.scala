@@ -6,7 +6,7 @@ object Optician extends OntologyDef(
         iris = Set("http://schema.org/Optician"),
         label = "Optician",
         comment = """A store that sells reading glasses and similar devices for improving vision.""",
-        `@extends` = () => List(MedicalBusiness.ontology)
+        `@extends` = List(MedicalBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalBusiness.Properties{
 

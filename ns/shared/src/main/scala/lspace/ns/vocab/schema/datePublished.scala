@@ -8,8 +8,8 @@ object datePublished extends PropertyDef(
         iris = Set("http://schema.org/datePublished"),
         label = "datePublished",
         comment = """Date of first broadcast/publication.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@date`)
+        `@extends` = List(),
+        `@range` = List(`@date`)
        ){
 
 override lazy val properties: List[LProperty] = List()

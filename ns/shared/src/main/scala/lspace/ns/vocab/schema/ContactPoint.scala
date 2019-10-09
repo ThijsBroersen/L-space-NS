@@ -6,7 +6,7 @@ object ContactPoint extends OntologyDef(
         iris = Set("http://schema.org/ContactPoint"),
         label = "ContactPoint",
         comment = """A contact point&#x2014;for example, a Customer Complaints department.""",
-        `@extends` = () => List(StructuredValue.ontology)
+        `@extends` = List(StructuredValue.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.StructuredValue.Properties{
 lazy val areaServed = lspace.ns.vocab.schema.areaServed.property

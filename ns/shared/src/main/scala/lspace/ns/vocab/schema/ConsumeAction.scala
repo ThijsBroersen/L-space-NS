@@ -6,7 +6,7 @@ object ConsumeAction extends OntologyDef(
         iris = Set("http://schema.org/ConsumeAction"),
         label = "ConsumeAction",
         comment = """The act of ingesting information/resources/food.""",
-        `@extends` = () => List(Action.ontology)
+        `@extends` = List(Action.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Action.Properties{
 lazy val actionAccessibilityRequirement = lspace.ns.vocab.schema.actionAccessibilityRequirement.property

@@ -8,8 +8,8 @@ object foodWarning extends PropertyDef(
         iris = Set("http://schema.org/foodWarning"),
         label = "foodWarning",
         comment = """Any precaution, guidance, contraindication, etc. related to consumption of specific foods while taking this drug.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

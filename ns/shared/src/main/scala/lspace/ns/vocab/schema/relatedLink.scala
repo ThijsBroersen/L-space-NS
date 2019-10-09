@@ -8,8 +8,8 @@ object relatedLink extends PropertyDef(
         iris = Set("http://schema.org/relatedLink"),
         label = "relatedLink",
         comment = """A link related to this web page, for example to other related web pages.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

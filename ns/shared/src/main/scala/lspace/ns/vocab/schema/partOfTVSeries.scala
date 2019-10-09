@@ -8,8 +8,8 @@ object partOfTVSeries extends PropertyDef(
         iris = Set("http://schema.org/partOfTVSeries"),
         label = "partOfTVSeries",
         comment = """The TV series to which this episode or season belongs.""",
-        `@extends` = () => List(isPartOf.property),
-        `@range` = () => List(TVSeries.ontology)
+        `@extends` = List(isPartOf.property),
+        `@range` = List(TVSeries.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

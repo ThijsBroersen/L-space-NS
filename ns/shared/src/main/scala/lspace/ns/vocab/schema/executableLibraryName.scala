@@ -8,8 +8,8 @@ object executableLibraryName extends PropertyDef(
         iris = Set("http://schema.org/executableLibraryName"),
         label = "executableLibraryName",
         comment = """Library file name e.g., mscorlib.dll, system.web.dll.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

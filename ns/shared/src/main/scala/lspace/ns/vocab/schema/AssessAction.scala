@@ -6,7 +6,7 @@ object AssessAction extends OntologyDef(
         iris = Set("http://schema.org/AssessAction"),
         label = "AssessAction",
         comment = """The act of forming one's opinion, reaction or sentiment.""",
-        `@extends` = () => List(Action.ontology)
+        `@extends` = List(Action.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Action.Properties{
 

@@ -8,8 +8,8 @@ object primaryImageOfPage extends PropertyDef(
         iris = Set("http://schema.org/primaryImageOfPage"),
         label = "primaryImageOfPage",
         comment = """Indicates the main image on the page.""",
-        `@extends` = () => List(),
-        `@range` = () => List(ImageObject.ontology)
+        `@extends` = List(),
+        `@range` = List(ImageObject.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

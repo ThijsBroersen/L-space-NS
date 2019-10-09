@@ -6,7 +6,7 @@ object EatAction extends OntologyDef(
         iris = Set("http://schema.org/EatAction"),
         label = "EatAction",
         comment = """The act of swallowing solid objects.""",
-        `@extends` = () => List(ConsumeAction.ontology)
+        `@extends` = List(ConsumeAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ConsumeAction.Properties{
 

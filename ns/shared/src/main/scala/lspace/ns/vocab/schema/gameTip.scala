@@ -8,8 +8,8 @@ object gameTip extends PropertyDef(
         iris = Set("http://schema.org/gameTip"),
         label = "gameTip",
         comment = """Links to tips, tactics, etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(CreativeWork.ontology)
+        `@extends` = List(),
+        `@range` = List(CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

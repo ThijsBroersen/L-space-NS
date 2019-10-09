@@ -6,7 +6,7 @@ object GatedResidenceCommunity extends OntologyDef(
         iris = Set("http://schema.org/GatedResidenceCommunity"),
         label = "GatedResidenceCommunity",
         comment = """Residence type: Gated community.""",
-        `@extends` = () => List(Residence.ontology)
+        `@extends` = List(Residence.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Residence.Properties{
 

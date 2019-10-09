@@ -8,8 +8,8 @@ object educationalLevel extends PropertyDef(
         iris = Set("http://schema.org/educationalLevel"),
         label = "educationalLevel",
         comment = """The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.""",
-        `@extends` = () => List(),
-        `@range` = () => List(DefinedTerm.ontology, Text.ontology, URL.ontology)
+        `@extends` = List(),
+        `@range` = List(DefinedTerm.ontology, `@string`, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

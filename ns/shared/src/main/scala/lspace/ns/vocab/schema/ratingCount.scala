@@ -8,8 +8,8 @@ object ratingCount extends PropertyDef(
         iris = Set("http://schema.org/ratingCount"),
         label = "ratingCount",
         comment = """The count of total number of ratings.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@int`)
+        `@extends` = List(),
+        `@range` = List(`@int`)
        ){
 
 override lazy val properties: List[LProperty] = List()

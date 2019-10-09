@@ -6,7 +6,7 @@ object Product extends OntologyDef(
         iris = Set("http://schema.org/Product"),
         label = "Product",
         comment = """Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online.""",
-        `@extends` = () => List(Thing.ontology)
+        `@extends` = List(Thing.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Thing.Properties{
 lazy val additionalProperty = lspace.ns.vocab.schema.additionalProperty.property

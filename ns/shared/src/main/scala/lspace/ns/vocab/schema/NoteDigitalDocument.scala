@@ -6,7 +6,7 @@ object NoteDigitalDocument extends OntologyDef(
         iris = Set("http://schema.org/NoteDigitalDocument"),
         label = "NoteDigitalDocument",
         comment = """A file containing a note, primarily for the author.""",
-        `@extends` = () => List(DigitalDocument.ontology)
+        `@extends` = List(DigitalDocument.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.DigitalDocument.Properties{
 

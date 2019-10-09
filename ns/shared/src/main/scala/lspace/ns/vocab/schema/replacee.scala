@@ -8,8 +8,8 @@ object replacee extends PropertyDef(
         iris = Set("http://schema.org/replacee"),
         label = "replacee",
         comment = """A sub property of object. The object that is being replaced.""",
-        `@extends` = () => List(`object`.property),
-        `@range` = () => List(Thing.ontology)
+        `@extends` = List(`object`.property),
+        `@range` = List(Thing.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

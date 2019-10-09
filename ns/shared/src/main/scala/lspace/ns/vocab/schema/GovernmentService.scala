@@ -6,7 +6,7 @@ object GovernmentService extends OntologyDef(
         iris = Set("http://schema.org/GovernmentService"),
         label = "GovernmentService",
         comment = """A service provided by a government organization, e.g. food stamps, veterans benefits, etc.""",
-        `@extends` = () => List(Service.ontology)
+        `@extends` = List(Service.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Service.Properties{
 lazy val serviceOperator = lspace.ns.vocab.schema.serviceOperator.property

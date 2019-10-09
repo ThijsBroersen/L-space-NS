@@ -8,8 +8,8 @@ object minValue extends PropertyDef(
         iris = Set("http://schema.org/minValue"),
         label = "minValue",
         comment = """The lower value of some characteristic or property.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

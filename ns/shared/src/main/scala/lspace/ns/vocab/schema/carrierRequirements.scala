@@ -8,8 +8,8 @@ object carrierRequirements extends PropertyDef(
         iris = Set("http://schema.org/carrierRequirements"),
         label = "carrierRequirements",
         comment = """Specifies specific carrier(s) requirements for the application (e.g. an application may only work on a specific carrier network).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

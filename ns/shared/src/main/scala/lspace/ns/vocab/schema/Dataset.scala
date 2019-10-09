@@ -6,7 +6,7 @@ object Dataset extends OntologyDef(
         iris = Set("http://schema.org/Dataset"),
         label = "Dataset",
         comment = """A body of structured information describing some topic(s) of interest.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val distribution = lspace.ns.vocab.schema.distribution.property

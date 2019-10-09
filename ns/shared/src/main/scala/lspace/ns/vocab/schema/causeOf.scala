@@ -8,8 +8,8 @@ object causeOf extends PropertyDef(
         iris = Set("http://schema.org/causeOf"),
         label = "causeOf",
         comment = """The condition, complication, symptom, sign, etc. caused.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MedicalEntity.ontology)
+        `@extends` = List(),
+        `@range` = List(MedicalEntity.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

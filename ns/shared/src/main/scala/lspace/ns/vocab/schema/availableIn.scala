@@ -8,8 +8,8 @@ object availableIn extends PropertyDef(
         iris = Set("http://schema.org/availableIn"),
         label = "availableIn",
         comment = """The location in which the strength is available.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AdministrativeArea.ontology)
+        `@extends` = List(),
+        `@range` = List(AdministrativeArea.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object screenshot extends PropertyDef(
         iris = Set("http://schema.org/screenshot"),
         label = "screenshot",
         comment = """A link to a screenshot image of the app.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology, ImageObject.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology, ImageObject.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

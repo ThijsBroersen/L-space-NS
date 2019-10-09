@@ -8,8 +8,8 @@ object actionableFeedbackPolicy extends PropertyDef(
         iris = Set("http://schema.org/actionableFeedbackPolicy"),
         label = "actionableFeedbackPolicy",
         comment = """For a <a class="localLink" href="http://schema.org/NewsMediaOrganization">NewsMediaOrganization</a> or other news-related <a class="localLink" href="http://schema.org/Organization">Organization</a>, a statement about public engagement activities (for news media, the newsroom’s), including involving the public - digitally or otherwise -- in coverage decisions, reporting and activities after publication.""",
-        `@extends` = () => List(publishingPrinciples.property),
-        `@range` = () => List(CreativeWork.ontology, URL.ontology)
+        `@extends` = List(publishingPrinciples.property),
+        `@range` = List(CreativeWork.ontology, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

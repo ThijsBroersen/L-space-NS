@@ -6,7 +6,7 @@ object RadioSeries extends OntologyDef(
         iris = Set("http://schema.org/RadioSeries"),
         label = "RadioSeries",
         comment = """CreativeWorkSeries dedicated to radio broadcast and associated online delivery.""",
-        `@extends` = () => List(CreativeWorkSeries.ontology)
+        `@extends` = List(CreativeWorkSeries.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWorkSeries.Properties{
 lazy val actor = lspace.ns.vocab.schema.actor.property

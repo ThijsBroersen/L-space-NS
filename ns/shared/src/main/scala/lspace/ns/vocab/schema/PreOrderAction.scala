@@ -6,7 +6,7 @@ object PreOrderAction extends OntologyDef(
         iris = Set("http://schema.org/PreOrderAction"),
         label = "PreOrderAction",
         comment = """An agent orders a (not yet released) object/product/service to be delivered/sent.""",
-        `@extends` = () => List(TradeAction.ontology)
+        `@extends` = List(TradeAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.TradeAction.Properties{
 

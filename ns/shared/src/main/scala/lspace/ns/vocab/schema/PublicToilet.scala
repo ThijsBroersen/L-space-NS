@@ -6,7 +6,7 @@ object PublicToilet extends OntologyDef(
         iris = Set("http://schema.org/PublicToilet"),
         label = "PublicToilet",
         comment = """A public toilet is a room or small building containing one or more toilets (and possibly also urinals) which is available for use by the general public, or by customers or employees of certain businesses.""",
-        `@extends` = () => List(CivicStructure.ontology)
+        `@extends` = List(CivicStructure.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CivicStructure.Properties{
 

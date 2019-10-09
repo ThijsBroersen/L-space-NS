@@ -6,7 +6,7 @@ object GovernmentPermit extends OntologyDef(
         iris = Set("http://schema.org/GovernmentPermit"),
         label = "GovernmentPermit",
         comment = """A permit issued by a government agency.""",
-        `@extends` = () => List(Permit.ontology)
+        `@extends` = List(Permit.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Permit.Properties{
 

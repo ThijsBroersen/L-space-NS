@@ -8,8 +8,8 @@ object paymentUrl extends PropertyDef(
         iris = Set("http://schema.org/paymentUrl"),
         label = "paymentUrl",
         comment = """The URL for sending a payment.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

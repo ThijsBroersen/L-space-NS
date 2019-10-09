@@ -8,8 +8,8 @@ object areaServed extends PropertyDef(
         iris = Set("http://schema.org/areaServed"),
         label = "areaServed",
         comment = """The geographic area where a service or offered item is provided.""",
-        `@extends` = () => List(),
-        `@range` = () => List(GeoShape.ontology, Place.ontology, AdministrativeArea.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(AdministrativeArea.ontology, GeoShape.ontology, Place.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

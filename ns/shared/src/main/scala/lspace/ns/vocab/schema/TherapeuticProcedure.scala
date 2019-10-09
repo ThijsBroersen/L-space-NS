@@ -6,7 +6,7 @@ object TherapeuticProcedure extends OntologyDef(
         iris = Set("http://schema.org/TherapeuticProcedure"),
         label = "TherapeuticProcedure",
         comment = """A medical procedure intended primarily for therapeutic purposes, aimed at improving a health condition.""",
-        `@extends` = () => List(MedicalProcedure.ontology)
+        `@extends` = List(MedicalProcedure.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalProcedure.Properties{
 lazy val adverseOutcome = lspace.ns.vocab.schema.adverseOutcome.property

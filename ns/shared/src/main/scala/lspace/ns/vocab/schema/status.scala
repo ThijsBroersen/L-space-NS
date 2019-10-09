@@ -8,8 +8,8 @@ object status extends PropertyDef(
         iris = Set("http://schema.org/status"),
         label = "status",
         comment = """The status of the study (enumerated).""",
-        `@extends` = () => List(),
-        `@range` = () => List(EventStatusType.ontology, MedicalStudyStatus.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, EventStatusType.ontology, MedicalStudyStatus.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

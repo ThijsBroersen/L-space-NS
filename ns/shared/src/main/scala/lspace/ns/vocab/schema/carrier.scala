@@ -8,8 +8,8 @@ object carrier extends PropertyDef(
         iris = Set("http://schema.org/carrier"),
         label = "carrier",
         comment = """'carrier' is an out-dated term indicating the 'provider' for parcel delivery and flights.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

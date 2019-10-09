@@ -6,7 +6,7 @@ object BlogPosting extends OntologyDef(
         iris = Set("http://schema.org/BlogPosting"),
         label = "BlogPosting",
         comment = """A blog post.""",
-        `@extends` = () => List(SocialMediaPosting.ontology)
+        `@extends` = List(SocialMediaPosting.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.SocialMediaPosting.Properties{
 

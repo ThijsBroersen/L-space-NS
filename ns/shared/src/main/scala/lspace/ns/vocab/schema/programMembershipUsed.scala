@@ -8,8 +8,8 @@ object programMembershipUsed extends PropertyDef(
         iris = Set("http://schema.org/programMembershipUsed"),
         label = "programMembershipUsed",
         comment = """Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation.""",
-        `@extends` = () => List(),
-        `@range` = () => List(ProgramMembership.ontology)
+        `@extends` = List(),
+        `@range` = List(ProgramMembership.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

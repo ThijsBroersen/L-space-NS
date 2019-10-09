@@ -8,8 +8,8 @@ object mpn extends PropertyDef(
         iris = Set("http://schema.org/mpn"),
         label = "mpn",
         comment = """The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

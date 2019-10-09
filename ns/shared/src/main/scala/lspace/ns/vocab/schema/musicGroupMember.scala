@@ -8,8 +8,8 @@ object musicGroupMember extends PropertyDef(
         iris = Set("http://schema.org/musicGroupMember"),
         label = "musicGroupMember",
         comment = """A member of a music group&#x2014;for example, John, Paul, George, or Ringo.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

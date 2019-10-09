@@ -8,8 +8,8 @@ object publishedOn extends PropertyDef(
         iris = Set("http://schema.org/publishedOn"),
         label = "publishedOn",
         comment = """A broadcast service associated with the publication event.""",
-        `@extends` = () => List(),
-        `@range` = () => List(BroadcastService.ontology)
+        `@extends` = List(),
+        `@range` = List(BroadcastService.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

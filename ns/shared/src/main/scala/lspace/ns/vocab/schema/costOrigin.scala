@@ -8,8 +8,8 @@ object costOrigin extends PropertyDef(
         iris = Set("http://schema.org/costOrigin"),
         label = "costOrigin",
         comment = """Additional details to capture the origin of the cost data. For example, 'Medicare Part B'.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

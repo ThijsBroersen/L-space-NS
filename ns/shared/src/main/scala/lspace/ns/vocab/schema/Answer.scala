@@ -6,7 +6,7 @@ object Answer extends OntologyDef(
         iris = Set("http://schema.org/Answer"),
         label = "Answer",
         comment = """An answer offered to a question; perhaps correct, perhaps opinionated or wrong.""",
-        `@extends` = () => List(Comment.ontology)
+        `@extends` = List(Comment.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Comment.Properties{
 

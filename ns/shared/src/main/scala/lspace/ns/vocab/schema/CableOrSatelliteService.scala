@@ -6,7 +6,7 @@ object CableOrSatelliteService extends OntologyDef(
         iris = Set("http://schema.org/CableOrSatelliteService"),
         label = "CableOrSatelliteService",
         comment = """A service which provides access to media programming like TV or radio. Access may be via cable or satellite.""",
-        `@extends` = () => List(Service.ontology)
+        `@extends` = List(Service.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Service.Properties{
 

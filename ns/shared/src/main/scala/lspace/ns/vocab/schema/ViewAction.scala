@@ -6,7 +6,7 @@ object ViewAction extends OntologyDef(
         iris = Set("http://schema.org/ViewAction"),
         label = "ViewAction",
         comment = """The act of consuming static visual content.""",
-        `@extends` = () => List(ConsumeAction.ontology)
+        `@extends` = List(ConsumeAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ConsumeAction.Properties{
 

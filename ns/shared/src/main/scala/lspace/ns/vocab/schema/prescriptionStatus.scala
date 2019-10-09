@@ -8,8 +8,8 @@ object prescriptionStatus extends PropertyDef(
         iris = Set("http://schema.org/prescriptionStatus"),
         label = "prescriptionStatus",
         comment = """Indicates the status of drug prescription eg. local catalogs classifications or whether the drug is available by prescription or over-the-counter, etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(DrugPrescriptionStatus.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, DrugPrescriptionStatus.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object noBylinesPolicy extends PropertyDef(
         iris = Set("http://schema.org/noBylinesPolicy"),
         label = "noBylinesPolicy",
         comment = """For a <a class="localLink" href="http://schema.org/NewsMediaOrganization">NewsMediaOrganization</a> or other news-related <a class="localLink" href="http://schema.org/Organization">Organization</a>, a statement explaining when authors of articles are not named in bylines.""",
-        `@extends` = () => List(publishingPrinciples.property),
-        `@range` = () => List(URL.ontology, CreativeWork.ontology)
+        `@extends` = List(publishingPrinciples.property),
+        `@range` = List(URL.ontology, CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

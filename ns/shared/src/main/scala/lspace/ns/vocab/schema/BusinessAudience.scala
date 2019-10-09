@@ -6,7 +6,7 @@ object BusinessAudience extends OntologyDef(
         iris = Set("http://schema.org/BusinessAudience"),
         label = "BusinessAudience",
         comment = """A set of characteristics belonging to businesses, e.g. who compose an item's target audience.""",
-        `@extends` = () => List(Audience.ontology)
+        `@extends` = List(Audience.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Audience.Properties{
 lazy val numberOfEmployees = lspace.ns.vocab.schema.numberOfEmployees.property

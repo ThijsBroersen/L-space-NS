@@ -6,7 +6,7 @@ object Occupation extends OntologyDef(
         iris = Set("http://schema.org/Occupation"),
         label = "Occupation",
         comment = """A profession, may involve prolonged training and/or a formal qualification.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val educationRequirements = lspace.ns.vocab.schema.educationRequirements.property

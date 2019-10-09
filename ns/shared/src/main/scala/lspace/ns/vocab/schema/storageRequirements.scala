@@ -8,8 +8,8 @@ object storageRequirements extends PropertyDef(
         iris = Set("http://schema.org/storageRequirements"),
         label = "storageRequirements",
         comment = """Storage requirements (free space required).""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

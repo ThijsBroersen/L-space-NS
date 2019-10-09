@@ -8,8 +8,8 @@ object suggestedMaxAge extends PropertyDef(
         iris = Set("http://schema.org/suggestedMaxAge"),
         label = "suggestedMaxAge",
         comment = """Maximal age recommended for viewing content.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

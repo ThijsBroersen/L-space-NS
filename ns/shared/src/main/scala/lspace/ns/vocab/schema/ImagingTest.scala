@@ -6,7 +6,7 @@ object ImagingTest extends OntologyDef(
         iris = Set("http://schema.org/ImagingTest"),
         label = "ImagingTest",
         comment = """Any medical imaging modality typically used for diagnostic purposes.""",
-        `@extends` = () => List(MedicalTest.ontology)
+        `@extends` = List(MedicalTest.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalTest.Properties{
 lazy val imagingTechnique = lspace.ns.vocab.schema.imagingTechnique.property

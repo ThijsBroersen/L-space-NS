@@ -18,7 +18,7 @@ EventSeries has been defined as a kind of Event to make it easy for publishers t
 worrying about which kinds of series are really event-like enough to call an Event. In general an EventSeries
 may seem more Event-like when the period of time is compact and when aspects such as location are fixed, but
 it may also sometimes prove useful to describe a longer-term series as an Event.""",
-        `@extends` = () => List(Event.ontology, Series.ontology)
+        `@extends` = List(Event.ontology, Series.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Event.Properties with lspace.ns.vocab.schema.Series.Properties{
 

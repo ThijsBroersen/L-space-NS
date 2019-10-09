@@ -6,7 +6,7 @@ object CollectionPage extends OntologyDef(
         iris = Set("http://schema.org/CollectionPage"),
         label = "CollectionPage",
         comment = """Web page type: Collection page.""",
-        `@extends` = () => List(WebPage.ontology)
+        `@extends` = List(WebPage.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.WebPage.Properties{
 

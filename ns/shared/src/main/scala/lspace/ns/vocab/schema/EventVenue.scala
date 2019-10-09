@@ -6,7 +6,7 @@ object EventVenue extends OntologyDef(
         iris = Set("http://schema.org/EventVenue"),
         label = "EventVenue",
         comment = """An event venue.""",
-        `@extends` = () => List(CivicStructure.ontology)
+        `@extends` = List(CivicStructure.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CivicStructure.Properties{
 

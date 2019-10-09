@@ -8,8 +8,8 @@ object seatingType extends PropertyDef(
         iris = Set("http://schema.org/seatingType"),
         label = "seatingType",
         comment = """The type/class of the seat.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QualitativeValue.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, QualitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

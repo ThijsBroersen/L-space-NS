@@ -6,7 +6,7 @@ object HinduTemple extends OntologyDef(
         iris = Set("http://schema.org/HinduTemple"),
         label = "HinduTemple",
         comment = """A Hindu temple.""",
-        `@extends` = () => List(PlaceOfWorship.ontology)
+        `@extends` = List(PlaceOfWorship.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.PlaceOfWorship.Properties{
 

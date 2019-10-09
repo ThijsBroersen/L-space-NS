@@ -8,8 +8,8 @@ object serviceUrl extends PropertyDef(
         iris = Set("http://schema.org/serviceUrl"),
         label = "serviceUrl",
         comment = """The website to access the service.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -9,7 +9,7 @@ object Accommodation extends OntologyDef(
 For more specific types of accommodations not defined in schema.org, one can use additionalType with external vocabularies.
 <br /><br />
 See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.""",
-        `@extends` = () => List(Place.ontology)
+        `@extends` = List(Place.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Place.Properties{
 lazy val floorSize = lspace.ns.vocab.schema.floorSize.property

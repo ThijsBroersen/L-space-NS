@@ -8,8 +8,8 @@ object isSimilarTo extends PropertyDef(
         iris = Set("http://schema.org/isSimilarTo"),
         label = "isSimilarTo",
         comment = """A pointer to another, functionally similar product (or multiple products).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Service.ontology, Product.ontology)
+        `@extends` = List(),
+        `@range` = List(Service.ontology, Product.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

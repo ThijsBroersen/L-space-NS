@@ -8,8 +8,8 @@ object mechanismOfAction extends PropertyDef(
         iris = Set("http://schema.org/mechanismOfAction"),
         label = "mechanismOfAction",
         comment = """The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

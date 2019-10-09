@@ -6,7 +6,7 @@ object SportsOrganization extends OntologyDef(
         iris = Set("http://schema.org/SportsOrganization"),
         label = "SportsOrganization",
         comment = """Represents the collection of all sports organizations, including sports teams, governing bodies, and sports associations.""",
-        `@extends` = () => List(Organization.ontology)
+        `@extends` = List(Organization.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Organization.Properties{
 lazy val sport = lspace.ns.vocab.schema.sport.property

@@ -8,8 +8,8 @@ object menu extends PropertyDef(
         iris = Set("http://schema.org/menu"),
         label = "menu",
         comment = """Either the actual menu as a structured representation, as text, or a URL of the menu.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology, Text.ontology, Menu.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology, `@string`, Menu.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

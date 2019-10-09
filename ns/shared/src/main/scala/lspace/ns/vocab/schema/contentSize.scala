@@ -8,8 +8,8 @@ object contentSize extends PropertyDef(
         iris = Set("http://schema.org/contentSize"),
         label = "contentSize",
         comment = """File size in (mega/kilo) bytes.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

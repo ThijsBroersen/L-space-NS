@@ -8,8 +8,8 @@ object sugarContent extends PropertyDef(
         iris = Set("http://schema.org/sugarContent"),
         label = "sugarContent",
         comment = """The number of grams of sugar.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Mass.ontology)
+        `@extends` = List(),
+        `@range` = List(Mass.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

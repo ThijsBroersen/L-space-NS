@@ -8,8 +8,8 @@ object faxNumber extends PropertyDef(
         iris = Set("http://schema.org/faxNumber"),
         label = "faxNumber",
         comment = """The fax number.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

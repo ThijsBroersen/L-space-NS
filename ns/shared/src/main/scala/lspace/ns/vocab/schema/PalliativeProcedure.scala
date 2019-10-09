@@ -6,7 +6,7 @@ object PalliativeProcedure extends OntologyDef(
         iris = Set("http://schema.org/PalliativeProcedure"),
         label = "PalliativeProcedure",
         comment = """A medical procedure intended primarily for palliative purposes, aimed at relieving the symptoms of an underlying health condition.""",
-        `@extends` = () => List(MedicalTherapy.ontology, MedicalProcedure.ontology)
+        `@extends` = List(MedicalTherapy.ontology, MedicalProcedure.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalTherapy.Properties with lspace.ns.vocab.schema.MedicalProcedure.Properties{
 

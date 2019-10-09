@@ -8,8 +8,8 @@ object containsPlace extends PropertyDef(
         iris = Set("http://schema.org/containsPlace"),
         label = "containsPlace",
         comment = """The basic containment relation between a place and another that it contains.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Place.ontology)
+        `@extends` = List(),
+        `@range` = List(Place.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

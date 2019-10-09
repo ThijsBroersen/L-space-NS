@@ -8,8 +8,8 @@ object potentialAction extends PropertyDef(
         iris = Set("http://schema.org/potentialAction"),
         label = "potentialAction",
         comment = """Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Action.ontology)
+        `@extends` = List(),
+        `@range` = List(Action.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

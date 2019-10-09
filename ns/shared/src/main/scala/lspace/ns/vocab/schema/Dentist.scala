@@ -6,7 +6,7 @@ object Dentist extends OntologyDef(
         iris = Set("http://schema.org/Dentist"),
         label = "Dentist",
         comment = """A dentist.""",
-        `@extends` = () => List(MedicalBusiness.ontology, LocalBusiness.ontology, MedicalOrganization.ontology)
+        `@extends` = List(MedicalBusiness.ontology, LocalBusiness.ontology, MedicalOrganization.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalBusiness.Properties with lspace.ns.vocab.schema.LocalBusiness.Properties with lspace.ns.vocab.schema.MedicalOrganization.Properties{
 

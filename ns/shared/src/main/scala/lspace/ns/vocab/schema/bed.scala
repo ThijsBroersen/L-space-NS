@@ -9,8 +9,8 @@ object bed extends PropertyDef(
         label = "bed",
         comment = """The type of bed or beds included in the accommodation. For the single case of just one bed of a certain type, you use bed directly with a text.
       If you want to indicate the quantity of a certain kind of bed, use an instance of BedDetails. For more detailed information, use the amenityFeature property.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, BedDetails.ontology, BedType.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, BedDetails.ontology, BedType.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

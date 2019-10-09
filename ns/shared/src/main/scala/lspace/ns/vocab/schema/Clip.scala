@@ -6,7 +6,7 @@ object Clip extends OntologyDef(
         iris = Set("http://schema.org/Clip"),
         label = "Clip",
         comment = """A short TV or radio program or a segment/part of a program.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val actor = lspace.ns.vocab.schema.actor.property

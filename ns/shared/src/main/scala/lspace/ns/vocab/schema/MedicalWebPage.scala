@@ -6,7 +6,7 @@ object MedicalWebPage extends OntologyDef(
         iris = Set("http://schema.org/MedicalWebPage"),
         label = "MedicalWebPage",
         comment = """A web page that provides medical information.""",
-        `@extends` = () => List(WebPage.ontology)
+        `@extends` = List(WebPage.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.WebPage.Properties{
 

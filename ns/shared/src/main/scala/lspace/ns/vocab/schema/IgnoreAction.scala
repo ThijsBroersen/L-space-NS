@@ -6,7 +6,7 @@ object IgnoreAction extends OntologyDef(
         iris = Set("http://schema.org/IgnoreAction"),
         label = "IgnoreAction",
         comment = """The act of intentionally disregarding the object. An agent ignores an object.""",
-        `@extends` = () => List(AssessAction.ontology)
+        `@extends` = List(AssessAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.AssessAction.Properties{
 

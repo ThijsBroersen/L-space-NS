@@ -8,8 +8,8 @@ object attendees extends PropertyDef(
         iris = Set("http://schema.org/attendees"),
         label = "attendees",
         comment = """A person attending the event.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology, Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology, Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object DiagnosticLab extends OntologyDef(
         iris = Set("http://schema.org/DiagnosticLab"),
         label = "DiagnosticLab",
         comment = """A medical laboratory that offers on-site or off-site diagnostic services.""",
-        `@extends` = () => List(MedicalOrganization.ontology)
+        `@extends` = List(MedicalOrganization.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalOrganization.Properties{
 lazy val availableTest = lspace.ns.vocab.schema.availableTest.property

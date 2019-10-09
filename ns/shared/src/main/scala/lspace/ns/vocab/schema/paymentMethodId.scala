@@ -8,8 +8,8 @@ object paymentMethodId extends PropertyDef(
         iris = Set("http://schema.org/paymentMethodId"),
         label = "paymentMethodId",
         comment = """An identifier for the method of payment used (e.g. the last 4 digits of the credit card).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

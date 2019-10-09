@@ -8,8 +8,8 @@ object acceptsReservations extends PropertyDef(
         iris = Set("http://schema.org/acceptsReservations"),
         label = "acceptsReservations",
         comment = """Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings <code>Yes</code> or <code>No</code>.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology, `@boolean`, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology, `@string`, `@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object HobbyShop extends OntologyDef(
         iris = Set("http://schema.org/HobbyShop"),
         label = "HobbyShop",
         comment = """A store that sells materials useful or necessary for various hobbies.""",
-        `@extends` = () => List(Store.ontology)
+        `@extends` = List(Store.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Store.Properties{
 

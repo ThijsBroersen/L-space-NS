@@ -8,8 +8,8 @@ object guidelineDate extends PropertyDef(
         iris = Set("http://schema.org/guidelineDate"),
         label = "guidelineDate",
         comment = """Date on which this guideline's recommendation was made.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@date`)
+        `@extends` = List(),
+        `@range` = List(`@date`)
        ){
 
 override lazy val properties: List[LProperty] = List()

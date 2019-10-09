@@ -8,8 +8,8 @@ object minPrice extends PropertyDef(
         iris = Set("http://schema.org/minPrice"),
         label = "minPrice",
         comment = """The lowest price if the price is a range.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

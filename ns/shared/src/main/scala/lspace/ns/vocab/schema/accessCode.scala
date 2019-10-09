@@ -8,8 +8,8 @@ object accessCode extends PropertyDef(
         iris = Set("http://schema.org/accessCode"),
         label = "accessCode",
         comment = """Password, PIN, or access code needed for delivery (e.g. from a locker).""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

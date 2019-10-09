@@ -6,7 +6,7 @@ object AppendAction extends OntologyDef(
         iris = Set("http://schema.org/AppendAction"),
         label = "AppendAction",
         comment = """The act of inserting at the end if an ordered collection.""",
-        `@extends` = () => List(InsertAction.ontology)
+        `@extends` = List(InsertAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.InsertAction.Properties{
 

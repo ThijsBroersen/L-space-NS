@@ -6,7 +6,7 @@ object Apartment extends OntologyDef(
         iris = Set("http://schema.org/Apartment"),
         label = "Apartment",
         comment = """An apartment (in American English) or flat (in British English) is a self-contained housing unit (a type of residential real estate) that occupies only part of a building (Source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Apartment">http://en.wikipedia.org/wiki/Apartment</a>).""",
-        `@extends` = () => List(Accommodation.ontology)
+        `@extends` = List(Accommodation.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Accommodation.Properties{
 lazy val occupancy = lspace.ns.vocab.schema.occupancy.property

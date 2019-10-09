@@ -8,8 +8,8 @@ object eligibleCustomerType extends PropertyDef(
         iris = Set("http://schema.org/eligibleCustomerType"),
         label = "eligibleCustomerType",
         comment = """The type(s) of customers for which the given offer is valid.""",
-        `@extends` = () => List(),
-        `@range` = () => List(BusinessEntityType.ontology)
+        `@extends` = List(),
+        `@range` = List(BusinessEntityType.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

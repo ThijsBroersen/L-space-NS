@@ -6,7 +6,7 @@ object CreativeWork extends OntologyDef(
         iris = Set("http://schema.org/CreativeWork"),
         label = "CreativeWork",
         comment = """The most generic kind of creative work, including books, movies, photographs, software programs, etc.""",
-        `@extends` = () => List(Thing.ontology)
+        `@extends` = List(Thing.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Thing.Properties{
 lazy val about = lspace.ns.vocab.schema.about.property

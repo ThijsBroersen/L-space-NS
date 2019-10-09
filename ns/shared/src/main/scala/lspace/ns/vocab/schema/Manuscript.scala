@@ -6,7 +6,7 @@ object Manuscript extends OntologyDef(
         iris = Set("http://schema.org/Manuscript"),
         label = "Manuscript",
         comment = """A book, document, or piece of music written by hand rather than typed or printed.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 

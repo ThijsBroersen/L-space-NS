@@ -8,8 +8,8 @@ object softwareHelp extends PropertyDef(
         iris = Set("http://schema.org/softwareHelp"),
         label = "softwareHelp",
         comment = """Software application help.""",
-        `@extends` = () => List(),
-        `@range` = () => List(CreativeWork.ontology)
+        `@extends` = List(),
+        `@range` = List(CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

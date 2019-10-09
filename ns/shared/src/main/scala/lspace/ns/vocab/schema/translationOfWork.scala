@@ -8,8 +8,8 @@ object translationOfWork extends PropertyDef(
         iris = Set("http://schema.org/translationOfWork"),
         label = "translationOfWork",
         comment = """The work that this work has been translated from. e.g. 物种起源 is a translationOf “On the Origin of Species”""",
-        `@extends` = () => List(),
-        `@range` = () => List(CreativeWork.ontology)
+        `@extends` = List(),
+        `@range` = List(CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

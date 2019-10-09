@@ -8,8 +8,8 @@ object amenityFeature extends PropertyDef(
         iris = Set("http://schema.org/amenityFeature"),
         label = "amenityFeature",
         comment = """An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.""",
-        `@extends` = () => List(),
-        `@range` = () => List(LocationFeatureSpecification.ontology)
+        `@extends` = List(),
+        `@range` = List(LocationFeatureSpecification.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

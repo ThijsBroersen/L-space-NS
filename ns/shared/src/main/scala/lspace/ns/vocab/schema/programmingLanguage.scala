@@ -8,8 +8,8 @@ object programmingLanguage extends PropertyDef(
         iris = Set("http://schema.org/programmingLanguage"),
         label = "programmingLanguage",
         comment = """The computer programming language.""",
-        `@extends` = () => List(),
-        `@range` = () => List(ComputerLanguage.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(ComputerLanguage.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

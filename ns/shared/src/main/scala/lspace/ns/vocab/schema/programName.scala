@@ -8,8 +8,8 @@ object programName extends PropertyDef(
         iris = Set("http://schema.org/programName"),
         label = "programName",
         comment = """The program providing the membership.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

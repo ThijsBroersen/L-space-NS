@@ -6,7 +6,7 @@ object ProgramMembership extends OntologyDef(
         iris = Set("http://schema.org/ProgramMembership"),
         label = "ProgramMembership",
         comment = """Used to describe membership in a loyalty programs (e.g. "StarAliance"), traveler clubs (e.g. "AAA"), purchase clubs ("Safeway Club"), etc.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val hostingOrganization = lspace.ns.vocab.schema.hostingOrganization.property

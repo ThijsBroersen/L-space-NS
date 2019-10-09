@@ -6,7 +6,7 @@ object PaymentService extends OntologyDef(
         iris = Set("http://schema.org/PaymentService"),
         label = "PaymentService",
         comment = """A Service to transfer funds from a person or organization to a beneficiary person or organization.""",
-        `@extends` = () => List(FinancialProduct.ontology)
+        `@extends` = List(FinancialProduct.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.FinancialProduct.Properties{
 

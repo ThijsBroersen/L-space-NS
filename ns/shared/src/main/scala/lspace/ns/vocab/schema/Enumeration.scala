@@ -6,7 +6,7 @@ object Enumeration extends OntologyDef(
         iris = Set("http://schema.org/Enumeration"),
         label = "Enumeration",
         comment = """Lists or enumerations—for example, a list of cuisines or music genres, etc.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val supersededBy = lspace.ns.vocab.schema.supersededBy.property

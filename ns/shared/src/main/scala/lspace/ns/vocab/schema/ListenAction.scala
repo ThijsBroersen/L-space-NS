@@ -6,7 +6,7 @@ object ListenAction extends OntologyDef(
         iris = Set("http://schema.org/ListenAction"),
         label = "ListenAction",
         comment = """The act of consuming audio content.""",
-        `@extends` = () => List(ConsumeAction.ontology)
+        `@extends` = List(ConsumeAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ConsumeAction.Properties{
 

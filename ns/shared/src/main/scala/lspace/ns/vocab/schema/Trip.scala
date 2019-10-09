@@ -6,7 +6,7 @@ object Trip extends OntologyDef(
         iris = Set("http://schema.org/Trip"),
         label = "Trip",
         comment = """A trip or journey. An itinerary of visits to one or more places.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val arrivalTime = lspace.ns.vocab.schema.arrivalTime.property

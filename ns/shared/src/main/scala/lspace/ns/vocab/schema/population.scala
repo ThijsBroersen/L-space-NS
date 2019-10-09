@@ -8,8 +8,8 @@ object population extends PropertyDef(
         iris = Set("http://schema.org/population"),
         label = "population",
         comment = """Any characteristics of the population used in the study, e.g. 'males under 65'.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

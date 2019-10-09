@@ -6,7 +6,7 @@ object ServiceChannel extends OntologyDef(
         iris = Set("http://schema.org/ServiceChannel"),
         label = "ServiceChannel",
         comment = """A means for accessing a service, e.g. a government office location, web site, or phone number.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val availableLanguage = lspace.ns.vocab.schema.availableLanguage.property

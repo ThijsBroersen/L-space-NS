@@ -6,7 +6,7 @@ object Hospital extends OntologyDef(
         iris = Set("http://schema.org/Hospital"),
         label = "Hospital",
         comment = """A hospital.""",
-        `@extends` = () => List(MedicalOrganization.ontology, CivicStructure.ontology, EmergencyService.ontology)
+        `@extends` = List(MedicalOrganization.ontology, CivicStructure.ontology, EmergencyService.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalOrganization.Properties with lspace.ns.vocab.schema.CivicStructure.Properties with lspace.ns.vocab.schema.EmergencyService.Properties{
 lazy val availableService = lspace.ns.vocab.schema.availableService.property

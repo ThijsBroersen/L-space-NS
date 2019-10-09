@@ -6,7 +6,7 @@ object Demand extends OntologyDef(
         iris = Set("http://schema.org/Demand"),
         label = "Demand",
         comment = """A demand entity represents the public, not necessarily binding, not necessarily exclusive, announcement by an organization or person to seek a certain type of goods or services. For describing demand using this type, the very same properties used for Offer apply.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val acceptedPaymentMethod = lspace.ns.vocab.schema.acceptedPaymentMethod.property

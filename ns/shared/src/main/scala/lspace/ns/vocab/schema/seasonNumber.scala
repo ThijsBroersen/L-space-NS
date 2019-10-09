@@ -8,8 +8,8 @@ object seasonNumber extends PropertyDef(
         iris = Set("http://schema.org/seasonNumber"),
         label = "seasonNumber",
         comment = """Position of the season within an ordered group of seasons.""",
-        `@extends` = () => List(position.property),
-        `@range` = () => List(`@int`, Text.ontology)
+        `@extends` = List(position.property),
+        `@range` = List(`@int`, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object MusicAlbumReleaseType extends OntologyDef(
         iris = Set("http://schema.org/MusicAlbumReleaseType"),
         label = "MusicAlbumReleaseType",
         comment = """The kind of release which this album is: single, EP or album.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

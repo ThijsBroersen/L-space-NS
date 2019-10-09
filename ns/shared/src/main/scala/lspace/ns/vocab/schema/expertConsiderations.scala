@@ -8,8 +8,8 @@ object expertConsiderations extends PropertyDef(
         iris = Set("http://schema.org/expertConsiderations"),
         label = "expertConsiderations",
         comment = """Medical expert advice related to the plan.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

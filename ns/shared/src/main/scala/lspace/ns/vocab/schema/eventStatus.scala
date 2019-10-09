@@ -8,8 +8,8 @@ object eventStatus extends PropertyDef(
         iris = Set("http://schema.org/eventStatus"),
         label = "eventStatus",
         comment = """An eventStatus of an event represents its status; particularly useful when an event is cancelled or rescheduled.""",
-        `@extends` = () => List(),
-        `@range` = () => List(EventStatusType.ontology)
+        `@extends` = List(),
+        `@range` = List(EventStatusType.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object AboutPage extends OntologyDef(
         iris = Set("http://schema.org/AboutPage"),
         label = "AboutPage",
         comment = """Web page type: About page.""",
-        `@extends` = () => List(WebPage.ontology)
+        `@extends` = List(WebPage.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.WebPage.Properties{
 

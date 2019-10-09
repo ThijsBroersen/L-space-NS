@@ -8,8 +8,8 @@ object appliesToDeliveryMethod extends PropertyDef(
         iris = Set("http://schema.org/appliesToDeliveryMethod"),
         label = "appliesToDeliveryMethod",
         comment = """The delivery method(s) to which the delivery charge or payment charge specification applies.""",
-        `@extends` = () => List(),
-        `@range` = () => List(DeliveryMethod.ontology)
+        `@extends` = List(),
+        `@range` = List(DeliveryMethod.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

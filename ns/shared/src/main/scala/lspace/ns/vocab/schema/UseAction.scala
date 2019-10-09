@@ -6,7 +6,7 @@ object UseAction extends OntologyDef(
         iris = Set("http://schema.org/UseAction"),
         label = "UseAction",
         comment = """The act of applying an object to its intended purpose.""",
-        `@extends` = () => List(ConsumeAction.ontology)
+        `@extends` = List(ConsumeAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ConsumeAction.Properties{
 

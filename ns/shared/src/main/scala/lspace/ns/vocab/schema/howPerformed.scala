@@ -8,8 +8,8 @@ object howPerformed extends PropertyDef(
         iris = Set("http://schema.org/howPerformed"),
         label = "howPerformed",
         comment = """How the procedure is performed.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

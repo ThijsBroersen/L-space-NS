@@ -6,7 +6,7 @@ object AuthorizeAction extends OntologyDef(
         iris = Set("http://schema.org/AuthorizeAction"),
         label = "AuthorizeAction",
         comment = """The act of granting permission to an object.""",
-        `@extends` = () => List(AllocateAction.ontology)
+        `@extends` = List(AllocateAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.AllocateAction.Properties{
 lazy val recipient = lspace.ns.vocab.schema.recipient.property

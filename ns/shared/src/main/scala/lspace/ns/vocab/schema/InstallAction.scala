@@ -6,7 +6,7 @@ object InstallAction extends OntologyDef(
         iris = Set("http://schema.org/InstallAction"),
         label = "InstallAction",
         comment = """The act of installing an application.""",
-        `@extends` = () => List(ConsumeAction.ontology)
+        `@extends` = List(ConsumeAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ConsumeAction.Properties{
 

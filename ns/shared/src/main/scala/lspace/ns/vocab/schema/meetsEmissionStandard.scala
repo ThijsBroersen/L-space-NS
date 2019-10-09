@@ -8,8 +8,8 @@ object meetsEmissionStandard extends PropertyDef(
         iris = Set("http://schema.org/meetsEmissionStandard"),
         label = "meetsEmissionStandard",
         comment = """Indicates that the vehicle meets the respective emission standard.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QualitativeValue.ontology, URL.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(QualitativeValue.ontology, URL.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

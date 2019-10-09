@@ -6,7 +6,7 @@ object Pharmacy extends OntologyDef(
         iris = Set("http://schema.org/Pharmacy"),
         label = "Pharmacy",
         comment = """A pharmacy or drugstore.""",
-        `@extends` = () => List(MedicalBusiness.ontology, MedicalOrganization.ontology)
+        `@extends` = List(MedicalBusiness.ontology, MedicalOrganization.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalBusiness.Properties with lspace.ns.vocab.schema.MedicalOrganization.Properties{
 

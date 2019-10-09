@@ -6,7 +6,7 @@ object DietarySupplement extends OntologyDef(
         iris = Set("http://schema.org/DietarySupplement"),
         label = "DietarySupplement",
         comment = """A product taken by mouth that contains a dietary ingredient intended to supplement the diet. Dietary ingredients may include vitamins, minerals, herbs or other botanicals, amino acids, and substances such as enzymes, organ tissues, glandulars and metabolites.""",
-        `@extends` = () => List(Substance.ontology)
+        `@extends` = List(Substance.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Substance.Properties{
 lazy val background = lspace.ns.vocab.schema.background.property

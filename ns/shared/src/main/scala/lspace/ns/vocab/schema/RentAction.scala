@@ -6,7 +6,7 @@ object RentAction extends OntologyDef(
         iris = Set("http://schema.org/RentAction"),
         label = "RentAction",
         comment = """The act of giving money in return for temporary use, but not ownership, of an object such as a vehicle or property. For example, an agent rents a property from a landlord in exchange for a periodic payment.""",
-        `@extends` = () => List(TradeAction.ontology)
+        `@extends` = List(TradeAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.TradeAction.Properties{
 lazy val landlord = lspace.ns.vocab.schema.landlord.property

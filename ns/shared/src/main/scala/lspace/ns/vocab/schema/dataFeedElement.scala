@@ -8,8 +8,8 @@ object dataFeedElement extends PropertyDef(
         iris = Set("http://schema.org/dataFeedElement"),
         label = "dataFeedElement",
         comment = """An item within in a data feed. Data feeds may have many elements.""",
-        `@extends` = () => List(),
-        `@range` = () => List(DataFeedItem.ontology, Thing.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(DataFeedItem.ontology, Thing.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

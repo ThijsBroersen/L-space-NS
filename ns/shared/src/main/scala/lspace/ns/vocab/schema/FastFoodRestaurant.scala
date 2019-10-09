@@ -6,7 +6,7 @@ object FastFoodRestaurant extends OntologyDef(
         iris = Set("http://schema.org/FastFoodRestaurant"),
         label = "FastFoodRestaurant",
         comment = """A fast-food restaurant.""",
-        `@extends` = () => List(FoodEstablishment.ontology)
+        `@extends` = List(FoodEstablishment.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.FoodEstablishment.Properties{
 

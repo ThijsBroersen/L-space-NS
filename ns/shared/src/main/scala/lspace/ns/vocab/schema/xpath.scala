@@ -8,8 +8,8 @@ object xpath extends PropertyDef(
         iris = Set("http://schema.org/xpath"),
         label = "xpath",
         comment = """An XPath, e.g. of a <a class="localLink" href="http://schema.org/SpeakableSpecification">SpeakableSpecification</a> or <a class="localLink" href="http://schema.org/WebPageElement">WebPageElement</a>. In the latter case, multiple matches within a page can constitute a single conceptual "Web page element".""",
-        `@extends` = () => List(),
-        `@range` = () => List(XPathType.ontology)
+        `@extends` = List(),
+        `@range` = List(XPathType.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

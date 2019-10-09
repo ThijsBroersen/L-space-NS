@@ -6,7 +6,7 @@ object Taxi extends OntologyDef(
         iris = Set("http://schema.org/Taxi"),
         label = "Taxi",
         comment = """A taxi.""",
-        `@extends` = () => List(Service.ontology)
+        `@extends` = List(Service.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Service.Properties{
 

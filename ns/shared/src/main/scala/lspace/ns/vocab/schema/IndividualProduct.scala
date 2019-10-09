@@ -6,7 +6,7 @@ object IndividualProduct extends OntologyDef(
         iris = Set("http://schema.org/IndividualProduct"),
         label = "IndividualProduct",
         comment = """A single, identifiable product instance (e.g. a laptop with a particular serial number).""",
-        `@extends` = () => List(Product.ontology)
+        `@extends` = List(Product.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Product.Properties{
 lazy val serialNumber = lspace.ns.vocab.schema.serialNumber.property

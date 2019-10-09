@@ -6,7 +6,7 @@ object RadioEpisode extends OntologyDef(
         iris = Set("http://schema.org/RadioEpisode"),
         label = "RadioEpisode",
         comment = """A radio episode which can be part of a series or season.""",
-        `@extends` = () => List(Episode.ontology)
+        `@extends` = List(Episode.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Episode.Properties{
 

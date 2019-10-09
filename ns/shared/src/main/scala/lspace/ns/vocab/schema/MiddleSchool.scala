@@ -6,7 +6,7 @@ object MiddleSchool extends OntologyDef(
         iris = Set("http://schema.org/MiddleSchool"),
         label = "MiddleSchool",
         comment = """A middle school (typically for children aged around 11-14, although this varies somewhat).""",
-        `@extends` = () => List(EducationalOrganization.ontology)
+        `@extends` = List(EducationalOrganization.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.EducationalOrganization.Properties{
 

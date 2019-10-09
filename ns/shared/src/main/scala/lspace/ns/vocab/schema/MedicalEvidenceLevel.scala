@@ -6,7 +6,7 @@ object MedicalEvidenceLevel extends OntologyDef(
         iris = Set("http://schema.org/MedicalEvidenceLevel"),
         label = "MedicalEvidenceLevel",
         comment = """Level of evidence for a medical guideline. Enumerated type.""",
-        `@extends` = () => List(MedicalEnumeration.ontology)
+        `@extends` = List(MedicalEnumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
 

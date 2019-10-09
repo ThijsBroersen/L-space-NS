@@ -8,8 +8,8 @@ object icaoCode extends PropertyDef(
         iris = Set("http://schema.org/icaoCode"),
         label = "icaoCode",
         comment = """ICAO identifier for an airport.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

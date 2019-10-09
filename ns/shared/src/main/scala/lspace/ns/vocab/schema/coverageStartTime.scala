@@ -8,8 +8,8 @@ object coverageStartTime extends PropertyDef(
         iris = Set("http://schema.org/coverageStartTime"),
         label = "coverageStartTime",
         comment = """The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time. The LiveBlogPosting may also be created before coverage begins.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@datetime`)
+        `@extends` = List(),
+        `@range` = List(`@datetime`)
        ){
 
 override lazy val properties: List[LProperty] = List()

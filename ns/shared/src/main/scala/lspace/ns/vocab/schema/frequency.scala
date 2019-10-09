@@ -8,8 +8,8 @@ object frequency extends PropertyDef(
         iris = Set("http://schema.org/frequency"),
         label = "frequency",
         comment = """How often the dose is taken, e.g. 'daily'.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

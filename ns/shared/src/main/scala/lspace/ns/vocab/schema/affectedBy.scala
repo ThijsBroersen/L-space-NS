@@ -8,8 +8,8 @@ object affectedBy extends PropertyDef(
         iris = Set("http://schema.org/affectedBy"),
         label = "affectedBy",
         comment = """Drugs that affect the test's results.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Drug.ontology)
+        `@extends` = List(),
+        `@range` = List(Drug.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

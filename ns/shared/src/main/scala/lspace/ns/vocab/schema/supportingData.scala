@@ -8,8 +8,8 @@ object supportingData extends PropertyDef(
         iris = Set("http://schema.org/supportingData"),
         label = "supportingData",
         comment = """Supporting data for a SoftwareApplication.""",
-        `@extends` = () => List(),
-        `@range` = () => List(DataFeed.ontology)
+        `@extends` = List(),
+        `@range` = List(DataFeed.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

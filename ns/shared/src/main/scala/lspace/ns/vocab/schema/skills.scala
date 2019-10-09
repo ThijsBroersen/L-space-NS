@@ -8,8 +8,8 @@ object skills extends PropertyDef(
         iris = Set("http://schema.org/skills"),
         label = "skills",
         comment = """Skills required to fulfill this role or in this Occupation.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object language extends PropertyDef(
         iris = Set("http://schema.org/language"),
         label = "language",
         comment = """A sub property of instrument. The language used on this action.""",
-        `@extends` = () => List(instrument.property),
-        `@range` = () => List(Language.ontology)
+        `@extends` = List(instrument.property),
+        `@range` = List(Language.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

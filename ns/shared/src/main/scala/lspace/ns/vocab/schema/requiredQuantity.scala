@@ -8,8 +8,8 @@ object requiredQuantity extends PropertyDef(
         iris = Set("http://schema.org/requiredQuantity"),
         label = "requiredQuantity",
         comment = """The required quantity of the item(s).""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`, Text.ontology, QuantitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, `@number`, QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

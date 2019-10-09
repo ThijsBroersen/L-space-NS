@@ -6,7 +6,7 @@ object BookmarkAction extends OntologyDef(
         iris = Set("http://schema.org/BookmarkAction"),
         label = "BookmarkAction",
         comment = """An agent bookmarks/flags/labels/tags/marks an object.""",
-        `@extends` = () => List(OrganizeAction.ontology)
+        `@extends` = List(OrganizeAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.OrganizeAction.Properties{
 

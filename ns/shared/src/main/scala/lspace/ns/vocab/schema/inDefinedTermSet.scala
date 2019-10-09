@@ -8,8 +8,8 @@ object inDefinedTermSet extends PropertyDef(
         iris = Set("http://schema.org/inDefinedTermSet"),
         label = "inDefinedTermSet",
         comment = """A <a class="localLink" href="http://schema.org/DefinedTermSet">DefinedTermSet</a> that contains this term.""",
-        `@extends` = () => List(isPartOf.property),
-        `@range` = () => List(DefinedTermSet.ontology, URL.ontology)
+        `@extends` = List(isPartOf.property),
+        `@range` = List(DefinedTermSet.ontology, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object successorOf extends PropertyDef(
         iris = Set("http://schema.org/successorOf"),
         label = "successorOf",
         comment = """A pointer from a newer variant of a product  to its previous, often discontinued predecessor.""",
-        `@extends` = () => List(),
-        `@range` = () => List(ProductModel.ontology)
+        `@extends` = List(),
+        `@range` = List(ProductModel.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

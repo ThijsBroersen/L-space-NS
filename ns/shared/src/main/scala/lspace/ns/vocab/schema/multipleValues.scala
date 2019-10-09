@@ -8,8 +8,8 @@ object multipleValues extends PropertyDef(
         iris = Set("http://schema.org/multipleValues"),
         label = "multipleValues",
         comment = """Whether multiple values are allowed for the property.  Default is false.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

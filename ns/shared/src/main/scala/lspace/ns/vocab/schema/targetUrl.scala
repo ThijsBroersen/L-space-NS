@@ -8,8 +8,8 @@ object targetUrl extends PropertyDef(
         iris = Set("http://schema.org/targetUrl"),
         label = "targetUrl",
         comment = """The URL of a node in an established educational framework.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology)
+        `@extends` = List(),
+        `@range` = List(URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

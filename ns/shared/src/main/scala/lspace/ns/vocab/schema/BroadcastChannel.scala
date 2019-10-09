@@ -6,7 +6,7 @@ object BroadcastChannel extends OntologyDef(
         iris = Set("http://schema.org/BroadcastChannel"),
         label = "BroadcastChannel",
         comment = """A unique instance of a BroadcastService on a CableOrSatelliteService lineup.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val broadcastChannelId = lspace.ns.vocab.schema.broadcastChannelId.property

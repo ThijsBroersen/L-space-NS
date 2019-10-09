@@ -8,8 +8,8 @@ object aircraft extends PropertyDef(
         iris = Set("http://schema.org/aircraft"),
         label = "aircraft",
         comment = """The kind of aircraft (e.g., "Boeing 747").""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, Vehicle.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, Vehicle.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

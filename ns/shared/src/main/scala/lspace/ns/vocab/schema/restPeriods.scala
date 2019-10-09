@@ -8,8 +8,8 @@ object restPeriods extends PropertyDef(
         iris = Set("http://schema.org/restPeriods"),
         label = "restPeriods",
         comment = """How often one should break from the activity.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, QualitativeValue.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, QualitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

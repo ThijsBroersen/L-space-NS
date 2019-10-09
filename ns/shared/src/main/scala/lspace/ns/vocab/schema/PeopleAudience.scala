@@ -6,7 +6,7 @@ object PeopleAudience extends OntologyDef(
         iris = Set("http://schema.org/PeopleAudience"),
         label = "PeopleAudience",
         comment = """A set of characteristics belonging to people, e.g. who compose an item's target audience.""",
-        `@extends` = () => List(Audience.ontology)
+        `@extends` = List(Audience.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Audience.Properties{
 lazy val healthCondition = lspace.ns.vocab.schema.healthCondition.property

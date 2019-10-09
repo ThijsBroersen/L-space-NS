@@ -6,7 +6,7 @@ object BedDetails extends OntologyDef(
         iris = Set("http://schema.org/BedDetails"),
         label = "BedDetails",
         comment = """An entity holding detailed information about the available bed types, e.g. the quantity of twin beds for a hotel room. For the single case of just one bed of a certain type, you can use bed directly with a text. See also <a class="localLink" href="http://schema.org/BedType">BedType</a> (under development).""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val numberOfBeds = lspace.ns.vocab.schema.numberOfBeds.property

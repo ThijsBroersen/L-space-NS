@@ -6,7 +6,7 @@ object DiscoverAction extends OntologyDef(
         iris = Set("http://schema.org/DiscoverAction"),
         label = "DiscoverAction",
         comment = """The act of discovering/finding an object.""",
-        `@extends` = () => List(FindAction.ontology)
+        `@extends` = List(FindAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.FindAction.Properties{
 

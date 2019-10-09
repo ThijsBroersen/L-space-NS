@@ -8,8 +8,8 @@ object relatedStructure extends PropertyDef(
         iris = Set("http://schema.org/relatedStructure"),
         label = "relatedStructure",
         comment = """Related anatomical structure(s) that are not part of the system but relate or connect to it, such as vascular bundles associated with an organ system.""",
-        `@extends` = () => List(),
-        `@range` = () => List(AnatomicalStructure.ontology)
+        `@extends` = List(),
+        `@range` = List(AnatomicalStructure.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

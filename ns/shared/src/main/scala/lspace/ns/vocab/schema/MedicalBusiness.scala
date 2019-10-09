@@ -6,7 +6,7 @@ object MedicalBusiness extends OntologyDef(
         iris = Set("http://schema.org/MedicalBusiness"),
         label = "MedicalBusiness",
         comment = """A particular physical or virtual business of an organization for medical purposes. Examples of MedicalBusiness include differents business run by health professionals.""",
-        `@extends` = () => List(LocalBusiness.ontology)
+        `@extends` = List(LocalBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.LocalBusiness.Properties{
 

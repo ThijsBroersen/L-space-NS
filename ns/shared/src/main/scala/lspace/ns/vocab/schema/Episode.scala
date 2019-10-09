@@ -6,7 +6,7 @@ object Episode extends OntologyDef(
         iris = Set("http://schema.org/Episode"),
         label = "Episode",
         comment = """A media episode (e.g. TV, radio, video game) which can be part of a series or season.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val actor = lspace.ns.vocab.schema.actor.property

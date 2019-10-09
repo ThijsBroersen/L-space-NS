@@ -6,7 +6,7 @@ object PostalAddress extends OntologyDef(
         iris = Set("http://schema.org/PostalAddress"),
         label = "PostalAddress",
         comment = """The mailing address.""",
-        `@extends` = () => List(ContactPoint.ontology)
+        `@extends` = List(ContactPoint.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ContactPoint.Properties{
 lazy val addressCountry = lspace.ns.vocab.schema.addressCountry.property

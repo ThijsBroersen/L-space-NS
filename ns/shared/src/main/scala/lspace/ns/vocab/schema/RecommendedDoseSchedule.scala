@@ -6,7 +6,7 @@ object RecommendedDoseSchedule extends OntologyDef(
         iris = Set("http://schema.org/RecommendedDoseSchedule"),
         label = "RecommendedDoseSchedule",
         comment = """A recommended dosing schedule for a drug or supplement as prescribed or recommended by an authority or by the drug/supplement's manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.""",
-        `@extends` = () => List(DoseSchedule.ontology)
+        `@extends` = List(DoseSchedule.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.DoseSchedule.Properties{
 

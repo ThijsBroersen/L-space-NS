@@ -8,8 +8,8 @@ object maxValue extends PropertyDef(
         iris = Set("http://schema.org/maxValue"),
         label = "maxValue",
         comment = """The upper value of some characteristic or property.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

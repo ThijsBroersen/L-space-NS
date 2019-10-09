@@ -8,8 +8,8 @@ object membershipNumber extends PropertyDef(
         iris = Set("http://schema.org/membershipNumber"),
         label = "membershipNumber",
         comment = """A unique identifier for the membership.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

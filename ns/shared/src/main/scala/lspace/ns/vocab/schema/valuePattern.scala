@@ -8,8 +8,8 @@ object valuePattern extends PropertyDef(
         iris = Set("http://schema.org/valuePattern"),
         label = "valuePattern",
         comment = """Specifies a regular expression for testing literal values according to the HTML spec.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -8,8 +8,8 @@ object biomechnicalClass extends PropertyDef(
         iris = Set("http://schema.org/biomechnicalClass"),
         label = "biomechnicalClass",
         comment = """The biomechanical properties of the bone.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

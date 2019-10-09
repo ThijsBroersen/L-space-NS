@@ -6,7 +6,7 @@ object Patient extends OntologyDef(
         iris = Set("http://schema.org/Patient"),
         label = "Patient",
         comment = """A patient is any person recipient of health care services.""",
-        `@extends` = () => List(Person.ontology, MedicalAudience.ontology)
+        `@extends` = List(Person.ontology, MedicalAudience.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Person.Properties with lspace.ns.vocab.schema.MedicalAudience.Properties{
 lazy val diagnosis = lspace.ns.vocab.schema.diagnosis.property

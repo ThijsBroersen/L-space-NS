@@ -8,8 +8,8 @@ object targetProduct extends PropertyDef(
         iris = Set("http://schema.org/targetProduct"),
         label = "targetProduct",
         comment = """Target Operating System / Product to which the code applies.  If applies to several versions, just the product name can be used.""",
-        `@extends` = () => List(),
-        `@range` = () => List(SoftwareApplication.ontology)
+        `@extends` = List(),
+        `@range` = List(SoftwareApplication.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

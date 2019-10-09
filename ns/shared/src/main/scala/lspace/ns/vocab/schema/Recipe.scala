@@ -6,7 +6,7 @@ object Recipe extends OntologyDef(
         iris = Set("http://schema.org/Recipe"),
         label = "Recipe",
         comment = """A recipe. For dietary restrictions covered by the recipe, a few common restrictions are enumerated via <a class="localLink" href="http://schema.org/suitableForDiet">suitableForDiet</a>. The <a class="localLink" href="http://schema.org/keywords">keywords</a> property can also be used to add more detail.""",
-        `@extends` = () => List(HowTo.ontology)
+        `@extends` = List(HowTo.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.HowTo.Properties{
 lazy val cookTime = lspace.ns.vocab.schema.cookTime.property

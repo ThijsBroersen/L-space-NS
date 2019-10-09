@@ -6,7 +6,7 @@ object MovieTheater extends OntologyDef(
         iris = Set("http://schema.org/MovieTheater"),
         label = "MovieTheater",
         comment = """A movie theater.""",
-        `@extends` = () => List(CivicStructure.ontology, EntertainmentBusiness.ontology)
+        `@extends` = List(CivicStructure.ontology, EntertainmentBusiness.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CivicStructure.Properties with lspace.ns.vocab.schema.EntertainmentBusiness.Properties{
 lazy val screenCount = lspace.ns.vocab.schema.screenCount.property

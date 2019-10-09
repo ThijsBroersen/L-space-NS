@@ -8,8 +8,8 @@ object transmissionMethod extends PropertyDef(
         iris = Set("http://schema.org/transmissionMethod"),
         label = "transmissionMethod",
         comment = """How the disease spreads, either as a route or vector, for example 'direct contact', 'Aedes aegypti', etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

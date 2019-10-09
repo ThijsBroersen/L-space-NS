@@ -8,8 +8,8 @@ object recommendationStrength extends PropertyDef(
         iris = Set("http://schema.org/recommendationStrength"),
         label = "recommendationStrength",
         comment = """Strength of the guideline's recommendation (e.g. 'class I').""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

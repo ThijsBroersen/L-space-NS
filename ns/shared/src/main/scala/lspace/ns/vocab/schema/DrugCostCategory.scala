@@ -6,7 +6,7 @@ object DrugCostCategory extends OntologyDef(
         iris = Set("http://schema.org/DrugCostCategory"),
         label = "DrugCostCategory",
         comment = """Enumerated categories of medical drug costs.""",
-        `@extends` = () => List(MedicalEnumeration.ontology)
+        `@extends` = List(MedicalEnumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEnumeration.Properties{
 

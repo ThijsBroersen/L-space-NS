@@ -8,8 +8,8 @@ object subOrganization extends PropertyDef(
         iris = Set("http://schema.org/subOrganization"),
         label = "subOrganization",
         comment = """A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Organization.ontology)
+        `@extends` = List(),
+        `@range` = List(Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

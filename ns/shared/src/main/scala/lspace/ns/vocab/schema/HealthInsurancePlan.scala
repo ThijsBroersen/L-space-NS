@@ -6,7 +6,7 @@ object HealthInsurancePlan extends OntologyDef(
         iris = Set("http://schema.org/HealthInsurancePlan"),
         label = "HealthInsurancePlan",
         comment = """A US-style health insurance plan, including PPOs, EPOs, and HMOs.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val benefitsSummaryUrl = lspace.ns.vocab.schema.benefitsSummaryUrl.property

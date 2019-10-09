@@ -6,7 +6,7 @@ object PublicationEvent extends OntologyDef(
         iris = Set("http://schema.org/PublicationEvent"),
         label = "PublicationEvent",
         comment = """A PublicationEvent corresponds indifferently to the event of publication for a CreativeWork of any type e.g. a broadcast event, an on-demand event, a book/journal publication via a variety of delivery media.""",
-        `@extends` = () => List(Event.ontology)
+        `@extends` = List(Event.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Event.Properties{
 lazy val publishedBy = lspace.ns.vocab.schema.publishedBy.property

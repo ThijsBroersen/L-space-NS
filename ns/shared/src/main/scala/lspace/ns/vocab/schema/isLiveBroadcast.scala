@@ -8,8 +8,8 @@ object isLiveBroadcast extends PropertyDef(
         iris = Set("http://schema.org/isLiveBroadcast"),
         label = "isLiveBroadcast",
         comment = """True is the broadcast is of a live event.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

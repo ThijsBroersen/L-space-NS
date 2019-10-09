@@ -8,8 +8,8 @@ object naics extends PropertyDef(
         iris = Set("http://schema.org/naics"),
         label = "naics",
         comment = """The North American Industry Classification System (NAICS) code for a particular organization or business person.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

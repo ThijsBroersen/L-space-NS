@@ -6,7 +6,7 @@ object WebApplication extends OntologyDef(
         iris = Set("http://schema.org/WebApplication"),
         label = "WebApplication",
         comment = """Web applications.""",
-        `@extends` = () => List(SoftwareApplication.ontology)
+        `@extends` = List(SoftwareApplication.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.SoftwareApplication.Properties{
 lazy val browserRequirements = lspace.ns.vocab.schema.browserRequirements.property

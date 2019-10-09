@@ -8,8 +8,8 @@ object address extends PropertyDef(
         iris = Set("http://schema.org/address"),
         label = "address",
         comment = """Physical address of the item.""",
-        `@extends` = () => List(),
-        `@range` = () => List(PostalAddress.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(PostalAddress.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

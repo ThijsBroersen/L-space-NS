@@ -8,8 +8,8 @@ object priceValidUntil extends PropertyDef(
         iris = Set("http://schema.org/priceValidUntil"),
         label = "priceValidUntil",
         comment = """The date after which the price is no longer available.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@date`)
+        `@extends` = List(),
+        `@range` = List(`@date`)
        ){
 
 override lazy val properties: List[LProperty] = List()

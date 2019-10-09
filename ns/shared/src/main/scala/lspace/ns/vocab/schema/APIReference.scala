@@ -6,7 +6,7 @@ object APIReference extends OntologyDef(
         iris = Set("http://schema.org/APIReference"),
         label = "APIReference",
         comment = """Reference documentation for application programming interfaces (APIs).""",
-        `@extends` = () => List(TechArticle.ontology)
+        `@extends` = List(TechArticle.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.TechArticle.Properties{
 lazy val assemblyVersion = lspace.ns.vocab.schema.assemblyVersion.property

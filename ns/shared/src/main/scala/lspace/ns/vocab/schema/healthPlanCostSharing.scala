@@ -8,8 +8,8 @@ object healthPlanCostSharing extends PropertyDef(
         iris = Set("http://schema.org/healthPlanCostSharing"),
         label = "healthPlanCostSharing",
         comment = """Whether The costs to the patient for services under this network or formulary.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

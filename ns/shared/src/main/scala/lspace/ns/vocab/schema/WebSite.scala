@@ -6,7 +6,7 @@ object WebSite extends OntologyDef(
         iris = Set("http://schema.org/WebSite"),
         label = "WebSite",
         comment = """A WebSite is a set of related web pages and other items typically served from a single web domain and accessible via URLs.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val issn = lspace.ns.vocab.schema.issn.property

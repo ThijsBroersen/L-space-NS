@@ -6,7 +6,7 @@ object MenuItem extends OntologyDef(
         iris = Set("http://schema.org/MenuItem"),
         label = "MenuItem",
         comment = """A food or drink item listed in a menu or menu section.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val menuAddOn = lspace.ns.vocab.schema.menuAddOn.property

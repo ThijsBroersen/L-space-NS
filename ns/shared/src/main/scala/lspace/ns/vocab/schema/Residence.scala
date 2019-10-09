@@ -6,7 +6,7 @@ object Residence extends OntologyDef(
         iris = Set("http://schema.org/Residence"),
         label = "Residence",
         comment = """The place where a person lives.""",
-        `@extends` = () => List(Place.ontology)
+        `@extends` = List(Place.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Place.Properties{
 

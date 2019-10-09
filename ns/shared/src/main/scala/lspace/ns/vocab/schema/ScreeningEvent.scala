@@ -6,7 +6,7 @@ object ScreeningEvent extends OntologyDef(
         iris = Set("http://schema.org/ScreeningEvent"),
         label = "ScreeningEvent",
         comment = """A screening of a movie or other video.""",
-        `@extends` = () => List(Event.ontology)
+        `@extends` = List(Event.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Event.Properties{
 lazy val subtitleLanguage = lspace.ns.vocab.schema.subtitleLanguage.property

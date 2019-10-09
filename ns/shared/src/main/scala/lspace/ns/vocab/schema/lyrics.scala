@@ -8,8 +8,8 @@ object lyrics extends PropertyDef(
         iris = Set("http://schema.org/lyrics"),
         label = "lyrics",
         comment = """The words in the song.""",
-        `@extends` = () => List(),
-        `@range` = () => List(CreativeWork.ontology)
+        `@extends` = List(),
+        `@range` = List(CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

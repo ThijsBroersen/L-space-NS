@@ -6,7 +6,7 @@ object Continent extends OntologyDef(
         iris = Set("http://schema.org/Continent"),
         label = "Continent",
         comment = """One of the continents (for example, Europe or Africa).""",
-        `@extends` = () => List(Landform.ontology)
+        `@extends` = List(Landform.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Landform.Properties{
 

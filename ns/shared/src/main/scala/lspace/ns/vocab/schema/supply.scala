@@ -8,8 +8,8 @@ object supply extends PropertyDef(
         iris = Set("http://schema.org/supply"),
         label = "supply",
         comment = """A sub-property of instrument. A supply consumed when performing instructions or a direction.""",
-        `@extends` = () => List(instrument.property),
-        `@range` = () => List(HowToSupply.ontology, Text.ontology)
+        `@extends` = List(instrument.property),
+        `@range` = List(HowToSupply.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

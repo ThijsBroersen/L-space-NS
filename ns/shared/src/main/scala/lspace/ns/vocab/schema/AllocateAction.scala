@@ -6,7 +6,7 @@ object AllocateAction extends OntologyDef(
         iris = Set("http://schema.org/AllocateAction"),
         label = "AllocateAction",
         comment = """The act of organizing tasks/objects/events by associating resources to it.""",
-        `@extends` = () => List(OrganizeAction.ontology)
+        `@extends` = List(OrganizeAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.OrganizeAction.Properties{
 lazy val purpose = lspace.ns.vocab.schema.purpose.property

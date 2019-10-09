@@ -8,8 +8,8 @@ object closes extends PropertyDef(
         iris = Set("http://schema.org/closes"),
         label = "closes",
         comment = """The closing hour of the place or service on the given day(s) of the week.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@time`)
+        `@extends` = List(),
+        `@range` = List(`@time`)
        ){
 
 override lazy val properties: List[LProperty] = List()

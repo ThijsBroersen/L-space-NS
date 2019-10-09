@@ -8,8 +8,8 @@ object leiCode extends PropertyDef(
         iris = Set("http://schema.org/leiCode"),
         label = "leiCode",
         comment = """An organization identifier that uniquely identifies a legal entity as defined in ISO 17442.""",
-        `@extends` = () => List(identifier.property),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(identifier.property),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

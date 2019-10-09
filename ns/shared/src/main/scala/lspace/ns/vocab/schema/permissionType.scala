@@ -8,8 +8,8 @@ object permissionType extends PropertyDef(
         iris = Set("http://schema.org/permissionType"),
         label = "permissionType",
         comment = """The type of permission granted the person, organization, or audience.""",
-        `@extends` = () => List(),
-        `@range` = () => List(DigitalDocumentPermissionType.ontology)
+        `@extends` = List(),
+        `@range` = List(DigitalDocumentPermissionType.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

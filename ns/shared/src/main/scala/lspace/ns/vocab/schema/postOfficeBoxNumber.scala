@@ -8,8 +8,8 @@ object postOfficeBoxNumber extends PropertyDef(
         iris = Set("http://schema.org/postOfficeBoxNumber"),
         label = "postOfficeBoxNumber",
         comment = """The post office box number for PO box addresses.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

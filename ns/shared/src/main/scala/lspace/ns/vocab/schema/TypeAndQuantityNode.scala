@@ -6,7 +6,7 @@ object TypeAndQuantityNode extends OntologyDef(
         iris = Set("http://schema.org/TypeAndQuantityNode"),
         label = "TypeAndQuantityNode",
         comment = """A structured value indicating the quantity, unit of measurement, and business function of goods included in a bundle offer.""",
-        `@extends` = () => List(StructuredValue.ontology)
+        `@extends` = List(StructuredValue.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.StructuredValue.Properties{
 lazy val amountOfThisGood = lspace.ns.vocab.schema.amountOfThisGood.property

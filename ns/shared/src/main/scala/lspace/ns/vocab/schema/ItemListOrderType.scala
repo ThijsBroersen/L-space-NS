@@ -6,7 +6,7 @@ object ItemListOrderType extends OntologyDef(
         iris = Set("http://schema.org/ItemListOrderType"),
         label = "ItemListOrderType",
         comment = """Enumerated for values for itemListOrder for indicating how an ordered ItemList is organized.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

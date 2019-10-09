@@ -8,8 +8,8 @@ object departureAirport extends PropertyDef(
         iris = Set("http://schema.org/departureAirport"),
         label = "departureAirport",
         comment = """The airport where the flight originates.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Airport.ontology)
+        `@extends` = List(),
+        `@range` = List(Airport.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

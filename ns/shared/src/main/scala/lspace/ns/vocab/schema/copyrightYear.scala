@@ -8,8 +8,8 @@ object copyrightYear extends PropertyDef(
         iris = Set("http://schema.org/copyrightYear"),
         label = "copyrightYear",
         comment = """The year during which the claimed copyright for the CreativeWork was first asserted.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@number`)
+        `@extends` = List(),
+        `@range` = List(`@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

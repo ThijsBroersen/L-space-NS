@@ -6,7 +6,7 @@ object MedicalConditionStage extends OntologyDef(
         iris = Set("http://schema.org/MedicalConditionStage"),
         label = "MedicalConditionStage",
         comment = """A stage of a medical condition, such as 'Stage IIIa'.""",
-        `@extends` = () => List(MedicalIntangible.ontology)
+        `@extends` = List(MedicalIntangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalIntangible.Properties{
 lazy val stageAsNumber = lspace.ns.vocab.schema.stageAsNumber.property

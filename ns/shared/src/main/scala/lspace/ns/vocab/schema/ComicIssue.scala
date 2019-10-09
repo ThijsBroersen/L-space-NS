@@ -11,7 +11,7 @@ object ComicIssue extends OntologyDef(
     uniquely identified by: the combination of the name and volume number of the
     series to which the issue belongs; the issue number; and the variant
     description of the issue (if any).""",
-        `@extends` = () => List(PublicationIssue.ontology)
+        `@extends` = List(PublicationIssue.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.PublicationIssue.Properties{
 lazy val artist = lspace.ns.vocab.schema.artist.property

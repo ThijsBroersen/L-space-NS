@@ -8,8 +8,8 @@ object owns extends PropertyDef(
         iris = Set("http://schema.org/owns"),
         label = "owns",
         comment = """Products owned by the organization or person.""",
-        `@extends` = () => List(),
-        `@range` = () => List(OwnershipInfo.ontology, Product.ontology)
+        `@extends` = List(),
+        `@range` = List(OwnershipInfo.ontology, Product.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

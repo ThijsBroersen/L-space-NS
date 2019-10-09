@@ -6,7 +6,7 @@ object OrganizeAction extends OntologyDef(
         iris = Set("http://schema.org/OrganizeAction"),
         label = "OrganizeAction",
         comment = """The act of manipulating/administering/supervising/controlling one or more objects.""",
-        `@extends` = () => List(Action.ontology)
+        `@extends` = List(Action.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Action.Properties{
 

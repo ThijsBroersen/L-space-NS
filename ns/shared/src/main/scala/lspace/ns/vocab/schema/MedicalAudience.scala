@@ -6,7 +6,7 @@ object MedicalAudience extends OntologyDef(
         iris = Set("http://schema.org/MedicalAudience"),
         label = "MedicalAudience",
         comment = """Target audiences for medical web pages. Enumerated type.""",
-        `@extends` = () => List(MedicalEnumeration.ontology, Audience.ontology, PeopleAudience.ontology)
+        `@extends` = List(MedicalEnumeration.ontology, Audience.ontology, PeopleAudience.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.MedicalEnumeration.Properties with lspace.ns.vocab.schema.Audience.Properties with lspace.ns.vocab.schema.PeopleAudience.Properties{
 

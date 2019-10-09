@@ -8,8 +8,8 @@ object broadcastTimezone extends PropertyDef(
         iris = Set("http://schema.org/broadcastTimezone"),
         label = "broadcastTimezone",
         comment = """The timezone in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 format</a> for which the service bases its broadcasts""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

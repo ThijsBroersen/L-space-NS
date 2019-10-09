@@ -6,7 +6,7 @@ object GameServerStatus extends OntologyDef(
         iris = Set("http://schema.org/GameServerStatus"),
         label = "GameServerStatus",
         comment = """Status of a game server.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

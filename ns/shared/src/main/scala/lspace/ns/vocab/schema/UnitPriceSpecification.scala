@@ -6,7 +6,7 @@ object UnitPriceSpecification extends OntologyDef(
         iris = Set("http://schema.org/UnitPriceSpecification"),
         label = "UnitPriceSpecification",
         comment = """The price asked for a given offer by the respective organization or person.""",
-        `@extends` = () => List(PriceSpecification.ontology)
+        `@extends` = List(PriceSpecification.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.PriceSpecification.Properties{
 lazy val billingIncrement = lspace.ns.vocab.schema.billingIncrement.property

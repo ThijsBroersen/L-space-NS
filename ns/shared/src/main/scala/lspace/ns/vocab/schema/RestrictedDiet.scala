@@ -6,7 +6,7 @@ object RestrictedDiet extends OntologyDef(
         iris = Set("http://schema.org/RestrictedDiet"),
         label = "RestrictedDiet",
         comment = """A diet restricted to certain foods or preparations for cultural, religious, health or lifestyle reasons.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

@@ -8,8 +8,8 @@ object genre extends PropertyDef(
         iris = Set("http://schema.org/genre"),
         label = "genre",
         comment = """Genre of the creative work, broadcast channel or group.""",
-        `@extends` = () => List(),
-        `@range` = () => List(URL.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

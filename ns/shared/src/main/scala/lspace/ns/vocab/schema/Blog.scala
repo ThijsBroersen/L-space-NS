@@ -6,7 +6,7 @@ object Blog extends OntologyDef(
         iris = Set("http://schema.org/Blog"),
         label = "Blog",
         comment = """A blog.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val blogPost = lspace.ns.vocab.schema.blogPost.property

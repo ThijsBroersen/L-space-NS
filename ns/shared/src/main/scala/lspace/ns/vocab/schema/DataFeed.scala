@@ -6,7 +6,7 @@ object DataFeed extends OntologyDef(
         iris = Set("http://schema.org/DataFeed"),
         label = "DataFeed",
         comment = """A single feed providing structured information about one or more entities or topics.""",
-        `@extends` = () => List(Dataset.ontology)
+        `@extends` = List(Dataset.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Dataset.Properties{
 lazy val dataFeedElement = lspace.ns.vocab.schema.dataFeedElement.property

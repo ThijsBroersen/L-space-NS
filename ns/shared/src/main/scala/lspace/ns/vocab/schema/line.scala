@@ -8,8 +8,8 @@ object line extends PropertyDef(
         iris = Set("http://schema.org/line"),
         label = "line",
         comment = """A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

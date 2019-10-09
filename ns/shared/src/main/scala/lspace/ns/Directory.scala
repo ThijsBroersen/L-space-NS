@@ -23,7 +23,7 @@ object Directory extends OntologyDef(Lspace + "Directory", label = "Directory") 
           Lspace + "filesystem/Directory/dateCreated",
           "dateCreated",
           "The date on which the directory was created.",
-          `@extends` = () => Property(schema + "dateCreated") :: Nil
+          `@extends` = Property(schema + "dateCreated") :: Nil
         )
     object `lspace:Directory/lastAccessedOn`
         extends PropertyDef(Lspace + "Directory/lastAccessedOn",

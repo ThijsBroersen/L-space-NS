@@ -6,7 +6,7 @@ object EducationalAudience extends OntologyDef(
         iris = Set("http://schema.org/EducationalAudience"),
         label = "EducationalAudience",
         comment = """An EducationalAudience.""",
-        `@extends` = () => List(Audience.ontology)
+        `@extends` = List(Audience.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Audience.Properties{
 lazy val educationalRole = lspace.ns.vocab.schema.educationalRole.property

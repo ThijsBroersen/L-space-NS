@@ -8,8 +8,8 @@ object outcome extends PropertyDef(
         iris = Set("http://schema.org/outcome"),
         label = "outcome",
         comment = """Expected or actual outcomes of the study.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, MedicalEntity.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, MedicalEntity.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

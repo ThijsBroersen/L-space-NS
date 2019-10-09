@@ -6,7 +6,7 @@ object SteeringPositionValue extends OntologyDef(
         iris = Set("http://schema.org/SteeringPositionValue"),
         label = "SteeringPositionValue",
         comment = """A value indicating a steering position.""",
-        `@extends` = () => List(QualitativeValue.ontology)
+        `@extends` = List(QualitativeValue.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.QualitativeValue.Properties{
 

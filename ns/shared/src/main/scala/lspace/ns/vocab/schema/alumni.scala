@@ -8,8 +8,8 @@ object alumni extends PropertyDef(
         iris = Set("http://schema.org/alumni"),
         label = "alumni",
         comment = """Alumni of an organization.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

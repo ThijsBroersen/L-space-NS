@@ -8,8 +8,8 @@ object softwareVersion extends PropertyDef(
         iris = Set("http://schema.org/softwareVersion"),
         label = "softwareVersion",
         comment = """Version of the software instance.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

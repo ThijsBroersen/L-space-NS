@@ -8,8 +8,8 @@ object typicalAgeRange extends PropertyDef(
         iris = Set("http://schema.org/typicalAgeRange"),
         label = "typicalAgeRange",
         comment = """The typical expected age range, e.g. '7-9', '11-'.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

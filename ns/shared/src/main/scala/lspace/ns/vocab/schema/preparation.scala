@@ -8,8 +8,8 @@ object preparation extends PropertyDef(
         iris = Set("http://schema.org/preparation"),
         label = "preparation",
         comment = """Typical preparation that a patient must undergo before having the procedure performed.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MedicalEntity.ontology, Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, MedicalEntity.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

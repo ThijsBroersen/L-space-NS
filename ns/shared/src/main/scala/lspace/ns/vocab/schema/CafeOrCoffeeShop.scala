@@ -6,7 +6,7 @@ object CafeOrCoffeeShop extends OntologyDef(
         iris = Set("http://schema.org/CafeOrCoffeeShop"),
         label = "CafeOrCoffeeShop",
         comment = """A cafe or coffee shop.""",
-        `@extends` = () => List(FoodEstablishment.ontology)
+        `@extends` = List(FoodEstablishment.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.FoodEstablishment.Properties{
 

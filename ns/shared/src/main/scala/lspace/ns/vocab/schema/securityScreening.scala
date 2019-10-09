@@ -8,8 +8,8 @@ object securityScreening extends PropertyDef(
         iris = Set("http://schema.org/securityScreening"),
         label = "securityScreening",
         comment = """The type of security screening the passenger is subject to.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

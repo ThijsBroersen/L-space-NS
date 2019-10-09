@@ -6,7 +6,7 @@ object DeliveryEvent extends OntologyDef(
         iris = Set("http://schema.org/DeliveryEvent"),
         label = "DeliveryEvent",
         comment = """An event involving the delivery of an item.""",
-        `@extends` = () => List(Event.ontology)
+        `@extends` = List(Event.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Event.Properties{
 lazy val accessCode = lspace.ns.vocab.schema.accessCode.property

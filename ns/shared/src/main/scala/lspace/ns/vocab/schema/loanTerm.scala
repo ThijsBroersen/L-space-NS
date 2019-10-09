@@ -8,8 +8,8 @@ object loanTerm extends PropertyDef(
         iris = Set("http://schema.org/loanTerm"),
         label = "loanTerm",
         comment = """The duration of the loan or credit agreement.""",
-        `@extends` = () => List(duration.property),
-        `@range` = () => List(QuantitativeValue.ontology)
+        `@extends` = List(duration.property),
+        `@range` = List(QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

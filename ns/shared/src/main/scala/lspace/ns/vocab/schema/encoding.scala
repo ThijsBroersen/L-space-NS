@@ -8,8 +8,8 @@ object encoding extends PropertyDef(
         iris = Set("http://schema.org/encoding"),
         label = "encoding",
         comment = """A media object that encodes this CreativeWork. This property is a synonym for associatedMedia.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MediaObject.ontology)
+        `@extends` = List(),
+        `@range` = List(MediaObject.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

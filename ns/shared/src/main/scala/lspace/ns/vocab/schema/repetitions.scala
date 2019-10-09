@@ -8,8 +8,8 @@ object repetitions extends PropertyDef(
         iris = Set("http://schema.org/repetitions"),
         label = "repetitions",
         comment = """Number of times one should repeat the activity.""",
-        `@extends` = () => List(),
-        `@range` = () => List(QualitativeValue.ontology, `@number`)
+        `@extends` = List(),
+        `@range` = List(QualitativeValue.ontology, `@number`)
        ){
 
 override lazy val properties: List[LProperty] = List()

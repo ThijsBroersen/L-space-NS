@@ -8,8 +8,8 @@ object sensoryUnit extends PropertyDef(
         iris = Set("http://schema.org/sensoryUnit"),
         label = "sensoryUnit",
         comment = """The neurological pathway extension that inputs and sends information to the brain or spinal cord.""",
-        `@extends` = () => List(),
-        `@range` = () => List(SuperficialAnatomy.ontology, AnatomicalStructure.ontology)
+        `@extends` = List(),
+        `@range` = List(AnatomicalStructure.ontology, SuperficialAnatomy.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

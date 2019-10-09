@@ -6,7 +6,7 @@ object MarryAction extends OntologyDef(
         iris = Set("http://schema.org/MarryAction"),
         label = "MarryAction",
         comment = """The act of marrying a person.""",
-        `@extends` = () => List(InteractAction.ontology)
+        `@extends` = List(InteractAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.InteractAction.Properties{
 

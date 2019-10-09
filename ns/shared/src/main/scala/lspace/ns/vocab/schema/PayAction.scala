@@ -6,7 +6,7 @@ object PayAction extends OntologyDef(
         iris = Set("http://schema.org/PayAction"),
         label = "PayAction",
         comment = """An agent pays a price to a participant.""",
-        `@extends` = () => List(TradeAction.ontology)
+        `@extends` = List(TradeAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.TradeAction.Properties{
 lazy val purpose = lspace.ns.vocab.schema.purpose.property

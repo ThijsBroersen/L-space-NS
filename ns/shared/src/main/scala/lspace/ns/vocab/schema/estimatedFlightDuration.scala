@@ -8,8 +8,8 @@ object estimatedFlightDuration extends PropertyDef(
         iris = Set("http://schema.org/estimatedFlightDuration"),
         label = "estimatedFlightDuration",
         comment = """The estimated time the flight will take.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, Duration.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, Duration.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

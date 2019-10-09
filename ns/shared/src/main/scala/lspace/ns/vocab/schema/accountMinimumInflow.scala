@@ -8,8 +8,8 @@ object accountMinimumInflow extends PropertyDef(
         iris = Set("http://schema.org/accountMinimumInflow"),
         label = "accountMinimumInflow",
         comment = """A minimum amount that has to be paid in every month.""",
-        `@extends` = () => List(),
-        `@range` = () => List(MonetaryAmount.ontology)
+        `@extends` = List(),
+        `@range` = List(MonetaryAmount.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

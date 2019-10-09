@@ -6,7 +6,7 @@ object FAQPage extends OntologyDef(
         iris = Set("http://schema.org/FAQPage"),
         label = "FAQPage",
         comment = """A <a class="localLink" href="http://schema.org/FAQPage">FAQPage</a> is a <a class="localLink" href="http://schema.org/WebPage">WebPage</a> presenting one or more "<a href="https://en.wikipedia.org/wiki/FAQ">Frequently asked questions</a>" (see also <a class="localLink" href="http://schema.org/QAPage">QAPage</a>).""",
-        `@extends` = () => List(WebPage.ontology)
+        `@extends` = List(WebPage.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.WebPage.Properties{
 

@@ -6,7 +6,7 @@ object Rating extends OntologyDef(
         iris = Set("http://schema.org/Rating"),
         label = "Rating",
         comment = """A rating is an evaluation on a numeric scale, such as 1 to 5 stars.""",
-        `@extends` = () => List(Intangible.ontology)
+        `@extends` = List(Intangible.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Intangible.Properties{
 lazy val author = lspace.ns.vocab.schema.author.property

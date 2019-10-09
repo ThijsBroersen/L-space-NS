@@ -8,8 +8,8 @@ object priceSpecification extends PropertyDef(
         iris = Set("http://schema.org/priceSpecification"),
         label = "priceSpecification",
         comment = """One or more detailed price specifications, indicating the unit price and delivery or payment charges.""",
-        `@extends` = () => List(),
-        `@range` = () => List(PriceSpecification.ontology)
+        `@extends` = List(),
+        `@range` = List(PriceSpecification.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

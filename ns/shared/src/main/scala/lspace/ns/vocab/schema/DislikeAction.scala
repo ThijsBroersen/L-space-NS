@@ -6,7 +6,7 @@ object DislikeAction extends OntologyDef(
         iris = Set("http://schema.org/DislikeAction"),
         label = "DislikeAction",
         comment = """The act of expressing a negative sentiment about the object. An agent dislikes an object (a proposition, topic or theme) with participants.""",
-        `@extends` = () => List(ReactAction.ontology)
+        `@extends` = List(ReactAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.ReactAction.Properties{
 

@@ -6,7 +6,7 @@ object Chapter extends OntologyDef(
         iris = Set("http://schema.org/Chapter"),
         label = "Chapter",
         comment = """One of the sections into which a book is divided. A chapter usually has a section number or a name.""",
-        `@extends` = () => List(CreativeWork.ontology)
+        `@extends` = List(CreativeWork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreativeWork.Properties{
 lazy val pageEnd = lspace.ns.vocab.schema.pageEnd.property

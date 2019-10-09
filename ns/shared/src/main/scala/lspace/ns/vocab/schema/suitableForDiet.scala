@@ -8,8 +8,8 @@ object suitableForDiet extends PropertyDef(
         iris = Set("http://schema.org/suitableForDiet"),
         label = "suitableForDiet",
         comment = """Indicates a dietary restriction or guideline for which this recipe or menu item is suitable, e.g. diabetic, halal etc.""",
-        `@extends` = () => List(),
-        `@range` = () => List(RestrictedDiet.ontology)
+        `@extends` = List(),
+        `@range` = List(RestrictedDiet.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

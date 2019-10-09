@@ -6,7 +6,7 @@ object CoverArt extends OntologyDef(
         iris = Set("http://schema.org/CoverArt"),
         label = "CoverArt",
         comment = """The artwork on the outer surface of a CreativeWork.""",
-        `@extends` = () => List(VisualArtwork.ontology)
+        `@extends` = List(VisualArtwork.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.VisualArtwork.Properties{
 

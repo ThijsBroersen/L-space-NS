@@ -8,8 +8,8 @@ object recommendedIntake extends PropertyDef(
         iris = Set("http://schema.org/recommendedIntake"),
         label = "recommendedIntake",
         comment = """Recommended intake of this supplement for a given population as defined by a specific recommending authority.""",
-        `@extends` = () => List(),
-        `@range` = () => List(RecommendedDoseSchedule.ontology)
+        `@extends` = List(),
+        `@range` = List(RecommendedDoseSchedule.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

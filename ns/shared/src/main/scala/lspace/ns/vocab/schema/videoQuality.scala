@@ -8,8 +8,8 @@ object videoQuality extends PropertyDef(
         iris = Set("http://schema.org/videoQuality"),
         label = "videoQuality",
         comment = """The quality of the video.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

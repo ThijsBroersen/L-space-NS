@@ -8,8 +8,8 @@ object dietFeatures extends PropertyDef(
         iris = Set("http://schema.org/dietFeatures"),
         label = "dietFeatures",
         comment = """Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -16,7 +16,7 @@ Commonly used values:<br/><br/>
 <li>http://purl.org/goodrelations/v1#Reseller</li>
 </ul>
 """,
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

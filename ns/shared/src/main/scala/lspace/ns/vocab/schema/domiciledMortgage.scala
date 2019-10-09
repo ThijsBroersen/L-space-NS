@@ -8,8 +8,8 @@ object domiciledMortgage extends PropertyDef(
         iris = Set("http://schema.org/domiciledMortgage"),
         label = "domiciledMortgage",
         comment = """Whether borrower is a resident of the jurisdiction where the property is located.""",
-        `@extends` = () => List(),
-        `@range` = () => List(`@boolean`)
+        `@extends` = List(),
+        `@range` = List(`@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

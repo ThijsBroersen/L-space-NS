@@ -6,7 +6,7 @@ object Volcano extends OntologyDef(
         iris = Set("http://schema.org/Volcano"),
         label = "Volcano",
         comment = """A volcano, like Fuji san.""",
-        `@extends` = () => List(Landform.ontology)
+        `@extends` = List(Landform.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Landform.Properties{
 

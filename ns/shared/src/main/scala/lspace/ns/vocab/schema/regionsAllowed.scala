@@ -8,8 +8,8 @@ object regionsAllowed extends PropertyDef(
         iris = Set("http://schema.org/regionsAllowed"),
         label = "regionsAllowed",
         comment = """The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in <a href="http://en.wikipedia.org/wiki/ISO_3166">ISO 3166 format</a>.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Place.ontology)
+        `@extends` = List(),
+        `@range` = List(Place.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object BoardingPolicyType extends OntologyDef(
         iris = Set("http://schema.org/BoardingPolicyType"),
         label = "BoardingPolicyType",
         comment = """A type of boarding policy used by an airline.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 

@@ -8,8 +8,8 @@ object paymentStatus extends PropertyDef(
         iris = Set("http://schema.org/paymentStatus"),
         label = "paymentStatus",
         comment = """The status of payment; whether the invoice has been paid or not.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology, PaymentStatusType.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`, PaymentStatusType.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

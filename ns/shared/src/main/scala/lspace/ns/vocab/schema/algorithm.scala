@@ -8,8 +8,8 @@ object algorithm extends PropertyDef(
         iris = Set("http://schema.org/algorithm"),
         label = "algorithm",
         comment = """The algorithm or rules to follow to compute the score.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Text.ontology)
+        `@extends` = List(),
+        `@range` = List(`@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -6,7 +6,7 @@ object CategoryCode extends OntologyDef(
         iris = Set("http://schema.org/CategoryCode"),
         label = "CategoryCode",
         comment = """A Category Code.""",
-        `@extends` = () => List(DefinedTerm.ontology)
+        `@extends` = List(DefinedTerm.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.DefinedTerm.Properties{
 lazy val codeValue = lspace.ns.vocab.schema.codeValue.property

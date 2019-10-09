@@ -6,7 +6,7 @@ object PrependAction extends OntologyDef(
         iris = Set("http://schema.org/PrependAction"),
         label = "PrependAction",
         comment = """The act of inserting at the beginning if an ordered collection.""",
-        `@extends` = () => List(InsertAction.ontology)
+        `@extends` = List(InsertAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.InsertAction.Properties{
 

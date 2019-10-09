@@ -8,8 +8,8 @@ object illustrator extends PropertyDef(
         iris = Set("http://schema.org/illustrator"),
         label = "illustrator",
         comment = """The illustrator of the book.""",
-        `@extends` = () => List(),
-        `@range` = () => List(Person.ontology)
+        `@extends` = List(),
+        `@range` = List(Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

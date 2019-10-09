@@ -15,7 +15,7 @@ Commonly used values:<br/><br/>
 <li>http://purl.org/goodrelations/v1#UPS</li>
 </ul>
 """,
-        `@extends` = () => List(DeliveryMethod.ontology)
+        `@extends` = List(DeliveryMethod.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.DeliveryMethod.Properties{
 

@@ -6,7 +6,7 @@ object PhotographAction extends OntologyDef(
         iris = Set("http://schema.org/PhotographAction"),
         label = "PhotographAction",
         comment = """The act of capturing still images of objects using a camera.""",
-        `@extends` = () => List(CreateAction.ontology)
+        `@extends` = List(CreateAction.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.CreateAction.Properties{
 

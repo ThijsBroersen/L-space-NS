@@ -6,7 +6,7 @@ object ContactPointOption extends OntologyDef(
         iris = Set("http://schema.org/ContactPointOption"),
         label = "ContactPointOption",
         comment = """Enumerated options related to a ContactPoint.""",
-        `@extends` = () => List(Enumeration.ontology)
+        `@extends` = List(Enumeration.ontology)
        ){
 object keys extends lspace.ns.vocab.schema.Enumeration.Properties{
 
