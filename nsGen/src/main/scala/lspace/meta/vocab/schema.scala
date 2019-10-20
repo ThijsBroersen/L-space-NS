@@ -14,7 +14,7 @@ import scala.concurrent.duration._
 object schema {
 
   val graph: Graph = Graph("https://schema.org/version/3.5/all-layers")
-  val decoder      = JsonLDDecoder(graph.ns)
+  val decoder      = JsonLDDecoder(graph)
 
   def saveToFile(path: String, code: Tree) = {
     val writer = new java.io.PrintWriter(path)
