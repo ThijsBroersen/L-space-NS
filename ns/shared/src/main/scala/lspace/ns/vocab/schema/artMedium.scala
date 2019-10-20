@@ -9,7 +9,7 @@ object artMedium extends PropertyDef(
         label = "artMedium",
         comment = """The material used. (e.g. Oil, Watercolour, Acrylic, Linoprint, Marble, Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil, Mixed Media, etc.)""",
         `@extends` = List(material.property),
-        `@range` = List(URL.ontology, `@string`)
+        `@range` = List(`@string`, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

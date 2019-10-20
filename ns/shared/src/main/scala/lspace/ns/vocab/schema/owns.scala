@@ -9,7 +9,7 @@ object owns extends PropertyDef(
         label = "owns",
         comment = """Products owned by the organization or person.""",
         `@extends` = List(),
-        `@range` = List(OwnershipInfo.ontology, Product.ontology)
+        `@range` = List(Product.ontology, OwnershipInfo.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

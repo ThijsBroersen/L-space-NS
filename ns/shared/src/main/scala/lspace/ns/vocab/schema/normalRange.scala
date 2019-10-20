@@ -9,7 +9,7 @@ object normalRange extends PropertyDef(
         label = "normalRange",
         comment = """Range of acceptable values for a typical patient, when applicable.""",
         `@extends` = List(),
-        `@range` = List(MedicalEnumeration.ontology, `@string`)
+        `@range` = List(`@string`, MedicalEnumeration.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

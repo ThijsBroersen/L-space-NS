@@ -9,7 +9,7 @@ object competencyRequired extends PropertyDef(
         label = "competencyRequired",
         comment = """Knowledge, skill, ability or personal attribute that must be demonstrated by a person or other entity.""",
         `@extends` = List(),
-        `@range` = List(DefinedTerm.ontology, `@string`, URL.ontology)
+        `@range` = List(DefinedTerm.ontology, URL.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

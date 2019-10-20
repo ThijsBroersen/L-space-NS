@@ -9,7 +9,7 @@ object bodyType extends PropertyDef(
         label = "bodyType",
         comment = """Indicates the design and body style of the vehicle (e.g. station wagon, hatchback, etc.).""",
         `@extends` = List(),
-        `@range` = List(URL.ontology, `@string`, QualitativeValue.ontology)
+        `@range` = List(QualitativeValue.ontology, URL.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

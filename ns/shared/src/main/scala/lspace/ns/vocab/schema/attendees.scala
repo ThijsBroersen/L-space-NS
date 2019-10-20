@@ -9,7 +9,7 @@ object attendees extends PropertyDef(
         label = "attendees",
         comment = """A person attending the event.""",
         `@extends` = List(),
-        `@range` = List(Organization.ontology, Person.ontology)
+        `@range` = List(Person.ontology, Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

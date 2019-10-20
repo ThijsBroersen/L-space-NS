@@ -9,7 +9,7 @@ object availableService extends PropertyDef(
         label = "availableService",
         comment = """A medical service available from this provider.""",
         `@extends` = List(),
-        `@range` = List(MedicalTest.ontology, MedicalTherapy.ontology, MedicalProcedure.ontology)
+        `@range` = List(MedicalTest.ontology, MedicalProcedure.ontology, MedicalTherapy.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

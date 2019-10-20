@@ -9,7 +9,7 @@ object volumeNumber extends PropertyDef(
         label = "volumeNumber",
         comment = """Identifies the volume of publication or multi-part work; for example, "iii" or "2".""",
         `@extends` = List(position.property),
-        `@range` = List(`@string`, `@int`)
+        `@range` = List(`@int`, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

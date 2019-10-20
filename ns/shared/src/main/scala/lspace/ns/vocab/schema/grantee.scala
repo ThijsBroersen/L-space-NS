@@ -9,7 +9,7 @@ object grantee extends PropertyDef(
         label = "grantee",
         comment = """The person, organization, contact point, or audience that has been granted this permission.""",
         `@extends` = List(),
-        `@range` = List(Person.ontology, Organization.ontology, ContactPoint.ontology, Audience.ontology)
+        `@range` = List(Audience.ontology, Person.ontology, ContactPoint.ontology, Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

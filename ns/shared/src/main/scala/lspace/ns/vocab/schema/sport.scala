@@ -9,7 +9,7 @@ object sport extends PropertyDef(
         label = "sport",
         comment = """A type of sport (e.g. Baseball).""",
         `@extends` = List(),
-        `@range` = List(`@string`, URL.ontology)
+        `@range` = List(URL.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

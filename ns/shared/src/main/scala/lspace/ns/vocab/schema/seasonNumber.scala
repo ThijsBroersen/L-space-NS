@@ -9,7 +9,7 @@ object seasonNumber extends PropertyDef(
         label = "seasonNumber",
         comment = """Position of the season within an ordered group of seasons.""",
         `@extends` = List(position.property),
-        `@range` = List(`@int`, `@string`)
+        `@range` = List(`@string`, `@int`)
        ){
 
 override lazy val properties: List[LProperty] = List()

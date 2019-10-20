@@ -9,7 +9,7 @@ object touristType extends PropertyDef(
         label = "touristType",
         comment = """Attraction suitable for type(s) of tourist. eg. Children, visitors from a particular country, etc.""",
         `@extends` = List(),
-        `@range` = List(Audience.ontology, `@string`)
+        `@range` = List(`@string`, Audience.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

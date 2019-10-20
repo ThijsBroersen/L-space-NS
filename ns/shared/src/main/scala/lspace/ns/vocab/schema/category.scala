@@ -9,7 +9,7 @@ object category extends PropertyDef(
         label = "category",
         comment = """A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.""",
         `@extends` = List(),
-        `@range` = List(Thing.ontology, `@string`, PhysicalActivityCategory.ontology)
+        `@range` = List(Thing.ontology, PhysicalActivityCategory.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

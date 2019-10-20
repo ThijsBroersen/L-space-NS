@@ -9,7 +9,7 @@ object acceptedPaymentMethod extends PropertyDef(
         label = "acceptedPaymentMethod",
         comment = """The payment method(s) accepted by seller for this offer.""",
         `@extends` = List(),
-        `@range` = List(LoanOrCredit.ontology, PaymentMethod.ontology)
+        `@range` = List(PaymentMethod.ontology, LoanOrCredit.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

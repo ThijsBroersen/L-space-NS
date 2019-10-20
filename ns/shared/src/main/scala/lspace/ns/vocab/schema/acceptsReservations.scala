@@ -9,7 +9,7 @@ object acceptsReservations extends PropertyDef(
         label = "acceptsReservations",
         comment = """Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings <code>Yes</code> or <code>No</code>.""",
         `@extends` = List(),
-        `@range` = List(URL.ontology, `@string`, `@boolean`)
+        `@range` = List(`@boolean`, URL.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

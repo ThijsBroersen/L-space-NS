@@ -9,7 +9,7 @@ object functionalClass extends PropertyDef(
         label = "functionalClass",
         comment = """The degree of mobility the joint allows.""",
         `@extends` = List(),
-        `@range` = List(`@string`, MedicalEntity.ontology)
+        `@range` = List(MedicalEntity.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

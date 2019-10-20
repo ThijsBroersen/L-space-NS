@@ -9,7 +9,7 @@ object photo extends PropertyDef(
         label = "photo",
         comment = """A photograph of this place.""",
         `@extends` = List(image.property),
-        `@range` = List(ImageObject.ontology, Photograph.ontology)
+        `@range` = List(Photograph.ontology, ImageObject.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

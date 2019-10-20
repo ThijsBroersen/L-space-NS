@@ -9,7 +9,7 @@ object feesAndCommissionsSpecification extends PropertyDef(
         label = "feesAndCommissionsSpecification",
         comment = """Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.""",
         `@extends` = List(),
-        `@range` = List(URL.ontology, `@string`)
+        `@range` = List(`@string`, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

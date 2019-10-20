@@ -9,7 +9,7 @@ object educationalCredentialAwarded extends PropertyDef(
         label = "educationalCredentialAwarded",
         comment = """A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course.""",
         `@extends` = List(),
-        `@range` = List(URL.ontology, `@string`, EducationalOccupationalCredential.ontology)
+        `@range` = List(URL.ontology, EducationalOccupationalCredential.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -9,7 +9,7 @@ object estimatedCost extends PropertyDef(
         label = "estimatedCost",
         comment = """The estimated cost of the supply or supplies consumed when performing instructions.""",
         `@extends` = List(),
-        `@range` = List(MonetaryAmount.ontology, `@string`)
+        `@range` = List(`@string`, MonetaryAmount.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -9,7 +9,7 @@ object toRecipient extends PropertyDef(
         label = "toRecipient",
         comment = """A sub property of recipient. The recipient who was directly sent the message.""",
         `@extends` = List(recipient.property),
-        `@range` = List(Audience.ontology, Person.ontology, ContactPoint.ontology, Organization.ontology)
+        `@range` = List(ContactPoint.ontology, Organization.ontology, Person.ontology, Audience.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

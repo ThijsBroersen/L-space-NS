@@ -9,7 +9,7 @@ object merchant extends PropertyDef(
         label = "merchant",
         comment = """'merchant' is an out-dated term for 'seller'.""",
         `@extends` = List(),
-        `@range` = List(Organization.ontology, Person.ontology)
+        `@range` = List(Person.ontology, Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

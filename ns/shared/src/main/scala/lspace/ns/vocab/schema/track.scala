@@ -9,7 +9,7 @@ object track extends PropertyDef(
         label = "track",
         comment = """A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.""",
         `@extends` = List(),
-        `@range` = List(MusicRecording.ontology, ItemList.ontology)
+        `@range` = List(ItemList.ontology, MusicRecording.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

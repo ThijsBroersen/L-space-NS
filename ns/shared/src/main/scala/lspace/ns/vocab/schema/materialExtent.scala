@@ -9,7 +9,7 @@ object materialExtent extends PropertyDef(
         label = "materialExtent",
         comment = """The quantity of the materials being described or an expression of the physical space they occupy.""",
         `@extends` = List(),
-        `@range` = List(QuantitativeValue.ontology, `@string`)
+        `@range` = List(`@string`, QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

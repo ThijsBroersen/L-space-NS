@@ -9,7 +9,7 @@ object unitCode extends PropertyDef(
         label = "unitCode",
         comment = """The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.""",
         `@extends` = List(),
-        `@range` = List(URL.ontology, `@string`)
+        `@range` = List(`@string`, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

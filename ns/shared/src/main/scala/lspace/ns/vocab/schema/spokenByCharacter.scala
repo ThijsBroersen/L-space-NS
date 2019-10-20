@@ -9,7 +9,7 @@ object spokenByCharacter extends PropertyDef(
         label = "spokenByCharacter",
         comment = """The (e.g. fictional) character, Person or Organization to whom the quotation is attributed within the containing CreativeWork.""",
         `@extends` = List(),
-        `@range` = List(Organization.ontology, Person.ontology)
+        `@range` = List(Person.ontology, Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

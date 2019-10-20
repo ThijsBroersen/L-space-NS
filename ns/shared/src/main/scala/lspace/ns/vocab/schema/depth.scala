@@ -9,7 +9,7 @@ object depth extends PropertyDef(
         label = "depth",
         comment = """The depth of the item.""",
         `@extends` = List(),
-        `@range` = List(QuantitativeValue.ontology, Distance.ontology)
+        `@range` = List(Distance.ontology, QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

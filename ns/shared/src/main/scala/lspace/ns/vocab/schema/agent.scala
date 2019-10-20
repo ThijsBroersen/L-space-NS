@@ -9,7 +9,7 @@ object agent extends PropertyDef(
         label = "agent",
         comment = """The direct performer or driver of the action (animate or inanimate). e.g. <em>John</em> wrote a book.""",
         `@extends` = List(),
-        `@range` = List(Organization.ontology, Person.ontology)
+        `@range` = List(Person.ontology, Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -9,7 +9,7 @@ object availableLanguage extends PropertyDef(
         label = "availableLanguage",
         comment = """A language someone may use with or at the item, service or place. Please use one of the language codes from the <a href="http://tools.ietf.org/html/bcp47">IETF BCP 47 standard</a>. See also <a class="localLink" href="http://schema.org/inLanguage">inLanguage</a>""",
         `@extends` = List(),
-        `@range` = List(Language.ontology, `@string`)
+        `@range` = List(`@string`, Language.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

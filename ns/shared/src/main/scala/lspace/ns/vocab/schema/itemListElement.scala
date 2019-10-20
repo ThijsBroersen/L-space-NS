@@ -13,7 +13,7 @@ Text values are best if the elements in the list are plain strings. Existing ent
 
 Note: The order of elements in your mark-up is not sufficient for indicating the order or elements.  Use ListItem with a 'position' property in such cases.""",
         `@extends` = List(),
-        `@range` = List(ListItem.ontology, Thing.ontology, `@string`)
+        `@range` = List(`@string`, Thing.ontology, ListItem.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

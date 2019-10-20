@@ -9,7 +9,7 @@ object geoWithin extends PropertyDef(
         label = "geoWithin",
         comment = """Represents a relationship between two geometries (or the places they represent), relating a geometry to one that contains it, i.e. it is inside (i.e. within) its interior. As defined in <a href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>.""",
         `@extends` = List(),
-        `@range` = List(Place.ontology, GeospatialGeometry.ontology)
+        `@range` = List(GeospatialGeometry.ontology, Place.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

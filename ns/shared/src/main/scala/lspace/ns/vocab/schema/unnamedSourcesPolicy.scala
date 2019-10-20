@@ -9,7 +9,7 @@ object unnamedSourcesPolicy extends PropertyDef(
         label = "unnamedSourcesPolicy",
         comment = """For an <a class="localLink" href="http://schema.org/Organization">Organization</a> (typically a <a class="localLink" href="http://schema.org/NewsMediaOrganization">NewsMediaOrganization</a>), a statement about policy on use of unnamed sources and the decision process required.""",
         `@extends` = List(publishingPrinciples.property),
-        `@range` = List(URL.ontology, CreativeWork.ontology)
+        `@range` = List(CreativeWork.ontology, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

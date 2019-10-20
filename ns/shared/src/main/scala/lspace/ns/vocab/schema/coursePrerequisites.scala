@@ -9,7 +9,7 @@ object coursePrerequisites extends PropertyDef(
         label = "coursePrerequisites",
         comment = """Requirements for taking the Course. May be completion of another <a class="localLink" href="http://schema.org/Course">Course</a> or a textual description like "permission of instructor". Requirements may be a pre-requisite competency, referenced using <a class="localLink" href="http://schema.org/AlignmentObject">AlignmentObject</a>.""",
         `@extends` = List(),
-        `@range` = List(Course.ontology, AlignmentObject.ontology, `@string`)
+        `@range` = List(Course.ontology, `@string`, AlignmentObject.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

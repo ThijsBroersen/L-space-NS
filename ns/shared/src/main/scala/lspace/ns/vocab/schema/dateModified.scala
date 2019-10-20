@@ -9,7 +9,7 @@ object dateModified extends PropertyDef(
         label = "dateModified",
         comment = """The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.""",
         `@extends` = List(),
-        `@range` = List(`@date`, `@datetime`)
+        `@range` = List(`@datetime`, `@date`)
        ){
 
 override lazy val properties: List[LProperty] = List()

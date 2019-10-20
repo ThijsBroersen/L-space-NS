@@ -9,7 +9,7 @@ object longitude extends PropertyDef(
         label = "longitude",
         comment = """The longitude of a location. For example <code>-122.08585</code> (<a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a>).""",
         `@extends` = List(),
-        `@range` = List(`@string`, `@number`)
+        `@range` = List(`@number`, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

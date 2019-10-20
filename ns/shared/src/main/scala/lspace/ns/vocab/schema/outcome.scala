@@ -9,7 +9,7 @@ object outcome extends PropertyDef(
         label = "outcome",
         comment = """Expected or actual outcomes of the study.""",
         `@extends` = List(),
-        `@range` = List(`@string`, MedicalEntity.ontology)
+        `@range` = List(MedicalEntity.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

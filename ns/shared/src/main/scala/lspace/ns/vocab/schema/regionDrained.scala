@@ -9,7 +9,7 @@ object regionDrained extends PropertyDef(
         label = "regionDrained",
         comment = """The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.""",
         `@extends` = List(),
-        `@range` = List(AnatomicalSystem.ontology, AnatomicalStructure.ontology)
+        `@range` = List(AnatomicalStructure.ontology, AnatomicalSystem.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

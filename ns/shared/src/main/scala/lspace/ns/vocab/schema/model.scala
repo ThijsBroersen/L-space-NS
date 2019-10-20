@@ -9,7 +9,7 @@ object model extends PropertyDef(
         label = "model",
         comment = """The model of the product. Use with the URL of a ProductModel or a textual representation of the model identifier. The URL of the ProductModel can be from an external source. It is recommended to additionally provide strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties.""",
         `@extends` = List(),
-        `@range` = List(ProductModel.ontology, `@string`)
+        `@range` = List(`@string`, ProductModel.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -9,7 +9,7 @@ object supply extends PropertyDef(
         label = "supply",
         comment = """A sub-property of instrument. A supply consumed when performing instructions or a direction.""",
         `@extends` = List(instrument.property),
-        `@range` = List(HowToSupply.ontology, `@string`)
+        `@range` = List(`@string`, HowToSupply.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

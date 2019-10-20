@@ -9,7 +9,7 @@ object highPrice extends PropertyDef(
         label = "highPrice",
         comment = """The highest price of all offers available.""",
         `@extends` = List(),
-        `@range` = List(`@string`, `@number`)
+        `@range` = List(`@number`, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

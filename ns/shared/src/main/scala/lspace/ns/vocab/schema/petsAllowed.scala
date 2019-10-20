@@ -9,7 +9,7 @@ object petsAllowed extends PropertyDef(
         label = "petsAllowed",
         comment = """Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text value.""",
         `@extends` = List(),
-        `@range` = List(`@boolean`, `@string`)
+        `@range` = List(`@string`, `@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

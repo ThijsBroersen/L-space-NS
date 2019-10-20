@@ -9,7 +9,7 @@ object producer extends PropertyDef(
         label = "producer",
         comment = """The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).""",
         `@extends` = List(),
-        `@range` = List(Organization.ontology, Person.ontology)
+        `@range` = List(Person.ontology, Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

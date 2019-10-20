@@ -9,7 +9,7 @@ object musicBy extends PropertyDef(
         label = "musicBy",
         comment = """The composer of the soundtrack.""",
         `@extends` = List(),
-        `@range` = List(MusicGroup.ontology, Person.ontology)
+        `@range` = List(Person.ontology, MusicGroup.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

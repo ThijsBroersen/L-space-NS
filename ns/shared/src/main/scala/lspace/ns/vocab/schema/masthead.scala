@@ -9,7 +9,7 @@ object masthead extends PropertyDef(
         label = "masthead",
         comment = """For a <a class="localLink" href="http://schema.org/NewsMediaOrganization">NewsMediaOrganization</a>, a link to the masthead page or a page listing top editorial management.""",
         `@extends` = List(publishingPrinciples.property),
-        `@range` = List(URL.ontology, CreativeWork.ontology)
+        `@range` = List(CreativeWork.ontology, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

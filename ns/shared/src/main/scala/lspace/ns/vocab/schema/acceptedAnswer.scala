@@ -9,7 +9,7 @@ object acceptedAnswer extends PropertyDef(
         label = "acceptedAnswer",
         comment = """The answer(s) that has been accepted as best, typically on a Question/Answer site. Sites vary in their selection mechanisms, e.g. drawing on community opinion and/or the view of the Question author.""",
         `@extends` = List(suggestedAnswer.property),
-        `@range` = List(Answer.ontology, ItemList.ontology)
+        `@range` = List(ItemList.ontology, Answer.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

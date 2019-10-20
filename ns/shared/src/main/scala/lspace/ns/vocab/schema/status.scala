@@ -9,7 +9,7 @@ object status extends PropertyDef(
         label = "status",
         comment = """The status of the study (enumerated).""",
         `@extends` = List(),
-        `@range` = List(`@string`, EventStatusType.ontology, MedicalStudyStatus.ontology)
+        `@range` = List(EventStatusType.ontology, MedicalStudyStatus.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

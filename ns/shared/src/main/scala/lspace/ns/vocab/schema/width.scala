@@ -9,7 +9,7 @@ object width extends PropertyDef(
         label = "width",
         comment = """The width of the item.""",
         `@extends` = List(),
-        `@range` = List(QuantitativeValue.ontology, Distance.ontology)
+        `@range` = List(Distance.ontology, QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

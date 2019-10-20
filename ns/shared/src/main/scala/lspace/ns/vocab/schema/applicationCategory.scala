@@ -9,7 +9,7 @@ object applicationCategory extends PropertyDef(
         label = "applicationCategory",
         comment = """Type of software application, e.g. 'Game, Multimedia'.""",
         `@extends` = List(),
-        `@range` = List(URL.ontology, `@string`)
+        `@range` = List(`@string`, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

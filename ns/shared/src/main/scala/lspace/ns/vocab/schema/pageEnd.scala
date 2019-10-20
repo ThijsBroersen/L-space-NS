@@ -9,7 +9,7 @@ object pageEnd extends PropertyDef(
         label = "pageEnd",
         comment = """The page on which the work ends; for example "138" or "xvi".""",
         `@extends` = List(),
-        `@range` = List(`@int`, `@string`)
+        `@range` = List(`@string`, `@int`)
        ){
 
 override lazy val properties: List[LProperty] = List()

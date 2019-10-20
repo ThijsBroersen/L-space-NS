@@ -9,7 +9,7 @@ object `yield` extends PropertyDef(
         label = "yield",
         comment = """The quantity that results by performing instructions. For example, a paper airplane, 10 personalized candles.""",
         `@extends` = List(),
-        `@range` = List(`@string`, QuantitativeValue.ontology)
+        `@range` = List(QuantitativeValue.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -9,7 +9,7 @@ object copyrightHolder extends PropertyDef(
         label = "copyrightHolder",
         comment = """The party holding the legal copyright to the CreativeWork.""",
         `@extends` = List(),
-        `@range` = List(Person.ontology, Organization.ontology)
+        `@range` = List(Organization.ontology, Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -9,7 +9,7 @@ object dataFeedElement extends PropertyDef(
         label = "dataFeedElement",
         comment = """An item within in a data feed. Data feeds may have many elements.""",
         `@extends` = List(),
-        `@range` = List(DataFeedItem.ontology, Thing.ontology, `@string`)
+        `@range` = List(Thing.ontology, DataFeedItem.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

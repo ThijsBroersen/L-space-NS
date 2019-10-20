@@ -9,7 +9,7 @@ object broadcastFrequency extends PropertyDef(
         label = "broadcastFrequency",
         comment = """The frequency used for over-the-air broadcasts. Numeric values or simple ranges e.g. 87-99. In addition a shortcut idiom is supported for frequences of AM and FM radio channels, e.g. "87 FM".""",
         `@extends` = List(),
-        `@range` = List(`@string`, BroadcastFrequencySpecification.ontology)
+        `@range` = List(BroadcastFrequencySpecification.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

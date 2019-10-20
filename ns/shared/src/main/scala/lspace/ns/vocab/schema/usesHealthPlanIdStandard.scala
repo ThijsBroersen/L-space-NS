@@ -9,7 +9,7 @@ object usesHealthPlanIdStandard extends PropertyDef(
         label = "usesHealthPlanIdStandard",
         comment = """The standard for interpreting thePlan ID. The preferred is "HIOS". See the Centers for Medicare &amp; Medicaid Services for more details.""",
         `@extends` = List(),
-        `@range` = List(`@string`, URL.ontology)
+        `@range` = List(URL.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

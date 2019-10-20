@@ -9,7 +9,7 @@ object credentialCategory extends PropertyDef(
         label = "credentialCategory",
         comment = """The category or type of credential being described, for example "degree”, “certificate”, “badge”, or more specific term.""",
         `@extends` = List(),
-        `@range` = List(`@string`, URL.ontology, DefinedTerm.ontology)
+        `@range` = List(DefinedTerm.ontology, `@string`, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

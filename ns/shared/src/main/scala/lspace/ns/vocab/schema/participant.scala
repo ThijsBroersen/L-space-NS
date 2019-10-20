@@ -9,7 +9,7 @@ object participant extends PropertyDef(
         label = "participant",
         comment = """Other co-agents that participated in the action indirectly. e.g. John wrote a book with <em>Steve</em>.""",
         `@extends` = List(),
-        `@range` = List(Organization.ontology, Person.ontology)
+        `@range` = List(Person.ontology, Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

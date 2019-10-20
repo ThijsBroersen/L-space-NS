@@ -9,7 +9,7 @@ object composer extends PropertyDef(
         label = "composer",
         comment = """The person or organization who wrote a composition, or who is the composer of a work performed at some event.""",
         `@extends` = List(),
-        `@range` = List(Person.ontology, Organization.ontology)
+        `@range` = List(Organization.ontology, Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

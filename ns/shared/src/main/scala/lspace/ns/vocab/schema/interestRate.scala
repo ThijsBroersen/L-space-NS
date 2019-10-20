@@ -9,7 +9,7 @@ object interestRate extends PropertyDef(
         label = "interestRate",
         comment = """The interest rate, charged or paid, applicable to the financial product. Note: This is different from the calculated annualPercentageRate.""",
         `@extends` = List(),
-        `@range` = List(QuantitativeValue.ontology, `@number`)
+        `@range` = List(`@number`, QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

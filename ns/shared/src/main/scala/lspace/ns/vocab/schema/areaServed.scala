@@ -9,7 +9,7 @@ object areaServed extends PropertyDef(
         label = "areaServed",
         comment = """The geographic area where a service or offered item is provided.""",
         `@extends` = List(),
-        `@range` = List(AdministrativeArea.ontology, GeoShape.ontology, Place.ontology, `@string`)
+        `@range` = List(`@string`, GeoShape.ontology, Place.ontology, AdministrativeArea.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -9,7 +9,7 @@ object sdLicense extends PropertyDef(
         label = "sdLicense",
         comment = """A license document that applies to this structured data, typically indicated by URL.""",
         `@extends` = List(),
-        `@range` = List(URL.ontology, CreativeWork.ontology)
+        `@range` = List(CreativeWork.ontology, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

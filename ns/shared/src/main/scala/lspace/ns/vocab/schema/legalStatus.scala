@@ -9,7 +9,7 @@ object legalStatus extends PropertyDef(
         label = "legalStatus",
         comment = """The drug or supplement's legal status, including any controlled substance schedules that apply.""",
         `@extends` = List(),
-        `@range` = List(DrugLegalStatus.ontology, MedicalEnumeration.ontology, `@string`)
+        `@range` = List(`@string`, DrugLegalStatus.ontology, MedicalEnumeration.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

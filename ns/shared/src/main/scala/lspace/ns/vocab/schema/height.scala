@@ -9,7 +9,7 @@ object height extends PropertyDef(
         label = "height",
         comment = """The height of the item.""",
         `@extends` = List(),
-        `@range` = List(Distance.ontology, QuantitativeValue.ontology)
+        `@range` = List(QuantitativeValue.ontology, Distance.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -9,7 +9,7 @@ object intensity extends PropertyDef(
         label = "intensity",
         comment = """Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of the movement.""",
         `@extends` = List(),
-        `@range` = List(`@string`, QualitativeValue.ontology)
+        `@range` = List(QualitativeValue.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

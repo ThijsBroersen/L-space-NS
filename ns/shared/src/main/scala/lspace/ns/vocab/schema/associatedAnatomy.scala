@@ -9,7 +9,7 @@ object associatedAnatomy extends PropertyDef(
         label = "associatedAnatomy",
         comment = """The anatomy of the underlying organ system or structures associated with this entity.""",
         `@extends` = List(),
-        `@range` = List(AnatomicalSystem.ontology, SuperficialAnatomy.ontology, AnatomicalStructure.ontology)
+        `@range` = List(AnatomicalStructure.ontology, AnatomicalSystem.ontology, SuperficialAnatomy.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

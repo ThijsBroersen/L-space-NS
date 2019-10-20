@@ -9,7 +9,7 @@ object legislationIdentifier extends PropertyDef(
         label = "legislationIdentifier",
         comment = """An identifier for the legislation. This can be either a string-based identifier, like the CELEX at EU level or the NOR in France, or a web-based, URL/URI identifier, like an ELI (European Legislation Identifier) or an URN-Lex.""",
         `@extends` = List(identifier.property),
-        `@range` = List(`@string`, URL.ontology)
+        `@range` = List(URL.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

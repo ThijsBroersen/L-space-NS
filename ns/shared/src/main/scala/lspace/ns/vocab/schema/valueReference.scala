@@ -9,7 +9,7 @@ object valueReference extends PropertyDef(
         label = "valueReference",
         comment = """A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.""",
         `@extends` = List(),
-        `@range` = List(Enumeration.ontology, QualitativeValue.ontology, QuantitativeValue.ontology, StructuredValue.ontology, PropertyValue.ontology)
+        `@range` = List(StructuredValue.ontology, QuantitativeValue.ontology, PropertyValue.ontology, QualitativeValue.ontology, Enumeration.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

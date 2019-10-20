@@ -9,7 +9,7 @@ object totalPrice extends PropertyDef(
         label = "totalPrice",
         comment = """The total price for the reservation or ticket, including applicable taxes, shipping, etc.""",
         `@extends` = List(),
-        `@range` = List(`@number`, PriceSpecification.ontology, `@string`)
+        `@range` = List(`@number`, `@string`, PriceSpecification.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

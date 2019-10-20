@@ -9,7 +9,7 @@ object underName extends PropertyDef(
         label = "underName",
         comment = """The person or organization the reservation or ticket is for.""",
         `@extends` = List(),
-        `@range` = List(Person.ontology, Organization.ontology)
+        `@range` = List(Organization.ontology, Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -9,7 +9,7 @@ object memberOf extends PropertyDef(
         label = "memberOf",
         comment = """An Organization (or ProgramMembership) to which this Person or Organization belongs.""",
         `@extends` = List(),
-        `@range` = List(Organization.ontology, ProgramMembership.ontology)
+        `@range` = List(ProgramMembership.ontology, Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

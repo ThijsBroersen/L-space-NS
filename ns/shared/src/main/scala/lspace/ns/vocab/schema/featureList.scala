@@ -9,7 +9,7 @@ object featureList extends PropertyDef(
         label = "featureList",
         comment = """Features or modules provided by this application (and possibly required by other applications).""",
         `@extends` = List(),
-        `@range` = List(`@string`, URL.ontology)
+        `@range` = List(URL.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

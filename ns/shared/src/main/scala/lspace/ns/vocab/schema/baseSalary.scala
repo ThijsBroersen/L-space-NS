@@ -9,7 +9,7 @@ object baseSalary extends PropertyDef(
         label = "baseSalary",
         comment = """The base salary of the job or of an employee in an EmployeeRole.""",
         `@extends` = List(),
-        `@range` = List(MonetaryAmount.ontology, PriceSpecification.ontology, `@number`)
+        `@range` = List(PriceSpecification.ontology, `@number`, MonetaryAmount.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -11,7 +11,7 @@ object numberOfDoors extends PropertyDef(
 
 Typical unit code(s): C62""",
         `@extends` = List(),
-        `@range` = List(QuantitativeValue.ontology, `@number`)
+        `@range` = List(`@number`, QuantitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

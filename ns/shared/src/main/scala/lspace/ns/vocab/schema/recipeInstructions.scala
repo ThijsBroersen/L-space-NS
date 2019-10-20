@@ -9,7 +9,7 @@ object recipeInstructions extends PropertyDef(
         label = "recipeInstructions",
         comment = """A step in making the recipe, in the form of a single item (document, video, etc.) or an ordered list with HowToStep and/or HowToSection items.""",
         `@extends` = List(step.property),
-        `@range` = List(CreativeWork.ontology, `@string`, ItemList.ontology)
+        `@range` = List(`@string`, ItemList.ontology, CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

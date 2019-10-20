@@ -9,7 +9,7 @@ object caption extends PropertyDef(
         label = "caption",
         comment = """The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the <a class="localLink" href="http://schema.org/encodingFormat">encodingFormat</a>.""",
         `@extends` = List(),
-        `@range` = List(MediaObject.ontology, `@string`)
+        `@range` = List(`@string`, MediaObject.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

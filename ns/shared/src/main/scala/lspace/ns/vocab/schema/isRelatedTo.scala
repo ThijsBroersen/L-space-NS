@@ -9,7 +9,7 @@ object isRelatedTo extends PropertyDef(
         label = "isRelatedTo",
         comment = """A pointer to another, somehow related product (or multiple products).""",
         `@extends` = List(),
-        `@range` = List(Product.ontology, Service.ontology)
+        `@range` = List(Service.ontology, Product.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

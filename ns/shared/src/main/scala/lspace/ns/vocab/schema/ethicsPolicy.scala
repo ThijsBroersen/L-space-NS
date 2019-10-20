@@ -9,7 +9,7 @@ object ethicsPolicy extends PropertyDef(
         label = "ethicsPolicy",
         comment = """Statement about ethics policy, e.g. of a <a class="localLink" href="http://schema.org/NewsMediaOrganization">NewsMediaOrganization</a> regarding journalistic and publishing practices, or of a <a class="localLink" href="http://schema.org/Restaurant">Restaurant</a>, a page describing food source policies. In the case of a <a class="localLink" href="http://schema.org/NewsMediaOrganization">NewsMediaOrganization</a>, an ethicsPolicy is typically a statement describing the personal, organizational, and corporate standards of behavior expected by the organization.""",
         `@extends` = List(),
-        `@range` = List(CreativeWork.ontology, URL.ontology)
+        `@range` = List(URL.ontology, CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

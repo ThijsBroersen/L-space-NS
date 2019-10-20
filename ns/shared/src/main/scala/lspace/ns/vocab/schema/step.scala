@@ -9,7 +9,7 @@ object step extends PropertyDef(
         label = "step",
         comment = """A single step item (as HowToStep, text, document, video, etc.) or a HowToSection.""",
         `@extends` = List(),
-        `@range` = List(HowToStep.ontology, HowToSection.ontology, CreativeWork.ontology, `@string`)
+        `@range` = List(HowToSection.ontology, CreativeWork.ontology, `@string`, HowToStep.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

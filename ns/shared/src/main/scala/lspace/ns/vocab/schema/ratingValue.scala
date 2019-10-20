@@ -9,7 +9,7 @@ object ratingValue extends PropertyDef(
         label = "ratingValue",
         comment = """The rating for the content.""",
         `@extends` = List(),
-        `@range` = List(`@string`, `@number`)
+        `@range` = List(`@number`, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

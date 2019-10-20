@@ -9,7 +9,7 @@ object tool extends PropertyDef(
         label = "tool",
         comment = """A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.""",
         `@extends` = List(instrument.property),
-        `@range` = List(HowToTool.ontology, `@string`)
+        `@range` = List(`@string`, HowToTool.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

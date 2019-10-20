@@ -9,7 +9,7 @@ object correctionsPolicy extends PropertyDef(
         label = "correctionsPolicy",
         comment = """For an <a class="localLink" href="http://schema.org/Organization">Organization</a> (e.g. <a class="localLink" href="http://schema.org/NewsMediaOrganization">NewsMediaOrganization</a>), a statement describing (in news media, the newsroom’s) disclosure and correction policy for errors.""",
         `@extends` = List(publishingPrinciples.property),
-        `@range` = List(CreativeWork.ontology, URL.ontology)
+        `@range` = List(URL.ontology, CreativeWork.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

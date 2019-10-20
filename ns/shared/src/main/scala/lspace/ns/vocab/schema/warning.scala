@@ -9,7 +9,7 @@ object warning extends PropertyDef(
         label = "warning",
         comment = """Any FDA or other warnings about the drug (text or URL).""",
         `@extends` = List(),
-        `@range` = List(`@string`, URL.ontology)
+        `@range` = List(URL.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

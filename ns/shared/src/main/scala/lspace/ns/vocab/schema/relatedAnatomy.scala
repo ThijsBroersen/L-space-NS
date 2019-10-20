@@ -9,7 +9,7 @@ object relatedAnatomy extends PropertyDef(
         label = "relatedAnatomy",
         comment = """Anatomical systems or structures that relate to the superficial anatomy.""",
         `@extends` = List(),
-        `@range` = List(AnatomicalSystem.ontology, AnatomicalStructure.ontology)
+        `@range` = List(AnatomicalStructure.ontology, AnatomicalSystem.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

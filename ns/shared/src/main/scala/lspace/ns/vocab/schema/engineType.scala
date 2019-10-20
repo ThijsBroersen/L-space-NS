@@ -9,7 +9,7 @@ object engineType extends PropertyDef(
         label = "engineType",
         comment = """The type of engine or engines powering the vehicle.""",
         `@extends` = List(),
-        `@range` = List(QualitativeValue.ontology, URL.ontology, `@string`)
+        `@range` = List(URL.ontology, `@string`, QualitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -9,7 +9,7 @@ object sensoryUnit extends PropertyDef(
         label = "sensoryUnit",
         comment = """The neurological pathway extension that inputs and sends information to the brain or spinal cord.""",
         `@extends` = List(),
-        `@range` = List(AnatomicalStructure.ontology, SuperficialAnatomy.ontology)
+        `@range` = List(SuperficialAnatomy.ontology, AnatomicalStructure.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

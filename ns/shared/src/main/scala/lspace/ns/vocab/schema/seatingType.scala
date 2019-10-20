@@ -9,7 +9,7 @@ object seatingType extends PropertyDef(
         label = "seatingType",
         comment = """The type/class of the seat.""",
         `@extends` = List(),
-        `@range` = List(`@string`, QualitativeValue.ontology)
+        `@range` = List(QualitativeValue.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

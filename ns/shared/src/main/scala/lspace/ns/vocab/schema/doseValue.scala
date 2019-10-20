@@ -9,7 +9,7 @@ object doseValue extends PropertyDef(
         label = "doseValue",
         comment = """The value of the dose, e.g. 500.""",
         `@extends` = List(),
-        `@range` = List(QualitativeValue.ontology, `@number`)
+        `@range` = List(`@number`, QualitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

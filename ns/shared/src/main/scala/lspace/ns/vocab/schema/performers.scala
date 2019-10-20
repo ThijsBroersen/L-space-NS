@@ -9,7 +9,7 @@ object performers extends PropertyDef(
         label = "performers",
         comment = """The main performer or performers of the event&#x2014;for example, a presenter, musician, or actor.""",
         `@extends` = List(),
-        `@range` = List(Person.ontology, Organization.ontology)
+        `@range` = List(Organization.ontology, Person.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -9,7 +9,7 @@ object storageRequirements extends PropertyDef(
         label = "storageRequirements",
         comment = """Storage requirements (free space required).""",
         `@extends` = List(),
-        `@range` = List(URL.ontology, `@string`)
+        `@range` = List(`@string`, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

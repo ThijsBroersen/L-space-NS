@@ -9,7 +9,7 @@ object itemOffered extends PropertyDef(
         label = "itemOffered",
         comment = """The item being offered.""",
         `@extends` = List(),
-        `@range` = List(Product.ontology, Service.ontology)
+        `@range` = List(Service.ontology, Product.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

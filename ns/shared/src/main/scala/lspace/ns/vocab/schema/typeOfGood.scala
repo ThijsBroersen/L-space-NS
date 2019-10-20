@@ -9,7 +9,7 @@ object typeOfGood extends PropertyDef(
         label = "typeOfGood",
         comment = """The product that this structured value is referring to.""",
         `@extends` = List(),
-        `@range` = List(Product.ontology, Service.ontology)
+        `@range` = List(Service.ontology, Product.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

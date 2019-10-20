@@ -9,7 +9,7 @@ object prescriptionStatus extends PropertyDef(
         label = "prescriptionStatus",
         comment = """Indicates the status of drug prescription eg. local catalogs classifications or whether the drug is available by prescription or over-the-counter, etc.""",
         `@extends` = List(),
-        `@range` = List(`@string`, DrugPrescriptionStatus.ontology)
+        `@range` = List(DrugPrescriptionStatus.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

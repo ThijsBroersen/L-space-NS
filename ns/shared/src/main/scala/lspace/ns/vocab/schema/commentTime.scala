@@ -9,7 +9,7 @@ object commentTime extends PropertyDef(
         label = "commentTime",
         comment = """The time at which the UserComment was made.""",
         `@extends` = List(),
-        `@range` = List(`@date`, `@datetime`)
+        `@range` = List(`@datetime`, `@date`)
        ){
 
 override lazy val properties: List[LProperty] = List()

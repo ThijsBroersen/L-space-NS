@@ -9,7 +9,7 @@ object cashBack extends PropertyDef(
         label = "cashBack",
         comment = """A cardholder benefit that pays the cardholder a small percentage of their net expenditures.""",
         `@extends` = List(),
-        `@range` = List(`@boolean`, `@number`)
+        `@range` = List(`@number`, `@boolean`)
        ){
 
 override lazy val properties: List[LProperty] = List()

@@ -9,7 +9,7 @@ object meetsEmissionStandard extends PropertyDef(
         label = "meetsEmissionStandard",
         comment = """Indicates that the vehicle meets the respective emission standard.""",
         `@extends` = List(),
-        `@range` = List(QualitativeValue.ontology, URL.ontology, `@string`)
+        `@range` = List(URL.ontology, QualitativeValue.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

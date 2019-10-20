@@ -9,7 +9,7 @@ object hasMenu extends PropertyDef(
         label = "hasMenu",
         comment = """Either the actual menu as a structured representation, as text, or a URL of the menu.""",
         `@extends` = List(),
-        `@range` = List(`@string`, URL.ontology, Menu.ontology)
+        `@range` = List(Menu.ontology, `@string`, URL.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

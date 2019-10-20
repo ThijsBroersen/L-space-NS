@@ -9,7 +9,7 @@ object fuelType extends PropertyDef(
         label = "fuelType",
         comment = """The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this property can be attached directly to the vehicle.""",
         `@extends` = List(),
-        `@range` = List(`@string`, QualitativeValue.ontology, URL.ontology)
+        `@range` = List(URL.ontology, `@string`, QualitativeValue.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

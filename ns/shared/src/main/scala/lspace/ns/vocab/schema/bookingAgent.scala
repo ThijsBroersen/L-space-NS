@@ -9,7 +9,7 @@ object bookingAgent extends PropertyDef(
         label = "bookingAgent",
         comment = """'bookingAgent' is an out-dated term indicating a 'broker' that serves as a booking agent.""",
         `@extends` = List(),
-        `@range` = List(Organization.ontology, Person.ontology)
+        `@range` = List(Person.ontology, Organization.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()

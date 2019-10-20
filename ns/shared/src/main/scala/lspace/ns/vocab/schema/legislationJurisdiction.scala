@@ -9,7 +9,7 @@ object legislationJurisdiction extends PropertyDef(
         label = "legislationJurisdiction",
         comment = """The jurisdiction from which the legislation originates.""",
         `@extends` = List(spatialCoverage.property),
-        `@range` = List(`@string`, AdministrativeArea.ontology)
+        `@range` = List(AdministrativeArea.ontology, `@string`)
        ){
 
 override lazy val properties: List[LProperty] = List()

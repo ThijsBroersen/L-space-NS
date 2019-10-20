@@ -9,7 +9,7 @@ object geoRadius extends PropertyDef(
         label = "geoRadius",
         comment = """Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation).""",
         `@extends` = List(),
-        `@range` = List(`@number`, Distance.ontology, `@string`)
+        `@range` = List(`@string`, `@number`, Distance.ontology)
        ){
 
 override lazy val properties: List[LProperty] = List()
