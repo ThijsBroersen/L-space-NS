@@ -14,7 +14,7 @@ object Library {
   val lspaceServices      = "eu.l-space" %% "lspace-services" % Version.lspace
   val twitterServer       = "com.twitter" %% "twitter-server" % "19.8.0"
 
-  val scalaTest = Def.setting("org.scalatest" %%% "scalatest" % "3.1.0-RC3" % "test")
+  val scalaTest = Def.setting("org.scalatest" %%% "scalatest" % "3.1.1" % "test")
 }
 
 object Dependencies {
@@ -32,7 +32,7 @@ object Dependencies {
           lspaceClient.value,
           lspaceParseArgonaut.value,
           twitterServer,
-          "org.scalatest" %% "scalatest" % "3.1.0-RC3" % "test"))
+          "org.scalatest" %% "scalatest" % "3.1.1" % "test"))
 
   val nsGenDeps =
     Def.setting(
