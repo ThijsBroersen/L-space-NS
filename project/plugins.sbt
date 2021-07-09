@@ -10,5 +10,5 @@ addSbtPlugin("com.geirsson"   % "sbt-ci-release" % "1.4.31")
 addSbtPlugin("com.typesafe.sbt" % "sbt-git" % "1.0.0")
 
 addSbtPlugin("com.47deg"     % "sbt-microsites" % "0.9.7")
-addSbtPlugin("org.scalameta" % "sbt-scalafmt"   % "2.0.7")
+addSbtPlugin("org.scalameta" % "sbt-scalafmt"   % "2.4.3")
 addSbtPlugin("org.scoverage" % "sbt-scoverage"  % "1.6.0")
